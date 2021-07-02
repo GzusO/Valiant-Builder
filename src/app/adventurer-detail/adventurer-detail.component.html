@@ -1,8 +1,155 @@
 <div *ngIf="adventurer">
-    <h2>{{adventurer.name | uppercase}} Details</h2>
+    <h2>{{adventurer.name | titlecase}} Details</h2>
     <div><span>id: </span>{{adventurer.id}}</div>
     <div>
-        <label for="Adventurer-name">Adventurer name: </label>
         <input id="Adventurer-name" [(ngModel)]="adventurer.name" placeholder="name">
+        <label for="Adventurer-tier">Tier: </label>
+        <input id="Adventurer-tier" [(ngModel)]="adventurer.tier" placeholder="0">
     </div>
+    <div>
+        <label class="tags">{{adventurer.tags}}</label>
+        <label for="Adventurer-profession"> Profession: </label>
+        <input id="Adventurer-profession" [(ngModel)]="adventurer.profession" placeholder="0">
+        <label for="Adventurer-lineage"> Lineage: </label>
+        <input id="Adventurer-lineage" [(ngModel)]="adventurer.lineage" placeholder="0">
+    </div>
+    <div class="row">
+        <table class="column left">
+            <tr>
+                <td>
+                    <label for="Adventurer-physicalPower">physicalPower: </label>
+                </td>
+                <td>
+                    <input id="Adventurer-physicalPower" [(ngModel)]="adventurer.physicalPower" placeholder="0">
+                </td>  
+            </tr>
+            <tr>
+                <td>
+                    <label for="Adventurer-physicalAcuity">physicalAcuity: </label>
+                </td>
+                <td>
+                    <input id="Adventurer-physicalAcuity" [(ngModel)]="adventurer.physicalAcuity" placeholder="0">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Adventurer-physicalResilience">physicalResilience: </label>
+                </td>
+                <td>
+                    <input id="Adventurer-physicalResilience" [(ngModel)]="adventurer.physicalResilience" placeholder="0">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Adventurer-mentalPower">mentalPower: </label>
+                </td>
+                <td>
+                    <input id="Adventurer-mentalPower" [(ngModel)]="adventurer.mentalPower" placeholder="0">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Adventurer-mentalAcuity">mentalAcuity: </label>
+                </td>
+                <td>
+                    <input id="Adventurer-mentalAcuity" [(ngModel)]="adventurer.mentalAcuity" placeholder="0">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Adventurer-mentalResilience">mentalResilience: </label>
+                </td>
+                <td>
+                    <input id="Adventurer-mentalResilience" [(ngModel)]="adventurer.mentalResilience" placeholder="0">
+                </td>  
+            </tr>
+        </table>
+        <table class="column right">
+            <tr>
+                <td>
+                    <label for="Adventurer-enduranceCurrent">Endurance: </label>
+                </td>
+                <td>
+                    <input id="Adventurer-enduranceCurrent" [(ngModel)]="adventurer.enduranceCurrent" placeholder="0"> / <input id="Adventurer-enduranceMax" [(ngModel)]="adventurer.enduranceMax" placeholder="0">
+                </td>  
+                <td>
+                    <label for="Adventurer-deathResistCurrent">Death Resistance: </label>
+                </td>
+                <td>
+                    <input id="Adventurer-deathResistCurrent" [(ngModel)]="adventurer.deathResistCurrent" placeholder="0"> / <input id="Adventurer-deathResistMax" [(ngModel)]="adventurer.deathResistMax" placeholder="0">
+                </td>  
+            </tr>
+            <tr>
+                <td>
+                    <label for="Adventurer-energyCurrent">Energy: </label>
+                </td>
+                <td>
+                    <input id="Adventurer-energyCurrent" [(ngModel)]="adventurer.energyCurrent" placeholder="0"> / <input id="Adventurer-energyMax" [(ngModel)]="adventurer.energyMax" placeholder="0">
+                </td>  
+                <td>
+                    <label for="Adventurer-focusSlotsCurrent">Focus Slots: </label>
+                </td>
+                <td>
+                    <input id="Adventurer-focusSlotsCurrent" [(ngModel)]="adventurer.focusSlotsCurrent" placeholder="0"> / <input id="Adventurer-focusSlotsMax" [(ngModel)]="adventurer.focusSlotsMax" placeholder="0">
+                </td>  
+            </tr>
+            <tr>
+                <td>Combat Stats</td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Adventurer-movement">Movement: </label>
+                </td>
+                <td>
+                    <input id="Adventurer-movement" [(ngModel)]="adventurer.movement" placeholder="0">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Adventurer-combatSpeed">Combat Speed: </label>
+                </td>
+                <td>
+                    <input id="Adventurer-combatSpeed" [(ngModel)]="adventurer.combatSpeed" placeholder="0">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Adventurer-lethality">Lethality: </label>
+                </td>
+                <td>
+                    <input id="Adventurer-lethality" [(ngModel)]="adventurer.lethality" placeholder="0">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Adventurer-force">Force: </label>
+                </td>
+                <td>
+                    <input id="Adventurer-force" [(ngModel)]="adventurer.force" placeholder="0">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Adventurer-defence">Defence: </label>
+                </td>
+                <td>
+                    <input id="Adventurer-defence" [(ngModel)]="adventurer.defence" placeholder="0">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Adventurer-resistance">Resistance: </label>
+                </td>
+                <td>
+                    <input id="Adventurer-resistance" [(ngModel)]="adventurer.resistance" placeholder="0">
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <footer>
+        <button (click)="save()">Save</button>
+        <button (click)="goBack()">Back</button>
+    </footer>
+    
 </div>

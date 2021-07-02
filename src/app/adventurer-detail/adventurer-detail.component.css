@@ -1,0 +1,61 @@
+/* HeroDetailComponent's private CSS styles */
+label {
+    color: #435960;
+    font-weight: bold;
+  }
+  input {
+    font-size: 1em;
+    padding: .5rem;
+  }
+  button {
+    margin-top: 20px;
+    background-color: #eee;
+    padding: 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  button:hover {
+    background-color: #cfd8dc;
+  }
+  button:disabled {
+    background-color: #eee;
+    color: #ccc;
+    cursor: auto;
+  }
+  .tags{
+    font-style: italic;
+  }
+  .column {
+    float: left;
+  }
+  
+  /* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+  /* Left and right column */
+  .column.left {
+    width: 33%;
+  }
+  
+  /* Middle column */
+  .column.right {
+    width: 67%;
+  }
+
+  /* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.right, .column.side {
+    width: 100%;
+  }
+}
+  

@@ -1,10 +1,18 @@
 <h2>My Adventurers</h2>
 <ul class="adventurers">
-    <li *ngFor="let adventurer of adventurers" 
-      (click)="onSelect(adventurer)"
-      [class.selected]="adventurer === selectedAdventurer">
+    <li *ngFor="let adventurer of adventurers">
+      <a routerLink="/detail/{{adventurer.id}}">
         <span class="badge">{{adventurer.id}}</span> {{adventurer.name}}
+      </a>
+      <button class="delete" title="delete adventurer" (click)="delete(adventurer)">x</button>
     </li>
 </ul>
+<div>
+  <label for="new-adventurer">Adventurer name: </label>
+  <input id="new-adventurer" #adventurerName />
 
-<app-adventurer-detail [adventurer]="selectedAdventurer"></app-adventurer-detail>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button class="add-button" (click)="add(adventurerName.value); adventurerName.value=''">
+    Add Adventurer
+  </button>
+</div>

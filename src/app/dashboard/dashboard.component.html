@@ -1,0 +1,9 @@
+<h2>Top Adventurers</h2>
+<div class="adventurers-menu">
+    <a *ngFor="let adventurer of adventurers"
+        routerLink="/detail/{{adventurer.id}}">
+        {{adventurer.name}}
+    </a>
+</div>
+
+<app-adventurer-search></app-adventurer-search>
