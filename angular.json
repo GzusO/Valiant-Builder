@@ -6,7 +6,7 @@
 	"version": 1,
 	"newProjectRoot": "projects",
 	"projects": {
-		"Character-Builder": {
+		"Valiant-Builder": {
 			"projectType": "application",
 			"schematics": {
 				"@schematics/angular:application": {
@@ -23,7 +23,7 @@
 				"build": {
 					"builder": "@angular-devkit/build-angular:browser",
 					"options": {
-						"outputPath": "dist/Character-Builder",
+						"outputPath": "dist/Valiant-Builder",
 						"index": "src/index.html",
 						"main": "src/main.ts",
 						"polyfills": "src/polyfills.ts",
@@ -75,10 +75,10 @@
 					"builder": "@angular-devkit/build-angular:dev-server",
 					"configurations": {
 						"production": {
-							"browserTarget": "Character-Builder:build:production"
+							"browserTarget": "Valiant-Builder:build:production"
 						},
 						"development": {
-							"browserTarget": "Character-Builder:build:development"
+							"browserTarget": "Valiant-Builder:build:development"
 						}
 					},
 					"defaultConfiguration": "development"
@@ -86,7 +86,7 @@
 				"extract-i18n": {
 					"builder": "@angular-devkit/build-angular:extract-i18n",
 					"options": {
-						"browserTarget": "Character-Builder:build"
+						"browserTarget": "Valiant-Builder:build"
 					}
 				},
 				"test": {
@@ -110,5 +110,5 @@
 			}
 		}
 	},
-	"defaultProject": "Character-Builder"
+	"defaultProject": "Valiant-Builder"
 }
