@@ -1,10 +1,8 @@
 mat-toolbar {
   display: flex;
-  align-items: center;
-}
-
-.flex-stretch {
-  flex: 1 0 auto;
+  align-items: left;
+  width: 100%;
+  padding: 20px;
 }
 
 .content {
@@ -14,4 +12,10 @@ mat-toolbar {
 
 mat-card {
   max-width: 400px;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+.title {
+  width: 250px;
 }

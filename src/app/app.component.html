@@ -1,9 +1,16 @@
-<mat-toolbar >
-    Valiance Character Builder
-    <div class="flex-stretch"></div>
+<mat-toolbar>
+    <div class="title">
+        Valiance Character Builder
+    </div>
+    <span class="buttons">
         <a mat-stroked-button routerLink="/professions">Professions</a>
         <a mat-stroked-button routerLink="/lineages">Lineages</a>
+    </span>
+    <span class="spacer"></span>
+    <span class="toggle">
         <mat-slide-toggle [formControl]="toggleControl" class="mr-8"></mat-slide-toggle>
+        <mat-icon>bedtime</mat-icon>
+    </span>
 </mat-toolbar>
 <main class="content mat-app-background" >
     <router-outlet ></router-outlet>
