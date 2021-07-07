@@ -10,7 +10,7 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'Character Builder';
+  title = 'Valiant Builder';
 
   @HostBinding('class') className = '';
 
