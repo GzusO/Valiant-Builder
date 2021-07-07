@@ -1,27 +1,27 @@
 <h2>Professions</h2>
-
 <div class="cards">
-  <a *ngFor="let profession of professions" class="card">
-    <div>
-        <span class="badge" bp="float-left">{{profession.type}}</span>
-        <span class="name">{{profession.name}}</span>  
-        <hr>
-    </div>
+  <mat-card *ngFor="let profession of professions" class="card">
+    <mat-card-header>
+        <mat-card-title>
+          <span class="name">{{profession.name}}</span>  
+        </mat-card-title>
+        <mat-card-subtitle>
+          <span>{{profession.type}}</span>
+          <mat-divider></mat-divider>
+        </mat-card-subtitle>
+    </mat-card-header>
     <div *ngFor="let feature of profession.features">
+      <p>
         {{feature.description}}
-        <br>
-        <br>
-        <br>
-        <div *ngFor="let ability of feature.abilities">
-            <div class="trait">{{ability.name}} ({{ability.primaryTags}})</div>
-            <div class="secondaryTags">{{ability.secondaryTags}}</div>
-            <div class="tertiaryTags">{{ability.tertiaryTags}}</div>
-            <span>{{ability.description}}</span>
-        </div>
-        <div *ngFor="let trait of feature.traits">
-            <div class="trait">{{trait.name}}</div>
-            <span>{{trait.description}}</span>
-        </div>
-    </div> 
-  </a>
+      </p>
+      <div *ngFor="let ability of feature.abilities">
+        <span class="ability-name">{{ability.name}}</span>
+        <p>{{ability.description}}</p>
+      </div>
+      <div *ngFor="let trait of feature.traits">
+        <span class="trait-name">{{trait.name}}</span>
+        <p>{{trait.description}}</p>
+      </div>
+    </div>
+  </mat-card>
 </div>
