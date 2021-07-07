@@ -4,6 +4,7 @@ import { ProfessionListComponent } from './profession-list/profession-list.compo
 import { LineageListComponent } from './lineage-list/lineage-list.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/lineages', pathMatch: 'full' },
   { path: 'professions', component: ProfessionListComponent},
   { path: 'lineages', component: LineageListComponent}
 ];
