@@ -1,7 +1,15 @@
-<h1>{{title}}</h1>
-<nav>
-    <a routerLink="/adventurers">Adventurers</a>
-    <a routerLink="/dashboard">Dashboard</a>
-</nav>
-<router-outlet></router-outlet>
-<app-messages></app-messages>
+<mat-toolbar >
+    Valiance Character Builder
+    <div class="flex-stretch"></div>
+        <a mat-stroked-button routerLink="/professions">Professions</a>
+        <a mat-stroked-button routerLink="/lineages">Lineages</a>
+        <a mat-stroked-button routerLink="/characteristics">Characteristics</a>
+        <mat-icon class="mr-8">brightness_5</mat-icon>
+        <mat-slide-toggle [formControl]="toggleControl" class="mr-8"></mat-slide-toggle>
+</mat-toolbar>
+<main class="content mat-app-background" >
+    <router-outlet ></router-outlet>
+</main>
+
+<app-footer></app-footer>
+    

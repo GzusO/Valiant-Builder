@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AdventurerSearchComponent } from './adventurer-search.component';
+import { ProfessionListComponent } from './profession-list.component';
 
-describe('AdventurerSearchComponent', () => {
-  let component: AdventurerSearchComponent;
-  let fixture: ComponentFixture<AdventurerSearchComponent>;
+describe('ProfessionListComponent', () => {
+  let component: ProfessionListComponent;
+  let fixture: ComponentFixture<ProfessionListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AdventurerSearchComponent ]
+      declarations: [ ProfessionListComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AdventurerSearchComponent);
+    fixture = TestBed.createComponent(ProfessionListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

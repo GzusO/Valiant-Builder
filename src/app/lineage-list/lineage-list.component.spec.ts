@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AdventurersComponent } from './adventurers.component';
+import { LineageListComponent } from './lineage-list.component';
 
-describe('AdventurersComponent', () => {
-  let component: AdventurersComponent;
-  let fixture: ComponentFixture<AdventurersComponent>;
+describe('LineageListComponent', () => {
+  let component: LineageListComponent;
+  let fixture: ComponentFixture<LineageListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AdventurersComponent ]
+      declarations: [ LineageListComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AdventurersComponent);
+    fixture = TestBed.createComponent(LineageListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

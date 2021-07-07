@@ -1,0 +1,82 @@
+<div class="cards">
+  <mat-card *ngFor="let lineage of lineages" class="card">
+    <mat-card-header>
+      <mat-card-title><span>{{lineage.name}}</span>
+
+      </mat-card-title>
+      <mat-card-subtitle>
+        <mat-divider></mat-divider>
+      </mat-card-subtitle>
+    </mat-card-header>
+    
+    <mat-card-content>
+      <mat-tab-group headerPosition="below"dynamicHeight="true">
+        <mat-tab label="Info">
+          <p>
+            {{lineage.description}}
+          </p>
+          <h3>Persistent Feature</h3>
+            <mat-expansion-panel *ngFor="let feature of persistent(lineage.features)">
+              <mat-expansion-panel-header> <span class="feature">{{feature.name}}</span> </mat-expansion-panel-header>
+              <p>
+                {{feature.description}}
+              </p>
+              <div *ngFor="let ability of feature.abilities">
+                <span class="ability-name">{{ability.name}}</span>
+                <p>{{ability.description}}</p>
+              </div>
+              <div *ngFor="let trait of feature.traits">
+                <span class="trait-name">{{trait.name}}</span>
+                <p>{{trait.description}}</p>
+              </div>
+            </mat-expansion-panel>
+        </mat-tab>
+        <mat-tab label="Primary">
+          <mat-accordion>
+            <mat-expansion-panel *ngFor="let feature of primary(lineage.features)">
+              <mat-expansion-panel-header>
+                <span class="feature">{{feature.name}}</span>
+              </mat-expansion-panel-header>
+              <p>
+                {{feature.description}}
+              </p>
+              <div *ngFor="let ability of feature.abilities">
+                <span class="ability-name">{{ability.name}} ({{ability.primaryTags}})</span>
+                <div *ngIf="ability.secondaryTags.length !== 0">{{ability.secondaryTags}}</div>
+                <div *ngIf="ability.tertiaryTags.length !== 0">{{ability.tertiaryTags}}</div>
+                <p>{{ability.description}}</p>
+              </div>
+              <div *ngFor="let trait of feature.traits">
+                <span class="trait-name">{{trait.name}}</span>
+                <p>{{trait.description}}</p>
+              </div>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </mat-tab>
+        <mat-tab label="Secondary">
+          <mat-accordion>
+            <mat-expansion-panel *ngFor="let feature of secondary(lineage.features)">
+              <mat-expansion-panel-header>
+                <span class="feature">{{feature.name}}</span>
+              </mat-expansion-panel-header>
+              <p>
+                {{feature.description}}
+              </p>
+              <div *ngFor="let ability of feature.abilities">
+                <span class="ability-name">{{ability.name}} ({{ability.primaryTags}})</span>
+                <div *ngIf="ability.secondaryTags.length !== 0">{{ability.secondaryTags}}</div>
+                <div *ngIf="ability.tertiaryTags.length !== 0">{{ability.tertiaryTags}}</div>
+                <p>{{ability.description}}</p>
+              </div>
+              <div *ngFor="let trait of feature.traits">
+                <span class="trait-name">{{trait.name}}</span>
+                <p>{{trait.description}}</p>
+              </div>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card-content>
+  </mat-card>
+</div>
+  

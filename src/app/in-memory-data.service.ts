@@ -12,7 +12,6 @@ export class InMemoryDataService implements InMemoryDbService {
         name: 'Nakoa',
         tier: 1,
         tags: ['pc', 'test'],
-        profession: 'Beggar',
         lineage: 'Human',
         physicalPower: 1,
         physicalAcuity: 1,
