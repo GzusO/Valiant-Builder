@@ -1,5 +1,3 @@
-import { LineageListComponent } from "./lineage-list/lineage-list.component";
-
 export interface Trait{
     name: string;
     types: string[];
@@ -33,7 +31,11 @@ export interface Lineage {
     features: Feature[];
 }
 
-
+export interface Characteristic{
+    name: string;
+    description: string;
+    scores?: Map<Number,Feature>;
+}
 export interface Adventurer{
     id: number;
     name: string;

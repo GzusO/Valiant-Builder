@@ -1,0 +1,22 @@
+<h2>Professions</h2>
+<div class="cards">
+  <mat-card *ngFor="let characteristic of characteristics" class="card">
+    <mat-card-header>
+        <mat-card-title>
+          <span class="name">{{characteristic.name}}</span>  
+        </mat-card-title>
+        <mat-card-subtitle>
+            {{characteristic.description}}
+          <mat-divider></mat-divider>
+        </mat-card-subtitle>
+    </mat-card-header>
+        <mat-accordion multi="true">
+            <mat-expansion-panel *ngFor="let feature of characteristic.scores | keyvalue" class="mat-elevation-z0">
+                <mat-expansion-panel-header> <span class="feature">{{feature.key}}</span> </mat-expansion-panel-header>
+                <p>
+                  {{feature.value.description}}
+                </p>
+              </mat-expansion-panel>
+        </mat-accordion>
+  </mat-card>
+</div>

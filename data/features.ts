@@ -125,5 +125,12 @@ export const featureData: Feature[] =[
     {name:'Natural Aspects',types:['Lineage','Vyld','Secondary'],description:'Vyld are undeniably closer to nature than other peoples.',abilities:[],traits:[]},
     {name:'Path of the Warrior',types:['Lineage','Vyld','Secondary'],description:'The Vyld have earned a reputation as a warrior people. While not always true, a clever Vyld can use this to their advantage.',abilities:[],traits:[]},
     
-    //Class Features
+    //Characteristic Features
+    {name:'Meek Form',types:['Characteristic','Physical Power','Tier 1'],description:'You are able to move your body, and maybe even lift small objects without hurting yourself.',abilities:[],traits:[]},
+    {name:'Physical Training',types:['Characteristic','Physical Power','Tier 2'],description:'Through moderate physical activity, you have become slightly more than skin and bones.',abilities:[],traits:[]},
+    {name:'Athletic Form',types:['Characteristic','Physical Power','Tier 3'],description:'Whether through regular training or natural gifts, you have physical capabilities beyond the average person.',abilities:[],traits:[]},
+    {name:'Powerful Build',types:['Characteristic','Physical Power','Tier 4'],description:'You have trained and labored, and have become a physical force to be reckoned with.',abilities:[],traits:[]},
+    {name:'Perfect Form',types:['Characteristic','Physical Power','Tier 5'],description:'You have pushed your body to its limits, and then beyond. You are nearly unmatched in physical prowess.',abilities:[],traits:[]},
+    
+    
 ]

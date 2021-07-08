@@ -24,14 +24,17 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatDividerModule } from '@angular/material/divider';
-import { FooterComponent } from './footer/footer.component'
+import {MatTableModule} from '@angular/material/table'; 
+import { FooterComponent } from './footer/footer.component';
+import { CharacteristicListComponent } from './characteristic-list/characteristic-list.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfessionListComponent,
     LineageListComponent,
-    FooterComponent
+    FooterComponent,
+    CharacteristicListComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +58,8 @@ import { FooterComponent } from './footer/footer.component'
     MatToolbarModule,
     MatGridListModule,
     MatTabsModule,
-    MatDividerModule
+    MatDividerModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

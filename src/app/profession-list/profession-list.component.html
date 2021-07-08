@@ -10,18 +10,20 @@
           <mat-divider></mat-divider>
         </mat-card-subtitle>
     </mat-card-header>
-    <div *ngFor="let feature of profession.features">
-      <p>
-        {{feature.description}}
-      </p>
-      <div *ngFor="let ability of feature.abilities">
-        <span class="ability-name">{{ability.name}}</span>
-        <p>{{ability.description}}</p>
+    <mat-card-content>
+      <div *ngFor="let feature of profession.features">
+        <p>
+          {{feature.description}}
+        </p>
+        <div *ngFor="let ability of feature.abilities">
+          <span class="ability-name">{{ability.name}}</span>
+          <p>{{ability.description}}</p>
+        </div>
+        <div *ngFor="let trait of feature.traits">
+          <span class="trait-name">{{trait.name}}</span>
+          <p>{{trait.description}}</p>
+        </div>
       </div>
-      <div *ngFor="let trait of feature.traits">
-        <span class="trait-name">{{trait.name}}</span>
-        <p>{{trait.description}}</p>
-      </div>
-    </div>
+    </mat-card-content>
   </mat-card>
 </div>
