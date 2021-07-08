@@ -1,8 +1,9 @@
+<h2>Lineages</h2>
 <div class="cards">
   <mat-card *ngFor="let lineage of lineages" class="card">
     <mat-card-header>
-      <mat-card-title><span>{{lineage.name}}</span>
-
+      <mat-card-title>
+        <span class="name">{{lineage.name}}</span>
       </mat-card-title>
       <mat-card-subtitle>
         <mat-divider></mat-divider>
@@ -32,6 +33,7 @@
             </mat-expansion-panel>
         </mat-tab>
         <mat-tab label="Primary">
+          <h3>Primary Features</h3>
           <mat-accordion>
             <mat-expansion-panel *ngFor="let feature of primary(lineage.features)">
               <mat-expansion-panel-header>
@@ -54,6 +56,7 @@
           </mat-accordion>
         </mat-tab>
         <mat-tab label="Secondary">
+          <h3>Secondary Features</h3>
           <mat-accordion>
             <mat-expansion-panel *ngFor="let feature of secondary(lineage.features)">
               <mat-expansion-panel-header>

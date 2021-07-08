@@ -1,16 +1,4 @@
-.badge {
-    display: inline-block;
-    font-size: small;
-    color: white;
-    padding: 0.8em 0.7em 0 0.7em;
-    background-color:#405061;
-    line-height: 1em;
-    position: relative;
-    height: 1.8em;
-    margin-right: .8em;
-    border-radius: 0 4px 4px 0;
-  }
-  .cards {
+.cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     grid-gap: 20px;
@@ -45,12 +33,6 @@
 .feature{
     font-size: medium;
     font-weight: bold;
-}
-.trait{
-    padding-left: .25em;
-}
-.ability{
-    padding-left: .25em;
 }
 
 //Shrink Tab Header
