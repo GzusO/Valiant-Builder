@@ -7,6 +7,7 @@ import { professionData } from 'data/professions';
 import { lineageData } from 'data/lineages';
 import { Observable, of } from 'rxjs';
 import { characteristicData } from 'data/characteristics';
+import { LineageListComponent } from './lineage-list/lineage-list.component';
 
 @Injectable({
   providedIn: 'root'
@@ -56,14 +57,7 @@ export class DataService {
     //Map abilties to Features
     features.map(x=>x.abilities = (abilities.filter(y => y.types.includes(x.name))!));
 
-    for (let index = 0; index < characteristics.length; index++) {
-      const element = characteristics[index];
-      element.scores = new Map<Number,Feature>();
-      const validFeatures: Feature[] = features.filter(x=> x.types.includes(element.name)).filter(x=> x.types.some(y => y.startsWith("Tier")))
-      for(let index2 = 0; index2 < validFeatures.length;index2++){
-        characteristics[index].scores?.set(Number(validFeatures[index2].types.find(x=> x.startsWith("Tier"))?.split(' ')[1]),validFeatures[index2])
-      }
-    }
+    characteristics.map(x => x.features = (features.filter(y => y.types.includes(x.name))).sort((a,b) => a.tier-b.tier));
 
     return of(characteristics)
   }

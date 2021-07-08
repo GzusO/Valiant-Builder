@@ -11,10 +11,10 @@
         </mat-card-subtitle>
     </mat-card-header>
         <mat-accordion multi="true">
-            <mat-expansion-panel *ngFor="let feature of characteristic.scores | keyvalue" class="mat-elevation-z0">
-                <mat-expansion-panel-header> <span class="feature">{{feature.key}}</span> </mat-expansion-panel-header>
+            <mat-expansion-panel *ngFor="let feature of characteristic.features" class="mat-elevation-z0">
+                <mat-expansion-panel-header> <span class="feature">{{feature.tier}} - {{feature.name}}</span> </mat-expansion-panel-header>
                 <p>
-                  {{feature.value.description}}
+                  {{feature.description}}
                 </p>
               </mat-expansion-panel>
         </mat-accordion>

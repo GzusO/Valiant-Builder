@@ -17,6 +17,7 @@ export interface Feature{
     traits: Trait[];
     abilities: Ability[];
     description: string;
+    tier: number;
 }
 
 export interface Profession{
@@ -34,7 +35,7 @@ export interface Lineage {
 export interface Characteristic{
     name: string;
     description: string;
-    scores?: Map<Number,Feature>;
+    features: Feature[];
 }
 export interface Adventurer{
     id: number;
