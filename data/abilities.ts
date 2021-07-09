@@ -53,7 +53,7 @@ export const abilityData: Ability[] =[
     //Physical Power Abilities
     {name:'Shove',types:['Characteristic','Physical Power','Athletic Form'],primaryTags:['Energy 4','Combat'],secondaryTags:['Action'],tertiaryTags:['Melee'],description:'Move a target 1 tile directly away from you. Cannot target characters that are a larger size than you.'},
     {name:'Grab',types:['Characteristic','Physical Power','Athletic Form'],primaryTags:['Energy 6','Combat'],secondaryTags:['Action'],tertiaryTags:['Melee','Focus 10'],description:'You and Your target\'s movement is set to 0. You must have one free hand to use this ability. That hand becomes unusable while focusing on this ability. The effects of this ability end if the target becomes invalid.'},
-    {name:'Exert',types:['Characteristic','Physical Power','Perfect Form'],primaryTags:['Energy 6','Combat'],secondaryTags:['Reaction'],tertiaryTags:[],description:'You attack ability resolves or you take part in a physical power characteristic contest: apply +1 Exertion to the triggering contest.'},
+    {name:'Exert',types:['Characteristic','Physical Power','Perfect Form'],primaryTags:['Energy 6','Combat'],secondaryTags:['Reaction'],tertiaryTags:[],description:'Your attack ability resolves or you take part in a physical power characteristic contest: apply +1 Exertion to the triggering contest.'},
 
     //Physical Acuity Abilities
     {name:'Rush',types:['Characteristic','Physical Acuity','Honed Agility'],primaryTags:['Energy 2x','Combat'],secondaryTags:['Reaction'],tertiaryTags:[],description:'your move phase ends: move up to x tiles (up to your movement).'},
