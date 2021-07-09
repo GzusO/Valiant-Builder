@@ -1,10 +1,10 @@
 import { Characteristic } from "src/app/adventurer";
 
 export const characteristicData: Characteristic[] = [
-    {name:'Physical Power',description:'Primary Attributes: Lethality, Force'},
-    {name:'Physical Acuity',description:'Primary Attribute: Movement'},
-    {name:'Physical Resilience',description:'Primary Attributes: Defence, Resistance'},
-    {name:'Mental Power',description:'Primary Attribute: Focus'},
-    {name:'Mental Acuity',description:'Primary Attribute: Combat Speed'},
-    {name:'Mental Resistance',description:'Primary Attributes: Energy, Endurance, Death Resistance'},
+    {name:'Physical Power',description:'Primary Attributes: Lethality, Force', features:[]},
+    {name:'Physical Acuity',description:'Primary Attribute: Movement', features:[]},
+    {name:'Physical Resilience',description:'Primary Attributes: Defence, Resistance', features:[]},
+    {name:'Mental Power',description:'Primary Attribute: Focus', features:[]},
+    {name:'Mental Acuity',description:'Primary Attribute: Combat Speed', features:[]},
+    {name:'Mental Resilience',description:'Primary Attributes: Energy, Endurance, Death Resistance', features:[]},
 ]

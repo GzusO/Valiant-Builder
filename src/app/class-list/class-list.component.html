@@ -1,9 +1,9 @@
-<h2>Characteristics</h2>
-<mat-tab-group style="width: 50%;">
-  <mat-tab *ngFor="let characteristic of characteristics" label="{{characteristic.name}}">
-    <p>{{characteristic.description}}</p>
+<h2>Classes</h2>
+<mat-tab-group style="width: 55%;">
+  <mat-tab *ngFor="let class of classes" label="{{class.name}}">
+    <p>{{class.description}}</p>
     <mat-accordion multi="true">
-      <mat-expansion-panel *ngFor="let feature of characteristic.features">
+      <mat-expansion-panel *ngFor="let feature of class.features">
         <mat-expansion-panel-header>
           <mat-panel-title>
             Score: {{feature.tier}} 
