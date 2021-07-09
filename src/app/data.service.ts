@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Ability, Trait, Feature,Profession, Lineage, Characteristic } from './adventurer';
+import { Ability, Trait, Feature,Profession, Lineage, Characteristic, Class } from './adventurer';
 import { abilityData } from 'data/abilities';
 import { featureData } from 'data/features';
 import { traitData } from 'data/traits';
@@ -8,6 +8,7 @@ import { lineageData } from 'data/lineages';
 import { Observable, of } from 'rxjs';
 import { characteristicData } from 'data/characteristics';
 import { LineageListComponent } from './lineage-list/lineage-list.component';
+import { classData } from 'data/classes';
 
 @Injectable({
   providedIn: 'root'
@@ -59,7 +60,12 @@ export class DataService {
 
     characteristics.map(x => x.features = (features.filter(y => y.types.includes(x.name))).sort((a,b) => a.tier-b.tier));
 
-    return of(characteristics)
+    return of(characteristics);
+  }
+
+  getClasses(): Observable<Class[]>{
+    const classes = classData;
+    return of (classes);
   }
 
   constructor() { }

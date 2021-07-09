@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Class } from '../adventurer';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-class-list',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./class-list.component.scss']
 })
 export class ClassListComponent implements OnInit {
-
-  constructor() { }
+  classes: Class[] = [];
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
+    this.getClasses();
   }
-
+  getClasses(): void {
+    this.dataService.getClasses().subscribe(classes => this.classes = classes);
+  }
 }
