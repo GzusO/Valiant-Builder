@@ -2,6 +2,7 @@ export interface Trait{
     name: string;
     types: string[];
     description: string;
+    tier: number;
 }
 export interface Ability{
     name: string;
@@ -10,6 +11,7 @@ export interface Ability{
     secondaryTags: string[];
     tertiaryTags: string[];
     description: string;
+    tier: number;
 }
 export interface Feature{
     name: string;
@@ -37,6 +39,16 @@ export interface Characteristic{
     description: string;
     features: Feature[];
 }
+
+export interface Class{
+    name: string;
+    description: string;
+    globalAbilityName: string;
+    features: Feature[];
+    abilities: Ability[];
+    traits: Trait[];
+}
+
 export interface Adventurer{
     id: number;
     name: string;
