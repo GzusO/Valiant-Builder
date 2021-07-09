@@ -126,11 +126,47 @@ export const featureData: Feature[] =[
     {name:'Path of the Warrior',types:['Lineage','Vyld','Secondary'],description:'The Vyld have earned a reputation as a warrior people. While not always true, a clever Vyld can use this to their advantage.',abilities:[],traits:[],tier:0},
     
     //Characteristic Features
+
+    //Physical Power Features
     {name:'Meek Form',types:['Characteristic','Physical Power'],description:'You are able to move your body, and maybe even lift small objects without hurting yourself.',abilities:[],traits:[],tier:1},
     {name:'Physical Training',types:['Characteristic','Physical Power'],description:'Through moderate physical activity, you have become slightly more than skin and bones.',abilities:[],traits:[],tier:2},
     {name:'Athletic Form',types:['Characteristic','Physical Power'],description:'Whether through regular training or natural gifts, you have physical capabilities beyond the average person.',abilities:[],traits:[],tier:3},
     {name:'Powerful Build',types:['Characteristic','Physical Power'],description:'You have trained and labored, and have become a physical force to be reckoned with.',abilities:[],traits:[],tier:4},
     {name:'Perfect Form',types:['Characteristic','Physical Power'],description:'You have pushed your body to its limits, and then beyond. You are nearly unmatched in physical prowess.',abilities:[],traits:[],tier:5},
     
+    //Physical Acuity Features
+    {name:'Simple Agility',types:['Characteristic','Physical Acuity'],description:'You can move at appreciable speeds. Nothing special, but it gets the job done.', tier:1,abilities:[],traits:[]},
+    {name:'Quick Feet',types:['Characteristic','Physical Acuity'],description:'While you won\'t win any races, you could probably run one without making a fool of yourself.', tier:2,abilities:[],traits:[]},
+    {name:'Honed Agility',types:['Characteristic','Physical Acuity'],description:'You are faster than most, and your coordination and finesse are something of note.', tier:3,abilities:[],traits:[]},
+    {name:'Improved Dexterity',types:['Characteristic','Physical Acuity'],description:'You have further improved your physical speed and coordination. You find that most people can no longer keep up with you.', tier:4,abilities:[],traits:[]},
+    {name:'Absolute Agility',types:['Characteristic','Physical Acuity'],description:'Your body is under your total control. Every movement is clean, deliberate, and blidningly quick.', tier:5,abilities:[],traits:[]},
+    
+    //Physical Resilience Features
+    {name:'Thin Skin',types:['Characteristic','Physical Resilience'],description:'You have some inherent barriers included in your physiology. It might keep you from dying.', tier:1,abilities:[],traits:[]},
+    {name:'Natural Defence',types:['Characteristic','Physical Resilience'],description:'You are capable of protecting your vitals, pushing through minor scrapes and bruises.', tier:2,abilities:[],traits:[]},
+    {name:'Thick Skin',types:['Characteristic','Physical Resilience'],description:'Your tough hide is a natural deterrent to those wishing you harm.', tier:3,abilities:[],traits:[]},
+    {name:'Reinforced Body',types:['Characteristic','Physical Resilience'],description:'You leave almost no openings in your defence, and brush off light blows with ease.', tier:4,abilities:[],traits:[]},
+    {name:'Stone Skin',types:['Characteristic','Physical Resilience'],description:'Your flesh is stone, and your body an immovable object.', tier:5,abilities:[],traits:[]},
+    
+    //Mental Power Features
+    {name:'Basic Cognition',types:['Characteristic','Mental Power'],description:'You have achieved the bare minimum intelligence to be considered sentient. Congratulations!', tier:1,abilities:[],traits:[]},
+    {name:'Deduction',types:['Characteristic','Mental Power'],description:'You have grasped the concepts of logic and reasoning.', tier:2,abilities:[],traits:[]},
+    {name:'Advanced Cognition',types:['Characteristic','Mental Power'],description:'Plans and designs are your tools to success. Through patterns, you can predict the future.', tier:3,abilities:[],traits:[]},
+    {name:'Expanded Mind',types:['Characteristic','Mental Power'],description:'Your mental prowess is exceptional, and your capability for complex tasks notable.', tier:4,abilities:[],traits:[]},
+    {name:'Ascended Cognition',types:['Characteristic','Mental Power'],description:'you have reached the limits of the mind\'s capabilities. There is no problem you cannot fidn the solution to.', tier:5,abilities:[],traits:[]},
+    
+    //Mental Acuity Features
+    {name:'Basic Wit',types:['Characteristic','Mental Acuity'],description:'You can react to external stimuli in a somewhat timely manner.', tier:1,abilities:[],traits:[]},
+    {name:'Instincts',types:['Characteristic','Mental Acuity'],description:'You are able to quickly and automatically respond, giving you an edge over the sloths of the world.', tier:2,abilities:[],traits:[]},
+    {name:'Advanced Wit',types:['Characteristic','Mental Acuity'],description:'You have committed to instinct what others must accomplish actively and deliberately', tier:3,abilities:[],traits:[]},
+    {name:'Razor Instincts',types:['Characteristic','Mental Acuity'],description:'You have honed your instincts to a deadly edge.', tier:4,abilities:[],traits:[]},
+    {name:'Perfect Wit',types:['Characteristic','Mental Acuity'],description:'You have become virtually incapable of stuttering, faltering, or stammering.', tier:5,abilities:[],traits:[]},
+    
+    //Mental Resilience Features
+    {name:'Fragile Will',types:['Characteristic','Mental Resilience'],description:'You can almost stand up for yourself.', tier:1,abilities:[],traits:[]},
+    {name:'Mental Fortitude',types:['Characteristic','Mental Resilience'],description:'You can hold yourself together well enough to avoid crubmling in the face of adversity.', tier:2,abilities:[],traits:[]},
+    {name:'Iron Will',types:['Characteristic','Mental Resilience'],description:'your willis stronger than most people\'s. You stand tall against threats that other would cower from.', tier:3,abilities:[],traits:[]},
+    {name:'Tested Psyche',types:['Characteristic','Mental Resilience'],description:'You are no stranger to adversary. You have trained yourself to be unflinching in the most uncertain of times, to the point of being an inspiration to others.', tier:4,abilities:[],traits:[]},
+    {name:'Perfect Will',types:['Characteristic','Mental Resilience'],description:'Your will is your being, and both are neigh unbreakable.', tier:5,abilities:[],traits:[]},
     
 ]

@@ -119,4 +119,41 @@ export const traitData: Trait[] = [
     {name:'Beast Bond',types:['Lineage','Vyld','Natural Aspects'],description:'You are able to more easily befriend beats, and can communicate with them to a limited degree.'},
     {name:'Warrior Impressions',types:['Lineage','Vyld','Path of the Warrior'],description:'Regardless of your actual physical appearance, those that don\'t know you assume you are a capable warrior.'},
     
+    //Charactertistic Traits
+
+    //Physical Power Traits
+    {name:'Weight Threshold',types:['Characteristic','Meek Form','Physical Power'],description:'Your base weight threshold is 50 lb. Your total weight threshold is your base threshold multiplied by your Physical Power score.'},
+    {name:'Strength',types:['Characteristic','Physical Training','Physical Power'],description:'Gain +2 lethality and +2 force.'},
+    {name:'Improved Strength',types:['Characteristic','Powerful Build','Physical Power'],description:'Gain +2 lethality and +2 force. Gain lethality and force equal to half of your tier (rounded down, minimum 1).'},
+    {name:'Improved Weight Threshold',types:['Characteristic','Perfect Form','Physical Power'],description:'Increase your base threshold by 25 lb.'},
+    
+    //Physical Acuity Traits
+    {name:'Basic Movement',types:['Characteristic','Physical Acuity','Simple Agility'],description:'You have a base movment of 5.'},
+    {name:'Movement',types:['Characteristic','Physical Acuity','Quick Feet'],description:'Gain +1 movement.'},
+    {name:'Improved Movement',types:['Characteristic','Physical Acuity','Improved Dexterity'],description:'Gain +1 movement.'},
+    
+    //Physical Resilience Traits
+    {name:'Basic Defence',types:['Characteristic','Physical Resilience','Thin Skin'],description:'You have a base defence of 7.'},
+    {name:'Basic Energy',types:['Characteristic','Physical Resilience','Thin Skin'],description:'You have a base energy of 28.'},
+    {name:'Hardiness',types:['Characteristic','Physical Resilience','Natural Defence'],description:'Gain +2 defence and +2 resistance.'},
+    {name:'Improve Hardiness',types:['Characteristic','Physical Resilience','Reinforced Body'],description:'Gain +2 defence and +2 resistance. Gain defence and resistance equal to half of your tier (rounded down, minimum 1).'},
+
+    //Mental Power Traits
+    {name:'Basic Focus',types:['Characteristic','Mental Power','Basic Cognition'],description:'You have 1 base focus slot.'},
+    {name:'Inherent Languages',types:['Characteristic','Mental Power','Basic Cognition'],description:'You know the language of your dominant lineage(s) and the language of your home nation, if you have a hom nation with its own language.'},
+    {name:'Focus',types:['Characteristic','Mental Power','Deduction'],description:'Gain +1 focus slots.'},
+    {name:'Improved Focus',types:['Characteristic','Mental Power','Expanded Mind'],description:'Gain +1 focus slots.'},
+    
+    //Mental Acuity Traits
+    {name:'Speed',types:['Characteristic','Mental Acuity','Instincts'],description:'Gain +2 combat speed.'},
+    {name:'Improved Speed',types:['Characteristic','Mental Acuity','Razor Instincts'],description:'Gain +2 combat speed.'},
+    {name:'Relaxed',types:['Characteristic','Mental Acuity','Perfect Wit'],description:'Permanently gain the relaxed 1 boon. If you are tier 6 or higher, gain the relaxed 2 boon instead.'},
+    
+    //Mental Resistance
+    {name:'Basic Death Resistance',types:['Characteristic','Mental Resilience','Fragile Will'],description:'You have a base death resistance of 3.'},
+    {name:'Basic Endurance',types:['Characteristic','Mental Resilience','Fragile Will'],description:'You have a base endurance of 1.'},
+    {name:'Conditioning',types:['Characteristic','Mental Resilience','Mental Fortitude'],description:'Gain +12 energy and +1 death resistance.'},
+    {name:'Improved Conditioning',types:['Characteristic','Mental Resilience','Tested Psyche'],description:'Gain +12 energy and +1 death resistance. Gain energy equal to threee times your tier.'},
+    {name:'Improved Endurance',types:['Characteristic','Mental Resilience','Perfect Will'],description:'Gain +1 endurance.'},
+    
 ]

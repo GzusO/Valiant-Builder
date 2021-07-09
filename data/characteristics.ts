@@ -6,5 +6,5 @@ export const characteristicData: Characteristic[] = [
     {name:'Physical Resilience',description:'Primary Attributes: Defence, Resistance', features:[]},
     {name:'Mental Power',description:'Primary Attribute: Focus', features:[]},
     {name:'Mental Acuity',description:'Primary Attribute: Combat Speed', features:[]},
-    {name:'Mental Resistance',description:'Primary Attributes: Energy, Endurance, Death Resistance', features:[]},
+    {name:'Mental Resilience',description:'Primary Attributes: Energy, Endurance, Death Resistance', features:[]},
 ]
