@@ -28,7 +28,7 @@ export const traitData: Trait[] = [
     {name: 'Educated', types: ['Profession','Scholar'], description: 'You are able to speak two additional languages.',tier:0},
     {name: 'Scholar Funds', types: ['Profession','Scholar'], description: 'You start with 2,000 tins.',tier:0},
     {name: 'Open Arms', types: ['Profession','Priest'], description: 'You and any characters allied with you are able to find sanctuary in any temple belonging to your religion, given you are not a known enemy of the temple.',tier:0},
-    {name: 'Priest Funds', types: ['Profesion','Priest'], description: 'You start with 1,500 tins.',tier:0},
+    {name: 'Priest Funds', types: ['Profession','Priest'], description: 'You start with 1,500 tins.',tier:0},
     {name: 'Disease Cure', types: ['Profession','Physician'], description: 'You are able to cure diseases. It costs you half of the usual cost to procure the treatments and cure the disease (given the reagents are available). To cure a disease, you must spend a number of days equal to 1 plus the disease\'s tier with the patient.',tier:0},
     {name: 'Physician Funds', types: ['Profession','Physician'], description: 'You start with 2,500 tins.',tier:0},
     {name: 'Criminal Funds', types: ['Profession','Criminal'], description: 'You start with 2,000 tins.',tier:0},
@@ -155,5 +155,22 @@ export const traitData: Trait[] = [
     {name:'Conditioning',types:['Characteristic','Mental Resilience','Mental Fortitude'],description:'Gain +12 energy and +1 death resistance.',tier:0},
     {name:'Improved Conditioning',types:['Characteristic','Mental Resilience','Tested Psyche'],description:'Gain +12 energy and +1 death resistance. Gain energy equal to threee times your tier.',tier:0},
     {name:'Improved Endurance',types:['Characteristic','Mental Resilience','Perfect Will'],description:'Gain +1 endurance.',tier:0},
+    
+
+    //Class Tratis
+
+    //Aspirant Traits
+    {name:'Beginner\'s Repertoire',types:['Class','Aspirant','Arcane Basics'],description:'When you gain this trait, select any tier 1 ability from the Arcanist Repertoire pool and gain access to that ability. If you gain a repertoire by investing into the Arcanist class path, add this ability to your repertoire. See the Arcanist global feature for more information.',tier:0},
+    {name:'Beginner\'s Techniques',types:['Class','Aspirant','Warfare Basics'],description:'When you gain this trait, select any tier 1 ability from the Warrior Techniques pool and gain access to that ability. If you gain access to additional techniques by investing into the Warrior class path, keep this technique and increase your Warrior Technique slots by 1 (using the additional slot for your known technique). See the Warrior global feature for more information.',tier:0},
+    {name:'Beginner\'s Strategies',types:['Class','Aspirant','Tactical Basics'],description:'When you gain this trait, learn one tier 1 trait from the Specialist Strategies pool. If you gain access to additional strategies by investing into the Specialist class path, keep this strategy in your known Specialist Strategies pool. See the Specialist global feature for more information.',tier:0},
+    {name:'Ascendant Growth',types:['Class','Aspirant','Ascendant Bond'],description:'Wherever you may find yourself, a small sentient critter or plant (your Ascendant) follows you. You and your Ascendant share a permanent telepathic link. If it dies or is destroyed, it regrows nearby 1 hour after it is destroyed. Your Ascendant does not count as a character, and dies if it is more than 10 ft. away from you. Due to your Ascendant’s innate senses, you cannot be blind or conditionally blind to any characters within 10 ft. of you while your Ascendant is alive. Your ascendant can manipulate objects no heavier than 5 lb. within 10 ft. of you, but cannot use any abilities or equipment as it is not a character.',tier:0},
+    {name:'Thrill of Combat',types:['Class','Aspirant','Daring Flair'],description:'You gain +1 lethality and +1 defence for every enemy character that is adjacent to you.',tier:0},
+    {name:'Lightened Loads',types:['Class','Aspirant','Light Traveler'],description:'Your tavel group gains +2 range.',tier:0},
+    {name:'Simple Market Knowledge',types:['Class','Aspirant','Basic Economy'],description:'You always know if a trade you are making is not in your favor.',tier:0},
+    {name:'Salesman',types:['Class','Aspirant','Basic Economy'],description:'When you sell items to merchants, you always get at least half of the Cost of the Item, granted the merchant is willing to buy that item and can afford it.',tier:0},
+    {name:'Pleasantly Disarming',types:['Class','People Person','Aspirant'],description:'Characters won\'t be openly hostile towards without provocation.',tier:0},
+    {name:'Slight of Mind',types:['Class','People Person','Aspirant'],description:'In any contests that uses your mental acuity, gain a +1 to your total.',tier:0},
+    {name:'Able Frame',types:['Class','Pack Mule','Aspirant'],description:'Your base weight threshold is increased by 10 lb.',tier:0},
+    {name:'Pocket Snacks',types:['Class','Pack Mule','Aspirant'],description:'Your travel group gains +1 provision score.',tier:0},
     
 ]
