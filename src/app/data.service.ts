@@ -65,6 +65,17 @@ export class DataService {
 
   getClasses(): Observable<Class[]>{
     const classes = classData;
+    const features= featureData;
+    const traits = traitData;
+    const abilities = abilityData;
+
+    //Map traits to Features
+    features.map(x=>x.traits = (traits.filter(y => y.types.includes(x.name))!));
+    //Map abilties to Features
+    features.map(x=>x.abilities = (abilities.filter(y => y.types.includes(x.name))!));
+
+    classes.map(x => x.features = (features.filter(y => y.types.includes(x.name))).sort((a,b) => a.tier-b.tier));
+
     return of (classes);
   }
 
