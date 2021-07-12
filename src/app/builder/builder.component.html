@@ -1,0 +1,41 @@
+<mat-stepper>
+    <mat-step>
+        <div>Available Points {{characteristicPoints}}</div>
+        <table class="characteristics">
+            <tr class="characteristic" *ngFor="let char of characteristics">
+                <td class="name">{{char.name}}</td> 
+                <td class="value">{{valiantCharacteristics.get(char.name)}}</td>
+                <td class="buttons">
+                    <button mat-stroked-button (click)="consumePoint(char.name,1)">+</button>
+                    <button mat-stroked-button (click)="consumePoint(char.name,-1)">-</button>
+                </td>
+            </tr>   
+        </table>
+        <div>
+            <button mat-button matStepperNext>Next</button>
+        </div>
+    </mat-step>
+    <mat-step label="Lineage">
+        <div>
+            <button mat-button matStepperPrevious>Previous</button>
+            <button mat-button matStepperNext>Next</button>
+        </div>
+    </mat-step>
+    <mat-step label="Profession">
+        <div>
+            <button mat-button matStepperPrevious>Previous</button>
+            <button mat-button matStepperNext>Next</button>
+        </div>
+    </mat-step>
+    <mat-step label="Class">
+        <div>
+            <button mat-button matStepperPrevious>Previous</button>
+            <button mat-button matStepperNext>Next</button>
+        </div>
+    </mat-step>
+    <mat-step label="Character">
+        <div>
+            <button mat-button matStepperPrevious>Previous</button>
+        </div>
+    </mat-step>
+</mat-stepper>

@@ -27,7 +27,10 @@ import { MatDividerModule } from '@angular/material/divider';
 import {MatTableModule} from '@angular/material/table'; 
 import { FooterComponent } from './footer/footer.component';
 import { CharacteristicListComponent } from './characteristic-list/characteristic-list.component';
-import { ClassListComponent } from './class-list/class-list.component'
+import { ClassListComponent } from './class-list/class-list.component';
+import { BuilderComponent } from './builder/builder.component'
+import { MatStepperModule} from '@angular/material/stepper'
+import { MatChipsModule} from '@angular/material/chips'
 
 @NgModule({
   declarations: [
@@ -36,7 +39,8 @@ import { ClassListComponent } from './class-list/class-list.component'
     LineageListComponent,
     FooterComponent,
     CharacteristicListComponent,
-    ClassListComponent
+    ClassListComponent,
+    BuilderComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +65,9 @@ import { ClassListComponent } from './class-list/class-list.component'
     MatGridListModule,
     MatTabsModule,
     MatDividerModule,
-    MatTableModule
+    MatTableModule,
+    MatStepperModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
