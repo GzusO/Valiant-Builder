@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { Characteristic } from '../adventurer';
+import { Observable, of } from 'rxjs';
+import { startWith } from 'rxjs/operators';
+import { Characteristic, Feature, Lineage } from '../adventurer';
 import { DataService } from '../data.service';
+import { Pipe, PipeTransform } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-builder',
@@ -12,20 +16,29 @@ export class BuilderComponent implements OnInit {
     characteristics: Characteristic[] =[];
     characteristicPoints: number = 2;
     valiantCharacteristics: Map<string,number> = new Map<string,number>();
-  constructor(fb: FormBuilder, private dataService: DataService) {
+    valiantLineages: string[] = [];
+    lineages: Lineage[] = [];
+    lineageFeatures: Feature[] =[];
+
+  constructor(private dataService: DataService) {
       this.getCharacteristics();
-      this.characteristics.forEach(char =>
-        this.valiantCharacteristics.set(char.name,1)
-        );
+      this.getLineages();
+      this.getLineageFeatures();
+      this.characteristics.forEach(char =>this.valiantCharacteristics.set(char.name,1));
    }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   getCharacteristics(): void {
     this.dataService.getCharacteristics().subscribe(characteristics => this.characteristics = characteristics);
   }
- 
+  getLineages(): void {
+    this.dataService.getLineages().subscribe(lineages => this.lineages = lineages);
+  }
+  getLineageFeatures():void {
+    this.dataService.getLineageFeatures().subscribe(feats => this.lineageFeatures=feats);
+  }
+
   consumePoint(name: string, amount: number){
     if(!this.valiantCharacteristics.has(name))
     {
@@ -50,3 +63,5 @@ export class BuilderComponent implements OnInit {
     } 
   }
 }
+
+
