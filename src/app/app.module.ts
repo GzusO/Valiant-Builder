@@ -29,8 +29,10 @@ import { FooterComponent } from './footer/footer.component';
 import { CharacteristicListComponent } from './characteristic-list/characteristic-list.component';
 import { ClassListComponent } from './class-list/class-list.component';
 import { BuilderComponent } from './builder/builder.component'
-import { MatStepperModule} from '@angular/material/stepper'
-import { MatChipsModule} from '@angular/material/chips'
+import { MatStepperModule } from '@angular/material/stepper'
+import { MatChipsModule } from '@angular/material/chips'
+import { MatListModule } from '@angular/material/list';
+import { FilterByTypePipe } from './filter-by-type.pipe'
 
 @NgModule({
   declarations: [
@@ -40,7 +42,8 @@ import { MatChipsModule} from '@angular/material/chips'
     FooterComponent,
     CharacteristicListComponent,
     ClassListComponent,
-    BuilderComponent
+    BuilderComponent,
+    FilterByTypePipe
   ],
   imports: [
     BrowserModule,
@@ -67,7 +70,8 @@ import { MatChipsModule} from '@angular/material/chips'
     MatDividerModule,
     MatTableModule,
     MatStepperModule,
-    MatChipsModule
+    MatChipsModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

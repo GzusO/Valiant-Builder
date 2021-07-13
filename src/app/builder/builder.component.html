@@ -16,6 +16,14 @@
         </div>
     </mat-step>
     <mat-step label="Lineage">
+        <mat-selection-list class="lineages" #lineageList [(ngModel)]="valiantLineages">
+            <mat-list-option #lineage *ngFor="let lineageType of lineages" [disabled]="lineageList.selectedOptions.selected.length > 1 && !lineage.selected" [value]="lineageType.name">
+                {{lineageType.name}}
+            </mat-list-option>
+        </mat-selection-list>
+        <div *ngFor="let feat of lineageFeatures | filterByType:valiantLineages">
+            {{feat.name}}
+        </div>
         <div>
             <button mat-button matStepperPrevious>Previous</button>
             <button mat-button matStepperNext>Next</button>
@@ -34,6 +42,16 @@
         </div>
     </mat-step>
     <mat-step label="Character">
+        <div class="valiantCharacteristics">
+            <div *ngFor="let char of characteristics">
+                <span>
+                    {{char.name}} : {{valiantCharacteristics.get(char.name)}}
+                </span>
+            </div>
+        </div>
+        <div class="valiantLineages">
+            Lineage: {{valiantLineages.join(" ")}}
+        </div>
         <div>
             <button mat-button matStepperPrevious>Previous</button>
         </div>
