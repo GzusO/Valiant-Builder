@@ -41,7 +41,7 @@ export const traitData: Trait[] = [
     {name:'Inspired',types:['Lineage','Cossim','Cosmic Inspiration'],description:'Whenever you create an art object, there is a 1 in 6 chance of it being 1 tier higher than what it would\'ve been.',tier:0},
     {name:'Cosmic Designs',types:['Lineage','Cossim','Patience of Eons'],description:'Any plan or strategy you design cannot be found out by any other characters unless they are told directly or have this trait.',tier:0},
     {name:'Bounding Vagrant',types:['Lineage','Cossim','Solitary Wanderer'],description:'When you are in a travel group with no other characters, your travel group gains +2 range and +3 provision score.',tier:0},
-    {name:'Natural Telepathy',types:['Lineage','Cossim','Cosmic Connection'],description:'You can communicate via telepathy to any character within 10 ft. of you. If you are granted telepathy by another trait or ability, increase that telepathy\'s range by 10 ft.',tier:0},
+    {name:'Natural Telepathy',types:['Lineage','Cossim','Cosmic Connections'],description:'You can communicate via telepathy to any character within 10 ft. of you. If you are granted telepathy by another trait or ability, increase that telepathy\'s range by 10 ft.',tier:0},
     {name:'Characteristic Sensing',types:['Lineage','Cossim','Strange Sense'],description:'When you gain this trait, select one characteristic. Whenever you are within 10 ft. of a character, you know their characteristic score for that characteristic.',tier:0},
 
     //Girt Traits

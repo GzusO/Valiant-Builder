@@ -1,0 +1,35 @@
+
+.name {
+    padding: .25em 1em .25em 1em;
+
+}
+.value {
+    border: thin groove;
+    padding: .25em 1em .25em 1em;
+}
+.buttons {
+    padding: .25em 1em .25em 1em;
+}
+table, th, td, tr {
+    outline: black thin 1;
+}
+
+.lineages{
+    flex: 1 0 auto;
+}
+
+.PrimaryFeatures{
+    flex: 2 0 ;
+    border: grey thin solid;
+}
+.SecondaryFeatures{
+    flex: 2 0 ;
+    border: grey thin solid;
+}
+
+.lineageSelection {
+    justify-content: center;
+    display: flex;
+    flex-flow: row;
+    gap: 20px;
+}

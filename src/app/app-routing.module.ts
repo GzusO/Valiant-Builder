@@ -4,13 +4,15 @@ import { ProfessionListComponent } from './profession-list/profession-list.compo
 import { LineageListComponent } from './lineage-list/lineage-list.component';
 import { CharacteristicListComponent } from './characteristic-list/characteristic-list.component';
 import { ClassListComponent } from './class-list/class-list.component';
+import { BuilderComponent } from './builder/builder.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/lineages', pathMatch: 'full' },
   { path: 'professions', component: ProfessionListComponent},
   { path: 'lineages', component: LineageListComponent},
   { path: 'characteristics',component:CharacteristicListComponent},
-  { path: 'classes',component:ClassListComponent}
+  { path: 'classes', component:ClassListComponent},
+  { path: 'builder', component:BuilderComponent}
 ];
 
 @NgModule({
