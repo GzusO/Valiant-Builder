@@ -81,7 +81,7 @@ export const featureData: Feature[] =[
     {name:'Will of Stone',types:['Lineage','Ingra','Primary'],description:'Even in the face of impossible odds, you press forward.',abilities:[],traits:[],tier:0},
     {name:'Honed Edge',types:['Lineage','Ingra','Primary'],description:'Most forces that expect to face Ingra leave their medics at home.',abilities:[],traits:[],tier:0},
     {name:'Fruits of the Desert',types:['Lineage','Ingra','Secondary'],description:'Even the most barren of lands bear fruit, and you know how to coax said fruit from those lands.',abilities:[],traits:[],tier:0},
-    {name:'Precious Crafts',types:['Linaege','Ingra','Secondary'],description:'Your people have a knack for art in all of its forms. with a focused effort, you are able to create much grander works than most.',abilities:[],traits:[],tier:0},
+    {name:'Precious Crafts',types:['Lineage','Ingra','Secondary'],description:'Your people have a knack for art in all of its forms. with a focused effort, you are able to create much grander works than most.',abilities:[],traits:[],tier:0},
     {name:'Silver Eyes',types:['Lineage','Ingra','Secondary'],description:'You see what others miss, and can perceive that which is hidden.',abilities:[],traits:[],tier:0},
     {name:'Tireless Sentinel',types:['Lineage','Ingra','Secondary'],description:'Your body is tuned finer than most. You can go far longer before needing to rest.',abilities:[],traits:[],tier:0},
     {name:'Runeweaver',types:['Lineage','Ingra','Secondary'],description:'The Ingra have a knack for applying enchantments. They can make simple, cheap materials go as far as the traditional precious resources often used in the trade.',abilities:[],traits:[],tier:0},

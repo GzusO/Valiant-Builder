@@ -15,5 +15,21 @@ table, th, td, tr {
 }
 
 .lineages{
-    width: 50%;
+    flex: 1 0 auto;
+}
+
+.PrimaryFeatures{
+    flex: 2 0 ;
+    border: grey thin solid;
+}
+.SecondaryFeatures{
+    flex: 2 0 ;
+    border: grey thin solid;
+}
+
+.lineageSelection {
+    justify-content: center;
+    display: flex;
+    flex-flow: row;
+    gap: 20px;
 }

@@ -17,6 +17,8 @@ export class BuilderComponent implements OnInit {
     characteristicPoints: number = 2;
     valiantCharacteristics: Map<string,number> = new Map<string,number>();
     valiantLineages: string[] = [];
+    valiantLineagePrimaryFeatures: string[] = [];
+    valiantLineageSecondaryFeatures: string[] = [];
     lineages: Lineage[] = [];
     lineageFeatures: Feature[] =[];
 
@@ -39,6 +41,12 @@ export class BuilderComponent implements OnInit {
     this.dataService.getLineageFeatures().subscribe(feats => this.lineageFeatures=feats);
   }
 
+  primary(feats: Feature[]): Feature[] {
+    return feats.filter(x=> x.types.includes("Primary"))
+  }
+  secondary(feats: Feature[]): Feature[] {
+    return feats.filter(x=> x.types.includes("Secondary"))
+  }
   consumePoint(name: string, amount: number){
     if(!this.valiantCharacteristics.has(name))
     {

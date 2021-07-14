@@ -16,14 +16,38 @@
         </div>
     </mat-step>
     <mat-step label="Lineage">
-        <mat-selection-list class="lineages" #lineageList [(ngModel)]="valiantLineages">
-            <mat-list-option #lineage *ngFor="let lineageType of lineages" [disabled]="lineageList.selectedOptions.selected.length > 1 && !lineage.selected" [value]="lineageType.name">
-                {{lineageType.name}}
-            </mat-list-option>
-        </mat-selection-list>
-        <div *ngFor="let feat of lineageFeatures | filterByType:valiantLineages">
-            {{feat.name}}
+        <div class="lineageSelection">
+            <div class="lineages">
+                <h3>Lineages Pick up to 2</h3>
+                <mat-selection-list  #lineageList [(ngModel)]="valiantLineages">
+                    <mat-list-option #lineage *ngFor="let lineageType of lineages" [disabled]="lineageList.selectedOptions.selected.length > 1 && !lineage.selected" [value]="lineageType.name">
+                        
+                        {{lineageType.name}}
+                    </mat-list-option>
+                </mat-selection-list>
+            </div>
+            
+            <div class="PrimaryFeatures">
+                <h3>Primary Features Pick 2, must be from different lineages if 2 lineages are selected</h3>
+                <mat-selection-list  #primaryFeatureList [(ngModel)]="valiantLineagePrimaryFeatures">
+                    <mat-list-option #primeFeature *ngFor="let primaryFeature of primary(lineageFeatures) | filterByType:valiantLineages" [disabled]="primaryFeatureList.selectedOptions.selected.length > 1 && !primeFeature.selected" [value]="primaryFeature.name">
+                        <h4 mat-line>{{primaryFeature.name}} - {{primaryFeature.types.join(", ")}}</h4>
+                        <p mat-line>{{primaryFeature.description}}</p>
+                    </mat-list-option>
+                </mat-selection-list>
+            </div>
+            
+            <div class="SecondaryFeatures">
+                <h3>Secondary Features Pick 2, must be from different lineages if 2 lineages are selected</h3>
+                <mat-selection-list  #secondaryFeatureList [(ngModel)]="valiantLineageSecondaryFeatures">
+                    <mat-list-option #secondFeature *ngFor="let secondaryFeature of secondary(lineageFeatures) | filterByType:valiantLineages" [disabled]="secondaryFeatureList.selectedOptions.selected.length > 1 && !secondFeature.selected" [value]="secondaryFeature.name">
+                        <h4 mat-line>{{secondaryFeature.name}} - {{secondaryFeature.types.join(", ")}}</h4>
+                        <p mat-line>{{secondaryFeature.description}}</p>
+                    </mat-list-option>
+                </mat-selection-list>
+            </div>
         </div>
+        
         <div>
             <button mat-button matStepperPrevious>Previous</button>
             <button mat-button matStepperNext>Next</button>
@@ -50,7 +74,10 @@
             </div>
         </div>
         <div class="valiantLineages">
-            Lineage: {{valiantLineages.join(" ")}}
+            Lineage: {{valiantLineages.join(", ")}}
+        </div>
+        <div class="valiantFeatures">
+            Features: {{valiantLineagePrimaryFeatures.join(", ")}}, {{valiantLineageSecondaryFeatures.join(", ")}}
         </div>
         <div>
             <button mat-button matStepperPrevious>Previous</button>
