@@ -19,11 +19,12 @@ table, th, td, tr {
 }
 
 .PrimaryFeatures{
-    flex: 2 0 ;
+    flex: 4 0 ;
     border: grey thin solid;
+    gap: 20px;
 }
 .SecondaryFeatures{
-    flex: 2 0 ;
+    flex: 4 0 ;
     border: grey thin solid;
 }
 
@@ -32,4 +33,47 @@ table, th, td, tr {
     display: flex;
     flex-flow: row;
     gap: 20px;
+}
+
+.description {
+    white-space: normal !important;
+}
+
+.trait-name{
+    font-size: small;
+    font-weight: bold;
+}
+.ability-name{
+    font-size: small;
+    font-weight: bold;
+}
+.secondaryTags{
+    font-size: small;
+    font-style: italic;
+}
+.tertiaryTags{
+    font-size: small;
+    font-style: italic;
+}
+.feature{
+    font-size: medium;
+    font-weight: bold;
+}
+
+::ng-deep.darkMode .choice {
+    /* other properties */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border-radius: 3px;
+    background-color: #424242 !important;
+ }
+
+ ::ng-deep.darkMode .choice:hover {
+    background-color: #868686 !important;
+ }
+ ::ng-deep.darkMode .mat-list-item-disabled {
+    color: #868686 !important;
+ }
+
+::ng-deep.darkMode .mat-stepper-horizontal, ::ng-deep.darkMode .mat-stepper-vertical {
+    background-color: #303030;
 }
