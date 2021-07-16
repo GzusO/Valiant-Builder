@@ -79,17 +79,18 @@ export class DataService {
     return of (classes);
   }
 
-  getLineageFeatures(): Observable<Feature[]>{
+  getFeaturesByType(type: string): Observable<Feature[]>{
     const features = featureData;
     const traits = traitData;
     const abilities = abilityData;
 
+    const result = features.filter(x=> x.types.includes(type));
     //Map traits to Features
-    features.map(x=>x.traits = (traits.filter(y => y.types.includes(x.name))!));
+    result.map(x=>x.traits = (traits.filter(y => y.types.includes(x.name))!));
     //Map abilties to Features
-    features.map(x=>x.abilities = (abilities.filter(y => y.types.includes(x.name))!));
+    result.map(x=>x.abilities = (abilities.filter(y => y.types.includes(x.name))!));
 
-    return of(features.filter(x=> x.types.includes('Lineage')))
+    return of(result);
   }
 
   constructor() { }
