@@ -32,7 +32,8 @@ import { BuilderComponent } from './builder/builder.component'
 import { MatStepperModule } from '@angular/material/stepper'
 import { MatChipsModule } from '@angular/material/chips'
 import { MatListModule } from '@angular/material/list';
-import { FilterByTypePipe } from './filter-by-type.pipe'
+import { FilterByTypePipe } from './filter-by-type.pipe';
+import { MapPipe } from './map.pipe'
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { FilterByTypePipe } from './filter-by-type.pipe'
     CharacteristicListComponent,
     ClassListComponent,
     BuilderComponent,
-    FilterByTypePipe
+    FilterByTypePipe,
+    MapPipe
   ],
   imports: [
     BrowserModule,

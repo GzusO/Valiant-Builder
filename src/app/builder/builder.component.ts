@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { startWith } from 'rxjs/operators';
-import { Characteristic, Feature, Lineage } from '../adventurer';
+import { Characteristic, Feature, Lineage, Profession } from '../adventurer';
 import { DataService } from '../data.service';
 import { Pipe, PipeTransform } from '@angular/core';
 
@@ -19,13 +19,17 @@ export class BuilderComponent implements OnInit {
     valiantLineages: string[] = [];
     valiantLineagePrimaryFeatures: string[] = [];
     valiantLineageSecondaryFeatures: string[] = [];
+    valiantProfession: Profession[] =[];
+
     lineages: Lineage[] = [];
     lineageFeatures: Feature[] =[];
+    professions: Profession[] = [];
 
   constructor(private dataService: DataService) {
       this.getCharacteristics();
       this.getLineages();
       this.getLineageFeatures();
+      this.getProfessions();
       this.characteristics.forEach(char =>this.valiantCharacteristics.set(char.name,1));
    }
 
@@ -38,14 +42,19 @@ export class BuilderComponent implements OnInit {
     this.dataService.getLineages().subscribe(lineages => this.lineages = lineages);
   }
   getLineageFeatures():void {
-    this.dataService.getLineageFeatures().subscribe(feats => this.lineageFeatures=feats);
+    this.dataService.getFeaturesByType('Lineage').subscribe(feats => this.lineageFeatures=feats);
+  }
+  getProfessions(): void{
+    this.dataService.getProfessions().subscribe(professions => this.professions=professions);
   }
 
   primary(feats: Feature[]): Feature[] {
-    return feats.filter(x=> x.types.includes("Primary"))
+    const result =feats.filter(x=> x.types.includes("Primary"));
+    return result;
   }
   secondary(feats: Feature[]): Feature[] {
-    return feats.filter(x=> x.types.includes("Secondary"))
+    const result = feats.filter(x=> x.types.includes("Secondary"));
+    return result;
   }
   consumePoint(name: string, amount: number){
     if(!this.valiantCharacteristics.has(name))

@@ -21,7 +21,6 @@
                 <h3>Lineages Pick up to 2</h3>
                 <mat-selection-list  #lineageList [(ngModel)]="valiantLineages">
                     <mat-list-option class="choice" #lineage *ngFor="let lineageType of lineages" [disabled]="lineageList.selectedOptions.selected.length > 1 && !lineage.selected" [value]="lineageType.name">
-                        
                         {{lineageType.name}}
                     </mat-list-option>
                 </mat-selection-list>
@@ -38,7 +37,7 @@
                             <span mat-line class="ability-name">{{ability.name}} ({{ability.primaryTags}})</span>
                             <div mat-line *ngIf="ability.secondaryTags.length !== 0">{{ability.secondaryTags}}</div>
                             <div mat-line *ngIf="ability.tertiaryTags.length !== 0">{{ability.tertiaryTags}}</div>
-                        <p class="description" mat-line>{{ability.description}}</p>
+                            <p class="description" mat-line>{{ability.description}}</p>
                         </div>
                         <div *ngFor="let trait of primaryFeature.traits"  mat-line>
                             <span  mat-line class="trait-name">{{trait.name}}</span>
@@ -73,7 +72,36 @@
             <button mat-button matStepperNext>Next</button>
         </div>
     </mat-step>
-    <mat-step label="Profession">
+    <mat-step mat-app-background label="Professions">
+        <div class="professionSelection">
+            <div class="professions">
+                <h3>Professions: Pick 1</h3>
+                <mat-selection-list  #professionList [(ngModel)]="valiantProfession" multiple="false">
+                    <mat-list-option class="choice" #profession *ngFor="let professionType of professions" [value]="professionType">
+                        {{professionType.name}}
+                    </mat-list-option>
+                </mat-selection-list>
+            </div>
+
+            <div class="professionInfo">
+                <h2>{{professionList.selectedOptions.selected[0]?.value.name}}</h2>
+                <div *ngFor="let feature of professionList.selectedOptions.selected[0]?.value.features">
+                    <p>
+                      {{feature.description}}
+                    </p>
+                    <div *ngFor="let ability of feature.abilities">
+                      <span class="ability-name">{{ability.name}} ({{ability.primaryTags}})</span>
+                            <div *ngIf="ability.secondaryTags.length !== 0">{{ability.secondaryTags}}</div>
+                            <div *ngIf="ability.tertiaryTags.length !== 0">{{ability.tertiaryTags}}</div>
+                            <p>{{ability.description}}</p>
+                    </div>
+                    <div *ngFor="let trait of feature.traits">
+                      <span class="trait-name">{{trait.name}}</span>
+                      <p>{{trait.description}}</p>
+                    </div>
+                  </div>
+            </div>
+        </div>
         <div>
             <button mat-button matStepperPrevious>Previous</button>
             <button mat-button matStepperNext>Next</button>
@@ -93,11 +121,15 @@
                 </span>
             </div>
         </div>
+        <div class="valiantProfession">
+            Profession: {{valiantProfession[0]?.name}}
+        </div>
         <div class="valiantLineages">
             Lineage: {{valiantLineages.join(", ")}}
         </div>
         <div class="valiantFeatures">
-            Features: {{valiantLineagePrimaryFeatures.join(", ")}}, {{valiantLineageSecondaryFeatures.join(", ")}}
+            Features: {{valiantLineagePrimaryFeatures.join(", ")}}, {{valiantLineageSecondaryFeatures.join(", ")}},
+            <span *ngFor="let feature of valiantProfession[0]?.features">{{feature.name}},</span>
         </div>
         <div>
             <button mat-button matStepperPrevious>Previous</button>

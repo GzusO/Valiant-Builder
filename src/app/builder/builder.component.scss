@@ -14,21 +14,24 @@ table, th, td, tr {
     outline: black thin 1;
 }
 
-.lineages{
+.lineages, .professions{
     flex: 1 0 auto;
+}
+.professionInfo {
+    flex: 2 0;
 }
 
 .PrimaryFeatures{
     flex: 4 0 ;
     border: grey thin solid;
-    gap: 20px;
 }
 .SecondaryFeatures{
     flex: 4 0 ;
     border: grey thin solid;
+
 }
 
-.lineageSelection {
+.lineageSelection, .professionSelection {
     justify-content: center;
     display: flex;
     flex-flow: row;
