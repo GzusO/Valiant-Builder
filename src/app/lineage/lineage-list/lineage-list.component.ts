@@ -10,7 +10,6 @@ import { DataService } from 'src/app/data.service';
 })
 export class LineageListComponent implements OnInit {
   lineages: Lineage[] = [];
-  selected = new FormControl(0)
   constructor(private dataService:DataService) { }
 
   ngOnInit(): void {
