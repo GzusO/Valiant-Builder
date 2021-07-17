@@ -6,7 +6,7 @@
 
 .card {
     display: grid;
-    grid-template-rows: max-content 700px 1fr;
+    grid-template-rows: max-content 625px 1fr;
 }
 
 .name{
@@ -50,4 +50,11 @@ position: absolute;
 //Rest of tab content fills space vertically
 ::ng-deep.mat-tab-body-wrapper{
 flex: 1;
+}
+
+h2, p{
+    padding: 8px 8px 8px 8px;
+}
+p {
+    padding: 4px 4px 4px 4px;
 }
