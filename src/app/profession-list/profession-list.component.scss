@@ -6,7 +6,7 @@
 
 .card {
     display: grid;
-    grid-template-rows: max-content 450px 1fr;
+    grid-template-rows: max-content 325px 1fr;
 }
 
 .name{
@@ -40,4 +40,11 @@
     min-width: 0!important;
     padding: 3px!important;
     margin: 3px!important;
+}
+
+h2, p{
+    padding: 8px 8px 8px 8px;
+}
+p {
+    padding: 4px 4px 4px 4px;
 }
