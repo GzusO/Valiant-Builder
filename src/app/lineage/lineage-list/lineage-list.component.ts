@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { Lineage,Ability,Feature,Trait } from '../adventurer';
-import { DataService } from '../data.service';
+import { Lineage, Feature } from 'src/app/adventurer';
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-lineage-list',

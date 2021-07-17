@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProfessionListComponent } from './profession-list/profession-list.component';
-import { LineageListComponent } from './lineage-list/lineage-list.component';
+import { LineageListComponent } from './lineage/lineage-list/lineage-list.component';
 import { CharacteristicListComponent } from './characteristic-list/characteristic-list.component';
 import { ClassListComponent } from './class-list/class-list.component';
 import { BuilderComponent } from './builder/builder.component';

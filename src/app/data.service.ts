@@ -7,7 +7,6 @@ import { professionData } from 'data/professions';
 import { lineageData } from 'data/lineages';
 import { Observable, of } from 'rxjs';
 import { characteristicData } from 'data/characteristics';
-import { LineageListComponent } from './lineage-list/lineage-list.component';
 import { classData } from 'data/classes';
 
 @Injectable({

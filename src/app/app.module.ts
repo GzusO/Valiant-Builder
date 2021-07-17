@@ -8,7 +8,7 @@ import { InMemoryDataService } from './in-memory-data.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfessionListComponent } from './profession-list/profession-list.component';
-import { LineageListComponent } from './lineage-list/lineage-list.component';
+import { LineageListComponent } from './lineage/lineage-list/lineage-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -33,7 +33,8 @@ import { MatStepperModule } from '@angular/material/stepper'
 import { MatChipsModule } from '@angular/material/chips'
 import { MatListModule } from '@angular/material/list';
 import { FilterByTypePipe } from './filter-by-type.pipe';
-import { MapPipe } from './map.pipe'
+import { MapPipe } from './map.pipe';
+import { LineageCardComponent } from './lineage/lineage-card/lineage-card.component'
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { MapPipe } from './map.pipe'
     ClassListComponent,
     BuilderComponent,
     FilterByTypePipe,
-    MapPipe
+    MapPipe,
+    LineageCardComponent
   ],
   imports: [
     BrowserModule,
