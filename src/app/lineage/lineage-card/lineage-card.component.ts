@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Lineage, Feature } from 'src/app/adventurer';
+import { Lineage } from "src/app/lineage/Lineage";
+import { Feature } from "src/app/feature/Feature";
 
 @Component({
   selector: 'app-lineage-card',

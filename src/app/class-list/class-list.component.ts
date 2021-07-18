@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Class, Feature } from '../adventurer';
+import { Class } from "../Class";
+import { Feature } from "../feature/Feature";
 import { DataService } from '../data.service';
 
 @Component({

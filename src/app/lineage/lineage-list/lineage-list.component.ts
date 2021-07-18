@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { Lineage, Feature } from 'src/app/adventurer';
+import { Lineage } from "src/app/lineage/Lineage";
+import { Feature } from "src/app/feature/Feature";
 import { DataService } from 'src/app/data.service';
 
 @Component({

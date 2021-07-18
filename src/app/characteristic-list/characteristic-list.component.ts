@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Characteristic } from '../adventurer';
+import { Characteristic } from "../Characteristic";
 import { DataService } from '../data.service';
 
 @Component({

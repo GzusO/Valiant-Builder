@@ -1,5 +1,11 @@
 import { Injectable } from '@angular/core';
-import { Ability, Trait, Feature,Profession, Lineage, Characteristic, Class } from './adventurer';
+import { Class } from "./Class";
+import { Characteristic } from "./Characteristic";
+import { Lineage } from "./lineage/Lineage";
+import { Profession } from "./profession/Profession";
+import { Ability } from "./Ability";
+import { Trait } from "./Trait";
+import { Feature } from "./feature/Feature";
 import { abilityData } from 'data/abilities';
 import { featureData } from 'data/features';
 import { traitData } from 'data/traits';

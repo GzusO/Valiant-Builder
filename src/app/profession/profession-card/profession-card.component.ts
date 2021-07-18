@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Profession } from 'src/app/adventurer';
+import { Profession } from "src/app/profession/Profession";
 
 @Component({
   selector: 'app-profession-card',

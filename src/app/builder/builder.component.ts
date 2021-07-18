@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { startWith } from 'rxjs/operators';
-import { Characteristic, Feature, Lineage, Profession } from '../adventurer';
+import { Characteristic } from "../Characteristic";
+import { Lineage } from "../lineage/Lineage";
+import { Profession } from "../profession/Profession";
+import { Feature } from "../feature/Feature";
 import { DataService } from '../data.service';
 import { Pipe, PipeTransform } from '@angular/core';
 

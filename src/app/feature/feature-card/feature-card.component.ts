@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Feature } from 'src/app/adventurer';
+import { Feature } from "src/app/feature/Feature";
 
 @Component({
   selector: 'app-feature-card',

@@ -1,4 +1,4 @@
-import { Profession } from "src/app/adventurer";
+import { Profession } from "src/app/profession/Profession";
 
 export const professionData: Profession[] =[
     {name:'Artist', type:'Artisan',features:[]},

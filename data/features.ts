@@ -1,4 +1,4 @@
-import { Feature } from "src/app/adventurer";
+import { Feature } from "src/app/feature/Feature";
 
 export const featureData: Feature[] =[
     //Profesion Features

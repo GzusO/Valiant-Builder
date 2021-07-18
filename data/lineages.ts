@@ -1,4 +1,4 @@
-import { Lineage } from "src/app/adventurer";
+import { Lineage } from "src/app/lineage/Lineage";
 
 export const lineageData: Lineage[] = [
     {name:'Cossim',description:'Cossim are a small and peculiar people. They’re short and slight, with blue-black skin covered in shimmering patterns. These patterns are unique to each Cossim, and glow softly for as long as the Cossim lives.',features:[]},
