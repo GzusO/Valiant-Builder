@@ -1,6 +1,4 @@
-<h2>Professions</h2>
-<div class="cards">
-  <mat-card *ngFor="let profession of professions" class="card">
+<mat-card class="card" *ngIf="profession">
     <mat-card-header>
         <mat-card-title>
           <span class="name">{{profession.name}}</span>  
@@ -27,5 +25,4 @@
         </div>
       </div>
     </mat-card-content>
-  </mat-card>
-</div>
+</mat-card>

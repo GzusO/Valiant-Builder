@@ -29,7 +29,7 @@
             <div class="PrimaryFeatures">
                 <h3>Primary Features Pick 2, must be from different lineages if 2 lineages are selected</h3>
                 <mat-selection-list  #primaryFeatureList [(ngModel)]="valiantLineagePrimaryFeatures">
-                    <mat-list-option class="choice" #primeFeature *ngFor="let primaryFeature of primary(lineageFeatures) | filterByType:valiantLineages" [disabled]="primaryFeatureList.selectedOptions.selected.length > 1 && !primeFeature.selected" [value]="primaryFeature.name">
+                    <mat-list-option class="choice" #primeFeature *ngFor="let primaryFeature of primary(lineageFeatures) | filterByType:valiantLineages" [disabled]="primaryFeatureList.selectedOptions.selected.length > 1 && !primeFeature.selected" [value]="primaryFeature">
                         <h4 mat-line>{{primaryFeature.name}} - {{primaryFeature.types.join(", ")}}</h4>
                         <br>
                         <p class="description" mat-line>{{primaryFeature.description}}</p>
@@ -49,7 +49,7 @@
             <div class="SecondaryFeatures">
                 <h3>Secondary Features Pick 2, must be from different lineages if 2 lineages are selected</h3>
                 <mat-selection-list  #secondaryFeatureList [(ngModel)]="valiantLineageSecondaryFeatures">
-                    <mat-list-option class="choice" #secondFeature *ngFor="let secondaryFeature of secondary(lineageFeatures) | filterByType:valiantLineages" [disabled]="secondaryFeatureList.selectedOptions.selected.length > 1 && !secondFeature.selected" [value]="secondaryFeature.name">
+                    <mat-list-option class="choice" #secondFeature *ngFor="let secondaryFeature of secondary(lineageFeatures) | filterByType:valiantLineages" [disabled]="secondaryFeatureList.selectedOptions.selected.length > 1 && !secondFeature.selected" [value]="secondaryFeature">
                         <h4 mat-line>{{secondaryFeature.name}} - {{secondaryFeature.types.join(", ")}}</h4>
                         <p class="description" mat-line>{{secondaryFeature.description}}</p>
                         <div  mat-line *ngFor="let ability of secondaryFeature.abilities">
@@ -84,22 +84,7 @@
             </div>
 
             <div class="professionInfo">
-                <h2>{{professionList.selectedOptions.selected[0]?.value.name}}</h2>
-                <div *ngFor="let feature of professionList.selectedOptions.selected[0]?.value.features">
-                    <p>
-                      {{feature.description}}
-                    </p>
-                    <div *ngFor="let ability of feature.abilities">
-                      <span class="ability-name">{{ability.name}} ({{ability.primaryTags}})</span>
-                            <div *ngIf="ability.secondaryTags.length !== 0">{{ability.secondaryTags}}</div>
-                            <div *ngIf="ability.tertiaryTags.length !== 0">{{ability.tertiaryTags}}</div>
-                            <p>{{ability.description}}</p>
-                    </div>
-                    <div *ngFor="let trait of feature.traits">
-                      <span class="trait-name">{{trait.name}}</span>
-                      <p>{{trait.description}}</p>
-                    </div>
-                  </div>
+                <app-profession-card [profession]=professionList.selectedOptions.selected[0]?.value></app-profession-card>
             </div>
         </div>
         <div>
@@ -108,6 +93,48 @@
         </div>
     </mat-step>
     <mat-step label="Class">
+        <div class="classSelection">
+            <div class="PrimaryFeatures">
+                <h3>Primary Features Pick 2</h3>
+                <mat-selection-list  #primaryClassFeatureList [(ngModel)]="valiantClassPrimaryFeatures">
+                    <mat-list-option class="choice" #primeClassFeature *ngFor="let primaryFeature of primary(classFeatures)" [disabled]="primaryClassFeatureList.selectedOptions.selected.length > 1 && !primeClassFeature.selected" [value]="primaryFeature">
+                        <h4 mat-line>{{primaryFeature.name}} - {{primaryFeature.types.join(", ")}}</h4>
+                        <br>
+                        <p class="description" mat-line>{{primaryFeature.description}}</p>
+                        <div  mat-line *ngFor="let ability of primaryFeature.abilities">
+                            <span mat-line class="ability-name">{{ability.name}} ({{ability.primaryTags}})</span>
+                            <div mat-line *ngIf="ability.secondaryTags.length !== 0">{{ability.secondaryTags}}</div>
+                            <div mat-line *ngIf="ability.tertiaryTags.length !== 0">{{ability.tertiaryTags}}</div>
+                            <p class="description" mat-line>{{ability.description}}</p>
+                        </div>
+                        <div *ngFor="let trait of primaryFeature.traits"  mat-line>
+                            <span  mat-line class="trait-name">{{trait.name}}</span>
+                            <p class="description" mat-line>{{trait.description}}</p>
+                        </div>
+                    </mat-list-option>
+                </mat-selection-list>
+            </div>
+            <div class="SecondaryFeatures">
+                <h3>Secondary Features Pick 1</h3>
+                <mat-selection-list  #secondaryClassFeatureList [(ngModel)]="valiantClassSecondaryFeatures">
+                    <mat-list-option class="choice" #secondClassFeature *ngFor="let secondaryFeature of secondary(classFeatures)" [disabled]="secondaryClassFeatureList.selectedOptions.selected.length > 0 && !secondClassFeature.selected" [value]="secondaryFeature">
+                        <h4 mat-line>{{secondaryFeature.name}} - {{secondaryFeature.types.join(", ")}}</h4>
+                        <p class="description" mat-line>{{secondaryFeature.description}}</p>
+                        <div  mat-line *ngFor="let ability of secondaryFeature.abilities">
+                            <span mat-line class="ability-name">{{ability.name}} ({{ability.primaryTags}})</span>
+                            <div mat-line *ngIf="ability.secondaryTags.length !== 0">{{ability.secondaryTags}}</div>
+                            <div mat-line *ngIf="ability.tertiaryTags.length !== 0">{{ability.tertiaryTags}}</div>
+                        <p class="description" mat-line>{{ability.description}}</p>
+                        </div>
+                        <div *ngFor="let trait of secondaryFeature.traits"  mat-line>
+                            <span  mat-line class="trait-name">{{trait.name}}</span>
+                            <p class="description" mat-line>{{trait.description}}</p>
+                        </div>
+                    </mat-list-option>
+                </mat-selection-list>
+            </div>
+        </div>
+        
         <div>
             <button mat-button matStepperPrevious>Previous</button>
             <button mat-button matStepperNext>Next</button>
@@ -127,9 +154,12 @@
         <div class="valiantLineages">
             Lineage: {{valiantLineages.join(", ")}}
         </div>
-        <div class="valiantFeatures">
-            Features: {{valiantLineagePrimaryFeatures.join(", ")}}, {{valiantLineageSecondaryFeatures.join(", ")}},
-            <span *ngFor="let feature of valiantProfession[0]?.features">{{feature.name}},</span>
+        <div class="cards">
+            <app-feature-card *ngFor="let feat of valiantLineagePrimaryFeatures" [feature]=feat></app-feature-card>
+            <app-feature-card *ngFor="let feat of valiantLineageSecondaryFeatures" [feature]=feat></app-feature-card>
+            <app-feature-card *ngFor="let feat of valiantProfession[0]?.features" [feature]=feat></app-feature-card>
+            <app-feature-card *ngFor="let feat of valiantClassPrimaryFeatures" [feature]=feat></app-feature-card>
+            <app-feature-card *ngFor="let feat of valiantClassSecondaryFeatures" [feature]=feat></app-feature-card>
         </div>
         <div>
             <button mat-button matStepperPrevious>Previous</button>

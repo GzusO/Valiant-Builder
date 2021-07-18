@@ -1,4 +1,4 @@
-import { Trait } from "src/app/adventurer";
+import { Trait } from "src/app/Trait";
 
 export const traitData: Trait[] = [
     //Profession Traits

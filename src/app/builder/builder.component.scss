@@ -1,4 +1,8 @@
-
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-gap: 20px;
+}
 .name {
     padding: .25em 1em .25em 1em;
 
@@ -31,7 +35,7 @@ table, th, td, tr {
 
 }
 
-.lineageSelection, .professionSelection {
+.lineageSelection, .professionSelection, .classSelection {
     justify-content: center;
     display: flex;
     flex-flow: row;

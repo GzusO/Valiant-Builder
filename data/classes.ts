@@ -1,4 +1,4 @@
-import { Class } from "src/app/adventurer";
+import { Class } from "src/app/Class";
 
 export const classData: Class[] =[
     {name:'Aspirant', description:'Aspirants are those who have only recently begun adventuring. Whether they be a fresh valiant or a runaway dreaming of grandeur, they all begin as aspirants.', globalAbilityName:'',features:[],abilities:[],traits:[]},

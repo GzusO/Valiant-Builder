@@ -1,0 +1,37 @@
+.card {
+    display: grid;
+    grid-template-rows: max-content 325px 1fr;
+}
+
+.name{
+    font-size: larger;
+    font-weight:  bold;
+}
+
+.trait-name{
+    font-size: small;
+    font-weight: bold;
+}
+.ability-name{
+    font-size: small;
+    font-weight: bold;
+}
+.secondaryTags{
+    font-size: small;
+    font-style: italic;
+}
+.tertiaryTags{
+    font-size: small;
+    font-style: italic;
+}
+.feature{
+    font-size: medium;
+    font-weight: bold;
+}
+
+h2, p{
+    padding: 8px 8px 8px 8px;
+}
+p {
+    padding: 4px 4px 4px 4px;
+}

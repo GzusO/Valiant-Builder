@@ -3,16 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './in-memory-data.service';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProfessionListComponent } from './profession-list/profession-list.component';
-import { LineageListComponent } from './lineage-list/lineage-list.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
@@ -24,16 +21,22 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatDividerModule } from '@angular/material/divider';
-import {MatTableModule} from '@angular/material/table'; 
+import { MatTableModule} from '@angular/material/table'; 
+import { MatStepperModule } from '@angular/material/stepper'
+import { MatChipsModule } from '@angular/material/chips'
+import { MatListModule } from '@angular/material/list';
+
 import { FooterComponent } from './footer/footer.component';
 import { CharacteristicListComponent } from './characteristic-list/characteristic-list.component';
 import { ClassListComponent } from './class-list/class-list.component';
 import { BuilderComponent } from './builder/builder.component'
-import { MatStepperModule } from '@angular/material/stepper'
-import { MatChipsModule } from '@angular/material/chips'
-import { MatListModule } from '@angular/material/list';
-import { FilterByTypePipe } from './filter-by-type.pipe';
-import { MapPipe } from './map.pipe'
+import { FilterByTypePipe } from './Pipes/filter-by-type.pipe';
+import { MapPipe } from './Pipes/map.pipe';
+import { ProfessionListComponent } from './profession/profession-list/profession-list.component';
+import { LineageListComponent } from './lineage/lineage-list/lineage-list.component';
+import { LineageCardComponent } from './lineage/lineage-card/lineage-card.component';
+import { ProfessionCardComponent } from './profession/profession-card/profession-card.component';
+import { FeatureCardComponent } from './feature/feature-card/feature-card.component'
 
 @NgModule({
   declarations: [
@@ -45,7 +48,10 @@ import { MapPipe } from './map.pipe'
     ClassListComponent,
     BuilderComponent,
     FilterByTypePipe,
-    MapPipe
+    MapPipe,
+    LineageCardComponent,
+    ProfessionCardComponent,
+    FeatureCardComponent
   ],
   imports: [
     BrowserModule,
@@ -53,9 +59,6 @@ import { MapPipe } from './map.pipe'
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, {dataEncapsulation: false, delay:0 }
-    ),
     BrowserAnimationsModule,
     MatButtonModule,
     MatCardModule,

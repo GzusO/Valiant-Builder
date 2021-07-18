@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { startWith } from 'rxjs/operators';
-import { Characteristic, Feature, Lineage, Profession } from '../adventurer';
+import { Characteristic } from "../Characteristic";
+import { Lineage } from "../lineage/Lineage";
+import { Profession } from "../profession/Profession";
+import { Feature } from "../feature/Feature";
 import { DataService } from '../data.service';
 import { Pipe, PipeTransform } from '@angular/core';
 
@@ -17,19 +20,23 @@ export class BuilderComponent implements OnInit {
     characteristicPoints: number = 2;
     valiantCharacteristics: Map<string,number> = new Map<string,number>();
     valiantLineages: string[] = [];
-    valiantLineagePrimaryFeatures: string[] = [];
-    valiantLineageSecondaryFeatures: string[] = [];
+    valiantLineagePrimaryFeatures: Feature[] = [];
+    valiantLineageSecondaryFeatures: Feature[] = [];
     valiantProfession: Profession[] =[];
+    valiantClassPrimaryFeatures: Feature[] =[];
+    valiantClassSecondaryFeatures: Feature[] = [];
 
     lineages: Lineage[] = [];
     lineageFeatures: Feature[] =[];
     professions: Profession[] = [];
+    classFeatures: Feature[] = [];
 
   constructor(private dataService: DataService) {
       this.getCharacteristics();
       this.getLineages();
       this.getLineageFeatures();
       this.getProfessions();
+      this.getClassFeatures();
       this.characteristics.forEach(char =>this.valiantCharacteristics.set(char.name,1));
    }
 
@@ -46,6 +53,9 @@ export class BuilderComponent implements OnInit {
   }
   getProfessions(): void{
     this.dataService.getProfessions().subscribe(professions => this.professions=professions);
+  }
+  getClassFeatures(): void {
+    this.dataService.getFeaturesByType('Aspirant').subscribe(feats => this.classFeatures= feats);
   }
 
   primary(feats: Feature[]): Feature[] {

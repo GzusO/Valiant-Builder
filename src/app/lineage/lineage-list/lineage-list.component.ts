@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { Lineage,Ability,Feature,Trait } from '../adventurer';
-import { DataService } from '../data.service';
+import { Lineage } from "src/app/lineage/Lineage";
+import { Feature } from "src/app/feature/Feature";
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-lineage-list',
@@ -10,7 +11,6 @@ import { DataService } from '../data.service';
 })
 export class LineageListComponent implements OnInit {
   lineages: Lineage[] = [];
-  selected = new FormControl(0)
   constructor(private dataService:DataService) { }
 
   ngOnInit(): void {

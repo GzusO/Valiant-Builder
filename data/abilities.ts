@@ -1,4 +1,4 @@
-import { Ability } from "src/app/adventurer";
+import { Ability } from "src/app/Ability";
 
 export const abilityData: Ability[] =[
     //Profession Abilties

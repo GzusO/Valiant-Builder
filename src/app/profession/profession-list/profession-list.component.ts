@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Profession, Ability, Trait, Feature } from '../adventurer';
-import { DataService } from '../data.service';
+import { Profession } from "src/app/profession/Profession";
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-profession-list',

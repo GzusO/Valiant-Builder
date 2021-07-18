@@ -1,6 +1,4 @@
-<h2>Lineages</h2>
-<div class="cards">
-  <mat-card *ngFor="let lineage of lineages" class="card">
+<mat-card class="card" *ngIf="lineage">
     <mat-card-header>
       <mat-card-title>
         <span class="name">{{lineage.name}}</span>
@@ -81,5 +79,3 @@
       </mat-tab-group>
     </mat-card-content>
   </mat-card>
-</div>
-  

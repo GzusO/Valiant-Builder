@@ -1,4 +1,4 @@
-import { Characteristic } from "src/app/adventurer";
+import { Characteristic } from "src/app/Characteristic";
 
 export const characteristicData: Characteristic[] = [
     {name:'Physical Power',description:'Primary Attributes: Lethality, Force', features:[]},
