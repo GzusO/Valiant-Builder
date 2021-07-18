@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Feature } from "./feature/Feature";
+import { Feature } from '../feature/Feature';
 
 @Pipe({
   name: 'filterByType'

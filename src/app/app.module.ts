@@ -30,8 +30,8 @@ import { FooterComponent } from './footer/footer.component';
 import { CharacteristicListComponent } from './characteristic-list/characteristic-list.component';
 import { ClassListComponent } from './class-list/class-list.component';
 import { BuilderComponent } from './builder/builder.component'
-import { FilterByTypePipe } from './filter-by-type.pipe';
-import { MapPipe } from './map.pipe';
+import { FilterByTypePipe } from './Pipes/filter-by-type.pipe';
+import { MapPipe } from './Pipes/map.pipe';
 import { ProfessionListComponent } from './profession/profession-list/profession-list.component';
 import { LineageListComponent } from './lineage/lineage-list/lineage-list.component';
 import { LineageCardComponent } from './lineage/lineage-card/lineage-card.component';
