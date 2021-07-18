@@ -17,8 +17,8 @@ export class BuilderComponent implements OnInit {
     characteristicPoints: number = 2;
     valiantCharacteristics: Map<string,number> = new Map<string,number>();
     valiantLineages: string[] = [];
-    valiantLineagePrimaryFeatures: string[] = [];
-    valiantLineageSecondaryFeatures: string[] = [];
+    valiantLineagePrimaryFeatures: Feature[] = [];
+    valiantLineageSecondaryFeatures: Feature[] = [];
     valiantProfession: Profession[] =[];
 
     lineages: Lineage[] = [];

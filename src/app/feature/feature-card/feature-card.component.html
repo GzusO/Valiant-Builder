@@ -1,1 +1,26 @@
-<p>feature-card works!</p>
+<mat-card class="card" *ngIf="feature">
+    <mat-card-header>
+        <mat-card-title>
+          <span class="name">{{feature.name}}</span>  
+        </mat-card-title>
+        <mat-card-subtitle>
+          <span>{{feature.types.join(", ")}}</span>
+          <mat-divider></mat-divider>
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <p>
+          {{feature.description}}
+        </p>
+        <div *ngFor="let ability of feature.abilities">
+          <span class="ability-name">{{ability.name}} ({{ability.primaryTags}})</span>
+                <div *ngIf="ability.secondaryTags.length !== 0">{{ability.secondaryTags}}</div>
+                <div *ngIf="ability.tertiaryTags.length !== 0">{{ability.tertiaryTags}}</div>
+                <p>{{ability.description}}</p>
+        </div>
+        <div *ngFor="let trait of feature.traits">
+          <span class="trait-name">{{trait.name}}</span>
+          <p>{{trait.description}}</p>
+        </div>
+    </mat-card-content>
+</mat-card>
