@@ -23,16 +23,20 @@ export class BuilderComponent implements OnInit {
     valiantLineagePrimaryFeatures: Feature[] = [];
     valiantLineageSecondaryFeatures: Feature[] = [];
     valiantProfession: Profession[] =[];
+    valiantClassPrimaryFeatures: Feature[] =[];
+    valiantClassSecondaryFeatures: Feature[] = [];
 
     lineages: Lineage[] = [];
     lineageFeatures: Feature[] =[];
     professions: Profession[] = [];
+    classFeatures: Feature[] = [];
 
   constructor(private dataService: DataService) {
       this.getCharacteristics();
       this.getLineages();
       this.getLineageFeatures();
       this.getProfessions();
+      this.getClassFeatures();
       this.characteristics.forEach(char =>this.valiantCharacteristics.set(char.name,1));
    }
 
@@ -49,6 +53,9 @@ export class BuilderComponent implements OnInit {
   }
   getProfessions(): void{
     this.dataService.getProfessions().subscribe(professions => this.professions=professions);
+  }
+  getClassFeatures(): void {
+    this.dataService.getFeaturesByType('Aspirant').subscribe(feats => this.classFeatures= feats);
   }
 
   primary(feats: Feature[]): Feature[] {
