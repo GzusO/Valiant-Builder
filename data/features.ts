@@ -201,6 +201,8 @@ export const featureData: Feature[] =[
     {name:'Stalwart Challenger',types:['Class','Primary','Warrior'],description:'In the heat of battle, none can deny your challenge.', tier:3,abilities:[],traits:[]},
     {name:'Trading Blows',types:['Class','Primary','Warrior'],description:'You\'re confident that you can take a hit, and more confident that your opponents won\'t be able to take yours.', tier:3,abilities:[],traits:[]},
     {name:'Active Defenses',types:['Class','Primary','Warrior'],description:'Heavy armor may ward off most blows, but skilled opponents require more active defensive measures.', tier:4,abilities:[],traits:[]},
+    {name:'Advanced Martial Stances',types:['Class','Primary','Warrior'],description:'You\'ve mastered the fundamentals, and have delved into advanced martial arts.', tier:4,abilities:[],traits:[]},
+    
     {name:'Masterful Maneuvers',types:['Class','Primary','Warrior'],description:'A single, deliberate strike is all you need.', tier:6,abilities:[],traits:[]},
     {name:'Deathless',types:['Class','Primary','Warrior'],description:'Heros often live on borrowed time.', tier:6,abilities:[],traits:[]},
     

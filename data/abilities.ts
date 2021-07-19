@@ -116,6 +116,10 @@ export const abilityData: Ability[] =[
     {name:'Punishing Bide',types:['Class','Warrior','Bided Time'],primaryTags:['Energy 2 + 2','Combat'],secondaryTags:['Charged Action 1 turn'],tertiaryTags:[],description:'When this ability resolves, use any attack ability and increase the energy damage of that ability by the energy damage you took while this action was pending.',tier:3},
     {name:'Challenge',types:['Class','Warrior','Stalwart Challenger'],primaryTags:['Energy 4','Combat'],secondaryTags:['Action'],tertiaryTags:['Range 5'],description:'The target character cannot target any character other than you. You cannot target any character other than the targeted character. If one of your allies targets the challenged character with an ability, this ability\'s effects end.',tier:3},
     {name:'Adrenaline Burst',types:['Class','Warrior','Trading Blows'],primaryTags:['Energy 0','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1'],description:'you take energy damage: restore energy equal to the energy damage taken plus your tier.',tier:3},
+    
+    {name:'Sentinel Stance',types:['Class','Warrior','Advanced Martial Stances'],primaryTags:['Energy 3','Combat'],secondaryTags:['Stance'],tertiaryTags:[],description:'When a character moves into a tile within range of one of your attack abilities for the first time on a turn, you may use an attack ability. That attack ability must target the triggering character.',tier:4},
+    {name:'Fleet Stance',types:['Class','Warrior','Advanced Martial Stances'],primaryTags:['Energy 3','Combat'],secondaryTags:['Stance'],tertiaryTags:[],description:'Gain +1 movement and combat speed.',tier:4},
+    
     {name:'Defy Death',types:['Class','Warrior','Deathless'],primaryTags:['Energy 8','Combat'],secondaryTags:['Stance'],tertiaryTags:[],description:'You are immune to the bleedout status and do not die due to negative endurance.',tier:6},
     
     {name:'Weapons Knowledge',types:['Class','Warrior','Arms Connoisseur'],primaryTags:['Energy 0'],secondaryTags:['Charged Action 5 minutes'],tertiaryTags:[],description:'Determine the origins of a target weapon.',tier:1},
