@@ -100,7 +100,7 @@ export const featureData: Feature[] =[
     {name:'Comfortable and Quiet',types:['Lineage','Marr','Secondary'],description:'The greatest benefit of being a Marr adventurer is that nobody bothers you during your time off.',abilities:[],traits:[],tier:0},
 
     //Selk Features
-    {name:'Expanded Mind',types:['Lineage','Selk','Persistent'],description:'Your mind is a powerful tool, which is good because you\'re not quite as strong, fast, or resilient as other people.',abilities:[],traits:[],tier:0},
+    {name:'Exceptional Mind',types:['Lineage','Selk','Persistent'],description:'Your mind is a powerful tool, which is good because you\'re not quite as strong, fast, or resilient as other people.',abilities:[],traits:[],tier:0},
     {name:'Combat Deduction',types:['Lineage','Selk','Primary'],description:'Your quick qits thrive in the heat of battle, allowing you to plan ahead further than others.',abilities:[],traits:[],tier:0},
     {name:'Lightning Recovery',types:['Lineage','Selk','Primary'],description:'You never miss a beat.',abilities:[],traits:[],tier:0},
     {name:'Fated Longevity',types:['Lineage','Selk','Primary'],description:'More impressive than the long lifespans of Selk is the lack of statistical outliers. Almost every Selk lives up to the natural lifespan.',abilities:[],traits:[],tier:0},
