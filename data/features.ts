@@ -222,6 +222,8 @@ export const featureData: Feature[] =[
     
     {name:'Practiced Repertoire',types:['Class','Primary','Arcanist'],description:'Minute optimizations accumulate into measureable improvements.', tier:1,abilities:[],traits:[]},
     {name:'Steady Mind',types:['Class','Primary','Arcanist'],description:'Many novice arcanists have fallen in battle, unable to focus over the sounds of conflict.', tier:1,abilities:[],traits:[]},
+    {name:'Arcane Munitions',types:['Class','Primary','Arcanist'],description:'Certain arcanists find it useful to supplement their repertoire with projectile weaponry, and find that arcane missile can substitute mundane ones with great efficiency.', tier:1,abilities:[],traits:[]},
+     
     {name:'Arcane Restoration',types:['Class','Primary','Arcanist'],description:'Very careful and exact manipulation of arcane forces can be used to mend and revitalize. Of course, this still requires a working understanding of your subject\'s physiology and some understanding of equivalent exchange.', tier:2,abilities:[],traits:[]},
     {name:'Stable Recovery',types:['Class','Primary','Arcanist'],description:'Your mastery over the fundamentals of energy conservation allow you to enter a more stable recovery state after substantial exertions.', tier:2,abilities:[],traits:[]},
     {name:'Hyperconscious',types:['Class','Primary','Arcanist'],description:'You are able to delegate increasingly complex tasks to your passive subconscious mind.', tier:3,abilities:[],traits:[]},
