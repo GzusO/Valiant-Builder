@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -28,7 +27,7 @@ import { MatListModule } from '@angular/material/list';
 
 import { FooterComponent } from './footer/footer.component';
 import { CharacteristicListComponent } from './characteristic-list/characteristic-list.component';
-import { ClassListComponent } from './class-list/class-list.component';
+import { ClassListComponent } from './class/class-list/class-list.component';
 import { BuilderComponent } from './builder/builder.component'
 import { FilterByTypePipe } from './Pipes/filter-by-type.pipe';
 import { MapPipe } from './Pipes/map.pipe';
@@ -36,7 +35,9 @@ import { ProfessionListComponent } from './profession/profession-list/profession
 import { LineageListComponent } from './lineage/lineage-list/lineage-list.component';
 import { LineageCardComponent } from './lineage/lineage-card/lineage-card.component';
 import { ProfessionCardComponent } from './profession/profession-card/profession-card.component';
-import { FeatureCardComponent } from './feature/feature-card/feature-card.component'
+import { FeatureCardComponent } from './feature/feature-card/feature-card.component';
+import { ClassDetailComponent } from './class/class-detail/class-detail.component';
+import { FeatureExpansionComponent } from './feature/feature-expansion/feature-expansion.component'
 
 @NgModule({
   declarations: [
@@ -51,7 +52,9 @@ import { FeatureCardComponent } from './feature/feature-card/feature-card.compon
     MapPipe,
     LineageCardComponent,
     ProfessionCardComponent,
-    FeatureCardComponent
+    FeatureCardComponent,
+    ClassDetailComponent,
+    FeatureExpansionComponent
   ],
   imports: [
     BrowserModule,
