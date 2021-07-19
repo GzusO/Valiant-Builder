@@ -8,7 +8,7 @@ export const abilityData: Ability[] =[
     //Lineage Abilties
 
     //Cossim Abilties
-    {name:'Auto-Stabilize',types:['Lineage','Cossim','Deathless Being'],primaryTags:['Energy 3','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1'],description:'You suffer the bleedout staus: gain the stable status.',tier:0},
+    {name:'Auto-Stabilize',types:['Lineage','Cossim','Deathless Being'],primaryTags:['Energy 0','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1'],description:'You suffer the bleedout status: gain the stable status.',tier:0},
     {name:'Shift',types:['Lineage','Cossim','Fitful Existence'],primaryTags:['Energy 3','Combat'],secondaryTags:['Reaction'],tertiaryTags:[],description:'Global: move up to 1 tile.',tier:0},
     {name:'Nova Counter',types:['Lineage','Cossim','Nova Rebound'],primaryTags:['Energy X','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1'],description:'You lose endurance due to a melee attack ability: the character that used the attack ability takes 2x energy damage.',tier:0},
     {name:'Flash',types:['Lineage','Cossim','Dazing Brilliance'],primaryTags:['Energy 6','Combat'],secondaryTags:['Action'],tertiaryTags:['Range 2 Sphere','Limited 1'],description:'Target characters, excluding yourself, suffer -2 lethality and -2 defence until the beginning of your next end phase. Target characters, excluding yourself, are incapacitated for an instant. In addition to any other potential effects, this causes the target character to lose focus on all of their focus abilities.',tier:0},
