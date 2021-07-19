@@ -212,5 +212,4 @@ export const abilityData: Ability[] =[
     {name:'Request',types:['Class','Specialist','Enthralling Speech'],primaryTags:['Energy 4'],secondaryTags:['Charged Action 1 minute'],tertiaryTags:[],description:'Convince a character that is at least one tier below you to do a task, within reason. This ability can be used on non-person characters as long as they can understand you.',tier:4},
     {name:'Enthrall',types:['Class','Specialist','Enthralling Speech'],primaryTags:['Energy 12'],secondaryTags:['Charged Action 1 hour'],tertiaryTags:[],description:'Make a character that is at least one tier below you friendly towards you, within reason. This ability can be used on non-person characters as long as they can understand you.',tier:4},
     
-    
 ]

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Class } from "../Class";
-import { Feature } from "../feature/Feature";
-import { DataService } from '../data.service';
+import { Class } from 'src/app/Class';
+import { Feature } from 'src/app/feature/Feature';
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-class-list',
