@@ -187,6 +187,9 @@ export const traitData: Trait[] = [
     {name:'Additional Stance',types:['Class','Warrior','Masterful Stances'],description:'You may use an additional stance ability during the round begin phase, given you have enough focus slots to maintain the additional stance.',tier:6},
     
     {name:'Eternal',types:['Class','Warrior','Eternal Body'],description:'If you would die, restore 1 endurance and permanently suffer -2 energy.',tier:10},
+    
+    {name:'Heavy Weapon Mastery',types:['Class','Warrior','Behemoth Momentum'],description:'Ignore the slow tag on attack abilities during your turn.',tier:9},
+    
     {name:'Popular',types:['Class','Warrior','Local Notoriety'],description:'You are popular among commoners, who will always offer you respite or aid if they can.',tier:1},
     {name:'March',types:['Class','Warrior','Martial Discipline'],description:'You may treat your travel group as if it had one less character in it when calculating range.',tier:1},
     {name:'Weightless Armor',types:['Class','Warrior','Armor Training'],description:'You don\'t count the weight of your worn armor against your weight threshold.',tier:2},

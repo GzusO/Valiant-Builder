@@ -209,6 +209,8 @@ export const featureData: Feature[] =[
     
     {name:'Eternal Body',types:['Class','Primary','Warrior'],description:'Your legacy may outlive your body, but not by much.', tier:10,abilities:[],traits:[]},
     
+    {name:'Behemoth Momentum',types:['Class','Primary','Warrior'],description:'With masterful precision, you can turn a charge into a sundering cleave.', tier:9,abilities:[],traits:[]},
+    
     {name:'Arms Connoisseur',types:['Class','Secondary','Warrior'],description:'You\'ve an appreciation of deadly implements.', tier:1,abilities:[],traits:[]},
     {name:'Local Notoriety',types:['Class','Secondary','Warrior'],description:'Your blend of martial skill and approachable demeanor make you popular among common folk.', tier:1,abilities:[],traits:[]},
     {name:'Martial Discipline',types:['Class','Secondary','Warrior'],description:'True martial mastery requries efficiency both on and off the battlefield.', tier:1,abilities:[],traits:[]},
