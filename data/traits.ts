@@ -90,7 +90,7 @@ export const traitData: Trait[] = [
     //Marr Traits
     {name:'Adapt',types:['Lineage','Marr','Adaptive Form'],description:'If you spend 1 season in a specific region or city, you are able to mimic the dialect, mannerisms, and other norms to the point of being able to be mistaken for a native of the region or city. If you are away from a region you have adapted to for more than 1 season, you lose the adaptation.',tier:0},
     {name:'Quiet Movement',types:['Lineage','Marr','Unassuming Demeanor'],description:'Enemies cannot use reaction abilities at any point during your move phase.',tier:0},
-    {name:'Opportunity',types:['Lineage','Marr','Simple Opportunist'],description:'Gain +3 lethality in attacks that target a character with the winded status.',tier:0},
+    {name:'Opportunity',types:['Lineage','Marr','Simple Opportunist'],description:'Gain +1 exertion in attack contests against characters with the winded status.',tier:0},
     {name:'Combat Adaptation',types:['Lineage','Marr','Unnatural Adaptation'],description:'At the beginning of every even round (up to and including round 10), gain your choice of +1 lethality, +1 force, +1 defence, or +1 resistance.',tier:0},
     {name:'Unassuming',types:['Lineage','Marr','Plain'],description:'Others will not suspect you of anything without direct evidence.',tier:0},
     {name:'Simple Crafts',types:['Lineage','Marr','Simple Means'],description:'You can only create items that are 1 tier lower than what you would usually be able to create. All items you create cost half as much as they normally would.',tier:0},
