@@ -226,6 +226,9 @@ export const featureData: Feature[] =[
      
     {name:'Arcane Restoration',types:['Class','Primary','Arcanist'],description:'Very careful and exact manipulation of arcane forces can be used to mend and revitalize. Of course, this still requires a working understanding of your subject\'s physiology and some understanding of equivalent exchange.', tier:2,abilities:[],traits:[]},
     {name:'Stable Recovery',types:['Class','Primary','Arcanist'],description:'Your mastery over the fundamentals of energy conservation allow you to enter a more stable recovery state after substantial exertions.', tier:2,abilities:[],traits:[]},
+    {name:'Arcane Armors',types:['Class','Primary','Arcanist'],description:'With enough practice, an arcanist can maintain a passive shell of force around themselves. This arcane shell is as effective as most light armors.', tier:2,abilities:[],traits:[]},
+    
+
     {name:'Hyperconscious',types:['Class','Primary','Arcanist'],description:'You are able to delegate increasingly complex tasks to your passive subconscious mind.', tier:3,abilities:[],traits:[]},
     {name:'Overcharging',types:['Class','Primary','Arcanist'],description:'Your body is a conduit capable of channeling dangerous amounts of arcane energy.', tier:3,abilities:[],traits:[]},
     {name:'Masterful Extensions',types:['Class','Primary','Arcanist'],description:'Brief flashes of power are novice displays. True masters of the arcane can maintain deadly effects for extended periods of time, ravaging battlefields with deadly energies.', tier:9,abilities:[],traits:[]},
