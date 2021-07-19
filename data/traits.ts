@@ -50,7 +50,7 @@ export const traitData: Trait[] = [
     {name:'Movement Reduction Immunity',types:['Lineage','Girt','Aspect of the Sands'],description:'You are immune to attribute ailments that reduce your movement.',tier:0},
     {name:'Gear Maintenance',types:['Lineage','Girt','Staunch Maintainer'],description:'You can prepare an additional gear item whenever you prepare gear.',tier:0},
     {name:'Bejeweled',types:['Lineage','Girt','Decorated Figure'],description:'You can wear on additional accessory.',tier:0},
-    {name:'Weight Distribution',types:['Lineage','Girt','Careful Packing'],description:'Your carry weight increases by 40 lb.',tier:0},
+    {name:'Weight Distribution',types:['Lineage','Girt','Careful Packing'],description:'Your base weight threshold is increased by 10 lb.',tier:0},
     {name:'Caravan',types:['Lineage','Girt','Skillful Navigator'],description:'Your travel group gains +1 range and +3 provision score.',tier:0},
     {name:'Merchant Friendliness',types:['Lineage','Girt','Silver Tongue'],description:'Merchants default to being friendly with you rather than being neutral towards you.',tier:0},
     {name:'Language Expert',types:['Lineage','Girt','Well-Traveled'],description:'You learn an additional language.',tier:0},
@@ -90,7 +90,7 @@ export const traitData: Trait[] = [
     //Marr Traits
     {name:'Adapt',types:['Lineage','Marr','Adaptive Form'],description:'If you spend 1 season in a specific region or city, you are able to mimic the dialect, mannerisms, and other norms to the point of being able to be mistaken for a native of the region or city. If you are away from a region you have adapted to for more than 1 season, you lose the adaptation.',tier:0},
     {name:'Quiet Movement',types:['Lineage','Marr','Unassuming Demeanor'],description:'Enemies cannot use reaction abilities at any point during your move phase.',tier:0},
-    {name:'Opportunity',types:['Lineage','Marr','Simple Opportunist'],description:'Gain +3 lethality in attacks that target a character with the winded status.',tier:0},
+    {name:'Opportunity',types:['Lineage','Marr','Simple Opportunist'],description:'Gain +1 exertion in attack contests against characters with the winded status.',tier:0},
     {name:'Combat Adaptation',types:['Lineage','Marr','Unnatural Adaptation'],description:'At the beginning of every even round (up to and including round 10), gain your choice of +1 lethality, +1 force, +1 defence, or +1 resistance.',tier:0},
     {name:'Unassuming',types:['Lineage','Marr','Plain'],description:'Others will not suspect you of anything without direct evidence.',tier:0},
     {name:'Simple Crafts',types:['Lineage','Marr','Simple Means'],description:'You can only create items that are 1 tier lower than what you would usually be able to create. All items you create cost half as much as they normally would.',tier:0},
@@ -99,7 +99,7 @@ export const traitData: Trait[] = [
     {name:'Quiet Downtime',types:['Lineage','Marr','Comfortable and Quiet'],description:'Nothing will actively interrupt your downtime as long as it is not spent with other characters who do not have this trait.',tier:0},
     
     //Selk Traits
-    {name:'Deliberation',types:['Lineage','Selk','Expanded Mind'],description:'You know if the characteristic contest target score for any static obstacles requiring a mental characteristic contest is possible for you to achieve in your current state.',tier:0},
+    {name:'Deliberation',types:['Lineage','Selk','Exceptional Mind'],description:'You know if the characteristic contest target score for any static obstacles requiring a mental characteristic contest is possible for you to achieve in your current state.',tier:0},
     {name:'Selk Death Resistance',types:['Lineage','Selk','Fated Longevity'],description:'Gain +4 death resistance.',tier:0},
     {name:'First Impressions',types:['Lineage','Selk','Grandiosity'],description:'Regardless of your actual physical appearance, those that don\'t know you assume you are of noble status.',tier:0},
     {name:'Keen Mind',types:['Lineage','Selk','Bright Minded'],description:'You can create gear of 1 tier higher than you normally could, paying 1.5 times the cost for that tier.',tier:0},
@@ -110,7 +110,7 @@ export const traitData: Trait[] = [
     //Vyld Traits
     {name: 'Recognizable', types: ['Lineage','Unfamiliar Form','Vyld'], description: 'Unless completely covered, you stand out in town and cities and are recognizable as Vyld. Common people oftenreact to your presence in exaggerated ways.',tier:0},
     {name:'Vyld Lethality',types:['Lineage','Vyld','Masterful Motion'],description:'Gain +1 lethality.',tier:0},
-    {name:'Natural Armor',types:['Lineage','Vyld','Bone Plating'],description:'While not wearing armor, you gain +2 defence and +1 resistance. You gain an additional +1 defence for every character tier above 0.',tier:0},
+    {name:'Natural Armor',types:['Lineage','Vyld','Bone Plating'],description:'While not wearing armor sets, you gain +2 defence and +1 resistance. You gain an additional +1 defence for every character tier above 0.',tier:0},
     {name:'Vyld Darksight',types:['Lineage','Vyld','Adapted Eyes'],description:'You gain darksight.',tier:0},
     {name:'Mutant',types:['Lineage','Vyld','Spontaneous Mutations'],description:'You can be affected by an additional transformation.',tier:0},
     {name:'Forced Survival',types:['Lineage','Vyld','Ancestral Instinct'],description:'Your travel group gains + 10 provisions when travelling into, travelling out of, or resting in dangerous tiles.',tier:0},
@@ -162,8 +162,9 @@ export const traitData: Trait[] = [
     //Aspirant Traits
     {name:'Beginner\'s Repertoire',types:['Class','Aspirant','Arcane Basics'],description:'When you gain this trait, select any tier 1 ability from the Arcanist Repertoire pool and gain access to that ability. If you gain a repertoire by investing into the Arcanist class path, add this ability to your repertoire. See the Arcanist global feature for more information.',tier:0},
     {name:'Beginner\'s Techniques',types:['Class','Aspirant','Warfare Basics'],description:'When you gain this trait, select any tier 1 ability from the Warrior Techniques pool and gain access to that ability. If you gain access to additional techniques by investing into the Warrior class path, keep this technique and increase your Warrior Technique slots by 1 (using the additional slot for your known technique). See the Warrior global feature for more information.',tier:0},
-    {name:'Beginner\'s Strategies',types:['Class','Aspirant','Tactical Basics'],description:'When you gain this trait, learn one tier 1 trait from the Specialist Strategies pool. If you gain access to additional strategies by investing into the Specialist class path, keep this strategy in your known Specialist Strategies pool. See the Specialist global feature for more information.',tier:0},
-    {name:'Ascendant Growth',types:['Class','Aspirant','Ascendant Bond'],description:'Wherever you may find yourself, a small sentient critter or plant (your Ascendant) follows you. You and your Ascendant share a permanent telepathic link. If it dies or is destroyed, it regrows nearby 1 hour after it is destroyed. Your Ascendant does not count as a character, and dies if it is more than 10 ft. away from you. Due to your Ascendant’s innate senses, you cannot be blind or conditionally blind to any characters within 10 ft. of you while your Ascendant is alive. Your ascendant can manipulate objects no heavier than 5 lb. within 10 ft. of you, but cannot use any abilities or equipment as it is not a character.',tier:0},
+    {name:'Beginner\'s Strategies',types:['Class','Aspirant','Tactical Basics'],description:'When you gain this trait, learn one tier 1 trait from the Specialist Strategies pool. You also gain access to the Strategy Application trait from the Specialist global feature that can be used to apply that strategy. If you gain access to additional strategies by investing into the Specialist class path, keep this strategy in your known Specialist Strategies pool. See the Specialist global feature for more information.',tier:0},
+    {name:'Ascendant',types:['Class','Aspirant','Ascendant Bond'],description:'A small sentient being (your Ascendant) follows you, taking a form of your choosing (this form cannot be changed). It can fly freely, but cannot willingly move more than 10 ft. away from you. If your Ascendant is destroyed, it reforms in 1 hour. Your Ascendant is destroyed if it is more than 10 ft. away from you, if any attack ability targeting it resolves (it can be targeted by attack abilities as if it were a character), or if it is subjected to any environmental hazards. Your ascendant can manipulate objects no heavier than 5 lb. within 10 ft. of you.',tier:0},
+    {name:'Ascendant Link',types:['Class','Aspirant','Ascendant Bond'],description:'You and your Ascendant can communicate telepathically. Due to your Ascendant\'s innate senses, you cannot be blind or conditionally blind to any characters within 10 ft. of you while your Ascendant is alive.',tier:0},
     {name:'Thrill of Combat',types:['Class','Aspirant','Daring Flair'],description:'You gain +1 lethality and +1 defence for every enemy character that is adjacent to you.',tier:0},
     {name:'Lightened Loads',types:['Class','Aspirant','Light Traveler'],description:'Your tavel group gains +2 range.',tier:0},
     {name:'Simple Market Knowledge',types:['Class','Aspirant','Basic Economy'],description:'You always know if a trade you are making is not in your favor.',tier:0},
@@ -184,7 +185,12 @@ export const traitData: Trait[] = [
     {name:'Force Buildup',types:['Class','Warrior','Trading Blows'],description:'Gain +1 force whenever you take energy damage. this boon lasts until combat ends.',tier:3},
     {name:'Deflecting',types:['Class','Warrior','Active Defenses'],description:'Any parry abilities you use can be triggered on any attack abilities, instead of just melee attack abilities. Additionally, all medium shields grant you cover from ranged attack abilities while wielded in at least one hand.',tier:4},
     {name:'Masterful Attacks',types:['Class','Warrior','Masterful Maneuvers'],description:'You may apply an additional attack modifier ability to your attack abilities.',tier:6},
+    {name:'Additional Stance',types:['Class','Warrior','Masterful Stances'],description:'You may use an additional stance ability during the round begin phase, given you have enough focus slots to maintain the additional stance.',tier:6},
+    
     {name:'Eternal',types:['Class','Warrior','Eternal Body'],description:'If you would die, restore 1 endurance and permanently suffer -2 energy.',tier:10},
+    
+    {name:'Heavy Weapon Mastery',types:['Class','Warrior','Behemoth Momentum'],description:'Ignore the slow tag on attack abilities during your turn.',tier:9},
+    
     {name:'Popular',types:['Class','Warrior','Local Notoriety'],description:'You are popular among commoners, who will always offer you respite or aid if they can.',tier:1},
     {name:'March',types:['Class','Warrior','Martial Discipline'],description:'You may treat your travel group as if it had one less character in it when calculating range.',tier:1},
     {name:'Weightless Armor',types:['Class','Warrior','Armor Training'],description:'You don\'t count the weight of your worn armor against your weight threshold.',tier:2},
@@ -204,10 +210,16 @@ export const traitData: Trait[] = [
     {name:'Hardened Focus',types:['Class','Arcanist','Steady Mind'],description:'You gain +1 resistance for each instance of focus you are maintaining.',tier:1},
     {name:'Arcane Medicine',types:['Class','Arcanist','Arcane Restoration'],description:'Whenever one of your effects restores a character\'s energy, that effect restores additional energy equal to your tier.',tier:2},
     {name:'Safe Recharging',types:['Class','Arcanist','Stable Recovery'],description:'While you suffer the Recharging status, gain defence and resistance equal to your tier.',tier:2},
+    {name:'Arcane Shell',types:['Class','Arcanist','Arcane Armors'],description:'While not wearing any armor sets, gain defence equal to your tier.',tier:2},
+    
     {name:'Passive Focus',types:['Class','Arcanist','Hyperconscious'],description:'You do not lose focus when incapacitated.',tier:3},
+    {name:'Experimenter',types:['Class','Arcanist','Practiced Experimentation'],description:'Change the base energy cost of the Arcane Experimentation ability to 0 and increase its limited value by 1.',tier:3},
+    
     {name:'Remote Execution',types:['Class','Arcanist','Masterful Extensions'],description:'For all of your Range abilities not attached to weapons, you may treat a remote tile as the origin point for determining the ability range rather than the tile you inhabit. This remote tile can be any tile within a range equal to your mental power characteristic score.',tier:9},
     {name:'Telepathy',types:['Class','Arcanist','Telepathic Communication'],description:'You can communicate telepathically with any creature within 10 ft. of you. The range of this trait is multiplied by your mental power characteristic score.',tier:3},
+    {name:'Remote Observer',types:['Class','Arcanist','Remote Observation'],description:'You can maintain a shimmering, physical form of your choosing (up to medium-character sized, and it always visible due to obvious arcane shimmers). You can move and sense from this form freely, as well as speak from it. The form may float or fly, and moves up to 2 tiles (10 ft.) during your move phase during combat. If the form moves more than 1 mile from your position, it returns to your position.',tier:6},
     
+
     //Specialist Traits
     {name:'Specialist Strategies',types:['Class','Specialist','Specialists'],description:'When you gain this trait, select two tier 1 traits from the Specialist Strategy pool. You do not normally have access to these traits (see Strategy Application). Whenever you invest a tier into the Specialist class path beyond the first, you may learn another Specialist Strategy trait. You may only learn traits with tiers equal to or less than your Specialist class path invested tier.',tier:0},
     {name:'Strategy Application',types:['Class','Specialist','Specialists'],description:'When combat begins, select one of your known Specialist Strategy traits. Gain the effects of that trait for the duration of the combat. A strategy can only be applied once during combat. If multiple Specialists apply the same strategy, only one has any effect.',tier:0},
@@ -238,5 +250,6 @@ export const traitData: Trait[] = [
     {name:'Rehearsed Autonomy',types:['Class','Specialist','Strategies'],description:'you an dall allied characters gain +1 focus slots.',tier:3},
     {name:'Stalling Tactics',types:['Class','Specialist','Strategies'],description:'All characters gain +3 defence and +3 resistance.',tier:3},
     {name:'Predictive Immunity',types:['Class','Specialist','Strategies'],description:'Select one non-attribute ailment when combat begins. You and your allies are immune to that ailment.',tier:4},
+    {name:'The Long Game',types:['Class','Specialist','Strategies'],description:'You and your allies may use stance abilities as if they were transformation abilities, paying twice the ability\'s energy cost.',tier:4},
     
 ]
