@@ -110,7 +110,7 @@ export const traitData: Trait[] = [
     //Vyld Traits
     {name: 'Recognizable', types: ['Lineage','Unfamiliar Form','Vyld'], description: 'Unless completely covered, you stand out in town and cities and are recognizable as Vyld. Common people oftenreact to your presence in exaggerated ways.',tier:0},
     {name:'Vyld Lethality',types:['Lineage','Vyld','Masterful Motion'],description:'Gain +1 lethality.',tier:0},
-    {name:'Natural Armor',types:['Lineage','Vyld','Bone Plating'],description:'While not wearing armor, you gain +2 defence and +1 resistance. You gain an additional +1 defence for every character tier above 0.',tier:0},
+    {name:'Natural Armor',types:['Lineage','Vyld','Bone Plating'],description:'While not wearing armor sets, you gain +2 defence and +1 resistance. You gain an additional +1 defence for every character tier above 0.',tier:0},
     {name:'Vyld Darksight',types:['Lineage','Vyld','Adapted Eyes'],description:'You gain darksight.',tier:0},
     {name:'Mutant',types:['Lineage','Vyld','Spontaneous Mutations'],description:'You can be affected by an additional transformation.',tier:0},
     {name:'Forced Survival',types:['Lineage','Vyld','Ancestral Instinct'],description:'Your travel group gains + 10 provisions when travelling into, travelling out of, or resting in dangerous tiles.',tier:0},
