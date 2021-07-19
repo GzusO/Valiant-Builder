@@ -50,7 +50,7 @@ export const traitData: Trait[] = [
     {name:'Movement Reduction Immunity',types:['Lineage','Girt','Aspect of the Sands'],description:'You are immune to attribute ailments that reduce your movement.',tier:0},
     {name:'Gear Maintenance',types:['Lineage','Girt','Staunch Maintainer'],description:'You can prepare an additional gear item whenever you prepare gear.',tier:0},
     {name:'Bejeweled',types:['Lineage','Girt','Decorated Figure'],description:'You can wear on additional accessory.',tier:0},
-    {name:'Weight Distribution',types:['Lineage','Girt','Careful Packing'],description:'Your carry weight increases by 40 lb.',tier:0},
+    {name:'Weight Distribution',types:['Lineage','Girt','Careful Packing'],description:'Your base weight threshold is increased by 10 lb.',tier:0},
     {name:'Caravan',types:['Lineage','Girt','Skillful Navigator'],description:'Your travel group gains +1 range and +3 provision score.',tier:0},
     {name:'Merchant Friendliness',types:['Lineage','Girt','Silver Tongue'],description:'Merchants default to being friendly with you rather than being neutral towards you.',tier:0},
     {name:'Language Expert',types:['Lineage','Girt','Well-Traveled'],description:'You learn an additional language.',tier:0},
