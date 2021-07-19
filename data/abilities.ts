@@ -28,7 +28,7 @@ export const abilityData: Ability[] =[
     {name:'Hasty Preparations',types:['Lineage','Hjark','Battlefield Maintenance'],primaryTags:['Energy 2','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1'],description:'Combat begins: you may prepare your gear.',tier:0},
     
     //Ingra Abilities
-    {name:'True Strikes',types:['Lineage','Ingra','Aspect of the Vulture'],primaryTags:['Energy 2','Combat'],secondaryTags:['Stance'],tertiaryTags:[],description:'Apply +1 precision to all of your attack contests.',tier:0},
+    {name:'True Strikes',types:['Lineage','Ingra','Aspect of the Vulture'],primaryTags:['Energy 1','Combat'],secondaryTags:['Stance'],tertiaryTags:[],description:'Apply +1 precision to all of your attack contests.',tier:0},
     {name:'Sway',types:['Lineage','Ingra','Graceful Form'],primaryTags:['Energy 0','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 2','Blitz'],description:'Global: move up to 1 tile.',tier:0},
     
     //Marr Abilities
