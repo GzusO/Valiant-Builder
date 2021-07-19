@@ -16,7 +16,7 @@ export const featureData: Feature[] =[
     {name:'Assistant',types:['Profession','Assistant'],abilities:[],traits:[], description:'Bar hands, store clerks, and other peoples employed by business owners to do simple labor. They make a meager living, but have any easy time finding odd jobs wherever they go.',tier:0},
     {name:'Scholar',types:['Profession','Scholar'],abilities:[],traits:[], description:'You are educated above the basic standards of society. In your endeavors to learn, you’ve picked up a few new languages.',tier:0},
     {name:'Priest',types:['Profession','Priest'],abilities:[],traits:[], description:'You’ve devoted yourself to some higher power. Besides some sense of inner piece, this devotion has given you access to a network of safe places, granted you’re travelling in friendly territory.',tier:0},
-    {name:'Physician',types:['Profession','Physician'],abilities:[],traits:[], description:'Doctor',tier:0},
+    {name:'Physician',types:['Profession','Physician'],abilities:[],traits:[], description:'There are many ailments on the Barrier Sea, and you’ve spent much of your life learning to cure them.',tier:0},
     {name:'Criminal',types:['Profession','Criminal'],abilities:[],traits:[], description:'Regardless of how you spin your tale, the truth is quite simple: you take things from people.',tier:0},
    
     //Lineage Features
@@ -100,7 +100,7 @@ export const featureData: Feature[] =[
     {name:'Comfortable and Quiet',types:['Lineage','Marr','Secondary'],description:'The greatest benefit of being a Marr adventurer is that nobody bothers you during your time off.',abilities:[],traits:[],tier:0},
 
     //Selk Features
-    {name:'Expanded Mind',types:['Lineage','Selk','Persistent'],description:'Your mind is a powerful tool, which is good because you\'re not quite as strong, fast, or resilient as other people.',abilities:[],traits:[],tier:0},
+    {name:'Exceptional Mind',types:['Lineage','Selk','Persistent'],description:'Your mind is a powerful tool, which is good because you\'re not quite as strong, fast, or resilient as other people.',abilities:[],traits:[],tier:0},
     {name:'Combat Deduction',types:['Lineage','Selk','Primary'],description:'Your quick qits thrive in the heat of battle, allowing you to plan ahead further than others.',abilities:[],traits:[],tier:0},
     {name:'Lightning Recovery',types:['Lineage','Selk','Primary'],description:'You never miss a beat.',abilities:[],traits:[],tier:0},
     {name:'Fated Longevity',types:['Lineage','Selk','Primary'],description:'More impressive than the long lifespans of Selk is the lack of statistical outliers. Almost every Selk lives up to the natural lifespan.',abilities:[],traits:[],tier:0},
@@ -178,7 +178,7 @@ export const featureData: Feature[] =[
     {name:'Alchemical Experimentations',types:['Class','Primary','Supplmentary','Aspirant'],description:'The practice of alchemy has largely been replaced by more practical processes. However, this doesn\'t keep an eccentric few from honing the talent anyways.', tier:0,abilities:[],traits:[]},
     {name:'Pugilism',types:['Class','Primary','Supplmentary','Aspirant'],description:'Bare-knuckled brawlers are a rare sight on the battlefield. Fighting with flesh alone is not easy, but masters of the craft are well-respected', tier:0,abilities:[],traits:[]},
     {name:'Frenzied Combatant',types:['Class','Primary','Supplmentary','Aspirant'],description:'You\'ve a short temper and an animal-like savagery in battle. Once you submit to this savagery, however, it takes a fair amount of bloodshed to bring you back to your senses.', tier:0,abilities:[],traits:[]},
-    {name:'Ascendant Bond',types:['Class','Primary','Supplmentary','Aspirant'],description:'There is plenty of ambient arcane energy flowing throughout the natural world. Infrequently, this energy manifests into a peculiar phenomenon known as an Ascendant. Ascendant require some sort of host to survive, else they burn up their available energy soon after forming.', tier:0,abilities:[],traits:[]},
+    {name:'Ascendant Bond',types:['Class','Primary','Supplmentary','Aspirant'],description:'Infrequently, ambient energies manifest into peculiar phenomena known as an Ascendants. Ascendants require some sort of host to survive, else they burn up their available energy soon after forming.', tier:0,abilities:[],traits:[]},
     {name:'Marked Prey',types:['Class','Primary','Supplmentary','Aspirant'],description:'Once you\'ve got your sights set on something, it\'s only a matter of time before it meets its demise.', tier:0,abilities:[],traits:[]},
     {name:'Charged Blood',types:['Class','Primary','Supplmentary','Aspirant'],description:'Whether it\'s hereditary or a freak mutation, your blood contains a significant amount of natural arcane energy. Having most likely lived like this for most of your life, you\'ve become quite adept at making use of this stored energy.', tier:0,abilities:[],traits:[]},
     {name:'Daring Flair',types:['Class','Primary','Supplmentary','Aspirant'],description:'Many adventurers learn to fight as a grim necessity. For you, however, a good fight is a great opportunity to try out some fancy new maneuvers.', tier:0,abilities:[],traits:[]},
@@ -201,8 +201,15 @@ export const featureData: Feature[] =[
     {name:'Stalwart Challenger',types:['Class','Primary','Warrior'],description:'In the heat of battle, none can deny your challenge.', tier:3,abilities:[],traits:[]},
     {name:'Trading Blows',types:['Class','Primary','Warrior'],description:'You\'re confident that you can take a hit, and more confident that your opponents won\'t be able to take yours.', tier:3,abilities:[],traits:[]},
     {name:'Active Defenses',types:['Class','Primary','Warrior'],description:'Heavy armor may ward off most blows, but skilled opponents require more active defensive measures.', tier:4,abilities:[],traits:[]},
+    {name:'Advanced Martial Stances',types:['Class','Primary','Warrior'],description:'You\'ve mastered the fundamentals, and have delved into advanced martial arts.', tier:4,abilities:[],traits:[]},
+    
     {name:'Masterful Maneuvers',types:['Class','Primary','Warrior'],description:'A single, deliberate strike is all you need.', tier:6,abilities:[],traits:[]},
+    {name:'Deathless',types:['Class','Primary','Warrior'],description:'Heros often live on borrowed time.', tier:6,abilities:[],traits:[]},
+    {name:'Masterful Stances',types:['Class','Primary','Warrior'],description:'You exist in a martial superposition.', tier:6,abilities:[],traits:[]},
+    
     {name:'Eternal Body',types:['Class','Primary','Warrior'],description:'Your legacy may outlive your body, but not by much.', tier:10,abilities:[],traits:[]},
+    
+    {name:'Behemoth Momentum',types:['Class','Primary','Warrior'],description:'With masterful precision, you can turn a charge into a sundering cleave.', tier:9,abilities:[],traits:[]},
     
     {name:'Arms Connoisseur',types:['Class','Secondary','Warrior'],description:'You\'ve an appreciation of deadly implements.', tier:1,abilities:[],traits:[]},
     {name:'Local Notoriety',types:['Class','Secondary','Warrior'],description:'Your blend of martial skill and approachable demeanor make you popular among common folk.', tier:1,abilities:[],traits:[]},
@@ -222,10 +229,17 @@ export const featureData: Feature[] =[
     
     {name:'Practiced Repertoire',types:['Class','Primary','Arcanist'],description:'Minute optimizations accumulate into measureable improvements.', tier:1,abilities:[],traits:[]},
     {name:'Steady Mind',types:['Class','Primary','Arcanist'],description:'Many novice arcanists have fallen in battle, unable to focus over the sounds of conflict.', tier:1,abilities:[],traits:[]},
+    {name:'Arcane Munitions',types:['Class','Primary','Arcanist'],description:'Certain arcanists find it useful to supplement their repertoire with projectile weaponry, and find that arcane missile can substitute mundane ones with great efficiency.', tier:1,abilities:[],traits:[]},
+     
     {name:'Arcane Restoration',types:['Class','Primary','Arcanist'],description:'Very careful and exact manipulation of arcane forces can be used to mend and revitalize. Of course, this still requires a working understanding of your subject\'s physiology and some understanding of equivalent exchange.', tier:2,abilities:[],traits:[]},
     {name:'Stable Recovery',types:['Class','Primary','Arcanist'],description:'Your mastery over the fundamentals of energy conservation allow you to enter a more stable recovery state after substantial exertions.', tier:2,abilities:[],traits:[]},
+    {name:'Arcane Armors',types:['Class','Primary','Arcanist'],description:'With enough practice, an arcanist can maintain a passive shell of force around themselves. This arcane shell is as effective as most light armors.', tier:2,abilities:[],traits:[]},
+    
+
     {name:'Hyperconscious',types:['Class','Primary','Arcanist'],description:'You are able to delegate increasingly complex tasks to your passive subconscious mind.', tier:3,abilities:[],traits:[]},
     {name:'Overcharging',types:['Class','Primary','Arcanist'],description:'Your body is a conduit capable of channeling dangerous amounts of arcane energy.', tier:3,abilities:[],traits:[]},
+    {name:'Practiced Experimentation',types:['Class','Primary','Arcanist'],description:'You\'re what more classical arcanist would call "dangerously adventurous".', tier:3,abilities:[],traits:[]},
+    
     {name:'Masterful Extensions',types:['Class','Primary','Arcanist'],description:'Brief flashes of power are novice displays. True masters of the arcane can maintain deadly effects for extended periods of time, ravaging battlefields with deadly energies.', tier:9,abilities:[],traits:[]},
     
     {name:'Arcane Signals',types:['Class','Secondary','Arcanist'],description:'Since telepathy is difficult to learn, most voice arcanist bother their peers with crude arcane pings and flashes.', tier:1,abilities:[],traits:[]},
@@ -237,7 +251,8 @@ export const featureData: Feature[] =[
     {name:'Animated Assistance',types:['Class','Secondary','Arcanist'],description:'It\'s common for young arcanists to simply instruct their chores to be done by simple animatta, or for arcane craftsmen to animate their tools for more efficiency.', tier:3,abilities:[],traits:[]},
     {name:'Remote Senses',types:['Class','Secondary','Arcanist'],description:'With careful probing of remote arcane fields, an adept arcanist can effectively see remote areas.', tier:3,abilities:[],traits:[]},
     {name:'Telepathic Communication',types:['Class','Secondary','Arcanist'],description:'You\'ve figured out telepathy, which is much more complicated than it may seem.', tier:3,abilities:[],traits:[]},
-
+    {name:'Remote Observation',types:['Class','Secondary','Arcanist'],description:'Elite arcanist can, to an extend, exist in two places at once.', tier:6,abilities:[],traits:[]},
+    
     //Specialist Features
     {name:'Specialists',types:['Class','Global','Specialist'],description:'You are a specialist, a sharp-witted agent able to manipulate others in and out of combat.', tier:0,abilities:[],traits:[]},
     
@@ -269,5 +284,5 @@ export const featureData: Feature[] =[
     {name:'Quiet Sneak',types:['Class','Secondary','Specialist'],description:'You find it hard to be loud even when you mean to.', tier:3,abilities:[],traits:[]},
     {name:'Enthralling Speech',types:['Class','Secondary','Specialist'],description:'Anyone can be convinced of anything if they believe it\'s in their best interest.', tier:4,abilities:[],traits:[]},
     {name:'Deep Insight',types:['Class','Secondary','Specialist'],description:'Society is a complex web of relationships, and you can see every strand.', tier:6,abilities:[],traits:[]},
-
+    
 ]
