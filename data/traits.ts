@@ -249,5 +249,6 @@ export const traitData: Trait[] = [
     {name:'Rehearsed Autonomy',types:['Class','Specialist','Strategies'],description:'you an dall allied characters gain +1 focus slots.',tier:3},
     {name:'Stalling Tactics',types:['Class','Specialist','Strategies'],description:'All characters gain +3 defence and +3 resistance.',tier:3},
     {name:'Predictive Immunity',types:['Class','Specialist','Strategies'],description:'Select one non-attribute ailment when combat begins. You and your allies are immune to that ailment.',tier:4},
+    {name:'The Long Game',types:['Class','Specialist','Strategies'],description:'You and your allies may use stance abilities as if they were transformation abilities, paying twice the ability\'s energy cost.',tier:4},
     
 ]
