@@ -75,7 +75,7 @@ export const abilityData: Ability[] =[
     
     //Mental Resilience Abilities
     {name:'Resist Ailment',types:['Characteristic','Mental Resilience','Iron Will'],primaryTags:['Energy 0','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 2'],description:'You suffer an ailment: Remove that ailment.',tier:0},
-    {name:'Ignore Pain',types:['Charateristic','Mental Resilience','Perfect Will'],primaryTags:['Energy 6','Combat'],secondaryTags:['Stance'],tertiaryTags:[],description:'You are immune to the bleedout status.',tier:0},
+    {name:'Ignore Pain',types:['Charateristic','Mental Resilience','Perfect Will'],primaryTags:['Energy 3','Combat'],secondaryTags:['Stance'],tertiaryTags:[],description:'You are immune to the bleedout status.',tier:0},
     
 
     //Class Abilties
