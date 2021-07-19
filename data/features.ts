@@ -16,7 +16,7 @@ export const featureData: Feature[] =[
     {name:'Assistant',types:['Profession','Assistant'],abilities:[],traits:[], description:'Bar hands, store clerks, and other peoples employed by business owners to do simple labor. They make a meager living, but have any easy time finding odd jobs wherever they go.',tier:0},
     {name:'Scholar',types:['Profession','Scholar'],abilities:[],traits:[], description:'You are educated above the basic standards of society. In your endeavors to learn, you’ve picked up a few new languages.',tier:0},
     {name:'Priest',types:['Profession','Priest'],abilities:[],traits:[], description:'You’ve devoted yourself to some higher power. Besides some sense of inner piece, this devotion has given you access to a network of safe places, granted you’re travelling in friendly territory.',tier:0},
-    {name:'Physician',types:['Profession','Physician'],abilities:[],traits:[], description:'Doctor',tier:0},
+    {name:'Physician',types:['Profession','Physician'],abilities:[],traits:[], description:'There are many ailments on the Barrier Sea, and you’ve spent much of your life learning to cure them.',tier:0},
     {name:'Criminal',types:['Profession','Criminal'],abilities:[],traits:[], description:'Regardless of how you spin your tale, the truth is quite simple: you take things from people.',tier:0},
    
     //Lineage Features
