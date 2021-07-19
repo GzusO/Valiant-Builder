@@ -237,7 +237,8 @@ export const featureData: Feature[] =[
     {name:'Animated Assistance',types:['Class','Secondary','Arcanist'],description:'It\'s common for young arcanists to simply instruct their chores to be done by simple animatta, or for arcane craftsmen to animate their tools for more efficiency.', tier:3,abilities:[],traits:[]},
     {name:'Remote Senses',types:['Class','Secondary','Arcanist'],description:'With careful probing of remote arcane fields, an adept arcanist can effectively see remote areas.', tier:3,abilities:[],traits:[]},
     {name:'Telepathic Communication',types:['Class','Secondary','Arcanist'],description:'You\'ve figured out telepathy, which is much more complicated than it may seem.', tier:3,abilities:[],traits:[]},
-
+    {name:'Remote Observation',types:['Class','Secondary','Arcanist'],description:'Elite arcanist can, to an extend, exist in two places at once.', tier:6,abilities:[],traits:[]},
+    
     //Specialist Features
     {name:'Specialists',types:['Class','Global','Specialist'],description:'You are a specialist, a sharp-witted agent able to manipulate others in and out of combat.', tier:0,abilities:[],traits:[]},
     
@@ -269,5 +270,5 @@ export const featureData: Feature[] =[
     {name:'Quiet Sneak',types:['Class','Secondary','Specialist'],description:'You find it hard to be loud even when you mean to.', tier:3,abilities:[],traits:[]},
     {name:'Enthralling Speech',types:['Class','Secondary','Specialist'],description:'Anyone can be convinced of anything if they believe it\'s in their best interest.', tier:4,abilities:[],traits:[]},
     {name:'Deep Insight',types:['Class','Secondary','Specialist'],description:'Society is a complex web of relationships, and you can see every strand.', tier:6,abilities:[],traits:[]},
-
+    
 ]
