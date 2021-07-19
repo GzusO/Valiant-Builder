@@ -231,6 +231,8 @@ export const featureData: Feature[] =[
 
     {name:'Hyperconscious',types:['Class','Primary','Arcanist'],description:'You are able to delegate increasingly complex tasks to your passive subconscious mind.', tier:3,abilities:[],traits:[]},
     {name:'Overcharging',types:['Class','Primary','Arcanist'],description:'Your body is a conduit capable of channeling dangerous amounts of arcane energy.', tier:3,abilities:[],traits:[]},
+    {name:'Practiced Experimentation',types:['Class','Primary','Arcanist'],description:'You\'re what more classical arcanist would call "dangerously adventurous".', tier:3,abilities:[],traits:[]},
+    
     {name:'Masterful Extensions',types:['Class','Primary','Arcanist'],description:'Brief flashes of power are novice displays. True masters of the arcane can maintain deadly effects for extended periods of time, ravaging battlefields with deadly energies.', tier:9,abilities:[],traits:[]},
     
     {name:'Arcane Signals',types:['Class','Secondary','Arcanist'],description:'Since telepathy is difficult to learn, most voice arcanist bother their peers with crude arcane pings and flashes.', tier:1,abilities:[],traits:[]},

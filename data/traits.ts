@@ -207,6 +207,8 @@ export const traitData: Trait[] = [
     {name:'Arcane Shell',types:['Class','Arcanist','Arcane Armors'],description:'While not wearing any armor sets, gain defence equal to your tier.',tier:2},
     
     {name:'Passive Focus',types:['Class','Arcanist','Hyperconscious'],description:'You do not lose focus when incapacitated.',tier:3},
+    {name:'Experimenter',types:['Class','Arcanist','Practiced Experimentation'],description:'Change the base energy cost of the Arcane Experimentation ability to 0 and increase its limited value by 1.',tier:3},
+    
     {name:'Remote Execution',types:['Class','Arcanist','Masterful Extensions'],description:'For all of your Range abilities not attached to weapons, you may treat a remote tile as the origin point for determining the ability range rather than the tile you inhabit. This remote tile can be any tile within a range equal to your mental power characteristic score.',tier:9},
     {name:'Telepathy',types:['Class','Arcanist','Telepathic Communication'],description:'You can communicate telepathically with any creature within 10 ft. of you. The range of this trait is multiplied by your mental power characteristic score.',tier:3},
     {name:'Remote Observer',types:['Class','Arcanist','Remote Observation'],description:'You can maintain a shimmering, physical form of your choosing (up to medium-character sized, and it always visible due to obvious arcane shimmers). You can move and sense from this form freely, as well as speak from it. The form may float or fly, and moves up to 2 tiles (10 ft.) during your move phase during combat. If the form moves more than 1 mile from your position, it returns to your position.',tier:6},
