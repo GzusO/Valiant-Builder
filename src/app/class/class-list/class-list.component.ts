@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Class } from 'src/app/Class';
+import { Class } from 'src/app/class/Class';
 import { Feature } from 'src/app/feature/Feature';
 import { DataService } from 'src/app/data.service';
 

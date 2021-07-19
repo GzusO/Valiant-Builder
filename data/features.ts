@@ -189,7 +189,7 @@ export const featureData: Feature[] =[
     {name:'Touched Mind',types:['Class','Secondary','Aspirant'],description:'Whether it be a higher power, a deeper power, or just manic tendencies, your mind is not entirely under your control.', tier:0,abilities:[],traits:[]},
     
     //Warrior Features
-    {name:'Warrior',types:['Class','Global','Warrior'],description:'You are a warrior, a capable combatant who relies on body and steel alone to overcome your enemies.', tier:0,abilities:[],traits:[]},
+    {name:'Warriors',types:['Class','Global','Warrior'],description:'You are a warrior, a capable combatant who relies on body and steel alone to overcome your enemies.', tier:0,abilities:[],traits:[]},
     
     {name:'Martial Stances',types:['Class','Primary','Warrior'],description:'Focus on the fundamentals.', tier:1,abilities:[],traits:[]},
     {name:'Martial Finesse',types:['Class','Primary','Warrior'],description:'Advantageous positions can be just as lethal as blades and bolts.', tier:1,abilities:[],traits:[]},
@@ -218,7 +218,7 @@ export const featureData: Feature[] =[
     {name:'Well-Founded Threats',types:['Class','Secondary','Warrior'],description:'When you threaten harm to another, it\'s very clear that it isn\'t an empty gesture.', tier:4,abilities:[],traits:[]},
 
     //Arcanist Features
-    {name:'Arcanist',types:['Class','Global','Arcanist'],description:'You are an arcanist, able to shape the world through your will alone.', tier:0,abilities:[],traits:[]},
+    {name:'Arcanists',types:['Class','Global','Arcanist'],description:'You are an arcanist, able to shape the world through your will alone.', tier:0,abilities:[],traits:[]},
     
     {name:'Practiced Repertoire',types:['Class','Primary','Arcanist'],description:'Minute optimizations accumulate into measureable improvements.', tier:1,abilities:[],traits:[]},
     {name:'Steady Mind',types:['Class','Primary','Arcanist'],description:'Many novice arcanists have fallen in battle, unable to focus over the sounds of conflict.', tier:1,abilities:[],traits:[]},
@@ -239,7 +239,7 @@ export const featureData: Feature[] =[
     {name:'Telepathic Communication',types:['Class','Secondary','Arcanist'],description:'You\'ve figured out telepathy, which is much more complicated than it may seem.', tier:3,abilities:[],traits:[]},
 
     //Specialist Features
-    {name:'Specialist',types:['Class','Global','Specialist'],description:'You are a specialist, a sharp-witted agent able to manipulate others in and out of combat.', tier:0,abilities:[],traits:[]},
+    {name:'Specialists',types:['Class','Global','Specialist'],description:'You are a specialist, a sharp-witted agent able to manipulate others in and out of combat.', tier:0,abilities:[],traits:[]},
     
     {name:'Battlefield Distractions',types:['Class','Primary','Specialist'],description:'You have a knack for trickery, and have found that your tricks can have dire consequences if applied at an opportune time.', tier:1,abilities:[],traits:[]},
     {name:'Munitions Resupply',types:['Class','Primary','Specialist'],description:'Most would consider it reckless to carry around this much ammunition.', tier:1,abilities:[],traits:[]},

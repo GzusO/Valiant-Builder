@@ -14,15 +14,14 @@
     font-size: small;
     font-style: italic;
 }
-
-.featureGroups {
-    display: flex;
-    gap: 10px;
-    flex-flow: row;
+.feature{
+    font-size: medium;
+    font-weight: bold;
 }
 
-.featureGroup {
-    flex:  1 0 0;
+.mat-expansion-panel-header-title,
+.mat-expansion-panel-header-description {
+  flex-basis: 0;
 }
 
 h2, p{
@@ -30,9 +29,4 @@ h2, p{
 }
 p {
     padding: 4px 4px 4px 4px;
-}
-
-.mat-expansion-panel-header-title,
-.mat-expansion-panel-header-description {
-  flex-basis: 0;
 }

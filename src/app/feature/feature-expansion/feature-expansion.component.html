@@ -1,0 +1,21 @@
+<mat-expansion-panel *ngIf="feature" [expanded]=expanded>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Tier: {{feature.tier}} 
+      </mat-panel-title>
+      <mat-panel-description>
+        {{feature.name}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>{{feature.description}}</p>
+    <div *ngFor="let ability of feature.abilities">
+      <span class="ability-name">{{ability.name}} ({{ability.primaryTags}})</span>
+      <div *ngIf="ability.secondaryTags.length !== 0">{{ability.secondaryTags}}</div>
+      <div *ngIf="ability.tertiaryTags.length !== 0">{{ability.tertiaryTags}}</div>
+      <p>{{ability.description}}</p>
+    </div>
+    <div *ngFor="let trait of feature.traits">
+      <span class="trait-name">{{trait.name}}</span>
+      <p>{{trait.description}}</p>
+    </div>
+  </mat-expansion-panel>

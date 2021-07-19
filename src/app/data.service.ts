@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Class } from "./Class";
+import { Class } from "./class/Class";
 import { Characteristic } from "./Characteristic";
 import { Lineage } from "./lineage/Lineage";
 import { Profession } from "./profession/Profession";
@@ -63,9 +63,11 @@ export class DataService {
 
   mapAbilities(): void{
     this.features.map(x=>x.abilities = (this.abilities.filter(y => y.types.includes(x.name))!));
+    this.classes.map(x=> x.abilities = (this.abilities.filter(y => y.types.includes(x.uniqueFeatureName))));
   }
   mapTraits(): void{
     this.features.map(x=>x.traits = (this.traits.filter(y => y.types.includes(x.name))!));
+    this.classes.map(x=>x.traits = (this.traits.filter(y=>y.types.includes(x.uniqueFeatureName))));
   }
   mapCharacteristics(): void{
     this.characteristics.map(x => x.features = (this.features.filter(y => y.types.includes(x.name))).sort((a,b) => a.tier-b.tier));
