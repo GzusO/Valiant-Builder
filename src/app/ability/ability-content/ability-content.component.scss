@@ -1,0 +1,91 @@
+.ability-name{
+    font-size: small;
+    font-weight: bold;
+}
+.secondaryTags{
+    font-size: small;
+    font-style: italic;
+}
+.tertiaryTags{
+    font-size: small;
+    font-style: italic;
+}
+h2, p{
+    padding: 8px 8px 8px 8px;
+}
+p {
+    padding: 4px 4px 4px 4px;
+}
+
+[data-tooltip] {
+    display: inline-block;
+    position: relative;
+    cursor: help;
+    padding: 4px;
+}
+/* Tooltip styling */
+[data-tooltip]:before {
+    content: attr(data-tooltip);
+    font-size: small;
+    font-weight: normal;
+    display: none;
+    position: absolute;
+    background: rgba(37, 37, 37);
+    color: #fff;
+    padding: 4px 4px;
+    min-width: 300px;
+    text-align: left;
+    border-radius: 4px;
+}
+/* Dynamic horizontal centering */
+[data-tooltip-position="top"]:before,
+[data-tooltip-position="bottom"]:before {
+    left: 5%;
+    -ms-transform: translateX(-5%);
+    -moz-transform: translateX(-5%);
+    -webkit-transform: translateX(-5%);
+    transform: translateX(-5%);
+}
+/* Dynamic vertical centering */
+[data-tooltip-position="right"]:before,
+[data-tooltip-position="left"]:before {
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+[data-tooltip-position="top"]:before {
+    bottom: 100%;
+    margin-bottom: 6px;
+}
+
+/* Tooltip arrow styling/placement */
+[data-tooltip]:after {
+    content: '';
+    display: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+}
+/* Dynamic horizontal centering for the tooltip */
+[data-tooltip-position="top"]:after,
+[data-tooltip-position="bottom"]:after {
+    left: 50%;
+    margin-left: -6px;
+}
+
+[data-tooltip-position="top"]:after {
+    bottom: 100%;
+    border-width: 6px 6px 0;
+    border-top-color: rgb(37, 37, 37);
+}
+
+/* Show the tooltip when hovering */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+    display: block;
+    z-index: 50;
+}

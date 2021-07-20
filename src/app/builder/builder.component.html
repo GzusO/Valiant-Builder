@@ -155,11 +155,12 @@
             Lineage: {{valiantLineages.join(", ")}}
         </div>
         <div class="cards">
-            <app-feature-card *ngFor="let feat of valiantLineagePrimaryFeatures" [feature]=feat></app-feature-card>
-            <app-feature-card *ngFor="let feat of valiantLineageSecondaryFeatures" [feature]=feat></app-feature-card>
-            <app-feature-card *ngFor="let feat of valiantProfession[0]?.features" [feature]=feat></app-feature-card>
-            <app-feature-card *ngFor="let feat of valiantClassPrimaryFeatures" [feature]=feat></app-feature-card>
-            <app-feature-card *ngFor="let feat of valiantClassSecondaryFeatures" [feature]=feat></app-feature-card>
+            <app-feature-card *ngFor="let feat of valiantCharacteristicFeautres" [feature]=feat class="card"></app-feature-card>
+            <app-feature-card *ngFor="let feat of valiantLineagePrimaryFeatures" [feature]=feat class="card"></app-feature-card>
+            <app-feature-card *ngFor="let feat of valiantLineageSecondaryFeatures" [feature]=feat class="card"></app-feature-card>
+            <app-feature-card *ngFor="let feat of valiantProfession[0]?.features" [feature]=feat class="card"></app-feature-card>
+            <app-feature-card *ngFor="let feat of valiantClassPrimaryFeatures" [feature]=feat class="card"></app-feature-card>
+            <app-feature-card *ngFor="let feat of valiantClassSecondaryFeatures" [feature]=feat class="card"></app-feature-card>
         </div>
         <div>
             <button mat-button matStepperPrevious>Previous</button>
