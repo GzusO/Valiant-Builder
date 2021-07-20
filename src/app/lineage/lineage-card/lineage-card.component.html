@@ -20,10 +20,7 @@
               <p>
                 {{feature.description}}
               </p>
-              <div *ngFor="let ability of feature.abilities">
-                <span class="ability-name">{{ability.name}}</span>
-                <p>{{ability.description}}</p>
-              </div>
+              <app-ability-content *ngFor="let ability of feature.abilities" [ability]=ability></app-ability-content>
               <div *ngFor="let trait of feature.traits">
                 <span class="trait-name">{{trait.name}}</span>
                 <p>{{trait.description}}</p>
@@ -40,12 +37,7 @@
               <p>
                 {{feature.description}}
               </p>
-              <div *ngFor="let ability of feature.abilities">
-                <span class="ability-name">{{ability.name}} ({{ability.primaryTags}})</span>
-                <div *ngIf="ability.secondaryTags.length !== 0">{{ability.secondaryTags}}</div>
-                <div *ngIf="ability.tertiaryTags.length !== 0">{{ability.tertiaryTags}}</div>
-                <p>{{ability.description}}</p>
-              </div>
+              <app-ability-content *ngFor="let ability of feature.abilities" [ability]=ability></app-ability-content>
               <div *ngFor="let trait of feature.traits">
                 <span class="trait-name">{{trait.name}}</span>
                 <p>{{trait.description}}</p>
@@ -63,12 +55,7 @@
               <p>
                 {{feature.description}}
               </p>
-              <div *ngFor="let ability of feature.abilities">
-                <span class="ability-name">{{ability.name}} ({{ability.primaryTags}})</span>
-                <div *ngIf="ability.secondaryTags.length !== 0">{{ability.secondaryTags}}</div>
-                <div *ngIf="ability.tertiaryTags.length !== 0">{{ability.tertiaryTags}}</div>
-                <p>{{ability.description}}</p>
-              </div>
+              <app-ability-content *ngFor="let ability of feature.abilities" [ability]=ability></app-ability-content>
               <div *ngFor="let trait of feature.traits">
                 <span class="trait-name">{{trait.name}}</span>
                 <p>{{trait.description}}</p>
