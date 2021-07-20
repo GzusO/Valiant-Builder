@@ -37,7 +37,8 @@ import { LineageCardComponent } from './lineage/lineage-card/lineage-card.compon
 import { ProfessionCardComponent } from './profession/profession-card/profession-card.component';
 import { FeatureCardComponent } from './feature/feature-card/feature-card.component';
 import { ClassDetailComponent } from './class/class-detail/class-detail.component';
-import { FeatureExpansionComponent } from './feature/feature-expansion/feature-expansion.component'
+import { FeatureExpansionComponent } from './feature/feature-expansion/feature-expansion.component';
+import { AbilityContentComponent } from './ability/ability-content/ability-content.component'
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { FeatureExpansionComponent } from './feature/feature-expansion/feature-e
     ProfessionCardComponent,
     FeatureCardComponent,
     ClassDetailComponent,
-    FeatureExpansionComponent
+    FeatureExpansionComponent,
+    AbilityContentComponent
   ],
   imports: [
     BrowserModule,

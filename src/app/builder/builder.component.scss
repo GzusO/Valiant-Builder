@@ -1,8 +1,49 @@
 .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-    grid-gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1em;
+    align-content: stretch;
+ }
+
+ /* Flexbox stuff */
+.card {
+    flex: 1 0 500px;
+    display: flex;
 }
+
+@media screen and (min-width: 300px) {
+    .card {
+       max-width: 100%;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .card {
+       max-width: calc(50% -  1em);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .card {
+       max-width: calc(33% -  1em);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .card {
+        max-width: calc(25% - 1em);
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .card {
+        max-width: calc(20% - 1em);
+    }
+}
+
+
+
 .name {
     padding: .25em 1em .25em 1em;
 

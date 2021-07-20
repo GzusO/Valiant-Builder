@@ -1,0 +1,10 @@
+<div *ngIf=ability>
+    <span class="ability-name">{{ability.name}} (<span *ngFor="let prime of ability.primaryTags" [attr.data-tooltip]="getTagDescription(prime)" data-tooltip-position="top">{{prime}}, </span>)</span>
+    <div *ngIf="ability.secondaryTags.length !== 0" class="secondaryTags">
+        <span *ngFor="let prime of ability.secondaryTags" [attr.data-tooltip]="getTagDescription(prime)" data-tooltip-position="top">{{prime}}, </span>
+    </div>
+    <div *ngIf="ability.tertiaryTags.length !== 0" class="tertiaryTags">
+        <span *ngFor="let prime of ability.tertiaryTags" [attr.data-tooltip]="getTagDescription(prime)" data-tooltip-position="top">{{prime}}, </span>
+    </div>
+    <p>{{ability.description}}</p>
+  </div>

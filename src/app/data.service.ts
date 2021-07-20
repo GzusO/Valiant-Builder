@@ -14,6 +14,7 @@ import { lineageData } from 'data/lineages';
 import { Observable, of } from 'rxjs';
 import { characteristicData } from 'data/characteristics';
 import { classData } from 'data/classes';
+import { Tag, tagData } from 'data/tags';
 
 @Injectable({
   providedIn: 'root'
@@ -26,6 +27,7 @@ export class DataService {
   lineages = lineageData;
   characteristics = characteristicData;
   classes = classData;
+  tags = tagData;
 
   getProfessions(): Observable<Profession[]> {
     return of(this.professions);
@@ -51,6 +53,9 @@ export class DataService {
     return of(this.features.filter(x=> x.types.includes('Lineage')));
   }
 
+  getTagByName(name: string): Tag | undefined {
+    return this.tags.find(x => x.name === name);
+  }
 
   constructor() {
     this.mapAbilities();
