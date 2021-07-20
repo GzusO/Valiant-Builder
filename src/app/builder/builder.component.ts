@@ -22,6 +22,7 @@ export class BuilderComponent implements OnInit {
     valiantProfession: Profession[] =[];
     valiantClassPrimaryFeatures: Feature[] =[];
     valiantClassSecondaryFeatures: Feature[] = [];
+    valiantCharacteristicFeautres: Feature[] =[];
 
     lineages: Lineage[] = [];
     lineageFeatures: Feature[] =[];
@@ -35,6 +36,7 @@ export class BuilderComponent implements OnInit {
       this.getProfessions();
       this.getClassFeatures();
       this.characteristics.forEach(char =>this.valiantCharacteristics.set(char.name,1));
+      this.characteristics.forEach(x=> this.updateCharacteristicFeatures(x.name,1));
    }
 
   ngOnInit(): void {}
@@ -73,7 +75,7 @@ export class BuilderComponent implements OnInit {
       if (this.characteristicPoints >= amount)
       {
         this.characteristicPoints -= amount;
-        this.valiantCharacteristics.set(name,this.valiantCharacteristics.get(name)! + amount)
+        this.valiantCharacteristics.set(name,this.valiantCharacteristics.get(name)! + amount);
       }
     }
     else if(amount < 0)
@@ -83,8 +85,19 @@ export class BuilderComponent implements OnInit {
         return;
       }
       this.characteristicPoints -= amount;
-      this.valiantCharacteristics.set(name,this.valiantCharacteristics.get(name)! + amount)
-    } 
+      this.valiantCharacteristics.set(name,this.valiantCharacteristics.get(name)! + amount);
+    }
+    this.updateCharacteristicFeatures(name,this.valiantCharacteristics.get(name)!) ;
+  }
+
+  updateCharacteristicFeatures(name: string, tier: number): void {
+    //Remove All Features of the Charactertic
+    this.valiantCharacteristicFeautres = this.valiantCharacteristicFeautres.filter(x => !x.types.includes(name));
+    let char: Characteristic | undefined = this.characteristics.find(x=> x.name === name);
+    if (char === undefined)
+      return;
+    let feats: Feature[] = char.features.filter(feat => feat.tier <= tier);
+    this.valiantCharacteristicFeautres.push(...feats);
   }
 }
 

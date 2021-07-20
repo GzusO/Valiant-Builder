@@ -155,6 +155,7 @@
             Lineage: {{valiantLineages.join(", ")}}
         </div>
         <div class="cards">
+            <app-feature-card *ngFor="let feat of valiantCharacteristicFeautres" [feature]=feat class="card"></app-feature-card>
             <app-feature-card *ngFor="let feat of valiantLineagePrimaryFeatures" [feature]=feat class="card"></app-feature-card>
             <app-feature-card *ngFor="let feat of valiantLineageSecondaryFeatures" [feature]=feat class="card"></app-feature-card>
             <app-feature-card *ngFor="let feat of valiantProfession[0]?.features" [feature]=feat class="card"></app-feature-card>
