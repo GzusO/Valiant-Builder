@@ -24,6 +24,7 @@ import { MatTableModule} from '@angular/material/table';
 import { MatStepperModule } from '@angular/material/stepper'
 import { MatChipsModule } from '@angular/material/chips'
 import { MatListModule } from '@angular/material/list';
+import { MatSortModule } from '@angular/material/sort';
 
 import { FooterComponent } from './footer/footer.component';
 import { CharacteristicListComponent } from './characteristic-list/characteristic-list.component';
@@ -38,7 +39,8 @@ import { ProfessionCardComponent } from './profession/profession-card/profession
 import { FeatureCardComponent } from './feature/feature-card/feature-card.component';
 import { ClassDetailComponent } from './class/class-detail/class-detail.component';
 import { FeatureExpansionComponent } from './feature/feature-expansion/feature-expansion.component';
-import { AbilityContentComponent } from './ability/ability-content/ability-content.component'
+import { AbilityContentComponent } from './ability/ability-content/ability-content.component';
+import { ArmorListComponent } from './item/armor-list/armor-list.component'
 
 @NgModule({
   declarations: [
@@ -56,7 +58,8 @@ import { AbilityContentComponent } from './ability/ability-content/ability-conte
     FeatureCardComponent,
     ClassDetailComponent,
     FeatureExpansionComponent,
-    AbilityContentComponent
+    AbilityContentComponent,
+    ArmorListComponent
   ],
   imports: [
     BrowserModule,
@@ -81,7 +84,8 @@ import { AbilityContentComponent } from './ability/ability-content/ability-conte
     MatTableModule,
     MatStepperModule,
     MatChipsModule,
-    MatListModule
+    MatListModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

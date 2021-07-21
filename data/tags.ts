@@ -26,3 +26,25 @@ export const tagData: Tag[] = [
     {name:'Blitz',displayFormat:'Blitz',description:'An ability that cannot be used as a trigger for other abilities. This includes the effects of this ability, such as energy reductions, ailments caused, or movement performed.'},
     
 ];
+
+export const weaponTags: Tag[] =[
+    {name:'Heavy',displayFormat:'Heavy',description:'Weapons that are bulky or unwieldly. Characters wielding heavy weapons suffer -1 movement.'},
+    {name:'Melee',displayFormat:'Melee',description:'A weapon that is used in melee combat.'},
+    {name:'Projectile',displayFormat:'Projectile [X]',description:'A weapon that fires projectiles at a range. Its range abilities can be used x times, after which the weapon’s range abilities become unusable. Commonly, these uses are recharged by using the rest ability. When determining range for a projectile weapon’s range abilities, any downward tiles do not have to be counted. For instance, a gunner atop a wall using an ability with a range of 10 can target another character 10 tiles north and 10 tiles below them.'},
+    {name:'Reach',displayFormat:'Reach [X]',description:'Melee attacks with these weapons can target creatures 1 + x tiles away with their melee abilities.'},
+    {name:'Shield',displayFormat:'Shield',description:'A weapon used primarily to block incoming attacks.'},
+    {name:'Thrown',displayFormat:'Thrown',description:'A weapon that can be thrown at a range. After using this weapon’s ranged abilities a number of times equal to the copies of this weapon a character owns, all of the weapon’s abilities become unusable for the rest of that combat and the hand the weapon was wielded in becomes empty'},
+    {name:'Two-Handed',displayFormat:'Two-Handed',description:'Weapons that require two hands in order to perform any of the weapon’s abilities. Two-handed weapons can still be held in one hand, but none of their abilities can be used unless they are held in both hands.'},
+    {name:'Unwieldly',displayFormat:'Unwieldly',description:'Characters wielding this weapon halve their defence and don’t apply positive resistance in attack contests against adjacent characters. Attack abilities attached to this weapon cannot target adjacent characters.'},
+    
+];
+
+export const itemTags: Tag[] = [
+    {name:'Arcane',displayFormat:'Arcane',description:'An item with arcane properties. Cannot be crafted or upgraded by characters who are not able to work with arcane items.'},
+    {name:'Size-Tiny',displayFormat:'Size-Tiny',description:'A tiny item of negligible weight and volume.'},
+    {name:'Size-Small',displayFormat:'Size-Small',description:'a small item that can be held in one hand. Small items can be stowed in small containers such as purses.'},
+    {name:'Size-Medium',displayFormat:'Size-Medium',description:'A moderately sized item that can be held in one or two hands. Medium items can be stowed in medium containers such as backpacks.'},
+    {name:'Size-Large',displayFormat:'Size-Large',description:'A large item that can be difficult to carry, even with two hands. Large items are difficult to stow, requiring large containers such as chests or barrels.'},
+    {name:'Size-Huge',displayFormat:'Size-Huge',description:'A massive item that requires special means to carry or stow.'},
+    
+]

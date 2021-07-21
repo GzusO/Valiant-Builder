@@ -252,4 +252,45 @@ export const traitData: Trait[] = [
     {name:'Predictive Immunity',types:['Class','Specialist','Strategies'],description:'Select one non-attribute ailment when combat begins. You and your allies are immune to that ailment.',tier:4},
     {name:'The Long Game',types:['Class','Specialist','Strategies'],description:'You and your allies may use stance abilities as if they were transformation abilities, paying twice the ability\'s energy cost.',tier:4},
     
+    //Weapon Traits
+    {name:'Couching',types:['Weapon','Lance'],description:'Attacks with this weapon may only be used while mounted.',tier:0},
+    {name:'Cover',types:['Weapon','Tower Shield','Pavise Shield'],description:'Gain +2 defence. You count as in cover against ranged attack abilities.',tier:0},
+    {name:'Heavy Cover',types:['Weapon','Bastion Shield'],description:'Gain +2 defence and +2 resistance. You count as in cover against ranged attack abilities.',tier:0},
+    {name:'Simple Weapon',types:['Weapon','Pavise Shield'],description:'This weapon only exists as a tier 0 weapon.',tier:0},
+    
+
+    //Armor Traits
+    {name:'Leather',types:['Armor','Leather','Strap Barding'],description:'You gain +2 defence.',tier:0},
+    {name:'Gambeson',types:['Armor','Gambeson','Light Barding'],description:'You gain +2 defence and +1 resistance. You suffer -1 combat speed.',tier:0},
+    {name:'Partial Plate',types:['Armor','Partial Plate','Partial Plate Barding'],description:'You gain +3 defence and +1 resistance. You suffer -2 combat speed.',tier:0},
+    {name:'Chain Mail',types:['Armor','Chain Mail','Chain Barding'],description:'you gain +3 defence and +2 resistance. You suffer -3 combat speed.',tier:0},
+    {name:'Brigandine',types:['Armor','Brigandine','Heavy Barding'],description:'You gain +4 defence and +2 resistance. You suffer -4 combat speed and -1 movement.',tier:0},
+    {name:'Full Plate',types:['Armor','Full Plate','Full Plate Barding'],description:'You gain +4 defence and +3 resistance. You suffer -5 combat speed and -1 movement.',tier:0},
+    {name:'Layered Plate',types:['Armor','Layered Plate','Layered Plate Barding'],description:'You gain +5 defence and +3 resistance. You suffer -6 combat speed and -2 movement.',tier:0},
+    
+    //Accessory Traits
+    //Tier 0
+    {name:'Backpack Container',types:['Accessory','Backpack'],description:'This container can carry up to 75 lb. of up to medium objects.',tier:0},
+    {name:'Backpack',types:['Accessory','Backpack'],description:'Increase you base weight threshold by 10 lb. Your travel group gains +3 provision score.',tier:0},
+    {name:'Cloak',types:['Accessory','Cloak'],description:'A simple, comfortable cloak. Keeps you dry and warm.',tier:0},
+    {name:'Necklace',types:['Accessory','Necklace'],description:'A simple ornamental necklace with no inherent benefits. Often used as a vessel for enchantments.',tier:0},
+    {name:'Ring',types:['Accessory','Ring'],description:'A simple ornamental ring with no inherent benefits. Often used as a vessel for enchantments.',tier:0},
+    {name:'Satchel Container',types:['Accessory','Satchel'],description:'This container can carry up to 10 lb. of small objects.',tier:0},
+    {name:'Satchel',types:['Accessory','Satchel'],description:'Increase your base weight threshold by 5 lb. Your travel group gains +1 provision score.',tier:0},
+    {name:'Simple Charm',types:['Accessory','Simple Charm'],description:'You gain +1 death resistance.',tier:0},
+    
+    //Tier 1
+    {name:'Mess Kit',types:['Accessory','Arcanist\'s Mess Kit'],description:'Your provision requirement is reduced by 1, to a minimum of 0.',tier:1},
+    {name:'Shepard\'s Compass',types:['Accessory','Shepard\'s Compass'],description:'Your travel group gains +1 range.',tier:1},
+    {name:'Soothe Stone',types:['Accessory','Soothe Stone'],description:'Characters within 10 ft. of you are soothed, and become slightly more reasonable.',tier:1},
+    
+    //Tier 2    
+    {name:'Gleaming Headband',types:['Accessory','Gleaming Headband'],description:'You provide light in a 5 tile (25 ft.) sphere.',tier:2},
+    {name:'Spelljammer\'s Bracer',types:['Accessory','Spelljammer\'s Bracer'],description:'When you deal energy damage to a focusing character, treat it as doubled when accruing it against the focus threshold.',tier:2},
+    {name:'Time Stone',types:['Accessory','Time Stone'],description:'Gain +1 combat speed.',tier:2},
+    
+    //Tier 3
+    {name:'Enchantable',types:['Accessory','Arcane Necklace','Arcane Ring'],description:'When enchanting this item, you may imbue 1 more enchantment than you would normally be able to.',tier:3},
+    {name:'Mindspeak Amulet',types:['Accessory','Mindspeak Amulet'],description:'You can communicate telepathically with any creature within 10 ft. of you.',tier:3},
+    
 ]
