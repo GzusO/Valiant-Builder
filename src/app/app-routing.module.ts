@@ -5,6 +5,7 @@ import { LineageListComponent } from './lineage/lineage-list/lineage-list.compon
 import { CharacteristicListComponent } from './characteristic-list/characteristic-list.component';
 import { ClassListComponent } from './class/class-list/class-list.component';
 import { BuilderComponent } from './builder/builder.component';
+import { ArmorListComponent } from './item/armor-list/armor-list.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/lineages', pathMatch: 'full' },
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: 'lineages', component: LineageListComponent},
   { path: 'characteristics',component:CharacteristicListComponent},
   { path: 'classes', component:ClassListComponent},
-  { path: 'builder', component:BuilderComponent}
+  { path: 'builder', component:BuilderComponent},
+  { path: 'armor', component:ArmorListComponent}
 ];
 
 @NgModule({
