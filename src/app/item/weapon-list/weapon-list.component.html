@@ -1,6 +1,6 @@
-<table mat-table #armorSort="matSort" [dataSource]="weaponsDataSource" matSort class="mat-elevation-z8">
+<table mat-table #weaponSort="matSort" [dataSource]="weaponsDataSource" matSort class="mat-elevation-z8">
     <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Armor Sets </th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Weapons </th>
         <td mat-cell *matCellDef="let weapon"> {{weapon.name}} </td>
       </ng-container>
     
