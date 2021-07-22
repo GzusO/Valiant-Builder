@@ -5,23 +5,26 @@
 .secondaryTags{
     font-size: small;
     font-style: italic;
+    margin-bottom: 0px;
 }
 .tertiaryTags{
     font-size: small;
     font-style: italic;
+    margin-bottom: 0px;
 }
 h2, p{
     padding: 8px 8px 8px 8px;
 }
 p {
-    padding: 4px 4px 4px 4px;
+    padding: 2px 2px 2px 2px;
+    margin-bottom: 0px;
 }
 
 [data-tooltip] {
     display: inline-block;
     position: relative;
     cursor: help;
-    padding: 4px;
+    padding: 2px;
 }
 /* Tooltip styling */
 [data-tooltip]:before {
