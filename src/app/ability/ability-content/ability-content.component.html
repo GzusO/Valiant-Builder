@@ -6,5 +6,8 @@
     <div *ngIf="ability.tertiaryTags.length !== 0" class="tertiaryTags">
         <span *ngFor="let prime of ability.tertiaryTags" [attr.data-tooltip]="getTagDescription(prime)" data-tooltip-position="top">{{prime}}, </span>
     </div>
-    <p>{{ability.description}}</p>
+    <p *ngIf="ability.attack !== 0">Attack: {{ability.attack}}</p>
+    <p *ngIf="ability.energyDamage !== 0">Energy Damage: {{ability.energyDamage}}</p>
+    <p *ngIf="ability.description.length !==0">{{ability.description}}</p>
+    <p *ngIf="ability.scaling.length !== 0">{{ability.scaling}}</p>
   </div>

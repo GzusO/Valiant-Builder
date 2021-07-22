@@ -7,4 +7,7 @@ export interface Ability {
     tertiaryTags: string[];
     description: string;
     tier: number;
+    attack: number;
+    energyDamage: number;
+    scaling: string;
 }

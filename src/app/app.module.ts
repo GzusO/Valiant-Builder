@@ -40,7 +40,9 @@ import { FeatureCardComponent } from './feature/feature-card/feature-card.compon
 import { ClassDetailComponent } from './class/class-detail/class-detail.component';
 import { FeatureExpansionComponent } from './feature/feature-expansion/feature-expansion.component';
 import { AbilityContentComponent } from './ability/ability-content/ability-content.component';
-import { ArmorListComponent } from './item/armor-list/armor-list.component'
+import { ArmorListComponent } from './item/armor-list/armor-list.component';
+import { WeaponListComponent } from './item/weapon-list/weapon-list.component';
+import { GearListComponent } from './item/gear-list/gear-list.component'
 
 @NgModule({
   declarations: [
@@ -59,7 +61,9 @@ import { ArmorListComponent } from './item/armor-list/armor-list.component'
     ClassDetailComponent,
     FeatureExpansionComponent,
     AbilityContentComponent,
-    ArmorListComponent
+    ArmorListComponent,
+    WeaponListComponent,
+    GearListComponent
   ],
   imports: [
     BrowserModule,
