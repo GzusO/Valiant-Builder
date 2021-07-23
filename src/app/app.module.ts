@@ -43,7 +43,8 @@ import { FeatureExpansionComponent } from './feature/feature-expansion/feature-e
 import { AbilityContentComponent } from './ability/ability-content/ability-content.component';
 import { ArmorListComponent } from './item/armor-list/armor-list.component';
 import { WeaponListComponent } from './item/weapon-list/weapon-list.component';
-import { GearListComponent } from './item/gear-list/gear-list.component'
+import { GearListComponent } from './item/gear-list/gear-list.component';
+import { EnchantmentListComponent } from './item/enchantment-list/enchantment-list.component'
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { GearListComponent } from './item/gear-list/gear-list.component'
     AbilityContentComponent,
     ArmorListComponent,
     WeaponListComponent,
-    GearListComponent
+    GearListComponent,
+    EnchantmentListComponent
   ],
   imports: [
     BrowserModule,

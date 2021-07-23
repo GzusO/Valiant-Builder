@@ -8,6 +8,7 @@ import { BuilderComponent } from './builder/builder.component';
 import { ArmorListComponent } from './item/armor-list/armor-list.component';
 import { WeaponListComponent } from './item/weapon-list/weapon-list.component';
 import { GearListComponent } from './item/gear-list/gear-list.component';
+import { EnchantmentListComponent } from './item/enchantment-list/enchantment-list.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/lineages', pathMatch: 'full' },
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'builder', component:BuilderComponent},
   { path: 'armor', component:ArmorListComponent},
   { path: 'weapon', component:WeaponListComponent},
-  { path: 'gear', component:GearListComponent}
+  { path: 'gear', component:GearListComponent},
+  { path: 'enchantments', component:EnchantmentListComponent}
 ];
 
 @NgModule({
