@@ -316,8 +316,8 @@ export const traitData: Trait[] = [
     {name:'Lethal',types:['Enchantment','Lethal'],description:'All attack abilities attached to this weapon have their attack increased by 1 (if they have a non-zero attack defined).',tier:1},
     {name:'Improved Lethal',types:['Enchantment','Lethal'],description:'All attack abilities attached to this weapon have their attack increased by 1 additional point (if they have a non-zero attack defined) for every 2 extra enchantmnet tiers.',tier:1},
     {name:'Improved Cast Light',types:['Enchantment','Light-Casting'],description:'The radius of the cast light ability increases b 1 tile (5 ft.) for every 2 extra enchantment tiers.',tier:1},
-    {name:'Resistance',types:['Enchantment','Resistance'],description:'You gain +1 resistance.',tier:1},
-    {name:'Improved Resistance',types:['Enchantment','Resistance'],description:'You gain an additional +1 resistance for every 2 extra enchantment tiers.',tier:1},
+    {name:'Resistant',types:['Enchantment','Resistant'],description:'You gain +1 resistance.',tier:1},
+    {name:'Improved Resistant',types:['Enchantment','Resistant'],description:'You gain an additional +1 resistance for every 2 extra enchantment tiers.',tier:1},
     
     //Tier 2
     {name:'Dense',types:['Enchantment','Dense'],description:'Increase the consumable trait of this item by 1.',tier:2},
@@ -335,7 +335,7 @@ export const traitData: Trait[] = [
     {name:'Improved Glasscharm',types:['Enchantment','Glasscharm'],description:'All attack abilities attached to this weapon have their attack increased by 1 additional point (if they have a non-zero attack defined) for every extra enchantment tier. You suffer an additional -1 defence for every extra enchantment tier.',tier:3},
     {name:'Ragecharm',types:['Enchantment','Ragecharm'],description:'All attack abilities attached to this weapon have their energy damage increase by 4. You suffer -4 resistane.',tier:3},
     {name:'Improved Ragecharm',types:['Enchantment','Ragecharm'],description:'All attack abilities attached to this weapon have their energy damage increase by 1 additional point for every extra enchantment tier. You suffer an additional -1 resistane for every extra enchantment tier.',tier:3},
-    {name:'Returning',types:['Enchantment','Returing'],description:'When thrown as part of a ranged attack, this weapon returns to your hand as the attack ability resolves.',tier:3},
+    {name:'Returning',types:['Enchantment','Returning'],description:'When thrown as part of a ranged attack, this weapon returns to your hand as the attack ability resolves.',tier:3},
     
     //Tier 4       
     {name:'Hyperlethal',types:['Enchantment','Hyperlethal'],description:'Whenever abilities attached to this weapon reduce a target\'s endurance, reduce the target\'s endurance by an additional point.',tier:4},
