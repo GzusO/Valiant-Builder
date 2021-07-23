@@ -279,8 +279,6 @@ export const abilityData: Ability[] =[
     {name:'Skewer',types:['Weapon','Lance'],primaryTags:['Energy 3','Combat'],secondaryTags:['Action'],tertiaryTags:['Attack','Melee','Blitz'],description:'',tier:0,attack:6,energyDamage:3,scaling:'This ability gains 2 attack for every weapon tier above 0.'},
     {name:'Run Down',types:['Weapon','Lance'],primaryTags:['Energy 3','Combat'],secondaryTags:['Action'],tertiaryTags:['Attack','Melee','Blitz'],description:'',tier:0,attack:2,energyDamage:9,scaling:'This ability gains 3 energy damage for every weapon tier above 0.'},
     
-    
-    
     //Gear Abilities 
     //Tier 0
     {name:'Light Lantern',types:['Gear','Lantern'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:[],description:'While wearing or wielding the lantern you can set it alight, providing light in a 5 tile (25 ft.) sphere. You can use this action to extinguish the lantern.',tier:0,attack:0,energyDamage:0,scaling:''},
@@ -310,5 +308,13 @@ export const abilityData: Ability[] =[
     //Tier 4
     {name:'Pair Arcane Communicator',types:['Gear','Arcane Communicator'],primaryTags:['Energy 0'],secondaryTags:['Charged Action 5 minutes'],tertiaryTags:[],description:'This ability requires at least two nearby characters with Arcane Communicators to use this ability at the same time for it to resolve. After this ability resolves, all Arcane Communicators involved are considered paired. Any previous pairing are overwritten.',tier:0,attack:0,energyDamage:0,scaling:''},
     {name:'Arcane Communicator',types:['Gear','Arcane Communicator'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:['Range 1000 miles','Indirect'],description:'Speak into the Arcane Communicator. Whatever you say can be heard from any paired Arcane Communicators within range.',tier:0,attack:0,energyDamage:0,scaling:''},
+    
+
+    //Enchantment Abilities
+    //Tier 0
+    {name:'Cast Light',types:['Enchantment','Light-Casting'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:[],description:'Set this weapon alight, providing light ina 3 tile (15 ft.) sphere. You can also use this action to extinguish the light.',tier:0,attack:0,energyDamage:0,scaling:''},
+    
+    //Tier 3
+    {name:'Null Storage',types:['Enchantment','Null Storage'],primaryTags:['Energy 1','Combat'],secondaryTags:['Action'],tertiaryTags:[],description:'While wielding this item, stow it away in a personal pocket space. You can use this ability at any time to pull the item bak into an empty hand.',tier:3,attack:0,energyDamage:0,scaling:''},
     
 ];
