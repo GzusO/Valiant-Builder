@@ -64,6 +64,5 @@ export const weaponData: Weapon[] =[
     {name:'Round Shield',class:'Medium Shield',tags:['Size-Medium','Melee','Shield'],weight:8,cost:500,abilities:[],traits:[],tier:0},
     
     {name:'Tower Shield',class:'Great Shield',tags:['Size-Large','Melee','Shield','Heavy'],weight:20,cost:750,abilities:[],traits:[],tier:0},
-    {name:'Pavise Shield',class:'Great Shield',tags:['Size-Large','Melee','Shield'],weight:10,cost:500,abilities:[],traits:[],tier:0},
     {name:'Bastion Shield',class:'Great Shield',tags:['Size-Large','Melee','Two-Handed','Shield','Heavy'],weight:40,cost:1500,abilities:[],traits:[],tier:0},
 ];
