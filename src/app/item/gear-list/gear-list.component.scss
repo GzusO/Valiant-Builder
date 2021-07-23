@@ -1,0 +1,35 @@
+.mat-table {
+    width: 100%;
+}
+
+.mat-row .mat-cell {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+}
+
+.mat-row:hover .mat-cell {
+    border-color: currentColor;
+}
+
+.mat-header-cell {
+    font-size: large;
+}
+
+th.mat-sort-header-sorted {
+    color: black;
+    text-align: center;
+  }
+
+  .trait-name{
+    font-size: small;
+    font-weight: bold;
+}
+
+h2, p{
+    padding: 8px 8px 8px 8px;
+}
+p {
+    padding: 4px 4px 4px 4px;
+}
+
+.gray {background-color: #555555;}

@@ -305,7 +305,7 @@ export const abilityData: Ability[] =[
     {name:'Lethal Toxin',types:['Gear','Lethal Toxin'],primaryTags:['Energy 6'],secondaryTags:['Charged Action 10 minutes'],tertiaryTags:['Limited 1'],description:'All attached abilities of a target weapon gain +2 attack until the end of the next combat. The effects end after 4 fours if no combat occurs.',tier:0,attack:0,energyDamage:0,scaling:''},
     
     //Tier 4
-    {name:'Pair Arcane Communicator',types:['Gear','Arcane Communicator'],primaryTags:['Energy 0'],secondaryTags:['Charged Action 5 minutes'],tertiaryTags:[],description:'This ability requires at least two characters with Arcane Communicator to use this ability while nearby each other. After this ability resolves, all Arcane Communicators involved are considered paired. Any previous pairing are overwritten.',tier:0,attack:0,energyDamage:0,scaling:''},
+    {name:'Pair Arcane Communicator',types:['Gear','Arcane Communicator'],primaryTags:['Energy 0'],secondaryTags:['Charged Action 5 minutes'],tertiaryTags:[],description:'This ability requires at least two nearby characters with Arcane Communicators to use this ability at the same time for it to resolve. After this ability resolves, all Arcane Communicators involved are considered paired. Any previous pairing are overwritten.',tier:0,attack:0,energyDamage:0,scaling:''},
     {name:'Arcane Communicator',types:['Gear','Arcane Communicator'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:['Range 1000 miles','Indirect'],description:'Speak into the Arcane Communicator. Whatever you say can be heard from any paired Arcane Communicators within range.',tier:0,attack:0,energyDamage:0,scaling:''},
     
-]
+];

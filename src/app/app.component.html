@@ -3,13 +3,19 @@
         Valiance Character Builder
     </div>
     <span class="buttons">
-        <a mat-stroked-button routerLink="/armor">Armor</a>
         <a mat-stroked-button routerLink="/characteristics">Characteristics</a>
         <a mat-stroked-button routerLink="/classes">Classes</a>
         <a mat-stroked-button routerLink="/lineages">Lineages</a>
         <a mat-stroked-button routerLink="/professions">Professions</a>
-        <a mat-stroked-button routerLink="/weapon">Weapons</a>
         <a mat-stroked-button routerLink="/builder">Valiant Builder</a>
+        <button mat-stroked-button [matMenuTriggerFor]="itemMenu" class="menu">Items 
+            <mat-icon>expand_more</mat-icon>
+        </button>
+        <mat-menu #itemMenu="matMenu">
+            <a mat-stroked-button routerLink="/armor" class="menuItem">Armor</a>
+            <a mat-stroked-button routerLink="/weapon" class="menuItem">Weapons</a>
+            <a mat-stroked-button routerLink="/gear" class="menuItem">Gear</a>
+        </mat-menu>
     </span>
     <span class="spacer"></span>
     <span class="toggle">

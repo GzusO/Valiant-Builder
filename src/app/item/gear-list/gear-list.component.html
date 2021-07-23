@@ -1,1 +1,45 @@
-<p>gear-list works!</p>
+<table mat-table #gearSort="matSort" [dataSource]="gearDataSource" matSort class="mat-elevation-z8">
+
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Gear </th>
+        <td mat-cell *matCellDef="let gear"> {{gear.name}} </td>
+      </ng-container>
+    
+      
+      <ng-container matColumnDef="tags">
+        <th mat-header-cell *matHeaderCellDef >Tags </th>
+        <td mat-cell *matCellDef="let gear"> {{gear.tags.join(", ")}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="tier">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Tier </th>
+        <td mat-cell *matCellDef="let gear"> {{gear.tier}}</td>
+      </ng-container>
+    
+      <ng-container matColumnDef="weight">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Weight </th>
+        <td mat-cell *matCellDef="let gear"> {{gear.weight}} lb.</td>
+      </ng-container>
+
+      <ng-container matColumnDef="cost">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Tier 0 Cost (tins) </th>
+        <td mat-cell *matCellDef="let gear"> {{gear.cost}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="traits">
+        <th mat-header-cell *matHeaderCellDef>Abilities and Traits </th>
+        <td mat-cell *matCellDef="let gear">
+            <app-ability-content *ngFor="let ability of gear.abilities" [ability]=ability></app-ability-content>
+            <div *ngFor="let trait of gear.traits">
+                <span class="trait-name">{{trait.name}}</span>
+                <p>{{trait.description}}</p>
+            </div>
+            </td>
+      </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; 
+                              let even = even
+                              columns: displayedColumns;"
+                              [ngClass]="{gray: even}"></tr>
+</table>
