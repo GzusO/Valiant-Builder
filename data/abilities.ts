@@ -306,6 +306,6 @@ export const abilityData: Ability[] =[
     
     //Tier 4
     {name:'Pair Arcane Communicator',types:['Gear','Arcane Communicator'],primaryTags:['Energy 0'],secondaryTags:['Charged Action 5 minutes'],tertiaryTags:[],description:'This ability requires at least two characters with Arcane Communicator to use this ability while nearby each other. After this ability resolves, all Arcane Communicators involved are considered paired. Any previous pairing are overwritten.',tier:0,attack:0,energyDamage:0,scaling:''},
-    {name:'Arcane Communicator',types:['Gear','Arcane Communicator'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:['Range 1000 miles','Indirect'],description:'Speak into the Arcane Communicator. Whatever you say can be heard from any paired Arcane Communicators within range.',tier:,attack:,energyDamage:,scaling:''},
+    {name:'Arcane Communicator',types:['Gear','Arcane Communicator'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:['Range 1000 miles','Indirect'],description:'Speak into the Arcane Communicator. Whatever you say can be heard from any paired Arcane Communicators within range.',tier:0,attack:0,energyDamage:0,scaling:''},
     
 ]
