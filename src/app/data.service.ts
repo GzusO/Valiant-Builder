@@ -18,6 +18,7 @@ import { Tag, tagData } from 'data/tags';
 import { Armor, armorData } from 'data/armors';
 import { ArmorClass, armorClassData } from 'data/armorClasses';
 import { Weapon, weaponData } from 'data/weapons';
+import { Gear, gearData } from 'data/gear';
 
 @Injectable({
   providedIn: 'root'
@@ -34,6 +35,7 @@ export class DataService {
   armors = armorData;
   armorClasses= armorClassData;
   weapons = weaponData;
+  gear = gearData;
 
   getProfessions(): Observable<Profession[]> {
     return of(this.professions);
@@ -71,6 +73,9 @@ export class DataService {
   getWeapons(): Observable<Weapon[]> {
     return of(this.weapons);
   }
+  getGear(): Observable<Gear[]>{
+    return of(this.gear);
+  }
 
   constructor() {
     this.mapAbilities();
@@ -81,6 +86,7 @@ export class DataService {
     this.mapLineages();
     this.mapArmor();
     this.mapWeapons();
+    this.mapGear();
   }
 
   mapAbilities(): void{
@@ -109,5 +115,9 @@ export class DataService {
   mapWeapons(): void {
     this.weapons.map(x =>x.abilities = (this.abilities.filter(y=> y.types.includes(x.name))));
     this.weapons.map(x =>x.traits = (this.traits.filter(y=> y.types.includes(x.name))));
+  }
+  mapGear(): void {
+    this.gear.map(x =>x.abilities = (this.abilities.filter(y=> y.types.includes(x.name))));
+    this.gear.map(x =>x.traits = (this.traits.filter(y=> y.types.includes(x.name))));
   }
 }

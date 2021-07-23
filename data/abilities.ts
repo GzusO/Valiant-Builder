@@ -278,6 +278,34 @@ export const abilityData: Ability[] =[
     
     
     
+    //Gear Abilities 
+    //Tier 0
+    {name:'Light Lantern',types:['Gear','Lantern'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:[],description:'While wearing or wielding the lantern you can set it alight, providing light in a 5 tile (25 ft.) sphere. You can use this action to extinguish the lantern.',tier:0,attack:0,energyDamage:0,scaling:''},
+    {name:'Trauma Kit',types:['Gear','Trauma Kit'],primaryTags:['Energy 4','Combat'],secondaryTags:['Action'],tertiaryTags:['Melee'],description:'Target character gains the stable status.',tier:0,attack:0,energyDamage:0,scaling:''},
     {name:'Plant',types:['Gear'],primaryTags:['Energy 2','Combat'],secondaryTags:['Action'],tertiaryTags:[],description:'Plant the shield between your own and an adjacent tile, creating cover. This ability can also be used to pick up a planted shield.',tier:0,attack:0,energyDamage:0,scaling:''},
     
-]
+    //Tier 1
+    {name:'Caffeinated Brew',types:['Gear','Caffeinated Brew'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:[],description:'Restore energy equal to 4 plus your tier.',tier:0,attack:0,energyDamage:0,scaling:''},
+    {name:'Drop Caltrops',types:['Gear','Caltrops'],primaryTags:['Energy 2','Combat'],secondaryTags:['Action'],tertiaryTags:[],description:'Drop caltrops on an adjacent, empty tile that last until the end of this combat. Any character that enters that tile take energy damage equal to 4 plus twice your tier.',tier:0,attack:0,energyDamage:0,scaling:''},
+    {name:'Set Caltrops',types:['Gear','Caltrops'],primaryTags:['Energy 0'],secondaryTags:['Action'],tertiaryTags:[],description:'Drop caltrops on an adjacent, empty tile that last for 1 hour. Any character that enters that tile takes energy damage equal to 4 plus twice your tier.',tier:0,attack:0,energyDamage:0,scaling:''},
+    {name:'Flare',types:['Gear','Flare'],primaryTags:['Energy 2','Combat'],secondaryTags:['Action'],tertiaryTags:[],description:'Light a flare, creating a bright light in a 3 tile (15 ft.) radius. This light lasts for 12 turns (1 minute).',tier:0,attack:0,energyDamage:0,scaling:''},
+    {name:'Toss Flare',types:['Gear','Flare'],primaryTags:['Energy 3','Combat'],secondaryTags:['Action'],tertiaryTags:['Range 5'],description:'Light and toss a flare to a tile in range, creating a bright light in a 3 tile (15 ft.) radius at that tile. This light lasts for 12 turns (1 minute).',tier:0,attack:0,energyDamage:0,scaling:''},
+    {name:'Smokescreen',types:['Gear','Smokescreen'],primaryTags:['Energy 4','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Range 2 Sphere'],description:'Global: The target area become opaque for 12 turns (1 minute).',tier:0,attack:0,energyDamage:0,scaling:''},
+
+    //Tier 2
+    {name:'Parachute',types:['Gear','Parachute'],primaryTags:['Energy 0'],secondaryTags:['Reaction'],tertiaryTags:[],description:'While you are falling: Slow your fall to 25 tiles per turn (25 ft. per second). Take no energy damage when you land.',tier:0,attack:0,energyDamage:0,scaling:''},
+    {name:'Stun Bomb',types:['Gear','Stun Bomb'],primaryTags:['Energy 4','Combat'],secondaryTags:['Action'],tertiaryTags:['Range 5'],description:'The target character is incapacitated for an instant. In addition to any other potential effects, this causes the target character to lose focus on all of their focus abilities.',tier:0,attack:0,energyDamage:0,scaling:''},
+    {name:'Witch-Hunter Charm',types:['Gear','Witch-Hunter Charm'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:[],description:'Touch this item to any other item, this item will glow a dull blue if the touched item is arcane.',tier:0,attack:0,energyDamage:0,scaling:''},
+    {name:'Witch-Hunter Strike',types:['Gear','Witch-Hunter Charm'],primaryTags:['Energy 5','Combat'],secondaryTags:['Attack Modifier'],tertiaryTags:[],description:'End one focus ability the target is maintaining.',tier:0,attack:0,energyDamage:0,scaling:''},
+    
+    //Tier 3
+    {name:'Arcane Flare',types:['Gear','Arcane Flare'],primaryTags:['Energy 2','Combat'],secondaryTags:['Action'],tertiaryTags:[],description:'Light a flare, creating a bright light in a 5 tile (25 ft.) radius. This light lasts for 1 hour and can burn in any environments.',tier:0,attack:0,energyDamage:0,scaling:''},
+    {name:'Toss Arcane Flare',types:['Gear','Arcane Flare'],primaryTags:['Energy 3','Combat'],secondaryTags:['Action'],tertiaryTags:['Range 5'],description:'Light and toss a flare to a tile in range, creating a bright light in a 5 tile (25 ft.) radius at that tile. This light lasts for 1 hour and can burn in any environments.',tier:0,attack:0,energyDamage:0,scaling:''},
+    {name:'Draining Toxin',types:['Gear','Draining Toxin'],primaryTags:['Energy 6'],secondaryTags:['Charged Action 10 minutes'],tertiaryTags:['Limited 1'],description:'All attached abilities of a target weapon gain +2 energy damage until the end of the next combat. The effects end after 4 hours if no combat occurs.',tier:0,attack:0,energyDamage:0,scaling:''},
+    {name:'Lethal Toxin',types:['Gear','Lethal Toxin'],primaryTags:['Energy 6'],secondaryTags:['Charged Action 10 minutes'],tertiaryTags:['Limited 1'],description:'All attached abilities of a target weapon gain +2 attack until the end of the next combat. The effects end after 4 fours if no combat occurs.',tier:0,attack:0,energyDamage:0,scaling:''},
+    
+    //Tier 4
+    {name:'Pair Arcane Communicator',types:['Gear','Arcane Communicator'],primaryTags:['Energy 0'],secondaryTags:['Charged Action 5 minutes'],tertiaryTags:[],description:'This ability requires at least two nearby characters with Arcane Communicators to use this ability at the same time for it to resolve. After this ability resolves, all Arcane Communicators involved are considered paired. Any previous pairing are overwritten.',tier:0,attack:0,energyDamage:0,scaling:''},
+    {name:'Arcane Communicator',types:['Gear','Arcane Communicator'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:['Range 1000 miles','Indirect'],description:'Speak into the Arcane Communicator. Whatever you say can be heard from any paired Arcane Communicators within range.',tier:0,attack:0,energyDamage:0,scaling:''},
+    
+];

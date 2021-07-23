@@ -293,4 +293,8 @@ export const traitData: Trait[] = [
     {name:'Enchantable',types:['Accessory','Arcane Necklace','Arcane Ring'],description:'When enchanting this item, you may imbue 1 more enchantment than you would normally be able to.',tier:3},
     {name:'Mindspeak Amulet',types:['Accessory','Mindspeak Amulet'],description:'You can communicate telepathically with any creature within 10 ft. of you.',tier:3},
     
+    //Gear Traits
+    //Tier 0
+    {name:'Crowbar',types:['Gear','Crowbar'],description:'You gain +1 to all non-attack contests that involve prying something open.',tier:0},
+    
 ]

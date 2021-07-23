@@ -25,6 +25,7 @@ import { MatStepperModule } from '@angular/material/stepper'
 import { MatChipsModule } from '@angular/material/chips'
 import { MatListModule } from '@angular/material/list';
 import { MatSortModule } from '@angular/material/sort';
+import { MatMenuModule } from '@angular/material/menu';
 
 import { FooterComponent } from './footer/footer.component';
 import { CharacteristicListComponent } from './characteristic-list/characteristic-list.component';
@@ -89,7 +90,8 @@ import { GearListComponent } from './item/gear-list/gear-list.component'
     MatStepperModule,
     MatChipsModule,
     MatListModule,
-    MatSortModule
+    MatSortModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
