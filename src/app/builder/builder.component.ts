@@ -1,11 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit } from '@angular/core';
 import { Characteristic } from "../Characteristic";
 import { Lineage } from "../lineage/Lineage";
 import { Profession } from "../profession/Profession";
 import { Feature } from "../feature/Feature";
 import { DataService } from '../data.service';
-
-
+import { MatSelectionListChange } from '@angular/material/list';
 
 @Component({
   selector: 'app-builder',
@@ -17,12 +16,14 @@ export class BuilderComponent implements OnInit {
     characteristicPoints: number = 2;
     valiantCharacteristics: Map<string,number> = new Map<string,number>();
     valiantLineages: string[] = [];
+    valiantLineagePersistentFeatures: Feature[] = [];
     valiantLineagePrimaryFeatures: Feature[] = [];
     valiantLineageSecondaryFeatures: Feature[] = [];
     valiantProfession: Profession[] =[];
     valiantClassPrimaryFeatures: Feature[] =[];
     valiantClassSecondaryFeatures: Feature[] = [];
     valiantCharacteristicFeautres: Feature[] =[];
+    
 
     lineages: Lineage[] = [];
     lineageFeatures: Feature[] =[];
@@ -98,6 +99,9 @@ export class BuilderComponent implements OnInit {
       return;
     let feats: Feature[] = char.features.filter(feat => feat.tier <= tier);
     this.valiantCharacteristicFeautres.push(...feats);
+  }
+  lineageSelected($event: MatSelectionListChange): void {
+    this.valiantLineagePersistentFeatures = this.lineageFeatures.filter(x=> x.types.includes('Persistent') && x.types.some(y=> $event.source._value?.includes(y)))
   }
 }
 

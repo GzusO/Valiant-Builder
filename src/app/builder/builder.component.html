@@ -1,5 +1,5 @@
 <mat-stepper>
-    <mat-step>
+    <mat-step mat-app-background label="Characteristics">
         <div>Available Points {{characteristicPoints}}</div>
         <table class="characteristics">
             <tr class="characteristic" *ngFor="let char of characteristics">
@@ -19,7 +19,7 @@
         <div class="lineageSelection">
             <div class="lineages">
                 <h3>Lineages Pick up to 2</h3>
-                <mat-selection-list  #lineageList [(ngModel)]="valiantLineages">
+                <mat-selection-list  #lineageList [(ngModel)]="valiantLineages" (selectionChange)="lineageSelected($event)">
                     <mat-list-option class="choice" #lineage *ngFor="let lineageType of lineages" [disabled]="lineageList.selectedOptions.selected.length > 1 && !lineage.selected" [value]="lineageType.name">
                         {{lineageType.name}}
                     </mat-list-option>
@@ -156,6 +156,7 @@
         </div>
         <div class="cards">
             <app-feature-card *ngFor="let feat of valiantCharacteristicFeautres" [feature]=feat class="card"></app-feature-card>
+            <app-feature-card *ngFor="let feat of valiantLineagePersistentFeatures" [feature]=feat class="card"></app-feature-card>
             <app-feature-card *ngFor="let feat of valiantLineagePrimaryFeatures" [feature]=feat class="card"></app-feature-card>
             <app-feature-card *ngFor="let feat of valiantLineageSecondaryFeatures" [feature]=feat class="card"></app-feature-card>
             <app-feature-card *ngFor="let feat of valiantProfession[0]?.features" [feature]=feat class="card"></app-feature-card>
