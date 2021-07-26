@@ -26,7 +26,6 @@ import { MatChipsModule } from '@angular/material/chips'
 import { MatListModule } from '@angular/material/list';
 import { MatSortModule } from '@angular/material/sort';
 import { MatMenuModule } from '@angular/material/menu';
-import { MatDialog } from '@angular/material/dialog';
 
 import { FooterComponent } from './footer/footer.component';
 import { CharacteristicListComponent } from './characteristic-list/characteristic-list.component';
@@ -49,6 +48,8 @@ import { EnchantmentListComponent } from './item/enchantment-list/enchantment-li
 import { CharacteristicDialogComponent } from './characteristic/characteristic-dialog/characteristic-dialog.component'
 import { CharacteristicDialogDialog } from './characteristic/characteristic-dialog/characteristic-dialog-dialog.component';
 import { CharacteristicDetailComponent } from './characteristic/characteristic-detail/characteristic-detail.component';
+import { ValiantListComponent } from './valiant/valiant-list/valiant-list.component';
+import { ValiantDetailComponent } from './valiant/valiant-detail/valiant-detail.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +74,9 @@ import { CharacteristicDetailComponent } from './characteristic/characteristic-d
     EnchantmentListComponent,
     CharacteristicDialogComponent,
     CharacteristicDialogDialog,
-    CharacteristicDetailComponent
+    CharacteristicDetailComponent,
+    ValiantListComponent,
+    ValiantDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -101,7 +104,8 @@ import { CharacteristicDetailComponent } from './characteristic/characteristic-d
     MatListModule,
     MatSortModule,
     MatMenuModule,
-    MatDialogModule
+    MatDialogModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

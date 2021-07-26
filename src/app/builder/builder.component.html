@@ -26,7 +26,7 @@
             <div class="lineages">
                 <h3>Lineages Pick up to 2</h3>
                 <mat-selection-list  #lineageList [(ngModel)]="valiantLineages" (selectionChange)="lineageSelected($event)">
-                    <mat-list-option class="choice" #lineage *ngFor="let lineageType of lineages" [disabled]="lineageList.selectedOptions.selected.length > 1 && !lineage.selected" [value]="lineageType.name">
+                    <mat-list-option class="choice" #lineage *ngFor="let lineageType of lineages" [disabled]="lineageList.selectedOptions.selected.length > 1 && !lineage.selected" [value]="lineageType">
                         {{lineageType.name}}
                     </mat-list-option>
                 </mat-selection-list>
@@ -147,6 +147,7 @@
         </div>
     </mat-step>
     <mat-step label="Character">
+        <input mat-input [(ngModel)]="valiantName">
         <div class="valiantCharacteristics">
             <div *ngFor="let char of characteristics">
                 <span>
@@ -158,7 +159,7 @@
             Profession: {{valiantProfession[0]?.name}}
         </div>
         <div class="valiantLineages">
-            Lineage: {{valiantLineages.join(", ")}}
+            Lineage: <span *ngFor="let lineage of valiantLineages">{{lineage.name}}, </span>
         </div>
         <div class="cards">
             <app-feature-card *ngFor="let feat of valiantCharacteristicFeautres" [feature]=feat class="card"></app-feature-card>
@@ -171,6 +172,7 @@
         </div>
         <div>
             <button mat-button matStepperPrevious>Previous</button>
+            <button mat-button (click)="save()">Save</button>
         </div>
     </mat-step>
 </mat-stepper>

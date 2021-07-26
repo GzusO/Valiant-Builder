@@ -20,6 +20,7 @@ import { ArmorClass, armorClassData } from 'data/armorClasses';
 import { Weapon, weaponData } from 'data/weapons';
 import { Gear, gearData } from 'data/gear';
 import { Enchantment,enchantmentData } from 'data/enchantments';
+import { Valiant } from 'data/valiant';
 
 @Injectable({
   providedIn: 'root'
@@ -38,6 +39,7 @@ export class DataService {
   weapons = weaponData;
   gear = gearData;
   enchantments = enchantmentData;
+  valiants: Valiant[]= [];
 
   getProfessions(): Observable<Profession[]> {
     return of(this.professions);
@@ -82,6 +84,13 @@ export class DataService {
     return of(this.enchantments);
   }
 
+  getValiants(): Observable<Valiant[]>{
+    return of(this.valiants);
+  }
+  getValiant(name: string): Valiant | undefined{
+    return this.valiants.find(x=> x.name = name);
+  }
+
   constructor() {
     this.mapAbilities();
     this.mapTraits();
@@ -93,6 +102,7 @@ export class DataService {
     this.mapWeapons();
     this.mapGear();
     this.mapEnchantments();
+    this.loadValiants();
   }
 
   mapAbilities(): void{
@@ -129,5 +139,35 @@ export class DataService {
   mapEnchantments(): void {
     this.enchantments.map(x =>x.abilities = (this.abilities.filter(y=> y.types.includes(x.name))));
     this.enchantments.map(x =>x.traits = (this.traits.filter(y=> y.types.includes(x.name))));
+  }
+  loadValiants(): void {
+    const valiants = this.getLocalStorage("valiants");
+    this.valiants = valiants !== null ? valiants : [];
+  }
+  saveValiants(): void {
+    this.setLocalStorage("valiants",this.valiants);
+  }
+  addValiant(valiant: Valiant): void {
+    this.valiants.push(valiant);
+    this.saveValiants();
+  }
+
+  getLocalStorage(key: string) {
+    try {
+      const data: string| null = localStorage.getItem(key);
+      return data !== null ? JSON.parse(data) : null;
+    }
+    catch(e){
+      console.error("Error getting data from localStorage",e);
+      return null;
+    }
+  }
+  setLocalStorage(key: string, data: any): void {
+    try{
+      localStorage.setItem(key,JSON.stringify(data));
+    }
+    catch (e){
+      console.error("Error setting data to localStorage",e);
+    }
   }
 }

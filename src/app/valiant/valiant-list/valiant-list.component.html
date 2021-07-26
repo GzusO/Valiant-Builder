@@ -1,0 +1,4 @@
+<mat-card class="card" *ngFor="let valiant of valiants" [routerLink]="['/valiant']" [state]=valiant>
+        <mat-card-title>{{valiant.name}}</mat-card-title>
+        <mat-card-subtitle>Tier: {{valiant.tier}}</mat-card-subtitle>
+</mat-card>

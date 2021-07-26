@@ -5,6 +5,7 @@ import { Profession } from "../profession/Profession";
 import { Feature } from "../feature/Feature";
 import { DataService } from '../data.service';
 import { MatSelectionListChange } from '@angular/material/list';
+import { Valiant } from 'data/valiant';
 
 @Component({
   selector: 'app-builder',
@@ -15,7 +16,7 @@ export class BuilderComponent implements OnInit {
     characteristics: Characteristic[] =[];
     characteristicPoints: number = 2;
     valiantCharacteristics: Map<string,number> = new Map<string,number>();
-    valiantLineages: string[] = [];
+    valiantLineages: Lineage[] = [];
     valiantLineagePersistentFeatures: Feature[] = [];
     valiantLineagePrimaryFeatures: Feature[] = [];
     valiantLineageSecondaryFeatures: Feature[] = [];
@@ -23,6 +24,7 @@ export class BuilderComponent implements OnInit {
     valiantClassPrimaryFeatures: Feature[] =[];
     valiantClassSecondaryFeatures: Feature[] = [];
     valiantCharacteristicFeautres: Feature[] =[];
+    valiantName: string= "";
     
 
     lineages: Lineage[] = [];
@@ -98,10 +100,27 @@ export class BuilderComponent implements OnInit {
     if (char === undefined)
       return;
     let feats: Feature[] = char.features.filter(feat => feat.tier <= tier);
-    this.valiantCharacteristicFeautres.push(...feats);
+    this.valiantCharacteristicFeautres.push(...feats); 
   }
   lineageSelected($event: MatSelectionListChange): void {
-    this.valiantLineagePersistentFeatures = this.lineageFeatures.filter(x=> x.types.includes('Persistent') && x.types.some(y=> $event.source._value?.includes(y)))
+    this.valiantLineagePersistentFeatures = [];
+    $event.options[0].selectionList._value?.forEach(x=> this.valiantLineagePersistentFeatures.push(...(x as Object as Lineage).features.filter(y=> y.types.includes("Persistent"))));
+  }
+  save(): void {
+    const valiant = new Valiant();
+    valiant.name = this.valiantName;
+    valiant.professions = this.valiantProfession;
+    valiant.lineages = this.valiantLineages;
+    valiant.characteristics =this.valiantCharacteristics
+    valiant.features.push(...this.valiantCharacteristicFeautres);
+    valiant.features.push(...this.valiantLineagePersistentFeatures);
+    valiant.features.push(...this.valiantLineagePrimaryFeatures);
+    valiant.features.push(...this.valiantLineageSecondaryFeatures);
+    valiant.features.push(...this.valiantClassPrimaryFeatures);
+    valiant.features.push(...this.valiantClassSecondaryFeatures);
+    valiant.features.push(...this.valiantProfession[0].features);
+    
+    this.dataService.addValiant(valiant);
   }
 }
 

@@ -1,0 +1,20 @@
+<div *ngIf="valiant">
+    <div>{{valiant.name}}</div>
+    <div class="valiantCharacteristics">
+    <div *ngFor="let char of valiant.characteristics | keyvalue">
+        <span>
+            {{char.key}} : {{char.value}}
+        </span>
+    </div>
+    </div>
+    <div class="valiantProfession">
+    Profession: {{valiant.professions[0]?.name}}
+    </div>
+    <div class="valiantLineages">
+    Lineage: <span *ngFor="let lineage of valiant.lineages">{{lineage.name}}, </span>
+    </div>
+    <div class="cards">
+    <app-feature-card *ngFor="let feat of valiant.features" [feature]=feat class="card"></app-feature-card>
+
+    </div>
+</div>
