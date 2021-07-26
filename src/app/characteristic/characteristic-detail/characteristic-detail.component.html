@@ -1,0 +1,18 @@
+<div *ngIf="characteristic">
+<h1 *ngIf="displayHeader">{{characteristic.name}}</h1>
+<p>{{characteristic.description}}</p>
+<div class="overlayFlex">
+    <mat-card *ngFor="let feature of characteristic.features">
+        <mat-card-title>{{feature.name}}</mat-card-title>
+        <mat-card-subtitle>Score: {{feature.tier}}</mat-card-subtitle>
+        <mat-card-content>
+            <p>{{feature.description}}</p>
+            <app-ability-content *ngFor="let ability of feature.abilities" [ability]="ability"></app-ability-content>
+            <div *ngFor="let trait of feature.traits">
+                <span class="trait-name">{{trait.name}}</span>
+                <p>{{trait.description}}</p>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>
+</div>

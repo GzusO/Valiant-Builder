@@ -3,7 +3,9 @@
         <div>Available Points {{characteristicPoints}}</div>
         <table class="characteristics">
             <tr class="characteristic" *ngFor="let char of characteristics">
-                <td class="name">{{char.name}}</td> 
+                <td class="name">
+                    <app-characteristic-dialog [characteristic]=char></app-characteristic-dialog>
+                </td> 
                 <td class="value">{{valiantCharacteristics.get(char.name)}}</td>
                 <td class="buttons">
                     <button mat-stroked-button (click)="consumePoint(char.name,1)">+</button>
@@ -11,6 +13,10 @@
                 </td>
             </tr>   
         </table>
+        <div>
+
+        </div>
+
         <div>
             <button mat-button matStepperNext>Next</button>
         </div>
