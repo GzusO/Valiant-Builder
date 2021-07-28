@@ -1,16 +1,22 @@
 <mat-stepper>
-    <mat-step>
+    <mat-step mat-app-background label="Characteristics">
         <div>Available Points {{characteristicPoints}}</div>
         <table class="characteristics">
-            <tr class="characteristic" *ngFor="let char of characteristics">
-                <td class="name">{{char.name}}</td> 
-                <td class="value">{{valiantCharacteristics.get(char.name)}}</td>
+            <tr class="characteristic" *ngFor="let char of characteristics; let i =index">
+                <td class="name">
+                    <app-characteristic-dialog [characteristic]=char></app-characteristic-dialog>
+                </td> 
+                <td class="value">{{valiantCharacteristics[i].score}}</td>
                 <td class="buttons">
                     <button mat-stroked-button (click)="consumePoint(char.name,1)">+</button>
                     <button mat-stroked-button (click)="consumePoint(char.name,-1)">-</button>
                 </td>
             </tr>   
         </table>
+        <div>
+
+        </div>
+
         <div>
             <button mat-button matStepperNext>Next</button>
         </div>
@@ -19,8 +25,8 @@
         <div class="lineageSelection">
             <div class="lineages">
                 <h3>Lineages Pick up to 2</h3>
-                <mat-selection-list  #lineageList [(ngModel)]="valiantLineages">
-                    <mat-list-option class="choice" #lineage *ngFor="let lineageType of lineages" [disabled]="lineageList.selectedOptions.selected.length > 1 && !lineage.selected" [value]="lineageType.name">
+                <mat-selection-list  #lineageList [(ngModel)]="valiantLineages" (selectionChange)="lineageSelected($event)">
+                    <mat-list-option class="choice" #lineage *ngFor="let lineageType of lineages" [disabled]="lineageList.selectedOptions.selected.length > 1 && !lineage.selected" [value]="lineageType">
                         {{lineageType.name}}
                     </mat-list-option>
                 </mat-selection-list>
@@ -141,10 +147,11 @@
         </div>
     </mat-step>
     <mat-step label="Character">
+        <input mat-input [(ngModel)]="valiantName">
         <div class="valiantCharacteristics">
-            <div *ngFor="let char of characteristics">
+            <div *ngFor="let char of valiantCharacteristics">
                 <span>
-                    {{char.name}} : {{valiantCharacteristics.get(char.name)}}
+                    {{char.name}} : {{char.score}}
                 </span>
             </div>
         </div>
@@ -152,10 +159,11 @@
             Profession: {{valiantProfession[0]?.name}}
         </div>
         <div class="valiantLineages">
-            Lineage: {{valiantLineages.join(", ")}}
+            Lineage: <span *ngFor="let lineage of valiantLineages">{{lineage.name}}, </span>
         </div>
         <div class="cards">
             <app-feature-card *ngFor="let feat of valiantCharacteristicFeautres" [feature]=feat class="card"></app-feature-card>
+            <app-feature-card *ngFor="let feat of valiantLineagePersistentFeatures" [feature]=feat class="card"></app-feature-card>
             <app-feature-card *ngFor="let feat of valiantLineagePrimaryFeatures" [feature]=feat class="card"></app-feature-card>
             <app-feature-card *ngFor="let feat of valiantLineageSecondaryFeatures" [feature]=feat class="card"></app-feature-card>
             <app-feature-card *ngFor="let feat of valiantProfession[0]?.features" [feature]=feat class="card"></app-feature-card>
@@ -164,6 +172,7 @@
         </div>
         <div>
             <button mat-button matStepperPrevious>Previous</button>
+            <button mat-button (click)="save()">Save</button>
         </div>
     </mat-step>
 </mat-stepper>

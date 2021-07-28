@@ -44,7 +44,12 @@ import { AbilityContentComponent } from './ability/ability-content/ability-conte
 import { ArmorListComponent } from './item/armor-list/armor-list.component';
 import { WeaponListComponent } from './item/weapon-list/weapon-list.component';
 import { GearListComponent } from './item/gear-list/gear-list.component';
-import { EnchantmentListComponent } from './item/enchantment-list/enchantment-list.component'
+import { EnchantmentListComponent } from './item/enchantment-list/enchantment-list.component';
+import { CharacteristicDialogComponent } from './characteristic/characteristic-dialog/characteristic-dialog.component'
+import { CharacteristicDialogDialog } from './characteristic/characteristic-dialog/characteristic-dialog-dialog.component';
+import { CharacteristicDetailComponent } from './characteristic/characteristic-detail/characteristic-detail.component';
+import { ValiantListComponent } from './valiant/valiant-list/valiant-list.component';
+import { ValiantDetailComponent } from './valiant/valiant-detail/valiant-detail.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +71,12 @@ import { EnchantmentListComponent } from './item/enchantment-list/enchantment-li
     ArmorListComponent,
     WeaponListComponent,
     GearListComponent,
-    EnchantmentListComponent
+    EnchantmentListComponent,
+    CharacteristicDialogComponent,
+    CharacteristicDialogDialog,
+    CharacteristicDetailComponent,
+    ValiantListComponent,
+    ValiantDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -93,7 +103,9 @@ import { EnchantmentListComponent } from './item/enchantment-list/enchantment-li
     MatChipsModule,
     MatListModule,
     MatSortModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDialogModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
