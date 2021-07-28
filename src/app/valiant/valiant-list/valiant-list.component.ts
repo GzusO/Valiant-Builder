@@ -18,4 +18,10 @@ export class ValiantListComponent implements OnInit {
   getValiants(): void {
     this.dataService.getValiants().subscribe(valiants => this.valiants = valiants);
   }
+
+  delete(valiant: Valiant): void{
+    event?.stopPropagation();
+    this.dataService.deleteValiant(valiant);
+    this.valiants = this.valiants.filter(x=> x.name !== valiant.name);
+  }
 }

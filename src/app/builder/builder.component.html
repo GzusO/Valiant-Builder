@@ -2,11 +2,11 @@
     <mat-step mat-app-background label="Characteristics">
         <div>Available Points {{characteristicPoints}}</div>
         <table class="characteristics">
-            <tr class="characteristic" *ngFor="let char of characteristics">
+            <tr class="characteristic" *ngFor="let char of characteristics; let i =index">
                 <td class="name">
                     <app-characteristic-dialog [characteristic]=char></app-characteristic-dialog>
                 </td> 
-                <td class="value">{{valiantCharacteristics.get(char.name)}}</td>
+                <td class="value">{{valiantCharacteristics[i].score}}</td>
                 <td class="buttons">
                     <button mat-stroked-button (click)="consumePoint(char.name,1)">+</button>
                     <button mat-stroked-button (click)="consumePoint(char.name,-1)">-</button>
@@ -149,9 +149,9 @@
     <mat-step label="Character">
         <input mat-input [(ngModel)]="valiantName">
         <div class="valiantCharacteristics">
-            <div *ngFor="let char of characteristics">
+            <div *ngFor="let char of valiantCharacteristics">
                 <span>
-                    {{char.name}} : {{valiantCharacteristics.get(char.name)}}
+                    {{char.name}} : {{char.score}}
                 </span>
             </div>
         </div>

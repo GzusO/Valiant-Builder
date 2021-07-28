@@ -151,6 +151,10 @@ export class DataService {
     this.valiants.push(valiant);
     this.saveValiants();
   }
+  deleteValiant(valiant: Valiant):void {
+    this.valiants = this.valiants.filter(x=> x.name !== valiant.name);
+    this.saveValiants();
+  }
 
   getLocalStorage(key: string) {
     try {

@@ -1,4 +1,18 @@
-<mat-card class="card" *ngFor="let valiant of valiants" [routerLink]="['/valiant']" [state]=valiant>
-        <mat-card-title>{{valiant.name}}</mat-card-title>
-        <mat-card-subtitle>Tier: {{valiant.tier}}</mat-card-subtitle>
-</mat-card>
+<div class="cards">
+        <mat-card class="card" *ngFor="let valiant of valiants" [routerLink]="['/valiant']" [state]=valiant>
+                <mat-card-title>{{valiant.name}}
+                        <div class="spacer"></div>
+                        <button mat-mini-fab color="warn"(click)="delete(valiant)"><mat-icon>delete</mat-icon></button>
+                </mat-card-title>
+                <mat-card-subtitle>Aspirant {{valiant.tier}}</mat-card-subtitle>
+                <mat-card-content>
+                        <div>Lineage: <span *ngFor="let lineage of valiant.lineages">{{lineage.name}} </span></div>
+                        <div>Profession: <span *ngFor="let profession of valiant.professions">{{profession.name}} </span></div>
+                        <div *ngFor="let char of valiant.characteristics">
+                                <span>
+                                    {{char.name}} : {{char.score}}
+                                </span>
+                        </div>
+                </mat-card-content>
+        </mat-card>
+</div>

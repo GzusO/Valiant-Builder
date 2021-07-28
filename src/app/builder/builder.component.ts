@@ -5,7 +5,7 @@ import { Profession } from "../profession/Profession";
 import { Feature } from "../feature/Feature";
 import { DataService } from '../data.service';
 import { MatSelectionListChange } from '@angular/material/list';
-import { Valiant } from 'data/valiant';
+import { CharacteristicScore, Valiant } from 'data/valiant';
 
 @Component({
   selector: 'app-builder',
@@ -15,7 +15,7 @@ import { Valiant } from 'data/valiant';
 export class BuilderComponent implements OnInit {
     characteristics: Characteristic[] =[];
     characteristicPoints: number = 2;
-    valiantCharacteristics: Map<string,number> = new Map<string,number>();
+    valiantCharacteristics: CharacteristicScore[] =[];
     valiantLineages: Lineage[] = [];
     valiantLineagePersistentFeatures: Feature[] = [];
     valiantLineagePrimaryFeatures: Feature[] = [];
@@ -38,7 +38,7 @@ export class BuilderComponent implements OnInit {
       this.getLineageFeatures();
       this.getProfessions();
       this.getClassFeatures();
-      this.characteristics.forEach(char =>this.valiantCharacteristics.set(char.name,1));
+      this.characteristics.forEach(char =>this.valiantCharacteristics.push({name:char.name,score:1}));
       this.characteristics.forEach(x=> this.updateCharacteristicFeatures(x.name,1));
    }
 
@@ -69,28 +69,31 @@ export class BuilderComponent implements OnInit {
     return result;
   }
   consumePoint(name: string, amount: number){
-    if(!this.valiantCharacteristics.has(name))
+    const index = this.valiantCharacteristics.findIndex(x=> x.name=== name);
+    if(index === -1)
     {
       return;
     }
+    //Add point
     if(amount > 0)
     {
       if (this.characteristicPoints >= amount)
       {
         this.characteristicPoints -= amount;
-        this.valiantCharacteristics.set(name,this.valiantCharacteristics.get(name)! + amount);
+        this.valiantCharacteristics[index].score+= amount;
       }
     }
+    //subtract point
     else if(amount < 0)
     {
-      if(this.valiantCharacteristics.get(name)! === 1)
+      if(this.valiantCharacteristics[index].score === 1)
       {
         return;
       }
       this.characteristicPoints -= amount;
-      this.valiantCharacteristics.set(name,this.valiantCharacteristics.get(name)! + amount);
+      this.valiantCharacteristics[index].score+= amount;
     }
-    this.updateCharacteristicFeatures(name,this.valiantCharacteristics.get(name)!) ;
+    this.updateCharacteristicFeatures(name,this.valiantCharacteristics[index].score) ;
   }
 
   updateCharacteristicFeatures(name: string, tier: number): void {
@@ -111,7 +114,7 @@ export class BuilderComponent implements OnInit {
     valiant.name = this.valiantName;
     valiant.professions = this.valiantProfession;
     valiant.lineages = this.valiantLineages;
-    valiant.characteristics =this.valiantCharacteristics
+    valiant.characteristics = this.valiantCharacteristics;
     valiant.features.push(...this.valiantCharacteristicFeautres);
     valiant.features.push(...this.valiantLineagePersistentFeatures);
     valiant.features.push(...this.valiantLineagePrimaryFeatures);
