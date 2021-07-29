@@ -1,11 +1,70 @@
-input
+.container {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    display: flex;
+    flex-direction: row;
+}
+.valiantName {
+    flex-grow: 2;
+}
+.valiantProfession{
+    flex-grow: 1;
+}
+.valiantLineages{
+    flex-grow: 1;
+}
+
+.stats {
+    display: flex;
+    flex-direction: row;
+}
+
+.valiantCharacteristics {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 50% 50%;
+}
+.valiantAttributes{
+    flex-grow: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.attribute{
+    display: inline-block;
+    margin: 5px 5px 5px 5px;
+    border: black thin solid;
+    padding: 5px 5px 5px 5px;
+    width: 221px;
+}
+.attributeFixed{
+    display: inline-block;
+    margin: 5px 5px 5px 5px;
+    border: black thin solid;
+    padding: 5px 5px 5px 5px;
+    width: 140px;
+}
+.attributeCurrMax, .attributeAmount {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.attributeCurrMax input, .attributeAmount input
 {
-    width: 40px;
+    width: 60px;
     font-size: xx-large;
     text-align: center;
     padding: 12px 12px;
     align-self: center;
 }
+
 .slash
 {
     width: 40px;
@@ -17,43 +76,12 @@ h3 {
     text-align: center;
     margin-bottom: 0px;
 }
-.attribute{
-    display: inline-block;
-    margin: 5px 5px 5px 5px;
-    border: black thin solid;
-    padding: 5px 5px 5px 5px;
-    width: 200px;
-}
-.attributeFixed{
-    display: inline-block;
-    margin: 5px 5px 5px 5px;
-    border: black thin solid;
-    padding: 5px 5px 5px 5px;
-    width: 120px;
+
+
+.fullWidth{
+    width: 100%;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: repeat(5, 20%);
-    grid-template-rows: 50px auto;
-}
-.valiantName {
-    grid-area: 1 / 1 / 1 / 5;
-}
-.valiantCharacteristics {
-    grid-area: 2 / 1 / 2 / 2;
-}
-.valiantAttributes{
-    grid-area: 2 / 2 / 2 / 5;
-}
-.valiantAttributesFixed{
-    grid-area: 3 / 2 / 3 / 5;
-}
-.attributeCurrMax, .attributeAmount {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
 .cards {
     display: flex;
     flex-wrap: wrap;

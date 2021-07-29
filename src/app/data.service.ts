@@ -151,6 +151,11 @@ export class DataService {
     this.valiants.push(valiant);
     this.saveValiants();
   }
+  updateValiant(valiant:Valiant):void{
+    const index = this.valiants.findIndex(x=> x.name ===  valiant.name);
+    this.valiants[index] = valiant;
+    this.saveValiants();
+  }
   deleteValiant(valiant: Valiant):void {
     this.valiants = this.valiants.filter(x=> x.name !== valiant.name);
     this.saveValiants();
