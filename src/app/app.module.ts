@@ -51,6 +51,7 @@ import { CharacteristicDetailComponent } from './characteristic/characteristic-d
 import { ValiantListComponent } from './valiant/valiant-list/valiant-list.component';
 import { ValiantDetailComponent } from './valiant/valiant-detail/valiant-detail.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -104,8 +105,7 @@ import { ValiantDetailComponent } from './valiant/valiant-detail/valiant-detail.
     MatListModule,
     MatSortModule,
     MatMenuModule,
-    MatDialogModule,
-    MatInputModule
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

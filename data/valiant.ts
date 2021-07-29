@@ -29,6 +29,15 @@ export class Valiant {
     defence: number = 7;
     resistance: number = 0;
     
+    //Descriptions
+    description: string = "";
+    age: string = "";
+    height: string = "";
+    weight: string = "";
+    gender: string = "";
+    appearance: string = "";
+    origin: string = "";
+    languages: string = "";
     constructor(){
         this.name = "";
         this.features =[];
