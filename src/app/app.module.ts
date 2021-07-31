@@ -50,6 +50,8 @@ import { CharacteristicDialogDialog } from './characteristic/characteristic-dial
 import { CharacteristicDetailComponent } from './characteristic/characteristic-detail/characteristic-detail.component';
 import { ValiantListComponent } from './valiant/valiant-list/valiant-list.component';
 import { ValiantDetailComponent } from './valiant/valiant-detail/valiant-detail.component';
+import { AbilityCardComponent } from './ability/ability-card/ability-card.component';
+import { TraitCardComponent } from './trait/trait-card/trait-card.component';
 
 
 @NgModule({
@@ -77,7 +79,9 @@ import { ValiantDetailComponent } from './valiant/valiant-detail/valiant-detail.
     CharacteristicDialogDialog,
     CharacteristicDetailComponent,
     ValiantListComponent,
-    ValiantDetailComponent
+    ValiantDetailComponent,
+    AbilityCardComponent,
+    TraitCardComponent
   ],
   imports: [
     BrowserModule,

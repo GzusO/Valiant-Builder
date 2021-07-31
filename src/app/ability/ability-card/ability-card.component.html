@@ -1,0 +1,14 @@
+<mat-card class="card" *ngIf="ability">
+    <mat-card-header>
+        <mat-card-title>
+          <span class="name">{{ability.name}}</span>  
+        </mat-card-title>
+        <mat-card-subtitle>
+          <span>{{ability.types.join(", ")}}</span>
+          <mat-divider></mat-divider>
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <app-ability-content [ability]=ability></app-ability-content>
+    </mat-card-content>
+</mat-card>

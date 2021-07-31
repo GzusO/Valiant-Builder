@@ -164,5 +164,15 @@
                 <app-feature-card *ngFor="let feat of valiant.features" [feature]=feat class="card"></app-feature-card>
             </div>
         </mat-tab>
+        <mat-tab label="Abilities">
+            <div class="cards">
+                <app-ability-card *ngFor="let ability of abilities" [ability]=ability class="card"></app-ability-card>
+            </div>
+        </mat-tab>
+        <mat-tab label="Traits">
+            <div class="cards">
+                <app-trait-card *ngFor="let trait of traits" [trait]=trait class="card"></app-trait-card>
+            </div>
+        </mat-tab>
     </mat-tab-group>   
 </div>
