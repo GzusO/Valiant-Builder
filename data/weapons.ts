@@ -32,8 +32,8 @@ export const weaponData: Weapon[] =[
     {name:'Hatchet',class:'Axe',tags:['Size-Medium','Melee','Thrown'],weight:3,cost:300,abilities:[],traits:[],tier:0},
     {name:'War Pick',class:'Axe',tags:['Size-Medium','Melee'],weight:4,cost:500,abilities:[],traits:[],tier:0},
     
-    {name:'Great Sword',class:'Great Blade',tags:['Size-Large','Melee','Heavy'],weight:10,cost:1750,abilities:[],traits:[],tier:0},
-    {name:'Great Axe',class:'Great Blade',tags:['Size-Large','Melee','Heavy'],weight:15,cost:1750,abilities:[],traits:[],tier:0},
+    {name:'Great Sword',class:'Great Blade',tags:['Size-Large','Melee','Two-Handed','Heavy'],weight:10,cost:1750,abilities:[],traits:[],tier:0},
+    {name:'Great Axe',class:'Great Blade',tags:['Size-Large','Melee','Two-Handed','Heavy'],weight:15,cost:1750,abilities:[],traits:[],tier:0},
     
     {name:'Spear',class:'Polearm',tags:['Size-Medium','Melee','Thrown'],weight:4,cost:300,abilities:[],traits:[],tier:0},
     {name:'Halberd',class:'Polearm',tags:['Size-Large','Melee','Two-Handed'],weight:7,cost:1000,abilities:[],traits:[],tier:0},
