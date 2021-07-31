@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import {ClipboardModule} from '@angular/cdk/clipboard';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -52,6 +53,7 @@ import { ValiantListComponent } from './valiant/valiant-list/valiant-list.compon
 import { ValiantDetailComponent } from './valiant/valiant-detail/valiant-detail.component';
 import { AbilityCardComponent } from './ability/ability-card/ability-card.component';
 import { TraitCardComponent } from './trait/trait-card/trait-card.component';
+import { ValiantExportDialogComponent } from './valiant/valiant-export-dialog/valiant-export-dialog.component';
 
 
 @NgModule({
@@ -81,7 +83,8 @@ import { TraitCardComponent } from './trait/trait-card/trait-card.component';
     ValiantListComponent,
     ValiantDetailComponent,
     AbilityCardComponent,
-    TraitCardComponent
+    TraitCardComponent,
+    ValiantExportDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -109,7 +112,8 @@ import { TraitCardComponent } from './trait/trait-card/trait-card.component';
     MatListModule,
     MatSortModule,
     MatMenuModule,
-    MatDialogModule
+    MatDialogModule,
+    ClipboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
