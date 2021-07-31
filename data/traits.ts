@@ -4,7 +4,7 @@ export const traitData: Trait[] = [
     //Profession Traits
     {name: 'Art Object Crafting', types: ['Profession','Artist'], description: 'You can create art objects.',tier:0},
     {name: 'Artist Funds', types: ['Profession', 'Artist'], description: 'You start with 2,000 tins.',tier:0},
-    {name: 'Weapon and Armor Crafting', types: ['Profession', 'Blacksmith'], description: 'You can create weapons and armor sets.',tier:0},
+    {name: 'Weapon and Armor Crafting', types: ['Profession', 'Blacksmith'], description: 'You can create weapons and armors.',tier:0},
     {name: 'Blacksmith Funds', types: ['Profession', 'Blacksmith'], description: 'You start with 2,500 tins.',tier:0},
     {name: 'Gear Crafting', types: ['Profession', 'Tinkerer'], description: 'You can create gear.',tier:0},
     {name: 'Tinkerer Funds', types: ['Profession', 'Tinkerer'], description: 'You start with 2,500 tins.',tier:0},
