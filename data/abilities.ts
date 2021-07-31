@@ -38,7 +38,7 @@ export const abilityData: Ability[] =[
     //Selk Abilities
     {name:'Planned Action',types:['Lineage','Selk','Combat Deduction'],primaryTags:['Energy 0','Combat'],secondaryTags:['Stance'],tertiaryTags:['Limited 1'],description:'Gain the relaxed 2 boon. If you are tier 6 or higher, gain the relaxed 4 boon instead.',tier:0,attack:0, energyDamage:0, scaling:''},
     {name:'Reset',types:['Lineage','Selk','Lightning Recovery'],primaryTags:['Energy 0','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1'],description:'You gain the recharging status: move the triggering status.',tier:0,attack:0, energyDamage:0, scaling:''},
-    {name:'Move Command',types:['Lineage','Selk','Commanding Presence'],primaryTags:['Energy 3','Combat'],secondaryTags:['Action'],tertiaryTags:['Range 5'],description:'A target character within range moves up to their movement.',tier:0,attack:0, energyDamage:0, scaling:''},
+    {name:'Move Command',types:['Lineage','Selk','Commanding Presence'],primaryTags:['Energy 3','Combat'],secondaryTags:['Action'],tertiaryTags:['Range 5','Limited 2'],description:'A target character within range moves up to their movement(maximum 5 tiles).',tier:0,attack:0, energyDamage:0, scaling:''},
     {name:'Clarity',types:['Lineage','Selk','Purity of Focus'],primaryTags:['Energy 2','Combat'],secondaryTags:['Transformation'],tertiaryTags:['Limited 1'],description:'Gain +1 focus slots.',tier:0,attack:0, energyDamage:0, scaling:''},
 
     //Vyld Abilities 
