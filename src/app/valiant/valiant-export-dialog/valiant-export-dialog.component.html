@@ -1,0 +1,7 @@
+<h1 mat-dialog-title>{{valiant.name}}</h1>
+<mat-dialog-content>
+    {{valiant | json}}
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button [cdkCopyToClipboard]="valiant|json">Copy to Clipboard</button>
+</mat-dialog-actions>

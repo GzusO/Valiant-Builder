@@ -5,6 +5,7 @@ import { Profession } from "src/app/profession/Profession";
 import { Trait } from "src/app/Trait";
 
 export class Valiant {
+    id: number;
     name: string;
     lineages: Lineage[];
     features: Feature[];
@@ -47,6 +48,7 @@ export class Valiant {
         this.traits = [];
         this.tier = 0;
         this.professions = [];
+        this.id = -1;
     }
 }
 

@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import {ClipboardModule} from '@angular/cdk/clipboard';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -26,6 +27,7 @@ import { MatChipsModule } from '@angular/material/chips'
 import { MatListModule } from '@angular/material/list';
 import { MatSortModule } from '@angular/material/sort';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { FooterComponent } from './footer/footer.component';
 import { CharacteristicListComponent } from './characteristic-list/characteristic-list.component';
@@ -50,6 +52,9 @@ import { CharacteristicDialogDialog } from './characteristic/characteristic-dial
 import { CharacteristicDetailComponent } from './characteristic/characteristic-detail/characteristic-detail.component';
 import { ValiantListComponent } from './valiant/valiant-list/valiant-list.component';
 import { ValiantDetailComponent } from './valiant/valiant-detail/valiant-detail.component';
+import { AbilityCardComponent } from './ability/ability-card/ability-card.component';
+import { TraitCardComponent } from './trait/trait-card/trait-card.component';
+import { ValiantExportDialogComponent } from './valiant/valiant-export-dialog/valiant-export-dialog.component';
 
 
 @NgModule({
@@ -77,7 +82,10 @@ import { ValiantDetailComponent } from './valiant/valiant-detail/valiant-detail.
     CharacteristicDialogDialog,
     CharacteristicDetailComponent,
     ValiantListComponent,
-    ValiantDetailComponent
+    ValiantDetailComponent,
+    AbilityCardComponent,
+    TraitCardComponent,
+    ValiantExportDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -105,7 +113,9 @@ import { ValiantDetailComponent } from './valiant/valiant-detail/valiant-detail.
     MatListModule,
     MatSortModule,
     MatMenuModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSnackBarModule,
+    ClipboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
