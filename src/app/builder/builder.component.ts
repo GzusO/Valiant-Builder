@@ -6,6 +6,7 @@ import { Feature } from "../feature/Feature";
 import { DataService } from '../data.service';
 import { MatSelectionListChange } from '@angular/material/list';
 import { CharacteristicScore, Valiant } from 'data/valiant';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-builder',
@@ -32,7 +33,7 @@ export class BuilderComponent implements OnInit {
     professions: Profession[] = [];
     classFeatures: Feature[] = [];
 
-  constructor(private dataService: DataService) {
+  constructor(private dataService: DataService,private snackBar: MatSnackBar) {
       this.getCharacteristics();
       this.getLineages();
       this.getLineageFeatures();
@@ -124,6 +125,8 @@ export class BuilderComponent implements OnInit {
     valiant.features.push(...this.valiantProfession[0].features);
     
     this.dataService.addValiant(valiant);
+
+    this.snackBar.open("Valiant Saved",undefined,{duration:3000});
   }
 }
 

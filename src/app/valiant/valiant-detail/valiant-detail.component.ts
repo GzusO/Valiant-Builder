@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Valiant } from 'data/valiant';
 import { Ability } from 'src/app/Ability';
@@ -16,7 +17,7 @@ export class ValiantDetailComponent implements OnInit {
   valiant?: Valiant;
   abilities: Ability[] = [];
   traits: Trait[] = [];
-  constructor(private router: Router, private activatedRoute: ActivatedRoute,public dialog: MatDialog, private dataService: DataService) { }
+  constructor(private router: Router, private activatedRoute: ActivatedRoute,public dialog: MatDialog, private dataService: DataService, private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.valiant = history.state;
@@ -34,6 +35,7 @@ export class ValiantDetailComponent implements OnInit {
   }
   save():void {
     this.dataService.updateValiant(this.valiant!);
+    this.snackBar.open("Valiant Saved",undefined,{duration: 3000})
   }
   export(): void{
     const dialogRef = this.dialog.open(ValiantExportDialogComponent, {data:this.valiant});

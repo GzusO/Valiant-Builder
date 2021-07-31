@@ -148,16 +148,17 @@ export class DataService {
     this.setLocalStorage("valiants",this.valiants);
   }
   addValiant(valiant: Valiant): void {
+    valiant.id = this.genId(this.valiants);
     this.valiants.push(valiant);
     this.saveValiants();
   }
   updateValiant(valiant:Valiant):void{
-    const index = this.valiants.findIndex(x=> x.name ===  valiant.name);
+    const index = this.valiants.findIndex(x=> x.id ===  valiant.id);
     this.valiants[index] = valiant;
     this.saveValiants();
   }
   deleteValiant(valiant: Valiant):void {
-    this.valiants = this.valiants.filter(x=> x.name !== valiant.name);
+    this.valiants = this.valiants.filter(x=> x.id !== valiant.id);
     this.saveValiants();
   }
 
@@ -178,5 +179,8 @@ export class DataService {
     catch (e){
       console.error("Error setting data to localStorage",e);
     }
+  }
+  genId(data: any[]): number {
+    return data.length > 0 ? Math.max(...data.map(x => x.id))+1: 11;
   }
 }

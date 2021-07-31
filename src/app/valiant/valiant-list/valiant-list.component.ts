@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Valiant } from 'data/valiant';
 import { DataService } from 'src/app/data.service';
 
@@ -9,7 +10,7 @@ import { DataService } from 'src/app/data.service';
 })
 export class ValiantListComponent implements OnInit {
   valiants: Valiant[]= [];
-  constructor(private dataService:DataService) { }
+  constructor(private dataService:DataService, private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.getValiants();
@@ -22,6 +23,7 @@ export class ValiantListComponent implements OnInit {
   delete(valiant: Valiant): void{
     event?.stopPropagation();
     this.dataService.deleteValiant(valiant);
-    this.valiants = this.valiants.filter(x=> x.name !== valiant.name);
+    this.valiants = this.valiants.filter(x=> x.id !== valiant.id);
+    this.snackBar.open("Valiant Deleted!",undefined, {duration:3000});
   }
 }

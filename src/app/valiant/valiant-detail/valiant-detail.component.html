@@ -1,6 +1,6 @@
 <div *ngIf="valiant" class="container">
     <div class="header">
-        <h1 class="valiantName">{{valiant.name}}</h1>
+        <input matInput [(ngModel)]=valiant.name class="valiantName">
         <button mat-button (click)="save()">Save</button>
         <button mat-button (click)="export()">Export</button>
     </div>

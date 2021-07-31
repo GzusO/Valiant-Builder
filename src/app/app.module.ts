@@ -27,6 +27,7 @@ import { MatChipsModule } from '@angular/material/chips'
 import { MatListModule } from '@angular/material/list';
 import { MatSortModule } from '@angular/material/sort';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { FooterComponent } from './footer/footer.component';
 import { CharacteristicListComponent } from './characteristic-list/characteristic-list.component';
@@ -113,6 +114,7 @@ import { ValiantExportDialogComponent } from './valiant/valiant-export-dialog/va
     MatSortModule,
     MatMenuModule,
     MatDialogModule,
+    MatSnackBarModule,
     ClipboardModule
   ],
   providers: [],
