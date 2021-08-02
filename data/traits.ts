@@ -254,8 +254,7 @@ export const traitData: Trait[] = [
     
     //Weapon Traits
     {name:'Couching',types:['Weapon','Lance'],description:'Attacks with this weapon may only be used while mounted.',tier:0},
-    {name:'Cover',types:['Weapon','Tower Shield','Pavise Shield'],description:'Gain +2 defence. You count as in cover against ranged attack abilities.',tier:0},
-    {name:'Heavy Cover',types:['Weapon','Bastion Shield'],description:'Gain +2 defence and +2 resistance. You count as in cover against ranged attack abilities.',tier:0},
+    {name:'Cover',types:['Weapon','Tower Shield','Pavise Shield','Bastion Shield'],description:'Gain +2 defence. You count as in cover against ranged attack abilities.',tier:0},
     {name:'Simple Weapon',types:['Weapon','Pavise Shield'],description:'This weapon only exists as a tier 0 weapon.',tier:0},
     
 
