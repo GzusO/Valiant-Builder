@@ -251,7 +251,6 @@ export const traitData: Trait[] = [
     {name:'The Long Game',types:['Class','Specialist','Strategies'],description:'You and your allies may use stance abilities as if they were transformation abilities, paying twice the ability\'s energy cost.',tier:4},
     
     //Weapon Traits
-    {name:'Couching',types:['Weapon','Lance'],description:'Attacks with this weapon may only be used while mounted.',tier:0},
     {name:'Cover',types:['Weapon','Tower Shield','Pavise Shield','Bastion Shield'],description:'Gain +2 defence. You count as in cover against ranged attack abilities.',tier:0},
     {name:'Simple Weapon',types:['Weapon','Pavise Shield'],description:'This weapon only exists as a tier 0 weapon.',tier:0},
     

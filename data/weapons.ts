@@ -40,7 +40,7 @@ export const weaponData: Weapon[] =[
     {name:'Pike',class:'Polearm',tags:['Size-Large','Melee','Two-Handed','Reach 1'],weight:6,cost:200,abilities:[],traits:[],tier:0},
     {name:'Glaive',class:'Polearm',tags:['Size-Large','Melee','Two-Handed'],weight:7,cost:500,abilities:[],traits:[],tier:0},
     {name:'War Scythe',class:'Polearm',tags:['Size-Large','Melee','Two-Handed','Reach 1'],weight:9,cost:400,abilities:[],traits:[],tier:0},
-    {name:'Lance',class:'Polearm',tags:['Size-Large','Melee'],weight:7,cost:500,abilities:[],traits:[],tier:0},
+    {name:'Lance',class:'Polearm',tags:['Size-Large','Melee','Couching'],weight:7,cost:500,abilities:[],traits:[],tier:0},
     
     {name:'Shortbow',class:'Bow',tags:['Size-Medium','Projectile 8','Two-Handed','Unwieldly'],weight:3,cost:100,abilities:[],traits:[],tier:0},
     {name:'Longbow',class:'Bow',tags:['Size-Large','Projectile 6','Two-Handed','Unwieldly'],weight:6,cost:250,abilities:[],traits:[],tier:0},
