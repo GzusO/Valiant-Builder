@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  @Input() valianceVersion: string ="0.18.3";
+  @Input() valianceVersion: string ="0.18.4";
   constructor() { }
 
   ngOnInit(): void {
