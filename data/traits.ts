@@ -217,8 +217,6 @@ export const traitData: Trait[] = [
     
     {name:'Remote Execution',types:['Class','Arcanist','Masterful Extensions'],description:'For all of your Range abilities not attached to weapons, you may treat a remote tile as the origin point for determining the ability range rather than the tile you inhabit. This remote tile can be any tile within a range equal to your mental power characteristic score.',tier:9},
     {name:'Telepathy',types:['Class','Arcanist','Telepathic Communication'],description:'You can communicate telepathically with any creature within 10 ft. of you. The range of this trait is multiplied by your mental power characteristic score.',tier:3},
-    {name:'Remote Observer',types:['Class','Arcanist','Remote Observation'],description:'You can maintain a shimmering, physical form of your choosing (up to medium-character sized, and it always visible due to obvious arcane shimmers). You can move and sense from this form freely, as well as speak from it. The form may float or fly, and moves up to 2 tiles (10 ft.) during your move phase during combat. If the form moves more than 1 mile from your position, it returns to your position.',tier:6},
-    
 
     //Specialist Traits
     {name:'Specialist Strategies',types:['Class','Specialist','Specialists'],description:'When you gain this trait, select two tier 1 traits from the Specialist Strategy pool. You do not normally have access to these traits (see Strategy Application). Whenever you invest a tier into the Specialist class path beyond the first, you may learn another Specialist Strategy trait. You may only learn traits with tiers equal to or less than your Specialist class path invested tier.',tier:0},
