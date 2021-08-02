@@ -3,35 +3,35 @@ import { Trait } from "src/app/Trait";
 export const traitData: Trait[] = [
     //Profession Traits
     {name: 'Art Object Crafting', types: ['Profession','Artist'], description: 'You can create art objects.',tier:0},
-    {name: 'Artist Funds', types: ['Profession', 'Artist'], description: 'You start with 2,000 tins.',tier:0},
+    {name: 'Artist Funds', types: ['Profession', 'Artist'], description: 'You start with 1,000 tins.',tier:0},
     {name: 'Weapon and Armor Crafting', types: ['Profession', 'Blacksmith'], description: 'You can create weapons and armors.',tier:0},
-    {name: 'Blacksmith Funds', types: ['Profession', 'Blacksmith'], description: 'You start with 2,500 tins.',tier:0},
+    {name: 'Blacksmith Funds', types: ['Profession', 'Blacksmith'], description: 'You start with 1,000 tins.',tier:0},
     {name: 'Gear Crafting', types: ['Profession', 'Tinkerer'], description: 'You can create gear.',tier:0},
-    {name: 'Tinkerer Funds', types: ['Profession', 'Tinkerer'], description: 'You start with 2,500 tins.',tier:0},
+    {name: 'Tinkerer Funds', types: ['Profession', 'Tinkerer'], description: 'You start with 1,000 tins.',tier:0},
     {name: 'Salesperson', types: ['Profession','Merchant'], description: 'You can reliably sell items to any character that can afford them, instead of just merchants.',tier:0},
-    {name: 'Merchant Funds', types: ['Profession','Merchant'], description: 'You start with 3,000 tins.',tier:0},
+    {name: 'Merchant Funds', types: ['Profession','Merchant'], description: 'You start with 1,500 tins.',tier:0},
     {name: 'Noble Air', types: ['Profession','Noble'], description: 'Your status allows you into exclusive areas and events.',tier:0},
-    {name: 'Noble Funds', types: ['Profession','Noble'], description: 'You start with 3,500 tins.',tier:0},
+    {name: 'Noble Funds', types: ['Profession','Noble'], description: 'You start with 2,000 tins.',tier:0},
     {name: 'Natural Explorer', types: ['Profession','Traveler'], description: 'Your travel groups gain a +1 to their range and a +3 to their provision score.',tier:0},
-    {name: 'Traveler Funds', types: ['Profession','Traveler'], description: 'You start with 2,000 tins.',tier:0},
+    {name: 'Traveler Funds', types: ['Profession','Traveler'], description: 'You start with 750 tins.',tier:0},
     {name: 'Peacekeeper', types: ['Profession','Guard'], description: 'You are always welcomed into neutral towns or cities.',tier:0},
-    {name: 'Guard Funds', types: ['Profession','Guard'], description: 'You start with 2,000 tins.',tier:0},
+    {name: 'Guard Funds', types: ['Profession','Guard'], description: 'You start with 750 tins.',tier:0},
     {name: 'Discipline', types: ['Profession','Soldier'], description: 'You gain a +1 to all resilience contests.',tier:0},
-    {name: 'Soldier Funds', types: ['Profession','Soldier'], description: 'You start with 2,500 tins.',tier:0},
+    {name: 'Soldier Funds', types: ['Profession','Soldier'], description: 'You start with 1,000 tins.',tier:0},
     {name: 'Tracking', types: ['Profession','Bounty Hunter'], description: 'You can pick up any creature\'s trail as long as the trail is less than 5 days old.',tier:0},
-    {name: 'Bounty Hunter Funds', types: ['Profession','Bounty Hunter'], description: 'You start with 3,000 tins.',tier:0},
+    {name: 'Bounty Hunter Funds', types: ['Profession','Bounty Hunter'], description: 'You start with 1,500 tins.',tier:0},
     {name: 'Tempered Body', types: ['Profession','Physical Laborer'], description: 'Gain +2 energy.',tier:0},
-    {name: 'Physical Laborer Funds', types: ['Profession','Physical Laborer'], description: 'You start with 1,000 tins.',tier:0},
+    {name: 'Physical Laborer Funds', types: ['Profession','Physical Laborer'], description: 'You start with 750 tins.',tier:0},
     {name: 'Submissive Demeanor', types: ['Profession','Servant'], description: 'Characters that don\'t know you will always dismiss you as unthreatening.',tier:0},
-    {name: 'Servant Funds', types: ['Profession','Servant'], description: 'You start with 1,500 tins.',tier:0},
-    {name: 'Assistant Funds', types: ['Profession','Assistant'], description: 'You start with 1,500 tins.',tier:0},
+    {name: 'Servant Funds', types: ['Profession','Servant'], description: 'You start with 750 tins.',tier:0},
+    {name: 'Assistant Funds', types: ['Profession','Assistant'], description: 'You start with 750 tins.',tier:0},
     {name: 'Educated', types: ['Profession','Scholar'], description: 'You are able to speak two additional languages.',tier:0},
-    {name: 'Scholar Funds', types: ['Profession','Scholar'], description: 'You start with 2,000 tins.',tier:0},
+    {name: 'Scholar Funds', types: ['Profession','Scholar'], description: 'You start with 1,000 tins.',tier:0},
     {name: 'Open Arms', types: ['Profession','Priest'], description: 'You and any characters allied with you are able to find sanctuary in any temple belonging to your religion, given you are not a known enemy of the temple.',tier:0},
-    {name: 'Priest Funds', types: ['Profession','Priest'], description: 'You start with 1,500 tins.',tier:0},
+    {name: 'Priest Funds', types: ['Profession','Priest'], description: 'You start with 1,000 tins.',tier:0},
     {name: 'Disease Cure', types: ['Profession','Physician'], description: 'You are able to cure diseases. It costs you half of the usual cost to procure the treatments and cure the disease (given the reagents are available). To cure a disease, you must spend a number of days equal to 1 plus the disease\'s tier with the patient.',tier:0},
-    {name: 'Physician Funds', types: ['Profession','Physician'], description: 'You start with 2,500 tins.',tier:0},
-    {name: 'Criminal Funds', types: ['Profession','Criminal'], description: 'You start with 2,000 tins.',tier:0},
+    {name: 'Physician Funds', types: ['Profession','Physician'], description: 'You start with 1,500 tins.',tier:0},
+    {name: 'Criminal Funds', types: ['Profession','Criminal'], description: 'You start with 1,000 tins.',tier:0},
     
     //Lineage Traits
     
@@ -163,7 +163,7 @@ export const traitData: Trait[] = [
     {name:'Beginner\'s Repertoire',types:['Class','Aspirant','Arcane Basics'],description:'When you gain this trait, select any tier 1 ability from the Arcanist Repertoire pool and gain access to that ability. If you gain a repertoire by investing into the Arcanist class path, add this ability to your repertoire. See the Arcanist global feature for more information.',tier:0},
     {name:'Beginner\'s Techniques',types:['Class','Aspirant','Warfare Basics'],description:'When you gain this trait, select any tier 1 ability from the Warrior Techniques pool and gain access to that ability. If you gain access to additional techniques by investing into the Warrior class path, keep this technique and increase your Warrior Technique slots by 1 (using the additional slot for your known technique). See the Warrior global feature for more information.',tier:0},
     {name:'Beginner\'s Strategies',types:['Class','Aspirant','Tactical Basics'],description:'When you gain this trait, learn one tier 1 trait from the Specialist Strategies pool. You also gain access to the Strategy Application trait from the Specialist global feature that can be used to apply that strategy. If you gain access to additional strategies by investing into the Specialist class path, keep this strategy in your known Specialist Strategies pool. See the Specialist global feature for more information.',tier:0},
-    {name:'Ascendant',types:['Class','Aspirant','Ascendant Bond'],description:'A small sentient being (your Ascendant) follows you, taking a form of your choosing (this form cannot be changed). It can fly freely, but cannot willingly move more than 10 ft. away from you. If your Ascendant is destroyed, it reforms in 1 hour. Your Ascendant is destroyed if it is more than 10 ft. away from you, if any attack ability targeting it resolves (it can be targeted by attack abilities as if it were a character), or if it is subjected to any environmental hazards. Your ascendant can manipulate objects no heavier than 5 lb. within 10 ft. of you.',tier:0},
+    {name:'Ascendant',types:['Class','Aspirant','Ascendant Bond'],description:'A small, non-character sentient being (your Ascendant) capable of flight follows you, taking a form of your choosing (this form cannot be changed). Your Ascendant is destroyed if it is more than 10 ft. away from you, if any attack ability targeting it resolves (it can be targeted by attack abilities as if it were a character), or if it is subjected to any environmental hazards. If your Ascendant is destroyed, it reforms in 1 hour. Your ascendant can manipulate objects no heavier than 5 lb.',tier:0},
     {name:'Ascendant Link',types:['Class','Aspirant','Ascendant Bond'],description:'You and your Ascendant can communicate telepathically. Due to your Ascendant\'s innate senses, you cannot be blind or conditionally blind to any characters within 10 ft. of you while your Ascendant is alive.',tier:0},
     {name:'Thrill of Combat',types:['Class','Aspirant','Daring Flair'],description:'You gain +1 lethality and +1 defence for every enemy character that is adjacent to you.',tier:0},
     {name:'Lightened Loads',types:['Class','Aspirant','Light Traveler'],description:'Your tavel group gains +2 range.',tier:0},
@@ -217,14 +217,12 @@ export const traitData: Trait[] = [
     
     {name:'Remote Execution',types:['Class','Arcanist','Masterful Extensions'],description:'For all of your Range abilities not attached to weapons, you may treat a remote tile as the origin point for determining the ability range rather than the tile you inhabit. This remote tile can be any tile within a range equal to your mental power characteristic score.',tier:9},
     {name:'Telepathy',types:['Class','Arcanist','Telepathic Communication'],description:'You can communicate telepathically with any creature within 10 ft. of you. The range of this trait is multiplied by your mental power characteristic score.',tier:3},
-    {name:'Remote Observer',types:['Class','Arcanist','Remote Observation'],description:'You can maintain a shimmering, physical form of your choosing (up to medium-character sized, and it always visible due to obvious arcane shimmers). You can move and sense from this form freely, as well as speak from it. The form may float or fly, and moves up to 2 tiles (10 ft.) during your move phase during combat. If the form moves more than 1 mile from your position, it returns to your position.',tier:6},
-    
 
     //Specialist Traits
     {name:'Specialist Strategies',types:['Class','Specialist','Specialists'],description:'When you gain this trait, select two tier 1 traits from the Specialist Strategy pool. You do not normally have access to these traits (see Strategy Application). Whenever you invest a tier into the Specialist class path beyond the first, you may learn another Specialist Strategy trait. You may only learn traits with tiers equal to or less than your Specialist class path invested tier.',tier:0},
     {name:'Strategy Application',types:['Class','Specialist','Specialists'],description:'When combat begins, select one of your known Specialist Strategy traits. Gain the effects of that trait for the duration of the combat. A strategy can only be applied once during combat. If multiple Specialists apply the same strategy, only one has any effect.',tier:0},
     {name:'Improved Strategies',types:['Class','Specialist','Specialists'],description:'At invested tier 6, you may apply an additional known Specialist Strategy trait when combat begins.',tier:0},
-    {name:'Stratagem Studies',types:['Class','Specialist','Specialists'],description:'You can acquire new Specialist Strategy traits, as long as thier tier is equal to or less than your Specialist class path invested tier. To add a new ability to your repertoire, the following requirements must be satistfied: You must spend a week of downtime per ability tier with no breaks or major interruptions. You must have uninterrupted access to at least one other cahracter or a study amenity of your tier or higher. You must spend 500t tins, where t is the ability tier, to gain access to the proper materials needed to learn the ability. After these conditions are satisfied, you gain access to the ability.',tier:0},
+    {name:'Stratagem Studies',types:['Class','Specialist','Specialists'],description:'You can acquire new Specialist Strategy traits, as long as thier tier is equal to or less than your Specialist class path invested tier. To add a new ability to your repertoire, the following requirements must be satistfied: You must spend a week of downtime per ability tier with no breaks or major interruptions. You must have uninterrupted access to at least one other cahracter or a study amenity of your tier or higher. You must spend 1000t tins, where t is the ability tier, to gain access to the proper materials needed to learn the ability. After these conditions are satisfied, you gain access to the ability.',tier:0},
     {name:'Preparedness',types:['Class','Specialist','Munition Resupply'],description:'Your consumable gears and projectile weapons gain +1 use.',tier:1},
     {name:'Unfaltering',types:['Class','Specialist','Unfaltering Will'],description:'You gain the unshakable boon.',tier:10},
     {name:'Efficient Gear',types:['Class','Specialist','Efficient Tinkering'],description:'All consumable gear you create has a consumable value of 1 higher than it would normally be.',tier:1},
@@ -253,9 +251,7 @@ export const traitData: Trait[] = [
     {name:'The Long Game',types:['Class','Specialist','Strategies'],description:'You and your allies may use stance abilities as if they were transformation abilities, paying twice the ability\'s energy cost.',tier:4},
     
     //Weapon Traits
-    {name:'Couching',types:['Weapon','Lance'],description:'Attacks with this weapon may only be used while mounted.',tier:0},
-    {name:'Cover',types:['Weapon','Tower Shield','Pavise Shield'],description:'Gain +2 defence. You count as in cover against ranged attack abilities.',tier:0},
-    {name:'Heavy Cover',types:['Weapon','Bastion Shield'],description:'Gain +2 defence and +2 resistance. You count as in cover against ranged attack abilities.',tier:0},
+    {name:'Cover',types:['Weapon','Tower Shield','Pavise Shield','Bastion Shield'],description:'Gain +2 defence. You count as in cover against ranged attack abilities.',tier:0},
     {name:'Simple Weapon',types:['Weapon','Pavise Shield'],description:'This weapon only exists as a tier 0 weapon.',tier:0},
     
 

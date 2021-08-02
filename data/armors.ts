@@ -15,22 +15,22 @@ export interface Armor {
 
 export const armorData: Armor[] = [
     //Armor Sets
-    {name:'Leather',class:'Light',tags:['Size-Medium'],weight:10,cost:750,abilities:[],traits:[],tier:0},
-    {name:'Gambeson',class:'Light',tags:['Size-Medium'],weight:15,cost:1000,abilities:[],traits:[],tier:0},
-    {name:'Partial Plate',class:'Medium',tags:['Size-Medium'],weight:25,cost:1500,abilities:[],traits:[],tier:0},
-    {name:'Chain Mail',class:'Medium',tags:['Size-Medium'],weight:35,cost:2000,abilities:[],traits:[],tier:0},
-    {name:'Brigandine',class:'Heavy',tags:['Size-Large'],weight:40,cost:2500,abilities:[],traits:[],tier:0},
-    {name:'Full Plate',class:'Heavy',tags:['Size-Large'],weight:50,cost:3500,abilities:[],traits:[],tier:0},
-    {name:'Layered Plate',class:'Ultra-Heavy',tags:['Size-Large'],weight:75,cost:5000,abilities:[],traits:[],tier:0},
+    {name:'Leather',class:'Light',tags:['Size-Medium'],weight:10,cost:100,abilities:[],traits:[],tier:0},
+    {name:'Gambeson',class:'Light',tags:['Size-Medium'],weight:15,cost:250,abilities:[],traits:[],tier:0},
+    {name:'Partial Plate',class:'Medium',tags:['Size-Medium'],weight:25,cost:500,abilities:[],traits:[],tier:0},
+    {name:'Chain Mail',class:'Medium',tags:['Size-Medium'],weight:35,cost:300,abilities:[],traits:[],tier:0},
+    {name:'Brigandine',class:'Heavy',tags:['Size-Large'],weight:40,cost:750,abilities:[],traits:[],tier:0},
+    {name:'Full Plate',class:'Heavy',tags:['Size-Large'],weight:50,cost:1000,abilities:[],traits:[],tier:0},
+    {name:'Layered Plate',class:'Ultra-Heavy',tags:['Size-Large'],weight:75,cost:1500,abilities:[],traits:[],tier:0},
 
     //Barding Sets
-    {name:'Strap Barding',class:'Light',tags:[],weight:10,cost:1000,abilities:[],traits:[],tier:0},
-    {name:'Light Barding',class:'Light',tags:[],weight:15,cost:1500,abilities:[],traits:[],tier:0},
-    {name:'Partial Plate Barding',class:'Medium',tags:[],weight:35,cost:2000,abilities:[],traits:[],tier:0},
-    {name:'Chain Barding',class:'Medium',tags:[],weight:35,cost:2500,abilities:[],traits:[],tier:0},
-    {name:'Heavy Barding',class:'Heavy',tags:[],weight:40,cost:3500,abilities:[],traits:[],tier:0},
-    {name:'Full Plate Barding',class:'Heavy',tags:[],weight:50,cost:5000,abilities:[],traits:[],tier:0},
-    {name:'Layered Plate Barding',class:'Ultra-Heavy',tags:[],weight:75,cost:7500,abilities:[],traits:[],tier:0},
+    {name:'Strap Barding',class:'Light',tags:[],weight:10,cost:100,abilities:[],traits:[],tier:0},
+    {name:'Light Barding',class:'Light',tags:[],weight:15,cost:250,abilities:[],traits:[],tier:0},
+    {name:'Partial Plate Barding',class:'Medium',tags:[],weight:35,cost:500,abilities:[],traits:[],tier:0},
+    {name:'Chain Barding',class:'Medium',tags:[],weight:35,cost:300,abilities:[],traits:[],tier:0},
+    {name:'Heavy Barding',class:'Heavy',tags:[],weight:40,cost:750,abilities:[],traits:[],tier:0},
+    {name:'Full Plate Barding',class:'Heavy',tags:[],weight:50,cost:1000,abilities:[],traits:[],tier:0},
+    {name:'Layered Plate Barding',class:'Ultra-Heavy',tags:[],weight:75,cost:1500,abilities:[],traits:[],tier:0},
 
     //Accessories 
     //Tier 0
