@@ -45,6 +45,6 @@ export const weaponTags: Tag[] =[
     {name:'Consumable',displayFormat:'Consumable [X]',description:'Gear with limited uses. Its abilities can be used x times, after which the gear\'s limited abilities become unusable. Commonly, these uses are recharged by using the rest ability'},
     {name:'Worn',displayFormat:'Worn',description:'This item’s abilities may be used while this item is worn. If the item also has the Wielded tag, then the wearer must have the required number of free hands to use any of the item’s abilities. The item’s traits are only gained if the item is worn.'},
     {name:'Wielded',displayFormat:'Wielded [1/2]',description:'This item must be wielded in either 1 or two hands for its abilities to be used. If an item also has the worn tag, then it’s abilities may also be used if it is currently being worn and the required number of hands are free.'},
-    
+    {name:'Couching',displayFormat:'Couching',description:'Attacks with this weapon may only be used while mounted.'},
 ];
 
