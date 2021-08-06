@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Ability } from 'src/app/Ability';
 import { DataService } from 'src/app/data.service';
 import { Tag } from 'data/tags';
+import { MatDialog } from '@angular/material/dialog';
+import { TagTooltipDialogComponent } from 'src/app/tag/tag-tooltip-dialog/tag-tooltip-dialog.component';
 
 @Component({
   selector: 'app-ability-content',
@@ -11,11 +13,14 @@ import { Tag } from 'data/tags';
 export class AbilityContentComponent implements OnInit {
 
   @Input() ability?: Ability
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService,public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
+  openTagDialog(name: string){
+    const dialogRef = this.dialog.open(TagTooltipDialogComponent, {data:name});
+  }
   getTagDescription(tag: string): string {
     let description: string = 'Unknown';
     let result = this.getTagByName(tag);
@@ -29,4 +34,5 @@ export class AbilityContentComponent implements OnInit {
       return undefined;
     return this.dataService.getTagByName(trimmedTag[0].trim());
   }
+
 }

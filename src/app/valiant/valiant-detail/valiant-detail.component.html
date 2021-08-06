@@ -161,8 +161,10 @@
             </form>
         </mat-tab>
         <mat-tab label="Features">
+            
             <div class="cards">
                 <app-feature-card *ngFor="let feat of valiant.features" [feature]=feat class="card"></app-feature-card>
+                <button mat-fab color="primary"(click)="openAddFeatures()"><mat-icon>add</mat-icon></button>
             </div>
         </mat-tab>
         <mat-tab label="Abilities">
@@ -173,6 +175,7 @@
         <mat-tab label="Traits">
             <div class="cards">
                 <app-trait-card *ngFor="let trait of traits" [trait]=trait class="card"></app-trait-card>
+                
             </div>
         </mat-tab>
     </mat-tab-group>   
