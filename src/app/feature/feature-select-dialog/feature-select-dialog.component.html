@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>Feature Select
+    <input matInput [(ngModel)]="filter" (ngModelChange)="filterItem($event)" placeholder="Search by Name">
+</h1>
+<mat-dialog-content>
+    <mat-selection-list [(ngModel)]="selection">
+        <mat-list-option class="choice"  *ngFor="let feat of displayFeatures" [value]="feat">
+            <h4 mat-line>{{feat.name}} - {{feat.types.join(", ")}}</h4>
+            <p class="description" mat-line>{{feat.description}}</p>
+            <div  mat-line *ngFor="let ability of feat.abilities">
+                <span mat-line class="ability-name">{{ability.name}} ({{ability.primaryTags}})</span>
+                <div mat-line *ngIf="ability.secondaryTags.length !== 0">{{ability.secondaryTags}}</div>
+                <div mat-line *ngIf="ability.tertiaryTags.length !== 0">{{ability.tertiaryTags}}</div>
+            <p class="description" mat-line>{{ability.description}}</p>
+            </div>
+            <div *ngFor="let trait of feat.traits"  mat-line>
+                <span  mat-line class="trait-name">{{trait.name}}</span>
+                <p class="description" mat-line>{{trait.description}}</p>
+            </div>
+        </mat-list-option>
+    </mat-selection-list>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button (click)="onCancelClick()">Cancel</button>
+    <button mat-button [mat-dialog-close]="selection" cdkFocusInitial>Select</button>
+</mat-dialog-actions>

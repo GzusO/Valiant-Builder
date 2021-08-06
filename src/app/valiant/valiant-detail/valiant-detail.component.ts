@@ -5,6 +5,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Valiant } from 'data/valiant';
 import { Ability } from 'src/app/Ability';
 import { DataService } from 'src/app/data.service';
+import { Feature } from 'src/app/feature/Feature';
+import { FeatureSelectDialogComponent } from 'src/app/feature/feature-select-dialog/feature-select-dialog.component';
 import { Trait } from 'src/app/Trait';
 import { ValiantExportDialogComponent } from '../valiant-export-dialog/valiant-export-dialog.component';
 
@@ -39,5 +41,16 @@ export class ValiantDetailComponent implements OnInit {
   }
   export(): void{
     const dialogRef = this.dialog.open(ValiantExportDialogComponent, {data:this.valiant});
+  }
+  
+  openAddFeatures(): void{
+    const dialogRef = this.dialog.open(FeatureSelectDialogComponent);
+
+    dialogRef.afterClosed().subscribe(data => this.addFeatures(data));
+  }
+
+  addFeatures(feats: Feature[]): void {
+    this.valiant!.features.push(...feats);
+    this.dataService.updateValiant(this.valiant!);
   }
 }
