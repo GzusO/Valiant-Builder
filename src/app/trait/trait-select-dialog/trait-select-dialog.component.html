@@ -1,0 +1,17 @@
+<h1 mat-dialog-title>Trait Select
+    <input matInput [(ngModel)]="filter" (ngModelChange)="filterItem($event)" placeholder="Search by Name">
+</h1>
+<mat-dialog-content>
+    <mat-selection-list [(ngModel)]="selection">
+        <mat-list-option class="choice"  *ngFor="let trait of displayTraits" [value]="trait">
+                <div mat-line class="trait-name">
+                    {{trait.name}}
+                </div>
+                <p mat-line>{{trait.description}}</p>
+        </mat-list-option>
+    </mat-selection-list>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button (click)="onCancelClick()">Cancel</button>
+    <button mat-button [mat-dialog-close]="selection" cdkFocusInitial>Select</button>
+</mat-dialog-actions>

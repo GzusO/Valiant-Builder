@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Trait } from 'src/app/Trait';
 
 @Component({
@@ -8,9 +8,14 @@ import { Trait } from 'src/app/Trait';
 })
 export class TraitCardComponent implements OnInit {
   @Input() trait?: Trait
+  @Input() enableMenu: Boolean = false;
+  @Output() deleteClicked: EventEmitter<Trait> = new EventEmitter<Trait>();
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  clickDelete(): void {
+    this.deleteClicked.emit(this.trait);
+  }
 }
