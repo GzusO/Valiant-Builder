@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Ability } from 'src/app/Ability';
 
 @Component({
@@ -8,10 +8,16 @@ import { Ability } from 'src/app/Ability';
 })
 export class AbilityCardComponent implements OnInit {
 
+  
   @Input() ability?: Ability;
+  @Input() enableMenu: Boolean = false;
+  @Output() deleteClicked: EventEmitter<Ability> = new EventEmitter<Ability>();
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  clickDelete(): void {
+    this.deleteClicked.emit(this.ability);
+  }
 }

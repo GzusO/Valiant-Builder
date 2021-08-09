@@ -60,6 +60,12 @@ export class DataService {
   getFeatures(): Observable<Feature[]>{
     return of(this.features);
   }
+  getAbilities(): Observable<Ability[]>{
+    return of(this.abilities);
+  }
+  getTraits(): Observable<Trait[]>{
+    return of(this.traits);
+  }
   getFeaturesByType(type: string): Observable<Feature[]>{
     return of(this.features.filter(x=> x.types.includes(type)));
   }

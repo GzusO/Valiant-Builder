@@ -1,12 +1,16 @@
 <mat-card class="card" *ngIf="feature">
     <mat-card-header>
         <mat-card-title>
-          <span class="name">{{feature.name}}</span>  
+            <span class="name">{{feature.name}}</span>
         </mat-card-title>
         <mat-card-subtitle>
           <span>{{feature.types.join(", ")}}</span>
           <mat-divider></mat-divider>
         </mat-card-subtitle>
+        <div style="flex-grow: 1"></div>
+        <button mat-icon-button [matMenuTriggerFor]="menu" *ngIf="enableMenu">
+          <mat-icon>more_vert</mat-icon>
+        </button> 
     </mat-card-header>
     <mat-card-content>
         <p>
@@ -18,4 +22,9 @@
           <p>{{trait.description}}</p>
         </div>
     </mat-card-content>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="clickDelete()">
+        Delete
+      </button>
+    </mat-menu>
 </mat-card>

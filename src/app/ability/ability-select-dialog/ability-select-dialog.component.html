@@ -1,0 +1,26 @@
+<h1 mat-dialog-title>Ability Select
+    <input matInput [(ngModel)]="filter" (ngModelChange)="filterItem($event)" placeholder="Search by Name">
+</h1>
+<mat-dialog-content>
+    <mat-selection-list [(ngModel)]="selection">
+        <mat-list-option class="choice"  *ngFor="let ability of displayAbilities" [value]="ability">
+                <div mat-line class="ability-name">
+                    {{ability.name}} (<span *ngFor="let prime of ability.primaryTags" class="tag">{{prime}}, </span>)
+                </div>
+                <div mat-line *ngIf="ability.secondaryTags.length !== 0" class="secondaryTags">
+                    <span class="tag" *ngFor="let prime of ability.secondaryTags">{{prime}}, </span>
+                </div>
+                <div mat-line *ngIf="ability.tertiaryTags.length !== 0" class="tertiaryTags">
+                    <span class="tag" *ngFor="let prime of ability.tertiaryTags">{{prime}}, </span>
+                </div>
+                <p mat-line *ngIf="ability.attack !== 0">Attack: {{ability.attack}}</p>
+                <p mat-line *ngIf="ability.energyDamage !== 0">Energy Damage: {{ability.energyDamage}}</p>
+                <p mat-line *ngIf="ability.description.length !==0">{{ability.description}}</p>
+                <p mat-line *ngIf="ability.scaling.length !== 0">{{ability.scaling}}</p>
+        </mat-list-option>
+    </mat-selection-list>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button (click)="onCancelClick()">Cancel</button>
+    <button mat-button [mat-dialog-close]="selection" cdkFocusInitial>Select</button>
+</mat-dialog-actions>

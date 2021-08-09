@@ -57,6 +57,8 @@ import { TraitCardComponent } from './trait/trait-card/trait-card.component';
 import { ValiantExportDialogComponent } from './valiant/valiant-export-dialog/valiant-export-dialog.component';
 import { TagTooltipDialogComponent } from './tag/tag-tooltip-dialog/tag-tooltip-dialog.component';
 import { FeatureSelectDialogComponent } from './feature/feature-select-dialog/feature-select-dialog.component';
+import { AbilitySelectDialogComponent } from './ability/ability-select-dialog/ability-select-dialog.component';
+import { TraitSelectDialogComponent } from './trait/trait-select-dialog/trait-select-dialog.component';
 
 
 @NgModule({
@@ -89,7 +91,9 @@ import { FeatureSelectDialogComponent } from './feature/feature-select-dialog/fe
     TraitCardComponent,
     ValiantExportDialogComponent,
     TagTooltipDialogComponent,
-    FeatureSelectDialogComponent
+    FeatureSelectDialogComponent,
+    AbilitySelectDialogComponent,
+    TraitSelectDialogComponent
   ],
   imports: [
     BrowserModule,
