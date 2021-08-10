@@ -203,9 +203,12 @@ export const featureData: Feature[] =[
     {name:'Active Defenses',types:['Class','Primary','Warrior'],description:'Heavy armor may ward off most blows, but skilled opponents require more active defensive measures.', tier:4,abilities:[],traits:[]},
     {name:'Advanced Martial Stances',types:['Class','Primary','Warrior'],description:'You\'ve mastered the fundamentals, and have delved into advanced martial arts.', tier:4,abilities:[],traits:[]},
     
+
+    {name:'Deathless',types:['Class','Primary','Warrior'],description:'Heros often live on borrowed time.', tier:5,abilities:[],traits:[]},
+
     {name:'Masterful Maneuvers',types:['Class','Primary','Warrior'],description:'A single, deliberate strike is all you need.', tier:6,abilities:[],traits:[]},
-    {name:'Deathless',types:['Class','Primary','Warrior'],description:'Heros often live on borrowed time.', tier:6,abilities:[],traits:[]},
     {name:'Masterful Stances',types:['Class','Primary','Warrior'],description:'You exist in a martial superposition.', tier:6,abilities:[],traits:[]},
+    {name:'Savior',types:['Class','Primary','Warrior'],description:'Taking additional blows is as necessary as it is unpleasant, for not everyone is as sturdy as you are.', tier:6,abilities:[],traits:[]},
     
     {name:'Eternal Body',types:['Class','Primary','Warrior'],description:'Your legacy may outlive your body, but not by much.', tier:10,abilities:[],traits:[]},
     
