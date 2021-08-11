@@ -96,8 +96,8 @@ export class DataService {
   getValiants(): Observable<Valiant[]>{
     return of(this.valiants);
   }
-  getValiant(name: string): Valiant | undefined{
-    return this.valiants.find(x=> x.name = name);
+  getValiant(id: number): Observable<Valiant> {
+    return of(this.valiants.find(x=> x.id===id)!);
   }
 
   constructor() {

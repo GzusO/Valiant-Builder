@@ -24,11 +24,15 @@ export class ValiantDetailComponent implements OnInit {
   constructor(private router: Router, private activatedRoute: ActivatedRoute,public dialog: MatDialog, private dataService: DataService, private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
-    this.valiant = history.state;
+    this.getValiant()
     this.getValiantAbilities();
     this.getValiantTraits();
   }
 
+  getValiant(){
+    const id = Number(this.activatedRoute.snapshot.paramMap.get('id'));
+    this.dataService.getValiant(id).subscribe(valiant => this.valiant = valiant);
+  }
   getValiantAbilities(): void {
     this.abilities.length =0;
     this.valiant!.features.map(x=> this.abilities.push(...x.abilities));

@@ -1,5 +1,5 @@
 <div class="cards">
-        <mat-card class="card" *ngFor="let valiant of valiants" [routerLink]="['/valiant']" [state]=valiant>
+        <mat-card class="card" *ngFor="let valiant of valiants" routerLink="/valiant/{{valiant.id}}" >
                 <mat-card-title>{{valiant.name}}
                         <div class="spacer"></div>
                         <button mat-mini-fab color="warn"(click)="delete(valiant)"><mat-icon>delete</mat-icon></button>

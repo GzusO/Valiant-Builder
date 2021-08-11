@@ -24,7 +24,7 @@ const routes: Routes = [
   { path: 'gear', component:GearListComponent},
   { path: 'enchantments', component:EnchantmentListComponent},
   { path: 'valiants', component:ValiantListComponent},
-  { path: 'valiant', component:ValiantDetailComponent}
+  { path: 'valiant/:id', component:ValiantDetailComponent}
 ];
 
 @NgModule({
