@@ -31,6 +31,8 @@ export const gearData: Gear[] = [
     {name:'Parachute',tags:['Size-Medium','Worn','Consumable 1'],weight:30,cost:3000,abilities:[],traits:[],tier:2},
     {name:'Stun Bomb',tags:['Size-Small','Wielded 1','Consumable 1'],weight:1,cost:4000,abilities:[],traits:[],tier:2},
     {name:'Witch-Hunter Charm',tags:['Size-Small','Arcane','Wielded 1'],weight:1,cost:3500,abilities:[],traits:[],tier:2},
+    {name:'Crystalline',tags:['Size-Small','Wielded 1','Consumable 1'],weight:1,cost:3500,abilities:[],traits:[],tier:2},
+    
 
     //Tier 3
     {name:'Arcane Flare',tags:['Size-Small','Arcane','Wielded 1','Consumable 2'],weight:2,cost:6500,abilities:[],traits:[],tier:3},
