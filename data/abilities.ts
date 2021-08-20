@@ -51,31 +51,29 @@ export const abilityData: Ability[] =[
     //Characteristic Abilities
 
     //Physical Power Abilities
-    {name:'Shove',types:['Characteristic','Physical Power','Athletic Form'],primaryTags:['Energy 4','Combat'],secondaryTags:['Action'],tertiaryTags:['Melee'],description:'Move a target 1 tile directly away from you. Cannot target characters that are a larger size than you.',tier:0,attack:0, energyDamage:0, scaling:''},
-    {name:'Grab',types:['Characteristic','Physical Power','Athletic Form'],primaryTags:['Energy 6','Combat'],secondaryTags:['Action'],tertiaryTags:['Melee','Focus 10'],description:'You and Your target\'s movement is set to 0. You must have one free hand to use this ability. That hand becomes unusable while focusing on this ability. The effects of this ability end if the target becomes invalid.',tier:0,attack:0, energyDamage:0, scaling:''},
-    {name:'Exert',types:['Characteristic','Physical Power','Perfect Form'],primaryTags:['Energy 6','Combat'],secondaryTags:['Reaction'],tertiaryTags:[],description:'Your attack ability resolves or you take part in a physical power characteristic contest: apply +1 Exertion to the triggering contest.',tier:0,attack:0, energyDamage:0, scaling:''},
+    {name:'Shove',types:['Characteristic','Physical Power','Physical Training'],primaryTags:['Energy 4','Combat'],secondaryTags:['Action'],tertiaryTags:['Melee'],description:'Move a target 1 tile directly away from you. Cannot target characters that are a larger size than you.',tier:0,attack:0, energyDamage:0, scaling:''},
+    {name:'Grab',types:['Characteristic','Physical Power','Physical Training'],primaryTags:['Energy 6','Combat'],secondaryTags:['Action'],tertiaryTags:['Melee','Focus 10'],description:'You and Your target\'s movement is set to 0. You must have one free hand to use this ability. That hand becomes unusable while focusing on this ability. The effects of this ability end if the target becomes invalid.',tier:0,attack:0, energyDamage:0, scaling:''},
 
     //Physical Acuity Abilities
-    {name:'Rush',types:['Characteristic','Physical Acuity','Honed Agility'],primaryTags:['Energy 2x','Combat'],secondaryTags:['Reaction'],tertiaryTags:[],description:'your move phase ends: move up to x tiles (up to your movement).',tier:0,attack:0, energyDamage:0, scaling:''},
-    {name:'Quick Action',types:['Characteristic','Physical Acuity','Absolute Agility'],primaryTags:['Energy 4','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1'],description:'Global: use an action ability.',tier:0,attack:0, energyDamage:0, scaling:''},
-    {name:'Leap',types:['Characteristic','Physical Acuity','Absolute Agility'],primaryTags:['Energy 2x','Combat'],secondaryTags:['Action'],tertiaryTags:[],description:'Jump up to x tiles (up to your movement) away from your current position, as long as there are no obstructions directly between you and your destination. Ignore the effects of all tiles between you and your destination.',tier:0,attack:0, energyDamage:0, scaling:''},
-    
+    {name:'Rush',types:['Characteristic','Physical Acuity','Quick Feet'],primaryTags:['Energy 2x','Combat'],secondaryTags:['Reaction'],tertiaryTags:[],description:'your move phase ends: move up to x tiles (up to your movement).',tier:0,attack:0, energyDamage:0, scaling:''},
+    {name:'Quick Action',types:['Characteristic','Physical Acuity','Improved Dexterity'],primaryTags:['Energy 4','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1'],description:'Global: use an action ability.',tier:0,attack:0, energyDamage:0, scaling:''},
+
     //Physical Resilience Abilities
-    {name:'Brace',types:['Characteristic','Physical Resilience','Thick Skin'],primaryTags:['Energy 3','Combat'],secondaryTags:['Stance'],tertiaryTags:[],description:'Gain +3 resistance.',tier:0,attack:0, energyDamage:0, scaling:''},
-    {name:'Bulwark',types:['Characteristic','Physical Resilience','Stone Skin'],primaryTags:['Energy 6','Combat'],secondaryTags:['Counter'],tertiaryTags:[],description:'Gain the Hardened boon.',tier:0,attack:0, energyDamage:0, scaling:''},
+    {name:'Brace',types:['Characteristic','Physical Resilience','Natural Defence'],primaryTags:['Energy 2','Combat'],secondaryTags:['Stance'],tertiaryTags:[],description:'Gain +3 resistance.',tier:0,attack:0, energyDamage:0, scaling:''},
+    {name:'Bulwark',types:['Characteristic','Physical Resilience','Reinforced Body'],primaryTags:['Energy 4','Combat'],secondaryTags:['Reaction'],tertiaryTags:[],description:'Counter: Gain the Hardened boon during the contest of the triggering attack ability.',tier:0,attack:0, energyDamage:0, scaling:''},
     
     //Mental Power Abilities
-    {name:'Deduce',types:['Characteristic','Mental Power','Advanced Cognition'],primaryTags:['Energy 1','Combat'],secondaryTags:['Action'],tertiaryTags:['Range 3'],description:'Target a charater within range, and select one characteristic. You learn the target character\'s score for that characteristic.',tier:0,attack:0, energyDamage:0, scaling:''},
-    {name:'Forgesight',types:['Characteristic','Mental Power','Advanced Cognition'],primaryTags:['Energy 2'],secondaryTags:['Charged Action 1 minute'],tertiaryTags:['Limited 1'],description:'After this ability resolves, you may apply +1 Precision to any one future contest that occurs within the next 24 hours. You can only have one instance of this bonus.',tier:0,attack:0, energyDamage:0, scaling:''},
-    {name:'Frantic Foresight',types:['Characteristic','Mental Power','Ascended Cognition'],primaryTags:['Energy 4','Combat'],secondaryTags:['Reaction'],tertiaryTags:[],description:'When you partake in any contest: apply +1 Precision to the contest.',tier:0,attack:0, energyDamage:0, scaling:''},
+    {name:'Deduce',types:['Characteristic','Mental Power','Deduction'],primaryTags:['Energy 1','Combat'],secondaryTags:['Action'],tertiaryTags:['Range 3'],description:'Target a charater within range, and select one characteristic. You learn the target character\'s score for that characteristic.',tier:0,attack:0, energyDamage:0, scaling:''},
+    {name:'Forgesight',types:['Characteristic','Mental Power','Deduction'],primaryTags:['Energy 0'],secondaryTags:['Charged Action 1 minute'],tertiaryTags:['Limited 1'],description:'After this ability resolves, select one ability either you or a nearby ally can use. When you or the ally use that ability, it costs 0 energy.',tier:0,attack:0, energyDamage:0, scaling:''},
+    {name:'Frantic Foresight',types:['Characteristic','Mental Power','Expanded Mind'],primaryTags:['Energy 3','Combat'],secondaryTags:['Reaction'],tertiaryTags:[],description:'When you make a contest roll (before you know the result): add +1 to the total contest roll.',tier:0,attack:0, energyDamage:0, scaling:''},
     
     //Mental Acuity Abilities
-    {name:'Close Call',types:['Characteristic','Mental Acuity','Advanced Wit'],primaryTags:['Energy 4','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1'],description:'You would lose endurance points: negate the loss of endurance points.',tier:0,attack:0, energyDamage:0, scaling:''},
-    {name:'Effortless Rebuttal',types:['Characteristic','Mental Acuity','Perfect Wit'],primaryTags:['Energy 0'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1'],description:'You enter a mental acuity contestwith another character: win the contest.',tier:0,attack:0, energyDamage:0, scaling:''},
+    {name:'Close Call',types:['Characteristic','Mental Acuity','Instincts'],primaryTags:['Energy 4','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1'],description:'You would lose endurance points: negate the loss of endurance points.',tier:0,attack:0, energyDamage:0, scaling:''},
+    {name:'Effortless Rebuttal',types:['Characteristic','Mental Acuity','Razor Instincts'],primaryTags:['Energy 0'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1'],description:'You enter a mental acuity contest with another character: win the contest.',tier:0,attack:0, energyDamage:0, scaling:''},
     
     //Mental Resilience Abilities
-    {name:'Resist Ailment',types:['Characteristic','Mental Resilience','Iron Will'],primaryTags:['Energy 0','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 2'],description:'You suffer an ailment: Remove that ailment.',tier:0,attack:0, energyDamage:0, scaling:''},
-    {name:'Ignore Pain',types:['Charateristic','Mental Resilience','Perfect Will'],primaryTags:['Energy 3','Combat'],secondaryTags:['Stance'],tertiaryTags:[],description:'You are immune to the bleedout status.',tier:0,attack:0, energyDamage:0, scaling:''},
+    {name:'Resist Ailment',types:['Characteristic','Mental Resilience','Mental Fortitude'],primaryTags:['Energy 0','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 2'],description:'You suffer an ailment: Remove that ailment.',tier:0,attack:0, energyDamage:0, scaling:''},
+    {name:'Ignore Pain',types:['Charateristic','Mental Resilience','Tested Psyche'],primaryTags:['Energy 3','Combat'],secondaryTags:['Stance'],tertiaryTags:[],description:'You are immune to the bleedout status.',tier:0,attack:0, energyDamage:0, scaling:''},
     
 
     //Class Abilties

@@ -123,38 +123,37 @@ export const traitData: Trait[] = [
 
     //Physical Power Traits
     {name:'Weight Threshold',types:['Characteristic','Meek Form','Physical Power'],description:'Your base weight threshold is 50 lb. Your total weight threshold is your base threshold multiplied by your Physical Power score.',tier:0},
-    {name:'Strength',types:['Characteristic','Physical Training','Physical Power'],description:'Gain +2 lethality and +2 force.',tier:0},
-    {name:'Improved Strength',types:['Characteristic','Powerful Build','Physical Power'],description:'Gain +2 lethality and +2 force. Gain lethality and force equal to half of your tier (rounded down, minimum 1).',tier:0},
-    {name:'Improved Weight Threshold',types:['Characteristic','Perfect Form','Physical Power'],description:'Increase your base threshold by 25 lb.',tier:0},
+    {name:'Strength',types:['Characteristic','Athletic Form','Physical Power'],description:'When you gain this trait, choose one of the following bonuses: - Gain +2 Lethality and +2 Force. - Gain +3 Lethality and +1 Force. - Gain +1 Lethality and +3 Force.',tier:0},
+    {name:'Improved Strength',types:['Characteristic','Perfect Form','Physical Power'],description:'When you gain this trait, choose one of the following bonuses: - Gain +2 Lethality and +2 Force. - Gain +3 Lethality and +1 Force. - Gain +1 Lethality and +3 Force',tier:0},
+    {name:'Improved Weight Threshold',types:['Characteristic','Powerful Build','Physical Power'],description:'Increase your base threshold by 25 lb.',tier:0},
     
     //Physical Acuity Traits
     {name:'Basic Movement',types:['Characteristic','Physical Acuity','Simple Agility'],description:'You have a base movment of 5.',tier:0},
-    {name:'Movement',types:['Characteristic','Physical Acuity','Quick Feet'],description:'Gain +1 movement.',tier:0},
-    {name:'Improved Movement',types:['Characteristic','Physical Acuity','Improved Dexterity'],description:'Gain +1 movement.',tier:0},
+    {name:'Movement',types:['Characteristic','Physical Acuity','Honed Agility'],description:'Gain +1 movement.',tier:0},
+    {name:'Improved Movement',types:['Characteristic','Physical Acuity','Absolute Agility'],description:'Gain +1 movement.',tier:0},
     
     //Physical Resilience Traits
     {name:'Basic Defence',types:['Characteristic','Physical Resilience','Thin Skin'],description:'You have a base defence of 7.',tier:0},
     {name:'Basic Energy',types:['Characteristic','Physical Resilience','Thin Skin'],description:'You have a base energy of 28.',tier:0},
-    {name:'Hardiness',types:['Characteristic','Physical Resilience','Natural Defence'],description:'Gain +2 defence and +2 resistance.',tier:0},
-    {name:'Improve Hardiness',types:['Characteristic','Physical Resilience','Reinforced Body'],description:'Gain +2 defence and +2 resistance. Gain defence and resistance equal to half of your tier (rounded down, minimum 1).',tier:0},
+    {name:'Hardiness',types:['Characteristic','Physical Resilience','Thick Skin'],description:'When you gian this trait, choose one of the following bonuses: - Gain +2 Defence and +2 Resistance. - Gain +3 Defence and +1 Resistance. - Gain +1 Defence and +3 Resistance.',tier:0},
+    {name:'Improved Hardiness',types:['Characteristic','Physical Resilience','Stone Skin'],description:'When you gian this trait, choose one of the following bonuses: - Gain +2 Defence and +2 Resistance. - Gain +3 Defence and +1 Resistance. - Gain +1 Defence and +3 Resistance.',tier:0},
 
     //Mental Power Traits
     {name:'Basic Focus',types:['Characteristic','Mental Power','Basic Cognition'],description:'You have 1 base focus slot.',tier:0},
     {name:'Inherent Languages',types:['Characteristic','Mental Power','Basic Cognition'],description:'You know the language of your dominant lineage(s) and the language of your home nation, if you have a hom nation with its own language.',tier:0},
-    {name:'Focus',types:['Characteristic','Mental Power','Deduction'],description:'Gain +1 focus slots.',tier:0},
-    {name:'Improved Focus',types:['Characteristic','Mental Power','Expanded Mind'],description:'Gain +1 focus slots.',tier:0},
+    {name:'Focus',types:['Characteristic','Mental Power','Advanced Cognition'],description:'Gain +1 focus slots.',tier:0},
+    {name:'Improved Focus',types:['Characteristic','Mental Power','Ascended Cognition'],description:'Gain +1 focus slots.',tier:0},
     
     //Mental Acuity Traits
-    {name:'Speed',types:['Characteristic','Mental Acuity','Instincts'],description:'Gain +1 Finesse',tier:0},
-    {name:'Improved Speed',types:['Characteristic','Mental Acuity','Razor Instincts'],description:'Gain +2 combat speed.',tier:0},
+    {name:'Speed',types:['Characteristic','Mental Acuity','Advanced Wit'],description:'Gain +1 Finesse',tier:0},
+    {name:'Unfaltering',types:['Characteristic','Mental Acuity','Razor Instincts'],description:'Your Finesse cannot be reduced below 0.',tier:0},
+    {name:'Improved Speed',types:['Characteristic','Mental Acuity','Perfect Wit'],description:'Gain +1 Finesse',tier:0},
 
     //Mental Resistance
     {name:'Basic Death Resistance',types:['Characteristic','Mental Resilience','Fragile Will'],description:'You have a base death resistance of 3.',tier:0},
     {name:'Basic Endurance',types:['Characteristic','Mental Resilience','Fragile Will'],description:'You have a base endurance of 1.',tier:0},
-    {name:'Conditioning',types:['Characteristic','Mental Resilience','Mental Fortitude'],description:'Gain +12 energy and +1 death resistance.',tier:0},
-    {name:'Improved Conditioning',types:['Characteristic','Mental Resilience','Tested Psyche'],description:'Gain +12 energy and +1 death resistance. Gain energy equal to threee times your tier.',tier:0},
-    {name:'Improved Endurance',types:['Characteristic','Mental Resilience','Perfect Will'],description:'Gain +1 endurance.',tier:0},
-    
+    {name:'Conditioning',types:['Characteristic','Mental Resilience','Iron Will'],description:'Gain +12 energy and +1 death resistance.',tier:0},
+    {name:'Improved Conditioning',types:['Characteristic','Mental Resilience','Perfect Will'],description:'Gain +12 energy and +1 death resistance.',tier:0},
 
     //Class Tratis
 
