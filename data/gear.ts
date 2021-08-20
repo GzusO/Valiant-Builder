@@ -38,6 +38,8 @@ export const gearData: Gear[] = [
     {name:'Arcane Flare',tags:['Size-Small','Arcane','Wielded 1','Consumable 2'],weight:2,cost:6500,abilities:[],traits:[],tier:3},
     {name:'Draining Toxin',tags:['Size-Small','Wielded 2','Consumable 1'],weight:1,cost:7000,abilities:[],traits:[],tier:3},
     {name:'Lethal Toxin',tags:['Size-Small','Wielded 2','Consumable 1'],weight:1,cost:7000,abilities:[],traits:[],tier:3},
+    {name:'Mindbreak',tags:['Size-Small','Wielded 1','Consumable 1'],weight:1,cost:7500,abilities:[],traits:[],tier:3},
+    
     
     //Tier 4
     {name:'Arcane Communicator',tags:['Size-Small','Arcane','Wielded 1'],weight:2,cost:10000,abilities:[],traits:[],tier:4},
