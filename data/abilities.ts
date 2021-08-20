@@ -52,7 +52,7 @@ export const abilityData: Ability[] =[
 
     //Physical Power Abilities
     {name:'Shove',types:['Characteristic','Physical Power','Physical Training'],primaryTags:['Energy 4','Combat'],secondaryTags:['Action'],tertiaryTags:['Melee'],description:'Move a target 1 tile directly away from you. Cannot target characters that are a larger size than you.',tier:0,attack:0, energyDamage:0, scaling:''},
-    {name:'Grab',types:['Characteristic','Physical Power','Physical Training'],primaryTags:['Energy 6','Combat'],secondaryTags:['Action'],tertiaryTags:['Melee','Focus 10'],description:'You and Your target\'s movement is set to 0. You must have one free hand to use this ability. That hand becomes unusable while focusing on this ability. The effects of this ability end if the target becomes invalid.',tier:0,attack:0, energyDamage:0, scaling:''},
+    {name:'Grab',types:['Characteristic','Physical Power','Physical Training'],primaryTags:['Energy 6','Combat'],secondaryTags:['Action'],tertiaryTags:['Melee','Focus 12'],description:'You and Your target\'s movement is set to 0. You must have one free hand to use this ability. That hand becomes unusable while focusing on this ability. The effects of this ability end if the target becomes invalid.',tier:0,attack:0, energyDamage:0, scaling:''},
 
     //Physical Acuity Abilities
     {name:'Rush',types:['Characteristic','Physical Acuity','Quick Feet'],primaryTags:['Energy 2x','Combat'],secondaryTags:['Reaction'],tertiaryTags:[],description:'your move phase ends: move up to x tiles (up to your movement).',tier:0,attack:0, energyDamage:0, scaling:''},
