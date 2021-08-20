@@ -24,7 +24,7 @@ export const abilityData: Ability[] =[
     
     //Hjark Abilities
     {name:'Martial Trance',types:['Lineage','Hjark','Martial Tradition'],primaryTags:['Energy 3','Combat'],secondaryTags:['Stance'],tertiaryTags:[],description:'Gain +2 defence and +2 resistance.',tier:0,attack:0, energyDamage:0, scaling:''},
-    {name:'Singular Strike',types:['Lineage','Hjark','Legendary Strike'],primaryTags:['Energy 5','Combat'],secondaryTags:['Attack Modifier'],tertiaryTags:['Limited 1'],description:'Gain +4 lethality and +4 force.',tier:0,attack:0, energyDamage:0, scaling:''},
+    {name:'Singular Strike',types:['Lineage','Hjark','Legendary Strikes'],primaryTags:['Energy 5','Combat'],secondaryTags:['Attack Modifier'],tertiaryTags:['Limited 1'],description:'Gain +4 lethality and +4 force.',tier:0,attack:0, energyDamage:0, scaling:''},
     {name:'Hasty Preparations',types:['Lineage','Hjark','Battlefield Maintenance'],primaryTags:['Energy 2','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1'],description:'Combat begins: you may prepare your gear.',tier:0,attack:0, energyDamage:0, scaling:''},
     
     //Ingra Abilities
