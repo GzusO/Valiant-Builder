@@ -299,7 +299,8 @@ export const abilityData: Ability[] =[
     {name:'Flare',types:['Gear','Flare'],primaryTags:['Energy 2','Combat'],secondaryTags:['Action'],tertiaryTags:[],description:'Light a flare, creating a bright light in a 3 tile (15 ft.) radius. This light lasts for 12 turns (1 minute).',tier:0,attack:0,energyDamage:0,scaling:''},
     {name:'Toss Flare',types:['Gear','Flare'],primaryTags:['Energy 3','Combat'],secondaryTags:['Action'],tertiaryTags:['Range 5'],description:'Light and toss a flare to a tile in range, creating a bright light in a 3 tile (15 ft.) radius at that tile. This light lasts for 12 turns (1 minute).',tier:0,attack:0,energyDamage:0,scaling:''},
     {name:'Smokescreen',types:['Gear','Smokescreen'],primaryTags:['Energy 4','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Range 2 Sphere'],description:'Global: The target area become opaque for 12 turns (1 minute).',tier:0,attack:0,energyDamage:0,scaling:''},
-
+    {name:'Ingest Syrhja',types:['Gear','Syrhja'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:[],description:'Reduce your Death Resistance by 1 and gain +2 Movement for the next hour.',tier:1,attack:0,energyDamage:0,scaling:''},
+    
     //Tier 2
     {name:'Parachute',types:['Gear','Parachute'],primaryTags:['Energy 0'],secondaryTags:['Reaction'],tertiaryTags:[],description:'While you are falling: Slow your fall to 25 tiles per turn (25 ft. per second). Take no energy damage when you land.',tier:0,attack:0,energyDamage:0,scaling:''},
     {name:'Stun Bomb',types:['Gear','Stun Bomb'],primaryTags:['Energy 4','Combat'],secondaryTags:['Action'],tertiaryTags:['Range 5'],description:'The target character is incapacitated for an instant. In addition to any other potential effects, this causes the target character to lose focus on all of their focus abilities.',tier:0,attack:0,energyDamage:0,scaling:''},

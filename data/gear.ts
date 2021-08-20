@@ -24,6 +24,8 @@ export const gearData: Gear[] = [
     {name:'Caltrops',tags:['Size-Small','Wielded 1','Consumable 3'],weight:2,cost:1000,abilities:[],traits:[],tier:1},
     {name:'Flare',tags:['Size-Small','Wielded 1','Consumable 3'],weight:2,cost:1250,abilities:[],traits:[],tier:1},
     {name:'Smokescreen',tags:['Size-Small','Wielded 1','Consumable 1'],weight:2,cost:1000,abilities:[],traits:[],tier:1},
+    {name:'Syrjha',tags:['Size-Small','Wielded 1','Consumable 1'],weight:1,cost:1250,abilities:[],traits:[],tier:1},
+    
     
     //Tier 2
     {name:'Parachute',tags:['Size-Medium','Worn','Consumable 1'],weight:30,cost:3000,abilities:[],traits:[],tier:2},
