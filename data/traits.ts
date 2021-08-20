@@ -145,10 +145,9 @@ export const traitData: Trait[] = [
     {name:'Improved Focus',types:['Characteristic','Mental Power','Expanded Mind'],description:'Gain +1 focus slots.',tier:0},
     
     //Mental Acuity Traits
-    {name:'Speed',types:['Characteristic','Mental Acuity','Instincts'],description:'Gain +2 combat speed.',tier:0},
+    {name:'Speed',types:['Characteristic','Mental Acuity','Instincts'],description:'Gain +1 Finesse',tier:0},
     {name:'Improved Speed',types:['Characteristic','Mental Acuity','Razor Instincts'],description:'Gain +2 combat speed.',tier:0},
-    {name:'Relaxed',types:['Characteristic','Mental Acuity','Perfect Wit'],description:'Permanently gain the relaxed 1 boon. If you are tier 6 or higher, gain the relaxed 2 boon instead.',tier:0},
-    
+
     //Mental Resistance
     {name:'Basic Death Resistance',types:['Characteristic','Mental Resilience','Fragile Will'],description:'You have a base death resistance of 3.',tier:0},
     {name:'Basic Endurance',types:['Characteristic','Mental Resilience','Fragile Will'],description:'You have a base endurance of 1.',tier:0},
@@ -180,7 +179,7 @@ export const traitData: Trait[] = [
     {name:'Technique Retraining',types:['Class','Warrior','Warriors'],description:'You can retrain your Warrior Techniques by spending a week of downtime with no breaks or major interruptions. After this week concludes, the character may reselect all of their available Warrior Techniques from the Warrior Techniques abilities pool.',tier:0},
     {name:'Advantageous Attacks',types:['Class','Warrior','Martial Finesse'],description:'Apply +1 Precision to your attack contests that target enemies adjacent to one or more of your allies.',tier:1},
     {name:'Rage',types:['Class','Warrior','Adrenaline Rush'],description:'You gain +3 lethality and +3 force while you suffer the winded status.',tier:2},
-    {name:'Heavy Armor Training',types:['Class','Warrior','Battle Conditioning'],description:'Ignore up to 2 points of combat speed reduction that come from your worn armor.',tier:2},
+    {name:'Heavy Armor Training',types:['Class','Warrior','Battle Conditioning'],description:'Ignore up to 1 points of Finesse reduction that come from your worn armor.',tier:2},
     {name:'Weapon Flurry',types:['Class','Warrior','Dual-Wielding'],description:'Gain +2 lethality and +2 defence while wielding two one-handed, non-shield weapons.',tier:2},
     {name:'Force Buildup',types:['Class','Warrior','Trading Blows'],description:'Gain +1 force whenever you take energy damage. this boon lasts until combat ends.',tier:3},
     {name:'Deflecting',types:['Class','Warrior','Active Defenses'],description:'Any parry abilities you use can be triggered on any attack abilities, instead of just melee attack abilities. Additionally, all medium shields grant you cover from ranged attack abilities while wielded in at least one hand.',tier:4},
@@ -235,12 +234,11 @@ export const traitData: Trait[] = [
     
       
     {name:'Bastion Formation',types:['Class','Specialist','Strategies'],description:'You and all allied characters gain +2 defence and suffer -1 lethality.',tier:1},
-    {name:'Blitz Formation',types:['Class','Specialist','Strategies'],description:'You and all allied characters gain +1 combat speed.',tier:1},
-    {name:'Escape Plan',types:['Class','Specialist','Strategies'],description:'You and all allied characters gain +4 combat speed and +3 movement. You and all allied characters suffer -4 lethality and -4 force.',tier:1},
+    {name:'Blitz Formation',types:['Class','Specialist','Strategies'],description:'Your party acts first this combat.',tier:1},
     {name:'Spearhead Formation',types:['Class','Specialist','Strategies'],description:'you and all allied characters gain +2 lethality and suffer -1 defence.',tier:1},
     {name:'Stalwart Formation',types:['Class','Specialist','Strategies'],description:'You and your allies gain +2 death resistance. this effect increases any affected character\'s current death resistance by 2 when it is applied, and reduces the uses by 2 when it expires. This effect cannot reduce death resistance below 1.',tier:1},
-    {name:'Brutal Aggressions',types:['Class','Specialist','Strategies'],description:'All enemy characters suffer the stressed 1 ailment.',tier:2},
-    {name:'Calm and Collected',types:['Class','Specialist','Strategies'],description:'You and all allied characters gain the relaxed 1 boon.',tier:2},
+    {name:'Brutal Aggressions',types:['Class','Specialist','Strategies'],description:'All enemy characters suffer -1 Finesse.',tier:2},
+    {name:'Calm and Collected',types:['Class','Specialist','Strategies'],description:'You and all allied characters gain +1 Finesse.',tier:2},
     {name:'Combat Drills',types:['Class','Specialist','Strategies'],description:'You and all allied characters gain +1 movement.',tier:2},
     {name:'Munition Packing',types:['Class','Specialist','Strategies'],description:'You and your allies\' projectile weapons gain +2 uses. This effect increases any affected projectile weapon\'s current uses by 2 when it is applied, and reduces the current uses by 2 when it expires.',tier:2},
     {name:'Pre-Prepared Equipment',types:['Class','Specialist','Strategies'],description:'You and your allies\' gear items can be used once this combat without counting towards their Consumable values. This allows otherwise consumed gear to be used.',tier:2},
@@ -285,7 +283,7 @@ export const traitData: Trait[] = [
     //Tier 2    
     {name:'Gleaming Headband',types:['Accessory','Gleaming Headband'],description:'You provide light in a 5 tile (25 ft.) sphere.',tier:2},
     {name:'Spelljammer\'s Bracer',types:['Accessory','Spelljammer\'s Bracer'],description:'When you deal energy damage to a focusing character, treat it as doubled when accruing it against the focus threshold.',tier:2},
-    {name:'Time Stone',types:['Accessory','Time Stone'],description:'Gain +1 combat speed.',tier:2},
+    {name:'Quick Stone',types:['Accessory','Quick Stone'],description:'Gain +1 Finesse.',tier:2},
     
     //Tier 3
     {name:'Enchantable',types:['Accessory','Arcane Necklace','Arcane Ring'],description:'When enchanting this item, you may imbue 1 more enchantment than you would normally be able to.',tier:3},
@@ -328,7 +326,7 @@ export const traitData: Trait[] = [
     {name:'Storage',types:['Enchantment','Storage'],description:'Items stored in this accessory do not count towards your carry weight limit. Containers with this trait always weigh their base weight, regardless of their content.',tier:2},
     
     //Tier 3
-    {name:'Calming',types:['Enchantment','Calming'],description:'Whenever you suffer the stressed ailment, reduce the value by 1. Whenever you gain the relaxed boon, increase the value by 1.',tier:3},
+    {name:'Calming',types:['Enchantment','Calming'],description:'You are immune to finesse reductions statuses.',tier:3},
     {name:'Glasscharm',types:['Enchantment','Glasscharm'],description:'All attack abilities attached to this weapon have their attack increased by 4 (if they have a non-zero attack defined). You suffer -4 defence.',tier:3},
     {name:'Improved Glasscharm',types:['Enchantment','Glasscharm'],description:'All attack abilities attached to this weapon have their attack increased by 1 additional point (if they have a non-zero attack defined) for every extra enchantment tier. You suffer an additional -1 defence for every extra enchantment tier.',tier:3},
     {name:'Ragecharm',types:['Enchantment','Ragecharm'],description:'All attack abilities attached to this weapon have their energy damage increase by 4. You suffer -4 resistane.',tier:3},

@@ -49,7 +49,7 @@ export const armorData: Armor[] = [
     //Tier 2
     {name:'Gleaming Headband',class:'Accessory',tags:['Size-Small'],weight:1,cost:4500,abilities:[],traits:[],tier:2},
     {name:'Spellhammer\'s Bracer',class:'Accessory',tags:['Size-Small'],weight:2,cost:3500,abilities:[],traits:[],tier:2},
-    {name:'Time Stone',class:'Accessory',tags:['Size-Small'],weight:1,cost:4000,abilities:[],traits:[],tier:2},
+    {name:'Quick Stone',class:'Accessory',tags:['Size-Small'],weight:1,cost:4000,abilities:[],traits:[],tier:2},
     
     //Tier 3
     {name:'Arcane Necklace',class:'Accessory',tags:['Size-Small'],weight:0,cost:6000,abilities:[],traits:[],tier:3},
