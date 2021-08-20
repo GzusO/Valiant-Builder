@@ -231,6 +231,8 @@ export const traitData: Trait[] = [
     {name:'Organized',types:['Class','Specialist','Orderly Mind'],description:'You always know the date and time down to an hour of precision. You always know the chronological order of events you have experienced, even if you can\'t remember exact times.',tier:3},
     {name:'Soft Steps',types:['Class','Specialist','Quiet Sneak'],description:'You make no sound while moving.',tier:3},
     {name:'Social Insights',types:['Class','Specialist','Deep Insight'],description:'You know the relations between all of the characters that you know, given they have any.',tier:6},
+    {name:'Ego-less',types:['Class','Specialist','Ego Death'],description:'You cannot target yourself with abilities you use, including Stances and Transformation. Any of your abilities that would target yourself may instead target any allied character you can see.',tier:9},
+    
       
     {name:'Bastion Formation',types:['Class','Specialist','Strategies'],description:'You and all allied characters gain +2 defence and suffer -1 lethality.',tier:1},
     {name:'Blitz Formation',types:['Class','Specialist','Strategies'],description:'You and all allied characters gain +1 combat speed.',tier:1},

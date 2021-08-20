@@ -274,6 +274,7 @@ export const featureData: Feature[] =[
     {name:'Target Identification',types:['Class','Primary','Specialist'],description:'Organized grunts can overcome lone heroes with frightening ease.', tier:5,abilities:[],traits:[]},
     {name:'The Perfect Moment',types:['Class','Primary','Specialist'],description:'Everything was possible, even if just for a brief moment.', tier:9,abilities:[],traits:[]},
     {name:'Careful Timing',types:['Class','Primary','Specialist'],description:'You can manage a lot in a short amount of time.', tier:9,abilities:[],traits:[]},
+    {name:'Ego Death',types:['Class','Primary','Specialist'],description:'There is no I.', tier:9,abilities:[],traits:[]},
     {name:'Unfaltering Will',types:['Class','Primary','Specialist'],description:'At this point, nothing surprises you.', tier:10,abilities:[],traits:[]},
     
     {name:'Efficient Tinkering',types:['Class','Secondary','Specialist'],description:'Your crafts are hardier than others\', able to do much more before needing maintenance.', tier:1,abilities:[],traits:[]},
