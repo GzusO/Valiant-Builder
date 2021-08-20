@@ -287,6 +287,7 @@ export const abilityData: Ability[] =[
     
     //Gear Abilities 
     //Tier 0
+    {name:'Alarm System',types:['Gear','Alarm System'],primaryTags:['Energy 0','Combat'],secondaryTags:['Charged Action 5 minutes'],tertiaryTags:[],description:'Set up an alarm perimeter of up to 100 ft. that lasts for 10 hours. Any character crossing the perimeter sounds the alarm. This ability can also be used to pick up the alarms, restoring one of this gear\'s consumable uses.',tier:0,attack:0,energyDamage:0,scaling:''},
     {name:'Light Lantern',types:['Gear','Lantern'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:[],description:'While wearing or wielding the lantern you can set it alight, providing light in a 5 tile (25 ft.) sphere. You can use this action to extinguish the lantern.',tier:0,attack:0,energyDamage:0,scaling:''},
     {name:'Trauma Kit',types:['Gear','Trauma Kit'],primaryTags:['Energy 4','Combat'],secondaryTags:['Action'],tertiaryTags:['Melee'],description:'Target character gains the stable status.',tier:0,attack:0,energyDamage:0,scaling:''},
     {name:'Plant',types:['Gear'],primaryTags:['Energy 2','Combat'],secondaryTags:['Action'],tertiaryTags:[],description:'Plant the shield between your own and an adjacent tile, creating cover. This ability can also be used to pick up a planted shield.',tier:0,attack:0,energyDamage:0,scaling:''},
