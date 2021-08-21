@@ -245,6 +245,8 @@ export const featureData: Feature[] =[
     
     {name:'Masterful Extensions',types:['Class','Primary','Arcanist'],description:'Brief flashes of power are novice displays. True masters of the arcane can maintain deadly effects for extended periods of time, ravaging battlefields with deadly energies.', tier:9,abilities:[],traits:[]},
     
+    {name:'Utter Mastery',types:['Class','Primary','Arcanist'],description:'Your complete mastery over the arcane allows you to bypass the accepted laws of the physical world and create energy from nothing.', tier:10,abilities:[],traits:[]},
+    
     {name:'Arcane Signals',types:['Class','Secondary','Arcanist'],description:'Since telepathy is difficult to learn, most voice arcanist bother their peers with crude arcane pings and flashes.', tier:1,abilities:[],traits:[]},
     {name:'Benign Runes',types:['Class','Secondary','Arcanist'],description:'Even master runebinders can appreciate an aesthetically pleasing rune, even if it doesn\'t actaully do anything.', tier:1,abilities:[],traits:[]},
     {name:'Street Tricks',types:['Class','Secondary','Arcanist'],description:'They won\'t win you any awards, but these little arcane tricks are a welcome respite from more taxing arcane spells.', tier:1,abilities:[],traits:[]},
