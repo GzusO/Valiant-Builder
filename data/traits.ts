@@ -294,7 +294,6 @@ export const traitData: Trait[] = [
     
     //Enchantment Traits
     //Tier 0
-    {name:'Animated',types:['Enchantment','Animated'],description:'All characteristic requirements for this item are reduced by 1.',tier:0},
     {name:'Cleanliness',types:['Enchantment','Cleanliness'],description:'This item cannot become dirtied',tier:0},
     {name:'Invigorating',types:['Enchantment','Invigorating'],description:'You gain +3 energy.',tier:0},
     {name:'Improved Invigorating',types:['Enchantment','Invigorating'],description:'You gain an additional +3 energy for every extra enchantment tier.',tier:0},
