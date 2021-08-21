@@ -14,8 +14,8 @@ export interface Gear{
 export const gearData: Gear[] = [
     //Tier 0
     {name:'Alarm System',tags:['Size-Large','Wielded 2','Consumable 1'],weight:15,cost:100,abilities:[],traits:[],tier:0},
-    {name:'Lantern',tags:['Size-Small','Wielded 1','Worn'],weight:2,cost:250,abilities:[],traits:[],tier:0},
-    {name:'Trauma Kit',tags:['Size-Small','Wielded 2','Consumable 1'],weight:5,cost:500,abilities:[],traits:[],tier:0},
+    {name:'Lantern',tags:['Size-Small','Wielded 1','Worn'],weight:2,cost:50,abilities:[],traits:[],tier:0},
+    {name:'Trauma Kit',tags:['Size-Small','Wielded 2','Consumable 1'],weight:5,cost:100,abilities:[],traits:[],tier:0},
     {name:'Pavise Shield',tags:['Size-Large','Wielded 2,','Consumable 1'],weight:10,cost:75,abilities:[],traits:[],tier:0},
     
     //Tier 1

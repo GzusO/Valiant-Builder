@@ -21,12 +21,12 @@ export const armorData: Armor[] = [
 
     //Accessories 
     //Tier 0
-    {name:'Backpack',class:'Accessory',tags:['Size-Medium'],weight:4,cost:250,abilities:[],traits:[],tier:0},
-    {name:'Cloak',class:'Accessory',tags:['Size-Medium'],weight:4,cost:250,abilities:[],traits:[],tier:0},
-    {name:'Necklace',class:'Accessory',tags:['Size-Small'],weight:0,cost:500,abilities:[],traits:[],tier:0},
-    {name:'Ring',class:'Accessory',tags:['Size-Tiny'],weight:0,cost:500,abilities:[],traits:[],tier:0},
-    {name:'Satchel',class:'Accessory',tags:['Size-Small'],weight:1,cost:100,abilities:[],traits:[],tier:0},
-    {name:'Simple Charm',class:'Accessory',tags:['Size-Small'],weight:1,cost:100,abilities:[],traits:[],tier:0},
+    {name:'Backpack',class:'Accessory',tags:['Size-Medium'],weight:4,cost:75,abilities:[],traits:[],tier:0},
+    {name:'Cloak',class:'Accessory',tags:['Size-Medium'],weight:4,cost:25,abilities:[],traits:[],tier:0},
+    {name:'Necklace',class:'Accessory',tags:['Size-Small'],weight:0,cost:75,abilities:[],traits:[],tier:0},
+    {name:'Ring',class:'Accessory',tags:['Size-Tiny'],weight:0,cost:75,abilities:[],traits:[],tier:0},
+    {name:'Satchel',class:'Accessory',tags:['Size-Small'],weight:1,cost:25,abilities:[],traits:[],tier:0},
+    {name:'Simple Charm',class:'Accessory',tags:['Size-Small'],weight:1,cost:50,abilities:[],traits:[],tier:0},
     
     //Tier 1
     {name:'Arcanist\'s Mess Kit',class:'Accessory',tags:['Size-Small'],weight:2,cost:1000,abilities:[],traits:[],tier:1},
