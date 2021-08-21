@@ -183,7 +183,7 @@ export const traitData: Trait[] = [
     {name:'Force Buildup',types:['Class','Warrior','Trading Blows'],description:'Gain +1 force whenever you take energy damage. this boon lasts until combat ends.',tier:3},
     {name:'Deflecting',types:['Class','Warrior','Active Defenses'],description:'Any parry abilities you use can be triggered on any attack abilities, instead of just melee attack abilities. Additionally, all medium shields grant you cover from ranged attack abilities while wielded in at least one hand.',tier:4},
     {name:'Masterful Attacks',types:['Class','Warrior','Masterful Maneuvers'],description:'You may apply an additional attack modifier ability to your attack abilities.',tier:6},
-    {name:'Additional Stance',types:['Class','Warrior','Masterful Stances'],description:'You may use an additional stance ability during the round begin phase, given you have enough focus slots to maintain the additional stance.',tier:6},
+    {name:'Additional Stance',types:['Class','Warrior','Masterful Stances'],description:'You may use an additional stance ability during the round begin phase.',tier:6},
     
     {name:'Eternal',types:['Class','Warrior','Eternal Body'],description:'If you would die, restore 1 endurance and permanently suffer -2 energy.',tier:10},
     
