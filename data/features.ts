@@ -205,7 +205,8 @@ export const featureData: Feature[] =[
     
 
     {name:'Deathless',types:['Class','Primary','Warrior'],description:'Heros often live on borrowed time.', tier:5,abilities:[],traits:[]},
-
+    {name:'Lancer',types:['Class','Primary','Warrior'],description:'Who said you need two hands to fire high-caliber weaponry?', tier:5,abilities:[],traits:[]},
+    
     {name:'Masterful Maneuvers',types:['Class','Primary','Warrior'],description:'A single, deliberate strike is all you need.', tier:6,abilities:[],traits:[]},
     {name:'Masterful Stances',types:['Class','Primary','Warrior'],description:'You exist in a martial superposition.', tier:6,abilities:[],traits:[]},
     {name:'Savior',types:['Class','Primary','Warrior'],description:'Taking additional blows is as necessary as it is unpleasant, for not everyone is as sturdy as you are.', tier:6,abilities:[],traits:[]},
@@ -245,6 +246,8 @@ export const featureData: Feature[] =[
     
     {name:'Masterful Extensions',types:['Class','Primary','Arcanist'],description:'Brief flashes of power are novice displays. True masters of the arcane can maintain deadly effects for extended periods of time, ravaging battlefields with deadly energies.', tier:9,abilities:[],traits:[]},
     
+    {name:'Utter Mastery',types:['Class','Primary','Arcanist'],description:'Your complete mastery over the arcane allows you to bypass the accepted laws of the physical world and create energy from nothing.', tier:10,abilities:[],traits:[]},
+    
     {name:'Arcane Signals',types:['Class','Secondary','Arcanist'],description:'Since telepathy is difficult to learn, most voice arcanist bother their peers with crude arcane pings and flashes.', tier:1,abilities:[],traits:[]},
     {name:'Benign Runes',types:['Class','Secondary','Arcanist'],description:'Even master runebinders can appreciate an aesthetically pleasing rune, even if it doesn\'t actaully do anything.', tier:1,abilities:[],traits:[]},
     {name:'Street Tricks',types:['Class','Secondary','Arcanist'],description:'They won\'t win you any awards, but these little arcane tricks are a welcome respite from more taxing arcane spells.', tier:1,abilities:[],traits:[]},
@@ -274,6 +277,7 @@ export const featureData: Feature[] =[
     {name:'Target Identification',types:['Class','Primary','Specialist'],description:'Organized grunts can overcome lone heroes with frightening ease.', tier:5,abilities:[],traits:[]},
     {name:'The Perfect Moment',types:['Class','Primary','Specialist'],description:'Everything was possible, even if just for a brief moment.', tier:9,abilities:[],traits:[]},
     {name:'Careful Timing',types:['Class','Primary','Specialist'],description:'You can manage a lot in a short amount of time.', tier:9,abilities:[],traits:[]},
+    {name:'Ego Death',types:['Class','Primary','Specialist'],description:'There is no I.', tier:9,abilities:[],traits:[]},
     {name:'Unfaltering Will',types:['Class','Primary','Specialist'],description:'At this point, nothing surprises you.', tier:10,abilities:[],traits:[]},
     
     {name:'Efficient Tinkering',types:['Class','Secondary','Specialist'],description:'Your crafts are hardier than others\', able to do much more before needing maintenance.', tier:1,abilities:[],traits:[]},

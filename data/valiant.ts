@@ -29,6 +29,7 @@ export class Valiant {
     force: number = 0;
     defence: number = 7;
     resistance: number = 0;
+    finesse: number = 0;
     
     //Descriptions
     description: string = "";

@@ -12,7 +12,6 @@ export interface Enchantment {
 
 export const enchantmentData: Enchantment[] = [
     //Tier 0
-    {name:'Animated',validItems:['Weapons','Armor Sets'],cost:250,abilities:[],traits:[],tier:0},
     {name:'Cleanliness',validItems:['All Items'],cost:100,abilities:[],traits:[],tier:0},
     {name:'Invigorating',validItems:['Armor Sets','Accessories'],cost:500,abilities:[],traits:[],tier:0},
     {name:'Lightness',validItems:['Weapons','Armor Sets','Accessories'],cost:100,abilities:[],traits:[],tier:0},

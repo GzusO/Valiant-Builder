@@ -59,6 +59,7 @@ import { TagTooltipDialogComponent } from './tag/tag-tooltip-dialog/tag-tooltip-
 import { FeatureSelectDialogComponent } from './feature/feature-select-dialog/feature-select-dialog.component';
 import { AbilitySelectDialogComponent } from './ability/ability-select-dialog/ability-select-dialog.component';
 import { TraitSelectDialogComponent } from './trait/trait-select-dialog/trait-select-dialog.component';
+import { ValiantRandomizerComponent } from './valiant/valiant-randomizer/valiant-randomizer.component';
 
 
 @NgModule({
@@ -93,7 +94,8 @@ import { TraitSelectDialogComponent } from './trait/trait-select-dialog/trait-se
     TagTooltipDialogComponent,
     FeatureSelectDialogComponent,
     AbilitySelectDialogComponent,
-    TraitSelectDialogComponent
+    TraitSelectDialogComponent,
+    ValiantRandomizerComponent
   ],
   imports: [
     BrowserModule,
