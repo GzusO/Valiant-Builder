@@ -280,7 +280,7 @@ export const traitData: Trait[] = [
     {name:'Soothe Stone',types:['Accessory','Soothe Stone'],description:'Characters within 10 ft. of you are soothed, and become slightly more reasonable.',tier:1},
     
     //Tier 2    
-    {name:'Gleaming Headband',types:['Accessory','Gleaming Headband'],description:'You provide light in a 5 tile (25 ft.) sphere.',tier:2},
+    {name:'Gleaming Headband',types:['Accessory','Gleaming Headband'],description:'You provide bright light in a 5 tile (25 ft.) sphere.',tier:2},
     {name:'Spelljammer\'s Bracer',types:['Accessory','Spelljammer\'s Bracer'],description:'When you deal energy damage to a focusing character, treat it as doubled when accruing it against the focus threshold.',tier:2},
     {name:'Quick Stone',types:['Accessory','Quick Stone'],description:'Gain +1 Finesse.',tier:2},
     
