@@ -208,7 +208,7 @@ export const traitData: Trait[] = [
     {name:'Hardened Focus',types:['Class','Arcanist','Steady Mind'],description:'You gain +1 resistance for each instance of focus you are maintaining.',tier:1},
     {name:'Arcane Medicine',types:['Class','Arcanist','Arcane Restoration'],description:'Whenever one of your effects restores a character\'s energy, that effect restores additional energy equal to your tier.',tier:2},
     {name:'Safe Recharging',types:['Class','Arcanist','Stable Recovery'],description:'While you suffer the Recharging status, gain defence and resistance equal to your tier.',tier:2},
-    {name:'Arcane Shell',types:['Class','Arcanist','Arcane Armors'],description:'While not wearing any armor sets, gain defence equal to your tier.',tier:2},
+    {name:'Arcane Shell',types:['Class','Arcanist','Arcane Armors'],description:'Gain Defence equal to your tier.',tier:2},
     
     {name:'Passive Focus',types:['Class','Arcanist','Hyperconscious'],description:'You do not lose focus when incapacitated.',tier:3},
     {name:'Experimenter',types:['Class','Arcanist','Practiced Experimentation'],description:'Change the base energy cost of the Arcane Experimentation ability to 0 and increase its limited value by 1.',tier:3},
