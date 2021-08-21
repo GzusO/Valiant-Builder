@@ -180,6 +180,8 @@ export const traitData: Trait[] = [
     {name:'Rage',types:['Class','Warrior','Adrenaline Rush'],description:'You gain +3 lethality and +3 force while you suffer the winded status.',tier:2},
     {name:'Heavy Armor Training',types:['Class','Warrior','Battle Conditioning'],description:'Ignore up to 1 points of Finesse reduction that come from your worn armor.',tier:2},
     {name:'Weapon Flurry',types:['Class','Warrior','Dual-Wielding'],description:'Gain +2 lethality and +2 defence while wielding two one-handed, non-shield weapons.',tier:2},
+    {name:'Gunslinger',types:['Class','Warrior','Dual-Wielding'],description:'Ignore the two-handed tag on short guns and arcane short guns.',tier:2},
+    
     {name:'Force Buildup',types:['Class','Warrior','Trading Blows'],description:'Gain +1 force whenever you take energy damage. this boon lasts until combat ends.',tier:3},
     {name:'Deflecting',types:['Class','Warrior','Active Defenses'],description:'Any parry abilities you use can be triggered on any attack abilities, instead of just melee attack abilities. Additionally, all medium shields grant you cover from ranged attack abilities while wielded in at least one hand.',tier:4},
     {name:'Masterful Attacks',types:['Class','Warrior','Masterful Maneuvers'],description:'You may apply an additional attack modifier ability to your attack abilities.',tier:6},
