@@ -256,18 +256,13 @@ export const traitData: Trait[] = [
     {name:'The Long Game',types:['Class','Specialist','Strategies'],description:'You and your allies may use stance abilities as if they were transformation abilities, paying twice the ability\'s energy cost.',tier:4},
     
     //Weapon Traits
-    {name:'Cover',types:['Weapon','Tower Shield','Pavise Shield','Bastion Shield'],description:'You count as in cover against ranged attack abilities.',tier:0},
-    {name:'Simple Weapon',types:['Weapon','Pavise Shield'],description:'This weapon only exists as a tier 0 weapon.',tier:0},
-    
+    {name:'Cover',types:['Weapon','Large Shield'],description:'You count as in cover against ranged attack abilities.',tier:0},
 
     //Armor Traits
-    {name:'Leather',types:['Armor','Leather','Strap Barding'],description:'You gain +2 defence.',tier:0},
-    {name:'Gambeson',types:['Armor','Gambeson','Light Barding'],description:'You gain +2 defence and +1 resistance. You suffer -1 combat speed.',tier:0},
-    {name:'Partial Plate',types:['Armor','Partial Plate','Partial Plate Barding'],description:'You gain +3 defence and +1 resistance. You suffer -2 combat speed.',tier:0},
-    {name:'Chain Mail',types:['Armor','Chain Mail','Chain Barding'],description:'you gain +3 defence and +2 resistance. You suffer -3 combat speed.',tier:0},
-    {name:'Brigandine',types:['Armor','Brigandine','Heavy Barding'],description:'You gain +4 defence and +2 resistance. You suffer -4 combat speed and -1 movement.',tier:0},
-    {name:'Full Plate',types:['Armor','Full Plate','Full Plate Barding'],description:'You gain +4 defence and +3 resistance. You suffer -5 combat speed and -1 movement.',tier:0},
-    {name:'Layered Plate',types:['Armor','Layered Plate','Layered Plate Barding'],description:'You gain +5 defence and +3 resistance. You suffer -6 combat speed and -2 movement.',tier:0},
+    {name:'Light Armor',types:['Armor','Light'],description:'You gain +3 defence. Defence bonus increases by 2 for every armor tier above 0.',tier:0},
+    {name:'Medium Armor',types:['Armor','Medium'],description:'you gain +5 defence and +1 resistance. You suffer -1 Finesse. Defence bonus increases by 3 for every armor tier above 0.',tier:0},
+    {name:'Heavy Armor',types:['Armor','Heavy'],description:'You gain +7 defence and +2 resistance. You suffer -1 Finesse and -1 Movement. Defence bonus increases by 4 for every armor tier above 0.',tier:0},
+    {name:'Ultra-Heavy Armor',types:['Armor','Ultra-Heavy'],description:'You gain +9 defence and +3 resistance. You suffer -2 Finesse and -2 Movement. Defence bonus increases by 5 for every armor tier above 0.',tier:0},
     
     //Accessory Traits
     //Tier 0
@@ -296,8 +291,7 @@ export const traitData: Trait[] = [
     
     //Gear Traits
     //Tier 0
-    {name:'Crowbar',types:['Gear','Crowbar'],description:'You gain +1 to all non-attack contests that involve prying something open.',tier:0},
-    
+
     //Enchantment Traits
     //Tier 0
     {name:'Cleanliness',types:['Enchantment','Cleanliness'],description:'This item cannot become dirtied',tier:0},
