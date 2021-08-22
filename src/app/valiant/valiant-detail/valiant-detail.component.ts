@@ -13,6 +13,7 @@ import { TraitSelectDialogComponent } from 'src/app/trait/trait-select-dialog/tr
 import { ValiantExportDialogComponent } from '../valiant-export-dialog/valiant-export-dialog.component';
 import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
 import { Item } from 'data/items';
+import { ItemEditDialogComponent } from 'src/app/item/item-edit-dialog/item-edit-dialog.component';
 
 @Component({
   selector: 'app-valiant-detail',
@@ -51,6 +52,16 @@ export class ValiantDetailComponent implements OnInit {
   }
   export(): void{
     const dialogRef = this.dialog.open(ValiantExportDialogComponent, {data:this.valiant});
+  }
+  editItem(item: Item): void{
+    const dialogRef = this.dialog.open(ItemEditDialogComponent, {panelClass:'fixed-width-dialog',data:item});
+  }
+  deleteItem(item:Item): void{
+    const index = this.valiant!.inventory.indexOf(item);
+
+    if (index >= 0) {
+      this.valiant!.inventory.splice(index, 1);
+    }
   }
   
   openAddFeatures(): void{

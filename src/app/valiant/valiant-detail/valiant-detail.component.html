@@ -211,9 +211,9 @@
                 </tr>
             </table>
             <mat-menu #invMenu="matMenu">
-                <button mat-menu-item>
+                <!--<button mat-menu-item>
                 Add Existing Item
-                </button>
+                </button>-->
                 <button mat-menu-item (click)="addNewItem()">
                 Add New Item
                 </button>
@@ -231,10 +231,10 @@
                         <mat-icon>more_vert</mat-icon>
                     </button>
                     <mat-menu #itemMenu="matMenu">
-                        <button mat-menu-item>
+                        <button mat-menu-item (click)="editItem(item)">
                         Modify
                         </button>
-                        <button mat-menu-item>
+                        <button mat-menu-item (click)="deleteItem(item)">
                         Delete
                         </button>
                     </mat-menu>

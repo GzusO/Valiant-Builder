@@ -1,0 +1,43 @@
+<div class="title"  mat-dialog-title>
+    <input matInput [(ngModel)]="item.name" name="Item" class="itemName">
+</div>
+<mat-dialog-content>
+    <mat-form-field class="fullWidth">
+        <mat-label>Tags</mat-label>
+        <mat-chip-list #chipList aria-label="Tag selection">
+          <mat-chip *ngFor="let tag of item.tags" [selectable]="selectable"
+                   [removable]="removable" (removed)="remove(tag)">
+            {{tag}}
+            <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+          </mat-chip>
+          <input placeholder="New tag..."
+                 [matChipInputFor]="chipList"
+                 [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                 [matChipInputAddOnBlur]="addOnBlur"
+                 (matChipInputTokenEnd)="add($event)">
+        </mat-chip-list>
+    </mat-form-field>
+<div>
+    <mat-form-field appearance="fill">
+        <mat-label>Tier</mat-label>
+        <input matInput [(ngModel)]="item.tier">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Weight</mat-label>
+        <input matInput [(ngModel)]="item.weight">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Cost</mat-label>
+        <input matInput [(ngModel)]="item.cost">
+    </mat-form-field>
+</div>
+    
+    <mat-form-field class="fullWidth">
+        <mat-label>Description</mat-label>
+        <textarea matInput [(ngModel)]="item.description"></textarea>
+    </mat-form-field>
+
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button [mat-dialog-close]="" cdkFocusInitial>Ok</button>
+</mat-dialog-actions>

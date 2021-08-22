@@ -11,6 +11,7 @@ export interface Item {
     traits: Trait[];
     tier: number;
     description: string;
+    //quantity: number;
 }
 
 export const armorData: Item[] = [
