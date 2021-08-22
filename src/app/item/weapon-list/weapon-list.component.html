@@ -10,12 +10,6 @@
         <td mat-cell *matCellDef="let weapon"> {{weapon.tags.join(", ")}}</td>
       </ng-container>
     
-      <!-- Weight Column -->
-      <ng-container matColumnDef="class">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Class </th>
-        <td mat-cell *matCellDef="let weapon"> {{weapon.class}} </td>
-      </ng-container>
-    
       <!-- Symbol Column -->
       <ng-container matColumnDef="weight">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Weight </th>

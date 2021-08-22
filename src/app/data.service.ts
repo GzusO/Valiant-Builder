@@ -15,10 +15,8 @@ import { Observable, of } from 'rxjs';
 import { characteristicData } from 'data/characteristics';
 import { classData } from 'data/classes';
 import { Tag, tagData } from 'data/tags';
-import { Armor, armorData } from 'data/armors';
-import { ArmorClass, armorClassData } from 'data/armorClasses';
-import { Weapon, weaponData } from 'data/weapons';
-import { Gear, gearData } from 'data/gear';
+import { Item, armorData,weaponData,gearData } from 'data/items';
+
 import { Enchantment,enchantmentData } from 'data/enchantments';
 import { Valiant } from 'data/valiant';
 
@@ -35,7 +33,6 @@ export class DataService {
   classes = classData;
   tags = tagData;
   armors = armorData;
-  armorClasses= armorClassData;
   weapons = weaponData;
   gear = gearData;
   enchantments = enchantmentData;
@@ -77,16 +74,14 @@ export class DataService {
   getTagByName(name: string): Tag | undefined {
     return this.tags.find(x => x.name === name);
   }
-  getArmors(): Observable<Armor[]> {
+  getArmors(): Observable<Item[]> {
     return of(this.armors);
   }
-  getArmorClassByName(name:string): ArmorClass | undefined {
-    return this.armorClasses.find(x=> x.name===name);
-  }
-  getWeapons(): Observable<Weapon[]> {
+  
+  getWeapons(): Observable<Item[]> {
     return of(this.weapons);
   }
-  getGear(): Observable<Gear[]>{
+  getGear(): Observable<Item[]>{
     return of(this.gear);
   }
   getEnchantments(): Observable<Enchantment[]>{

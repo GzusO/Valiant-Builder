@@ -79,7 +79,16 @@ h3 {
     margin-bottom: 0px;
 }
 
-
+.valiantDetails {
+    display: flex;
+    flex-direction: row;
+}
+.info {
+    flex: 6;
+}
+.inventory {
+    flex: 5;
+}
 .fullWidth{
     width: 100%;
 }
@@ -106,26 +115,20 @@ h3 {
     }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
     .card {
        max-width: calc(50% -  1em);
     }
 }
 
-@media screen and (min-width: 768px) {
-    .card {
-       max-width: calc(33% -  1em);
-    }
-}
-
 @media screen and (min-width: 1024px) {
     .card {
-        max-width: calc(25% - 1em);
+        max-width: calc(33% - 1em);
     }
 }
 
 @media screen and (min-width: 1920px) {
     .card {
-        max-width: calc(20% - 1em);
+        max-width: calc(25% - 1em);
     }
 }
