@@ -46,3 +46,7 @@ p {
 .mr-8 {
   margin-right: 8px;
 }
+.fixed-width-dialog .mat-dialog-container {
+  max-width: 80vw !important;
+  width: 80vw !important;
+}

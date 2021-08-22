@@ -1,7 +1,8 @@
 import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { Gear } from 'data/gear';
+import { Item } from 'data/items';
+
 import { DataService } from 'src/app/data.service';
 
 @Component({
@@ -10,8 +11,8 @@ import { DataService } from 'src/app/data.service';
   styleUrls: ['./gear-list.component.scss']
 })
 export class GearListComponent implements OnInit, AfterViewInit {
-  gear: Gear[] =[];
-  gearDataSource = new MatTableDataSource<Gear>();
+  gear: Item[] =[];
+  gearDataSource = new MatTableDataSource<Item>();
   displayedColumns: string[] = ['tier','name', 'tags', 'weight','cost','traits'];
   @ViewChild('gearSort') sortGear: MatSort = new MatSort();
   constructor(private dataService: DataService) { }

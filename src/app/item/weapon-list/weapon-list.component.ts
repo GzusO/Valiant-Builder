@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { Weapon } from 'data/weapons';
+import { Item } from 'data/items';
 import { DataService } from 'src/app/data.service';
 
 @Component({
@@ -10,9 +10,9 @@ import { DataService } from 'src/app/data.service';
   styleUrls: ['./weapon-list.component.scss']
 })
 export class WeaponListComponent implements OnInit, AfterViewInit {
-  weapons: Weapon[] =[];
-  weaponsDataSource = new MatTableDataSource<Weapon>();
-  displayedColumns: string[] = ['name', 'tags', 'class', 'weight','cost','traits'];
+  weapons: Item[] =[];
+  weaponsDataSource = new MatTableDataSource<Item>();
+  displayedColumns: string[] = ['name', 'tags', 'weight','cost','traits'];
 
   @ViewChild('weaponSort') sortWeapons: MatSort = new MatSort();
   constructor(private dataService: DataService) { }

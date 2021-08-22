@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import {ClipboardModule} from '@angular/cdk/clipboard';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -60,6 +61,7 @@ import { FeatureSelectDialogComponent } from './feature/feature-select-dialog/fe
 import { AbilitySelectDialogComponent } from './ability/ability-select-dialog/ability-select-dialog.component';
 import { TraitSelectDialogComponent } from './trait/trait-select-dialog/trait-select-dialog.component';
 import { ValiantRandomizerComponent } from './valiant/valiant-randomizer/valiant-randomizer.component';
+import { ItemEditDialogComponent } from './item/item-edit-dialog/item-edit-dialog.component';
 
 
 @NgModule({
@@ -95,7 +97,8 @@ import { ValiantRandomizerComponent } from './valiant/valiant-randomizer/valiant
     FeatureSelectDialogComponent,
     AbilitySelectDialogComponent,
     TraitSelectDialogComponent,
-    ValiantRandomizerComponent
+    ValiantRandomizerComponent,
+    ItemEditDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -125,7 +128,8 @@ import { ValiantRandomizerComponent } from './valiant/valiant-randomizer/valiant
     MatMenuModule,
     MatDialogModule,
     MatSnackBarModule,
-    ClipboardModule
+    ClipboardModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]

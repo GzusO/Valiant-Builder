@@ -92,92 +92,154 @@
         </div>
     </div>
     
-        
-    <mat-tab-group class="info">
-        <mat-tab label="Description">
-            <div class="valiantProfession">
-                Profession: {{valiant.professions[0]?.name}}
+    <div class="valiantDetails">
+        <mat-tab-group class="info">
+            <mat-tab label="Description">
+                <div class="valiantProfession">
+                    Profession: {{valiant.professions[0]?.name}}
+                </div>
+                <div class="valiantLineages">
+                    Lineage: <span *ngFor="let lineage of valiant.lineages">{{lineage.name}}, </span>
+                </div>
+                <form class="basicInfo">
+                    <table cellspacing="0" class="fullWidth">
+                        <tr>
+                            <td>
+                                <mat-form-field appearance="fill" class="fullWidth">
+                                    <mat-label>Age</mat-label>
+                                    <input matInput [(ngModel)]="valiant.age" name="age">
+                                </mat-form-field>
+                            </td>
+                            <td>
+                                <mat-form-field appearance="fill" class="fullWidth">
+                                    <mat-label>Height</mat-label>
+                                    <input matInput [(ngModel)]="valiant.height" name="height">
+                                </mat-form-field>
+                            </td>
+                            <td>
+                                <mat-form-field appearance="fill" class="fullWidth">
+                                    <mat-label>Weight</mat-label>
+                                    <input matInput [(ngModel)]="valiant.weight" name="weight">
+                                </mat-form-field>
+                            </td>
+                            <td>
+                                <mat-form-field appearance="fill" class="fullWidth">
+                                    <mat-label>Gender</mat-label>
+                                    <input matInput [(ngModel)]="valiant.gender" name="gender">
+                                </mat-form-field>
+                            </td>
+                        </tr>
+                    </table>
+                    <table cellspacing="0" class="fullWidth">
+                        <tr>
+                            <td style="vertical-align: top;">
+                                <mat-form-field appearance="fill" class="fullWidth">
+                                    <mat-label>Appearance</mat-label>
+                                    <textarea matInput [(ngModel)]="valiant.appearance" name="appearance" cdkTextareaAutosize cdkAutosizeMinRows="25"></textarea>
+                                </mat-form-field>
+                            </td>
+                            <td style="vertical-align: top;">
+                                <mat-form-field appearance="fill" class="fullWidth">
+                                    <mat-label>Origin</mat-label>
+                                    <textarea matInput [(ngModel)]="valiant.origin" name="origin" cdkTextareaAutosize cdkAutosizeMinRows="25"></textarea>
+                                </mat-form-field>
+                            </td>
+                            <td style="vertical-align: top;">
+                                <mat-form-field appearance="fill" class="fullWidth">
+                                    <mat-label>Languages</mat-label>
+                                    <textarea matInput [(ngModel)]="valiant.languages" name="languages" cdkTextareaAutosize cdkAutosizeMinRows="25"></textarea>
+                                </mat-form-field>
+                            </td>
+                            <td style="vertical-align: top;">
+                                <mat-form-field appearance="fill" class="fullWidth">
+                                    <mat-label>Description</mat-label>
+                                    <textarea matInput [(ngModel)]="valiant.description" name="description" cdkTextareaAutosize cdkAutosizeMinRows="25"></textarea>
+                                </mat-form-field>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </mat-tab>
+            <mat-tab label="Features">
+                
+                <div class="cards">
+                    <app-feature-card *ngFor="let feat of valiant.features" [feature]=feat [enableMenu]="true" (deleteClicked)="removeFeature($event)" class="card" ></app-feature-card>
+                    <button mat-fab color="primary"(click)="openAddFeatures()"><mat-icon>add</mat-icon></button>
+                </div>
+            </mat-tab>
+            <mat-tab label="Abilities">
+                <div class="cards">
+                    <app-ability-card *ngFor="let ability of abilities" [ability]=ability [enableMenu]="true" (deleteClicked)="removeAbility($event)" class="card"></app-ability-card>
+                    <button mat-fab color="primary"(click)="openAddAbilities()"><mat-icon>add</mat-icon></button>
+                </div>
+            </mat-tab>
+            <mat-tab label="Traits">
+                <div class="cards">
+                    <app-trait-card *ngFor="let trait of traits" [trait]=trait [enableMenu]="true" (deleteClicked)="removeTrait($event)" class="card"></app-trait-card>
+                    <button mat-fab color="primary"(click)="openAddTraits()"><mat-icon>add</mat-icon></button>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+        <div class="inventory">
+            <div class="header">
+                Inventory
+                <button mat-icon-button [matMenuTriggerFor]="invMenu">
+                    <mat-icon>more_vert</mat-icon>
+                </button>
             </div>
-            <div class="valiantLineages">
-                Lineage: <span *ngFor="let lineage of valiant.lineages">{{lineage.name}}, </span>
-            </div>
-            <form class="basicInfo">
-                <table cellspacing="0">
-                    <tr>
-                        <td>
-                            <mat-form-field appearance="fill" >
-                                <mat-label>Age</mat-label>
-                                <input matInput [(ngModel)]="valiant.age" name="age">
-                            </mat-form-field>
-                        </td>
-                        <td>
-                            <mat-form-field appearance="fill" >
-                                <mat-label>Height</mat-label>
-                                <input matInput [(ngModel)]="valiant.height" name="height">
-                            </mat-form-field>
-                        </td>
-                        <td>
-                            <mat-form-field appearance="fill">
-                                <mat-label>Weight</mat-label>
-                                <input matInput [(ngModel)]="valiant.weight" name="weight">
-                            </mat-form-field>
-                        </td>
-                        <td>
-                            <mat-form-field appearance="fill">
-                                <mat-label>Gender</mat-label>
-                                <input matInput [(ngModel)]="valiant.gender" name="gender">
-                            </mat-form-field>
-                        </td>
-                    </tr>
-                </table>
-                <table cellspacing="0" class="fullWidth">
-                    <tr>
-                        <td>
-                            <mat-form-field appearance="fill" class="fullWidth">
-                                <mat-label>Appearance</mat-label>
-                                <textarea matInput [(ngModel)]="valiant.appearance" name="appearance"></textarea>
-                            </mat-form-field>
-                        </td>
-                        <td>
-                            <mat-form-field appearance="fill" class="fullWidth">
-                                <mat-label>Origin</mat-label>
-                                <textarea matInput [(ngModel)]="valiant.origin" name="origin"></textarea>
-                            </mat-form-field>
-                        </td>
-                        <td>
-                            <mat-form-field appearance="fill" class="fullWidth">
-                                <mat-label>Languages</mat-label>
-                                <textarea matInput [(ngModel)]="valiant.languages" name="languages"></textarea>
-                            </mat-form-field>
-                        </td>
-                        <td>
-                            <mat-form-field appearance="fill" class="fullWidth">
-                                <mat-label>Description</mat-label>
-                                <textarea matInput [(ngModel)]="valiant.description" name="description"></textarea>
-                            </mat-form-field>
-                        </td>
-                    </tr>
-                </table>
-            </form>
-        </mat-tab>
-        <mat-tab label="Features">
             
-            <div class="cards">
-                <app-feature-card *ngFor="let feat of valiant.features" [feature]=feat [enableMenu]="true" (deleteClicked)="removeFeature($event)" class="card" ></app-feature-card>
-                <button mat-fab color="primary"(click)="openAddFeatures()"><mat-icon>add</mat-icon></button>
+            <table cellspacing="0" class="fullWidth">
+                <tr>
+                    <td>
+                        <mat-form-field appearance="fill" class="fullWidth">
+                            <mat-label>Tins</mat-label>
+                            <input matInput [(ngModel)]="valiant.tins" name="tins">
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field appearance="fill" class="fullWidth">
+                            <mat-label>Crowns</mat-label>
+                            <input matInput [(ngModel)]="valiant.crowns" name="crowns">
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <mat-form-field appearance="fill" class="fullWidth">
+                            <mat-label>Perls</mat-label>
+                            <input matInput [(ngModel)]="valiant.perls" name="perls">
+                        </mat-form-field>
+                    </td>
+                </tr>
+            </table>
+            <mat-menu #invMenu="matMenu">
+                <!--<button mat-menu-item>
+                Add Existing Item
+                </button>-->
+                <button mat-menu-item (click)="addNewItem()">
+                Add New Item
+                </button>
+            </mat-menu>
+            <div class="example-list" cdkDropList (cdkDropListDropped)="dropItem($event)">
+                <div class="example-box" *ngFor="let item of valiant.inventory" cdkDrag cdkDragLockAxis="y">
+                    <div class="example-handle" cdkDragHandle>
+                        <svg width="24px" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z"></path>
+                          <path d="M0 0h24v24H0z" fill="none"></path>
+                        </svg>
+                    </div>
+                    <div class="itemName">{{item.name}}</div>
+                    <button mat-icon-button [matMenuTriggerFor]="itemMenu" class="itemButton">
+                        <mat-icon>more_vert</mat-icon>
+                    </button>
+                    <mat-menu #itemMenu="matMenu">
+                        <button mat-menu-item (click)="editItem(item)">
+                        Modify
+                        </button>
+                        <button mat-menu-item (click)="deleteItem(item)">
+                        Delete
+                        </button>
+                    </mat-menu>
+                </div>
             </div>
-        </mat-tab>
-        <mat-tab label="Abilities">
-            <div class="cards">
-                <app-ability-card *ngFor="let ability of abilities" [ability]=ability [enableMenu]="true" (deleteClicked)="removeAbility($event)" class="card"></app-ability-card>
-                <button mat-fab color="primary"(click)="openAddAbilities()"><mat-icon>add</mat-icon></button>
-            </div>
-        </mat-tab>
-        <mat-tab label="Traits">
-            <div class="cards">
-                <app-trait-card *ngFor="let trait of traits" [trait]=trait [enableMenu]="true" (deleteClicked)="removeTrait($event)" class="card"></app-trait-card>
-                <button mat-fab color="primary"(click)="openAddTraits()"><mat-icon>add</mat-icon></button>
-            </div>
-        </mat-tab>
-    </mat-tab-group>   
+        </div>
+    </div>   
 </div>

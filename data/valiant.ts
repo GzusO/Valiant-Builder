@@ -3,6 +3,7 @@ import { Feature } from "src/app/feature/Feature";
 import { Lineage } from "src/app/lineage/Lineage";
 import { Profession } from "src/app/profession/Profession";
 import { Trait } from "src/app/Trait";
+import { Item } from "./items";
 
 export class Valiant {
     id: number;
@@ -14,6 +15,10 @@ export class Valiant {
     traits: Trait[];
     tier: number;
     professions: Profession[];
+    inventory: Item[];
+    tins: number = 0;
+    crowns: number = 0;
+    perls: number = 0;
     //Attributes
     enduranceMax: number=1;
     enduranceCurrent: number=1;
@@ -50,6 +55,7 @@ export class Valiant {
         this.tier = 0;
         this.professions = [];
         this.id = -1;
+        this.inventory = [];
     }
 }
 
