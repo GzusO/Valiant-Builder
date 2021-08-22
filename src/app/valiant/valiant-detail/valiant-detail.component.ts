@@ -11,6 +11,8 @@ import { FeatureSelectDialogComponent } from 'src/app/feature/feature-select-dia
 import { Trait } from 'src/app/Trait';
 import { TraitSelectDialogComponent } from 'src/app/trait/trait-select-dialog/trait-select-dialog.component';
 import { ValiantExportDialogComponent } from '../valiant-export-dialog/valiant-export-dialog.component';
+import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
+import { Item } from 'data/items';
 
 @Component({
   selector: 'app-valiant-detail',
@@ -96,5 +98,11 @@ export class ValiantDetailComponent implements OnInit {
     this.valiant!.abilities = this.valiant!.abilities.filter(x=> x!== ability);
     this.dataService.updateValiant(this.valiant!);
     this.getValiantAbilities();
+  }
+  addNewItem(): void {
+    this.valiant!.inventory.push({name:'New Item',tags:[],weight:0,cost:0,abilities:[],traits:[],tier:0,description:'',types:[]},)
+  }
+  drop(event: any ) {
+    moveItemInArray(this.valiant!.inventory, event.previousIndex, event.currentIndex);
   }
 }

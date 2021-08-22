@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import {ClipboardModule} from '@angular/cdk/clipboard';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -125,7 +126,8 @@ import { ValiantRandomizerComponent } from './valiant/valiant-randomizer/valiant
     MatMenuModule,
     MatDialogModule,
     MatSnackBarModule,
-    ClipboardModule
+    ClipboardModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]
