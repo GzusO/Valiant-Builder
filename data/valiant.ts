@@ -16,6 +16,9 @@ export class Valiant {
     tier: number;
     professions: Profession[];
     inventory: Item[];
+    tins: number = 0;
+    crowns: number = 0;
+    perls: number = 0;
     //Attributes
     enduranceMax: number=1;
     enduranceCurrent: number=1;

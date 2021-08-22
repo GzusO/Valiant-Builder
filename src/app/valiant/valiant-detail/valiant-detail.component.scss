@@ -88,6 +88,15 @@ h3 {
 }
 .inventory {
     flex: 5;
+    padding: 0px 4px 4px 4px;
+}
+.inventory .header{
+    height: 48px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    align-items: center;
 }
 .fullWidth{
     width: 100%;
@@ -135,30 +144,33 @@ h3 {
 
 
 .example-list {
-    width: 500px;
     max-width: 100%;
-    border: solid 1px #ccc;
+    margin: 4px;
     min-height: 60px;
     display: block;
-    background: white;
     border-radius: 4px;
     overflow: hidden;
   }
   
   .example-box {
     padding: 20px 10px;
-    border-bottom: solid 1px #ccc;
-    color: rgba(0, 0, 0, 0.87);
+    color: white;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
-    cursor: move;
-    background: white;
+    background: #424242;
     font-size: 14px;
+    margin: 4px;
   }
-  
+  .example-handle {
+    color: #ccc;
+    cursor: move;
+    width: 24px;
+    height: 24px;
+  }
+
   .cdk-drag-preview {
     box-sizing: border-box;
     border-radius: 4px;

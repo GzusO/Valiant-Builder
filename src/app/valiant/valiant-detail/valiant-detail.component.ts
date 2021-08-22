@@ -102,7 +102,7 @@ export class ValiantDetailComponent implements OnInit {
   addNewItem(): void {
     this.valiant!.inventory.push({name:'New Item',tags:[],weight:0,cost:0,abilities:[],traits:[],tier:0,description:'',types:[]},)
   }
-  drop(event: any ) {
+  dropItem(event: any ) {
     moveItemInArray(this.valiant!.inventory, event.previousIndex, event.currentIndex);
   }
 }
