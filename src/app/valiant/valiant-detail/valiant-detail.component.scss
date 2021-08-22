@@ -100,8 +100,11 @@ h3 {
 }
 .fullWidth{
     width: 100%;
+    
 }
-
+.inventory .fullWidth {
+    padding: 4px;
+}
 .cards {
     display: flex;
     flex-wrap: wrap;
