@@ -12,10 +12,10 @@ export interface Enchantment {
 
 export const enchantmentData: Enchantment[] = [
     //Tier 0
-    {name:'Cleanliness',validItems:['All Items'],cost:100,abilities:[],traits:[],tier:0},
-    {name:'Invigorating',validItems:['Armor Sets','Accessories'],cost:500,abilities:[],traits:[],tier:0},
-    {name:'Lightness',validItems:['Weapons','Armor Sets','Accessories'],cost:100,abilities:[],traits:[],tier:0},
-    {name:'Providing',validItems:['Accessories with container trait'],cost:250,abilities:[],traits:[],tier:0},
+    {name:'Cleanliness',validItems:['All Items'],cost:75,abilities:[],traits:[],tier:0},
+    {name:'Invigorating',validItems:['Armor Sets','Accessories'],cost:250,abilities:[],traits:[],tier:0},
+    {name:'Lightness',validItems:['Weapons','Armor Sets','Accessories'],cost:50,abilities:[],traits:[],tier:0},
+    {name:'Providing',validItems:['Accessories with container trait'],cost:100,abilities:[],traits:[],tier:0},
     
     //Tier 1
     {name:'Forceful',validItems:['Weapons'],cost:1500,abilities:[],traits:[],tier:1},
