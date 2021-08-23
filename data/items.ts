@@ -36,7 +36,7 @@ export const armorData: Item[] = [
     {name:'Soothe Stone',tags:['Size-Small'],weight:1,cost:1250,abilities:[],traits:[],tier:1,description:'',types:['Accessory']},
     
     //Tier 2
-    {name:'Gleaming Headband',tags:['Size-Small'],weight:1,cost:4500,abilities:[],traits:[],tier:2,description:'',types:['Accessory']},
+    {name:'Gleaming Goggles',tags:['Size-Small'],weight:1,cost:4500,abilities:[],traits:[],tier:2,description:'',types:['Accessory']},
     {name:'Spelljammer\'s Bracer',tags:['Size-Small'],weight:2,cost:3500,abilities:[],traits:[],tier:2,description:'',types:['Accessory']},
     {name:'Quick Stone',tags:['Size-Small'],weight:1,cost:4000,abilities:[],traits:[],tier:2,description:'',types:['Accessory']},
     
