@@ -275,6 +275,8 @@ export const featureData: Feature[] =[
     {name:'Paralyzing Presence',types:['Class','Primary','Specialist'],description:'A cold, hard look can be as intimidating as any blade or spell.', tier:4,abilities:[],traits:[]},
     {name:'Restorative Clarity',types:['Class','Primary','Specialist'],description:'A cripplied combatant is almost always doomed to soon become a dead combatant.', tier:4,abilities:[],traits:[]},
     {name:'Target Identification',types:['Class','Primary','Specialist'],description:'Organized grunts can overcome lone heroes with frightening ease.', tier:5,abilities:[],traits:[]},
+    {name:'Lightning Reflex',types:['Class','Primary','Specialist'],description:'Stke first and strike hard.', tier:6,abilities:[],traits:[]},
+    
     {name:'The Perfect Moment',types:['Class','Primary','Specialist'],description:'Everything was possible, even if just for a brief moment.', tier:9,abilities:[],traits:[]},
     {name:'Careful Timing',types:['Class','Primary','Specialist'],description:'You can manage a lot in a short amount of time.', tier:9,abilities:[],traits:[]},
     {name:'Ego Death',types:['Class','Primary','Specialist'],description:'There is no I.', tier:9,abilities:[],traits:[]},
