@@ -36,7 +36,6 @@ export const enchantmentData: Enchantment[] = [
     {name:'Glasscharm',validItems:['Weapons'],cost:7000,abilities:[],traits:[],tier:3},
     {name:'Null Storage',validItems:['Weapons','Gear with the Wielded tag'],cost:6000,abilities:[],traits:[],tier:3},
     {name:'Ragecharm',validItems:['Weapons'],cost:7000,abilities:[],traits:[],tier:3},
-    {name:'Returning',validItems:['Weapons with the thrown tag.'],cost:7500,abilities:[],traits:[],tier:3},
     
     //Tier 4
     {name:'Hyperlethal',validItems:['Weapons'],cost:15000,abilities:[],traits:[],tier:4},

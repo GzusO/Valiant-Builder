@@ -329,7 +329,6 @@ export const traitData: Trait[] = [
     {name:'Improved Glasscharm',types:['Enchantment','Glasscharm'],description:'All attack abilities attached to this weapon have their attack increased by 1 additional point (if they have a non-zero attack defined) for every extra enchantment tier. You suffer an additional -1 defence for every extra enchantment tier.',tier:3},
     {name:'Ragecharm',types:['Enchantment','Ragecharm'],description:'All attack abilities attached to this weapon have their energy damage increase by 4. You suffer -4 resistane.',tier:3},
     {name:'Improved Ragecharm',types:['Enchantment','Ragecharm'],description:'All attack abilities attached to this weapon have their energy damage increase by 1 additional point for every extra enchantment tier. You suffer an additional -1 resistane for every extra enchantment tier.',tier:3},
-    {name:'Returning',types:['Enchantment','Returning'],description:'When thrown as part of a ranged attack, this weapon returns to your hand as the attack ability resolves.',tier:3},
     
     //Tier 4       
     {name:'Hyperlethal',types:['Enchantment','Hyperlethal'],description:'Whenever abilities attached to this weapon reduce a target\'s endurance, reduce the target\'s endurance by an additional point.',tier:4},

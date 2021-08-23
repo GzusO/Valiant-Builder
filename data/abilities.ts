@@ -275,9 +275,6 @@ export const abilityData: Ability[] =[
     {name:'Block',types:['Weapon','Medium Shield'],primaryTags:['Energy 2','Combat'],secondaryTags:['Reaction'],tertiaryTags:[],description:'Counter: Gain +5 Defence during the contest of the triggering attack ability.',tier:0,attack:0,energyDamage:0,scaling:'This ability gives an additional 2 Defence for every weapon tier above 0.'},
     {name:'Heavy Block',types:['Weapon','Large Shield'],primaryTags:['Energy 3','Combat'],secondaryTags:['Reaction'],tertiaryTags:[],description:'Counter: Gain +7 Defence during the contest of the triggering attack ability.',tier:0,attack:0,energyDamage:0,scaling:'This ability gives an additional 3 Defence for every weapon tier above 0.'},
     
-    {name:'Weapon Throw',types:['Weapon'],primaryTags:['Energy 1','Combat'],secondaryTags:['Action'],tertiaryTags:['Range 5'],description:'Use another one of this weapon\'s attacks as a range attack instead of a melee attack, with the specified range. As part of this ability, you may equip any other weapon you own.',tier:0,attack:0,energyDamage:0,scaling:''},
-    
-
     //Gear Abilities 
     //Tier 0
     {name:'Alarm System',types:['Gear','Alarm System'],primaryTags:['Energy 0','Combat'],secondaryTags:['Charged Action 5 minutes'],tertiaryTags:[],description:'Set up an alarm perimeter of up to 100 ft. that lasts for 10 hours. Any character crossing the perimeter sounds the alarm. This ability can also be used to pick up the alarms, restoring one of this gear\'s consumable uses.',tier:0,attack:0,energyDamage:0,scaling:''},
