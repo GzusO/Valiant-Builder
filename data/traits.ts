@@ -122,7 +122,7 @@ export const traitData: Trait[] = [
     //Charactertistic Traits
 
     //Physical Power Traits
-    {name:'Weight Threshold',types:['Characteristic','Meek Form','Physical Power'],description:'Your base weight threshold is 50 lb. Your total weight threshold is your base threshold multiplied by your Physical Power score.',tier:0},
+    {name:'Weight Threshold',types:['Characteristic','Meek Form','Physical Power'],description:'Your base weight threshold is 75 lb. Your total weight threshold is your base threshold multiplied by your Physical Power score.',tier:0},
     {name:'Strength',types:['Characteristic','Athletic Form','Physical Power'],description:'When you gain this trait, choose one of the following bonuses: - Gain +2 Lethality and +2 Force. - Gain +3 Lethality and +1 Force. - Gain +1 Lethality and +3 Force.',tier:0},
     {name:'Improved Strength',types:['Characteristic','Perfect Form','Physical Power'],description:'When you gain this trait, choose one of the following bonuses: - Gain +2 Lethality and +2 Force. - Gain +3 Lethality and +1 Force. - Gain +1 Lethality and +3 Force',tier:0},
     {name:'Improved Weight Threshold',types:['Characteristic','Powerful Build','Physical Power'],description:'Increase your base threshold by 25 lb.',tier:0},
