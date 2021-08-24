@@ -245,6 +245,7 @@ export const featureData: Feature[] =[
     {name:'Practiced Experimentation',types:['Class','Primary','Arcanist'],description:'You\'re what more classical arcanist would call "dangerously adventurous".', tier:3,abilities:[],traits:[]},
     
     {name:'Masterful Extensions',types:['Class','Primary','Arcanist'],description:'Brief flashes of power are novice displays. True masters of the arcane can maintain deadly effects for extended periods of time, ravaging battlefields with deadly energies.', tier:9,abilities:[],traits:[]},
+    {name:'Arcane Sculpting',types:['Class','Primary','Arcanist'],description:'You somehow blur the line between artist and living weapon of mass destruction.', tier:9,abilities:[],traits:[]},
     
     {name:'Utter Mastery',types:['Class','Primary','Arcanist'],description:'Your complete mastery over the arcane allows you to bypass the accepted laws of the physical world and create energy from nothing.', tier:10,abilities:[],traits:[]},
     
@@ -259,6 +260,7 @@ export const featureData: Feature[] =[
     {name:'Telepathic Communication',types:['Class','Secondary','Arcanist'],description:'You\'ve figured out telepathy, which is much more complicated than it may seem.', tier:3,abilities:[],traits:[]},
     {name:'Remote Observation',types:['Class','Secondary','Arcanist'],description:'Elite arcanist can, to an extend, exist in two places at once.', tier:6,abilities:[],traits:[]},
     
+
     //Specialist Features
     {name:'Specialists',types:['Class','Global','Specialist'],description:'You are a specialist, a sharp-witted agent able to manipulate others in and out of combat.', tier:1,abilities:[],traits:[]},
     
