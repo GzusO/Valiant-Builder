@@ -184,7 +184,7 @@ export const traitData: Trait[] = [
     
     {name:'Force Buildup',types:['Class','Warrior','Trading Blows'],description:'Gain +1 force whenever you take energy damage. this boon lasts until combat ends.',tier:3},
     {name:'Deflecting',types:['Class','Warrior','Active Defenses'],description:'Any parry abilities you use can be triggered on any attack abilities, instead of just melee attack abilities. Additionally, all medium shields grant you cover from ranged attack abilities while wielded in at least one hand.',tier:4},
-    {name:'Shielded Barrage',types:['Class','Warrior','Lancer'],description:'You may wield a shield while wielding a carbine, rifle, arcane carbine, or arcane rifle.',tier:5},
+    {name:'Shielded Barrage',types:['Class','Warrior','Lancer'],description:'You may wield a shield while wielding a carbine, rifle, arcane carbine, or arcane rifle. Ignore the unwieldly tag on carbines, rifles, arcane carbines, or arcane rifles.',tier:5},
     
     {name:'Masterful Attacks',types:['Class','Warrior','Masterful Maneuvers'],description:'You may apply an additional attack modifier ability to your attack abilities.',tier:6},
     {name:'Additional Stance',types:['Class','Warrior','Masterful Stances'],description:'You may use an additional stance ability during the round begin phase.',tier:6},
