@@ -17,9 +17,9 @@ export interface Item {
 export const armorData: Item[] = [
     //Armor Sets
     {name:'Light',tags:['Size-Medium'],weight:10,cost:100,abilities:[],traits:[],tier:0,description:'',types:[]},
-    {name:'Medium',tags:['Size-Medium'],weight:25,cost:250,abilities:[],traits:[],tier:0,description:'',types:[]},
-    {name:'Heavy',tags:['Size-Large'],weight:50,cost:500,abilities:[],traits:[],tier:0,description:'',types:[]},
-    {name:'Ultra-Heavy',tags:['Size-Large'],weight:75,cost:1000,abilities:[],traits:[],tier:0,description:'',types:[]},
+    {name:'Medium',tags:['Size-Medium'],weight:20,cost:250,abilities:[],traits:[],tier:0,description:'',types:[]},
+    {name:'Heavy',tags:['Size-Large'],weight:35,cost:500,abilities:[],traits:[],tier:0,description:'',types:[]},
+    {name:'Ultra-Heavy',tags:['Size-Large'],weight:50,cost:750,abilities:[],traits:[],tier:0,description:'',types:[]},
 
     //Accessories 
     //Tier 0
@@ -27,7 +27,7 @@ export const armorData: Item[] = [
     {name:'Cloak',tags:['Size-Medium',],weight:4,cost:25,abilities:[],traits:[],tier:0,description:'',types:['Accessory']},
     {name:'Necklace',tags:['Size-Small'],weight:0,cost:75,abilities:[],traits:[],tier:0,description:'',types:['Accessory']},
     {name:'Ring',tags:['Size-Tiny'],weight:0,cost:75,abilities:[],traits:[],tier:0,description:'',types:['Accessory']},
-    {name:'Satchel',tags:['Size-Small'],weight:1,cost:25,abilities:[],traits:[],tier:0,description:'',types:['Accessory']},
+    {name:'Munition Pouch',tags:['Size-Small'],weight:1,cost:100,abilities:[],traits:[],tier:0,description:'',types:['Accessory']},
     {name:'Simple Charm',tags:['Size-Small'],weight:1,cost:50,abilities:[],traits:[],tier:0,description:'',types:['Accessory']},
     
     //Tier 1
@@ -36,7 +36,7 @@ export const armorData: Item[] = [
     {name:'Soothe Stone',tags:['Size-Small'],weight:1,cost:1250,abilities:[],traits:[],tier:1,description:'',types:['Accessory']},
     
     //Tier 2
-    {name:'Gleaming Headband',tags:['Size-Small'],weight:1,cost:4500,abilities:[],traits:[],tier:2,description:'',types:['Accessory']},
+    {name:'Gleaming Goggles',tags:['Size-Small'],weight:1,cost:4500,abilities:[],traits:[],tier:2,description:'',types:['Accessory']},
     {name:'Spelljammer\'s Bracer',tags:['Size-Small'],weight:2,cost:3500,abilities:[],traits:[],tier:2,description:'',types:['Accessory']},
     {name:'Quick Stone',tags:['Size-Small'],weight:1,cost:4000,abilities:[],traits:[],tier:2,description:'',types:['Accessory']},
     
@@ -53,6 +53,7 @@ export const gearData: Item[] = [
     {name:'Lantern',tags:['Size-Small','Wielded 1','Worn'],weight:2,cost:50,abilities:[],traits:[],tier:0,description:'',types:[]},
     {name:'Trauma Kit',tags:['Size-Small','Wielded 2','Consumable 1'],weight:5,cost:100,abilities:[],traits:[],tier:0,description:'',types:[]},
     {name:'Pavise Shield',tags:['Size-Large','Wielded 2,','Consumable 1'],weight:10,cost:75,abilities:[],traits:[],tier:0,description:'',types:[]},
+    {name:'Fire Bomb',tags:['Size-Small','Wielded 1,','Consumable 1'],weight:2,cost:50,abilities:[],traits:[],tier:0,description:'',types:[]},
     
     //Tier 1
     {name:'Caffeinated Brew',tags:['Size-Small','Wielded 1','Consumable 1'],weight:1,cost:1500,abilities:[],traits:[],tier:1,description:'',types:[]},
@@ -102,13 +103,13 @@ export const weaponData: Item[] =[
     {name:'Heavy Bladed Polearm',tags:['Size-Large','Melee','Two-Handed','Reach 1'],weight:7,cost:250,abilities:[],traits:[],tier:0,description:'',types:[]},
     {name:'Heavy Hybrid Polearm',tags:['Size-Large','Melee','Two-Handed','Reach 1'],weight:9,cost:500,abilities:[],traits:[],tier:0,description:'',types:[]},
     
-    {name:'Bow',tags:['Size-Medium','Projectile 8','Two-Handed'],weight:3,cost:100,abilities:[],traits:[],tier:0,description:'',types:[]},
-    {name:'Crossbow',tags:['Size-Medium','Projectile 8','Two-Handed'],weight:8,cost:100,abilities:[],traits:[],tier:0,description:'',types:[]},
-    {name:'Short Gun',tags:['Size-Small','Projectile 8','Two-Handed'],weight:3,cost:150,abilities:[],traits:[],tier:0,description:'',types:[]},
-    {name:'Arcane Short Gun',tags:['Size-Small','Arcane','Projectile 6','Reach 3','Two-Handed'],weight:5,cost:250,abilities:[],traits:[],tier:0,description:'',types:[]},
-    {name:'Heavy Bow',tags:['Size-Large','Projectile 6','Two-Handed','Unwieldly'],weight:6,cost:200,abilities:[],traits:[],tier:0,description:'',types:[]},
-    {name:'Heavy Crossbow',tags:['Size-Medium','Projectile 6','Two-Handed','Unwieldly'],weight:12,cost:250,abilities:[],traits:[],tier:0,description:'',types:[]},
-    {name:'Carbine',tags:['Size-Medium','Projectile 6','Two-Handed','Unwieldly'],weight:5,cost:400,abilities:[],traits:[],tier:0,description:'',types:[]},
+    {name:'Bow',tags:['Size-Medium','Projectile 5','Two-Handed'],weight:3,cost:100,abilities:[],traits:[],tier:0,description:'',types:[]},
+    {name:'Crossbow',tags:['Size-Medium','Projectile 5','Two-Handed'],weight:8,cost:100,abilities:[],traits:[],tier:0,description:'',types:[]},
+    {name:'Short Gun',tags:['Size-Small','Projectile 5','Two-Handed'],weight:3,cost:150,abilities:[],traits:[],tier:0,description:'',types:[]},
+    {name:'Arcane Short Gun',tags:['Size-Small','Arcane','Projectile 4','Reach 3','Two-Handed'],weight:5,cost:250,abilities:[],traits:[],tier:0,description:'',types:[]},
+    {name:'Heavy Bow',tags:['Size-Large','Projectile 4','Two-Handed','Unwieldly'],weight:6,cost:200,abilities:[],traits:[],tier:0,description:'',types:[]},
+    {name:'Heavy Crossbow',tags:['Size-Medium','Projectile 4','Two-Handed','Unwieldly'],weight:12,cost:250,abilities:[],traits:[],tier:0,description:'',types:[]},
+    {name:'Carbine',tags:['Size-Medium','Projectile 4','Two-Handed','Unwieldly'],weight:5,cost:400,abilities:[],traits:[],tier:0,description:'',types:[]},
     {name:'Arcane Carbine',tags:['Size-Medium','Arcane','Projectile 3','Reach 5','Two-Handed','Unwieldly'],weight:10,cost:500,abilities:[],traits:[],tier:0,description:'',types:[]},
     {name:'Great Bow',tags:['Size-Large','Projectile 3','Two-Handed','Unwieldly','Heavy'],weight:12,cost:400,abilities:[],traits:[],tier:0,description:'',types:[]},
     {name:'Great Crossbow',tags:['Size-Large','Projectile 3','Two-Handed','Unwieldly','Heavy'],weight:18,cost:500,abilities:[],traits:[],tier:0,description:'',types:[]},
