@@ -69,7 +69,9 @@ export const traitData: Trait[] = [
     //Hjark Traits
     {name:'Cold Resistance',types:['Lineage','Hjark','Chilled Veins'],description:'You are immune to the effects of freezing travel tiles.',tier:0},
     {name:'Resistance Reduction Immunity',types:['Lineage','Hjark','Winterhide'],description:'You are immune to attribute ailments that reduce your resistance.',tier:0},
-    {name:'Steady Footing',types:['Lineage','Hjark','Highlander'],description:'Characters cannot gain a height advantage against you. Ignore effects of precarious tiles.',tier:0},
+    {name:'Steady Footing',types:['Lineage','Hjark','Highlander'],description:'Characters that target you with attacks do not gain height advantage bonuses on those attacks. Ignore the effects of precarious tiles.',tier:0},
+    {name:'Climbing',types:['Lineage','Hjark','Highlander'],description:'You may climb one tile per movement, rather than spending two points of movement per tile climbed.',tier:0},
+    
     {name:'Meticulous Crafts',types:['Lineage','Hjark','Family Business'],description:'You can create weapons and armor 1 tier higher than you normally could, paying 1.5 times the cost for that tier.',tier:0},
     {name:'Self-Reliant',types:['Lineage','Hjark','Needless'],description:'Your provision requirement is 0.',tier:0},
     {name:'Jolly',types:['Lineage','Hjark','Warmth of Winter'],description:'People will almost always converse with you at gatherings.',tier:0},
@@ -110,7 +112,7 @@ export const traitData: Trait[] = [
     //Vyld Traits
     {name: 'Recognizable', types: ['Lineage','Unfamiliar Form','Vyld'], description: 'Unless completely covered, you stand out in town and cities and are recognizable as Vyld. Common people oftenreact to your presence in exaggerated ways.',tier:0},
     {name:'Vyld Lethality',types:['Lineage','Vyld','Masterful Motion'],description:'Gain +1 lethality.',tier:0},
-    {name:'Natural Armor',types:['Lineage','Vyld','Bone Plating'],description:'While not wearing armor sets, you gain +2 defence and +1 resistance. You gain an additional +1 defence for every character tier above 0.',tier:0},
+    {name:'Natural Armor',types:['Lineage','Vyld','Bone Plating'],description:'While not wearing armor sets, you gain +3 defence and +1 resistance. You gain an additional +2 defence for every character tier above 0.',tier:0},
     {name:'Vyld Darksight',types:['Lineage','Vyld','Adapted Eyes'],description:'You gain darksight.',tier:0},
     {name:'Mutant',types:['Lineage','Vyld','Spontaneous Mutations'],description:'You may have an additional active transformation.',tier:0},
     {name:'Forced Survival',types:['Lineage','Vyld','Ancestral Instinct'],description:'Your travel group gains + 10 provisions when travelling into, travelling out of, or resting in dangerous tiles.',tier:0},
@@ -122,11 +124,12 @@ export const traitData: Trait[] = [
     //Charactertistic Traits
 
     //Physical Power Traits
-    {name:'Weight Threshold',types:['Characteristic','Meek Form','Physical Power'],description:'Your base weight threshold is 50 lb. Your total weight threshold is your base threshold multiplied by your Physical Power score.',tier:0},
+    {name:'Weight Threshold',types:['Characteristic','Meek Form','Physical Power'],description:'Your base weight threshold is 75 lb. Your total weight threshold is your base threshold multiplied by your Physical Power score.',tier:0},
+    {name:'Battle Bully',types:['Characteristic','Phyiscal Power','Physical Training'],description:'When you use the Shove ability, increase the distance your target is pushed by 1 tile. When you use the Grab ability, increase the focus threshold of the ability by 8.',tier:0},
     {name:'Strength',types:['Characteristic','Athletic Form','Physical Power'],description:'When you gain this trait, choose one of the following bonuses: - Gain +2 Lethality and +2 Force. - Gain +3 Lethality and +1 Force. - Gain +1 Lethality and +3 Force.',tier:0},
     {name:'Improved Strength',types:['Characteristic','Perfect Form','Physical Power'],description:'When you gain this trait, choose one of the following bonuses: - Gain +2 Lethality and +2 Force. - Gain +3 Lethality and +1 Force. - Gain +1 Lethality and +3 Force',tier:0},
-    {name:'Improved Weight Threshold',types:['Characteristic','Powerful Build','Physical Power'],description:'Increase your base threshold by 25 lb.',tier:0},
-    
+
+
     //Physical Acuity Traits
     {name:'Basic Movement',types:['Characteristic','Physical Acuity','Simple Agility'],description:'You have a base movment of 5.',tier:0},
     {name:'Movement',types:['Characteristic','Physical Acuity','Honed Agility'],description:'Gain +1 movement.',tier:0},
@@ -163,6 +166,9 @@ export const traitData: Trait[] = [
     {name:'Beginner\'s Strategies',types:['Class','Aspirant','Tactical Basics'],description:'When you gain this trait, learn one tier 1 trait from the Specialist Strategies pool. You also gain access to the Strategy Application trait from the Specialist global feature that can be used to apply that strategy. If you gain access to additional strategies by investing into the Specialist class path, keep this strategy in your known Specialist Strategies pool. See the Specialist global feature for more information.',tier:0},
     {name:'Ascendant',types:['Class','Aspirant','Ascendant Bond'],description:'A small, sentient being (your Ascendant) capable of flight follows you, taking a form of your choosing. Your Ascendant is destroyed if it is more than 10 ft. away from you, if any attack ability targeting it resolves (it can be targeted by attack abilities as if it were a character), or if it is subjected to any environmental hazards. If your Ascendant is destroyed, it reforms in 1 hour. Your ascendant can manipulate objects no heavier than 5 lb.',tier:0},
     {name:'Ascendant Link',types:['Class','Aspirant','Ascendant Bond'],description:'You and your Ascendant can communicate telepathically. Due to your Ascendant\'s innate senses, you cannot be blind or conditionally blind to any characters within 10 ft. of you while your Ascendant is alive. Using and maintaining the effects of any of your Ascendant abilities requires your Ascendant to be alive.',tier:0},
+    {name:'Marked Assault',types:['Class','Aspirant','Marked Prey'],description:'Attack modifier abilities appplied to attack abilities targeting only your marked character cost 0 energy.',tier:0},
+    {name:'Marked Tracking',types:['Class','Aspirant','Marked Prey'],description:'You can always track your marked character given there are tracks to follow. You can identify a marked character as long as you can see them, even if they are disguised (excluding invisible characters).',tier:0},
+    
     {name:'Thrill of Combat',types:['Class','Aspirant','Daring Flair'],description:'You gain +1 lethality and +1 defence for every enemy character that is adjacent to you.',tier:0},
     {name:'Lightened Loads',types:['Class','Aspirant','Light Traveler'],description:'Your tavel group gains +2 range.',tier:0},
     {name:'Simple Market Knowledge',types:['Class','Aspirant','Basic Economy'],description:'You always know if a trade you are making is not in your favor.',tier:0},
@@ -179,12 +185,12 @@ export const traitData: Trait[] = [
     {name:'Advantageous Attacks',types:['Class','Warrior','Martial Finesse'],description:'Gain +1 to the total roll of your attack contests that target enemies adjacent to one or more of your allies.',tier:1},
     {name:'Rage',types:['Class','Warrior','Adrenaline Rush'],description:'You gain +3 lethality and +3 force while you suffer the winded status.',tier:2},
     {name:'Heavy Armor Training',types:['Class','Warrior','Battle Conditioning'],description:'Ignore up to 1 points of Finesse reduction that come from your worn armor.',tier:2},
-    {name:'Weapon Flurry',types:['Class','Warrior','Dual-Wielding'],description:'Gain +2 lethality and +2 defence while wielding two one-handed, non-shield weapons.',tier:2},
+    {name:'Weapon Flurry',types:['Class','Warrior','Dual-Wielding'],description:'Gain +1 Lethality, +1 Force, and +2 Defence while wielding two one-handed, non-shield weapons.',tier:2},
     {name:'Gunslinger',types:['Class','Warrior','Dual-Wielding'],description:'Ignore the two-handed tag on short guns and arcane short guns.',tier:2},
     
     {name:'Force Buildup',types:['Class','Warrior','Trading Blows'],description:'Gain +1 force whenever you take energy damage. this boon lasts until combat ends.',tier:3},
     {name:'Deflecting',types:['Class','Warrior','Active Defenses'],description:'Any parry abilities you use can be triggered on any attack abilities, instead of just melee attack abilities. Additionally, all medium shields grant you cover from ranged attack abilities while wielded in at least one hand.',tier:4},
-    {name:'Shielded Barrage',types:['Class','Warrior','Lancer'],description:'You may wield a shield while wielding a carbine, rifle, arcane carbine, or arcane rifle.',tier:5},
+    {name:'Shielded Barrage',types:['Class','Warrior','Lancer'],description:'You may wield a shield while wielding a carbine, rifle, arcane carbine, or arcane rifle. Ignore the unwieldly tag on carbines, rifles, arcane carbines, or arcane rifles.',tier:5},
     
     {name:'Masterful Attacks',types:['Class','Warrior','Masterful Maneuvers'],description:'You may apply an additional attack modifier ability to your attack abilities.',tier:6},
     {name:'Additional Stance',types:['Class','Warrior','Masterful Stances'],description:'You may use an additional stance ability during the round begin phase.',tier:6},
@@ -207,7 +213,7 @@ export const traitData: Trait[] = [
     {name:'Improved Repertoire',types:['Class','Arcanist','Arcanists'],description:'At invested tiers 3, 6, 9, and 10, you may augment a single ability in your repertoire, permanently granting it one of the following bonuses (you may augment the same ability multiple times, with effects stacking): Reduce its energy cost by 1 (cannot reduce energy costs below 1). Increase its focus threshold by 3. When you use the ability, treat your character tier as one higher for ability scaling.',tier:0},
     {name:'Expanded Repertoire',types:['Class','Arcanist','Arcanists'],description:'You can learn new abilities from the Arcanist Repertoire pool, as long as their tier is equal to or less than your Arcanist class path invested tier. to add a new ability to your repertoire, the following requirements must be satistfied: you must spend a week of downtime per ability tier with no breaks or major interruptions. You must have uninterrupted access to a study amenity of a tier equal to or greater than the tier of the ability you are learning. You must spend 1,000t tins, where t is the ability tier, to gain access to the proper materials and facilities needed to learn the ability. After these conditions are satisfied, you gain access to the ability.',tier:0},
     {name:'Enchanter',types:['Class','Arcanist','Arcanists'],description:'You may apply and remove enchantments and craft arcane items.',tier:0},
-    {name:'Energy Efficiency',types:['Class','Arcanist','Practiced Repertoire'],description:'Reduce the energy cost of your Arcanist Repertoire abilities by 1.',tier:1},
+    {name:'Energy Efficiency',types:['Class','Arcanist','Practiced Repertoire'],description:'Reduce the energy cost of your Arcanist Repertoire abilities by 1. This cannot reduce the cost of abilities below 1.',tier:1},
     {name:'Steadfast Focus',types:['Class','Arcanist','Steady Mind'],description:'Increase your focus thresholds by your Mental Resilience score.',tier:1},
     {name:'Hardened Focus',types:['Class','Arcanist','Steady Mind'],description:'You gain +1 resistance for each instance of focus you are maintaining.',tier:1},
     {name:'Arcane Medicine',types:['Class','Arcanist','Arcane Restoration'],description:'Whenever one of your effects restores a character\'s energy, that effect restores additional energy equal to your tier.',tier:2},
@@ -216,10 +222,11 @@ export const traitData: Trait[] = [
     
     {name:'Passive Focus',types:['Class','Arcanist','Hyperconscious'],description:'You do not lose focus when incapacitated.',tier:3},
     {name:'Experimenter',types:['Class','Arcanist','Practiced Experimentation'],description:'Change the base energy cost of the Arcane Experimentation ability to 0 and increase its limited value by 1.',tier:3},
-    
-    {name:'Remote Execution',types:['Class','Arcanist','Masterful Extensions'],description:'For all of your Range abilities not attached to weapons, you may treat a remote tile as the origin point for determining the ability range rather than the tile you inhabit. This remote tile can be any tile within a range equal to your mental power characteristic score.',tier:9},
     {name:'Telepathy',types:['Class','Arcanist','Telepathic Communication'],description:'You can communicate telepathically with any creature within 10 ft. of you. The range of this trait is multiplied by your mental power characteristic score.',tier:3},
 
+    {name:'Remote Execution',types:['Class','Arcanist','Masterful Extensions'],description:'For all of your Range abilities not attached to weapons, you may treat a remote tile as the origin point for determining the ability range rather than the tile you inhabit. This remote tile can be any tile within a range equal to twice your mental power characteristic score.',tier:9},
+    {name:'Sculpted Abilities',types:['Class','Arcanist','Arcane Sculpting'],description:'Increase the shape range of your abilities by 1. You may choose up to one targeted character to be immune to the effects of any of your shapes abilities.',tier:9},
+    
     {name:'Arcane Mastery',types:['Class','Arcanist','Utter Mastery'],description:'Reduce the cost of all of your repertoire abilities by 1. This is applied after all other energy cost reductions and cannot reduce the cost of abilities below 0.',tier:10},
     
     //Specialist Traits
@@ -227,6 +234,8 @@ export const traitData: Trait[] = [
     {name:'Strategy Application',types:['Class','Specialist','Specialists'],description:'When combat begins, select one of your known Specialist Strategy traits. Gain the effects of that trait for the duration of the combat. A strategy can only be applied once during combat. If multiple Specialists apply the same strategy, only one has any effect.',tier:0},
     {name:'Improved Strategies',types:['Class','Specialist','Specialists'],description:'At invested tier 6, you may apply an additional known Specialist Strategy trait when combat begins.',tier:0},
     {name:'Stratagem Studies',types:['Class','Specialist','Specialists'],description:'You can acquire new Specialist Strategy traits, as long as thier tier is equal to or less than your Specialist class path invested tier. To add a new ability to your repertoire, the following requirements must be satistfied: You must spend a week of downtime per ability tier with no breaks or major interruptions. You must have uninterrupted access to at least one other cahracter or a study amenity of your tier or higher. You must spend 1000t tins, where t is the ability tier, to gain access to the proper materials needed to learn the ability. After these conditions are satisfied, you gain access to the ability.',tier:0},
+    {name:'Embargo',types:['Class','Specialist','Specialists'],description:'When combat begins, you may select one character on another team. That character cannot be the first character to act for that team. If no characters on a team are able to go first, any characters on that team may go first.',tier:0},
+    
     {name:'Preparedness',types:['Class','Specialist','Munition Resupply'],description:'Your consumable gears and projectile weapons gain +1 use.',tier:1},
     {name:'Unfaltering',types:['Class','Specialist','Unfaltering Will'],description:'You gain the unshakable boon.',tier:10},
     {name:'Efficient Gear',types:['Class','Specialist','Efficient Tinkering'],description:'All consumable gear you create has a consumable value of 1 higher than it would normally be.',tier:1},
@@ -271,8 +280,7 @@ export const traitData: Trait[] = [
     {name:'Cloak',types:['Accessory','Cloak'],description:'A simple, comfortable cloak. Keeps you dry and warm.',tier:0},
     {name:'Necklace',types:['Accessory','Necklace'],description:'A simple ornamental necklace with no inherent benefits. Often used as a vessel for enchantments.',tier:0},
     {name:'Ring',types:['Accessory','Ring'],description:'A simple ornamental ring with no inherent benefits. Often used as a vessel for enchantments.',tier:0},
-    {name:'Satchel Container',types:['Accessory','Satchel'],description:'This container can carry up to 10 lb. of small objects.',tier:0},
-    {name:'Satchel',types:['Accessory','Satchel'],description:'Increase your base weight threshold by 5 lb. Your travel group gains +1 provision score.',tier:0},
+    {name:'Munition Pouch',types:['Accessory','Munition Pouch'],description:'Your projectile weapons gain +1 use.',tier:0},
     {name:'Simple Charm',types:['Accessory','Simple Charm'],description:'You gain +1 death resistance.',tier:0},
     
     //Tier 1
@@ -281,7 +289,7 @@ export const traitData: Trait[] = [
     {name:'Soothe Stone',types:['Accessory','Soothe Stone'],description:'Characters within 10 ft. of you are soothed, and become slightly more reasonable.',tier:1},
     
     //Tier 2    
-    {name:'Gleaming Headband',types:['Accessory','Gleaming Headband'],description:'You provide bright light in a 5 tile (25 ft.) sphere.',tier:2},
+    {name:'Gleaming Goggles',types:['Accessory','Gleaming Goggles'],description:'You are immune to the blind ailment.',tier:2},
     {name:'Spelljammer\'s Bracer',types:['Accessory','Spelljammer\'s Bracer'],description:'When you deal energy damage to a focusing character, treat it as doubled when accruing it against the focus threshold.',tier:2},
     {name:'Quick Stone',types:['Accessory','Quick Stone'],description:'Gain +1 Finesse.',tier:2},
     
@@ -329,7 +337,6 @@ export const traitData: Trait[] = [
     {name:'Improved Glasscharm',types:['Enchantment','Glasscharm'],description:'All attack abilities attached to this weapon have their attack increased by 1 additional point (if they have a non-zero attack defined) for every extra enchantment tier. You suffer an additional -1 defence for every extra enchantment tier.',tier:3},
     {name:'Ragecharm',types:['Enchantment','Ragecharm'],description:'All attack abilities attached to this weapon have their energy damage increase by 4. You suffer -4 resistane.',tier:3},
     {name:'Improved Ragecharm',types:['Enchantment','Ragecharm'],description:'All attack abilities attached to this weapon have their energy damage increase by 1 additional point for every extra enchantment tier. You suffer an additional -1 resistane for every extra enchantment tier.',tier:3},
-    {name:'Returning',types:['Enchantment','Returning'],description:'When thrown as part of a ranged attack, this weapon returns to your hand as the attack ability resolves.',tier:3},
     
     //Tier 4       
     {name:'Hyperlethal',types:['Enchantment','Hyperlethal'],description:'Whenever abilities attached to this weapon reduce a target\'s endurance, reduce the target\'s endurance by an additional point.',tier:4},

@@ -245,6 +245,7 @@ export const featureData: Feature[] =[
     {name:'Practiced Experimentation',types:['Class','Primary','Arcanist'],description:'You\'re what more classical arcanist would call "dangerously adventurous".', tier:3,abilities:[],traits:[]},
     
     {name:'Masterful Extensions',types:['Class','Primary','Arcanist'],description:'Brief flashes of power are novice displays. True masters of the arcane can maintain deadly effects for extended periods of time, ravaging battlefields with deadly energies.', tier:9,abilities:[],traits:[]},
+    {name:'Arcane Sculpting',types:['Class','Primary','Arcanist'],description:'You somehow blur the line between artist and living weapon of mass destruction.', tier:9,abilities:[],traits:[]},
     
     {name:'Utter Mastery',types:['Class','Primary','Arcanist'],description:'Your complete mastery over the arcane allows you to bypass the accepted laws of the physical world and create energy from nothing.', tier:10,abilities:[],traits:[]},
     
@@ -259,6 +260,7 @@ export const featureData: Feature[] =[
     {name:'Telepathic Communication',types:['Class','Secondary','Arcanist'],description:'You\'ve figured out telepathy, which is much more complicated than it may seem.', tier:3,abilities:[],traits:[]},
     {name:'Remote Observation',types:['Class','Secondary','Arcanist'],description:'Elite arcanist can, to an extend, exist in two places at once.', tier:6,abilities:[],traits:[]},
     
+
     //Specialist Features
     {name:'Specialists',types:['Class','Global','Specialist'],description:'You are a specialist, a sharp-witted agent able to manipulate others in and out of combat.', tier:1,abilities:[],traits:[]},
     
@@ -275,6 +277,8 @@ export const featureData: Feature[] =[
     {name:'Paralyzing Presence',types:['Class','Primary','Specialist'],description:'A cold, hard look can be as intimidating as any blade or spell.', tier:4,abilities:[],traits:[]},
     {name:'Restorative Clarity',types:['Class','Primary','Specialist'],description:'A cripplied combatant is almost always doomed to soon become a dead combatant.', tier:4,abilities:[],traits:[]},
     {name:'Target Identification',types:['Class','Primary','Specialist'],description:'Organized grunts can overcome lone heroes with frightening ease.', tier:5,abilities:[],traits:[]},
+    {name:'Lightning Reflex',types:['Class','Primary','Specialist'],description:'Stke first and strike hard.', tier:6,abilities:[],traits:[]},
+    
     {name:'The Perfect Moment',types:['Class','Primary','Specialist'],description:'Everything was possible, even if just for a brief moment.', tier:9,abilities:[],traits:[]},
     {name:'Careful Timing',types:['Class','Primary','Specialist'],description:'You can manage a lot in a short amount of time.', tier:9,abilities:[],traits:[]},
     {name:'Ego Death',types:['Class','Primary','Specialist'],description:'There is no I.', tier:9,abilities:[],traits:[]},
