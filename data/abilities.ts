@@ -60,7 +60,7 @@ export const abilityData: Ability[] =[
 
     //Physical Resilience Abilities
     {name:'Brace',types:['Characteristic','Physical Resilience','Natural Defence'],primaryTags:['Energy 2','Combat'],secondaryTags:['Stance'],tertiaryTags:[],description:'Gain +3 resistance.',tier:0,attack:0, energyDamage:0, scaling:''},
-    {name:'Bulwark',types:['Characteristic','Physical Resilience','Reinforced Body'],primaryTags:['Energy 4','Combat'],secondaryTags:['Reaction'],tertiaryTags:[],description:'Counter: Gain the Hardened boon during the contest of the triggering attack ability.',tier:0,attack:0, energyDamage:0, scaling:''},
+    {name:'Bulwark',types:['Characteristic','Physical Resilience','Reinforced Body'],primaryTags:['Energy 4','Combat'],secondaryTags:['Reaction'],tertiaryTags:[],description:'Counter: double your defence during the contest of the triggering attack ability.',tier:0,attack:0, energyDamage:0, scaling:''},
     
     //Mental Power Abilities
     {name:'Deduce',types:['Characteristic','Mental Power','Deduction'],primaryTags:['Energy 1','Combat'],secondaryTags:['Action'],tertiaryTags:['Range 3'],description:'Target a charater within range, and select one characteristic. You learn the target character\'s score for that characteristic.',tier:0,attack:0, energyDamage:0, scaling:''},
