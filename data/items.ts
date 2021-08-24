@@ -53,6 +53,7 @@ export const gearData: Item[] = [
     {name:'Lantern',tags:['Size-Small','Wielded 1','Worn'],weight:2,cost:50,abilities:[],traits:[],tier:0,description:'',types:[]},
     {name:'Trauma Kit',tags:['Size-Small','Wielded 2','Consumable 1'],weight:5,cost:100,abilities:[],traits:[],tier:0,description:'',types:[]},
     {name:'Pavise Shield',tags:['Size-Large','Wielded 2,','Consumable 1'],weight:10,cost:75,abilities:[],traits:[],tier:0,description:'',types:[]},
+    {name:'Fire Bomb',tags:['Size-Small','Wielded 1,','Consumable 1'],weight:2,cost:50,abilities:[],traits:[],tier:0,description:'',types:[]},
     
     //Tier 1
     {name:'Caffeinated Brew',tags:['Size-Small','Wielded 1','Consumable 1'],weight:1,cost:1500,abilities:[],traits:[],tier:1,description:'',types:[]},

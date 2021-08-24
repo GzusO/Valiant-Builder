@@ -282,6 +282,7 @@ export const abilityData: Ability[] =[
     {name:'Light Lantern',types:['Gear','Lantern'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:[],description:'While wearing or wielding the lantern you can set it alight, providing light in a 5 tile (25 ft.) sphere. You can use this action to extinguish the lantern.',tier:0,attack:0,energyDamage:0,scaling:''},
     {name:'Trauma Kit',types:['Gear','Trauma Kit'],primaryTags:['Energy 4','Combat'],secondaryTags:['Action'],tertiaryTags:['Melee'],description:'Target character gains the stable status.',tier:0,attack:0,energyDamage:0,scaling:''},
     {name:'Plant Pavise Shield',types:['Gear','Pavise Shield'],primaryTags:['Energy 2','Combat'],secondaryTags:['Action'],tertiaryTags:[],description:'Plant the shield between your own and an adjacent tile, creating cover. This ability can also be used to pick up a planted Pavise, restoring one of this gear\'s consumable uses.',tier:0,attack:0,energyDamage:0,scaling:''},
+    {name:'Fire Bomb',types:['Gear','Fire Bomb'],primaryTags:['Energy 3','Combat'],secondaryTags:['Action'],tertiaryTags:['Range 5 Sphere 1'],description:'Target characters suffer the burning 1 ailment.',tier:0,attack:0,energyDamage:0,scaling:''},
     
     //Tier 1
     {name:'Caffeinated Brew',types:['Gear','Caffeinated Brew'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:[],description:'Restore energy equal to 4 plus your tier.',tier:0,attack:0,energyDamage:0,scaling:''},
