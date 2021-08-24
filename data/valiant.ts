@@ -19,6 +19,8 @@ export class Valiant {
     tins: number = 0;
     crowns: number = 0;
     perls: number = 0;
+    weightThreshold: number =75;
+    inventoryWeight: number =0;
     //Attributes
     enduranceMax: number=1;
     enduranceCurrent: number=1;

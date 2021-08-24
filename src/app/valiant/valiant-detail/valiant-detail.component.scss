@@ -197,3 +197,16 @@ h3 {
   .example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
     transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
   }
+
+.itemName{
+    flex: 1;
+    font-size: x-large;
+}
+.itemQuantity{
+    text-align: center;
+}
+.quantity{
+    width: 50px;
+    padding-left:20px;
+    padding-right:20px;
+}

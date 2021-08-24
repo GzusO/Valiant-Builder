@@ -34,7 +34,7 @@ export class ValiantDetailComponent implements OnInit {
 
   getValiant(){
     const id = Number(this.activatedRoute.snapshot.paramMap.get('id'));
-    this.dataService.getValiant(id).subscribe(valiant => this.valiant = valiant);
+    this.dataService.getValiant(id).subscribe(valiant => this.valiant = valiant); 
   }
   getValiantAbilities(): void {
     this.abilities.length =0;
@@ -111,9 +111,17 @@ export class ValiantDetailComponent implements OnInit {
     this.getValiantAbilities();
   }
   addNewItem(): void {
-    this.valiant!.inventory.push({name:'New Item',tags:[],weight:0,cost:0,abilities:[],traits:[],tier:0,description:'',types:[]},)
+    this.valiant!.inventory.push({name:'New Item',tags:[],weight:0,cost:0,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},)
   }
   dropItem(event: any ) {
     moveItemInArray(this.valiant!.inventory, event.previousIndex, event.currentIndex);
+  }
+  inventoryWeight(): number{
+    if(this.valiant === undefined){
+      return 0;
+    }
+    let weight = 0;
+    this.valiant!.inventory.map(x=> weight+= x.quantity*x.weight);
+    return weight;
   }
 }
