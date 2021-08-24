@@ -183,6 +183,8 @@
         <div class="inventory">
             <div class="header">
                 Inventory
+                ({{inventoryWeight()}}/
+                {{valiant.weightThreshold}} lbs.)
                 <button mat-icon-button [matMenuTriggerFor]="invMenu">
                     <mat-icon>more_vert</mat-icon>
                 </button>
@@ -226,9 +228,13 @@
                           <path d="M0 0h24v24H0z" fill="none"></path>
                         </svg>
                     </div>
+                    <mat-form-field class="quantity" appearance="standard">
+                        <input matInput class="itemQuantity" [(ngModel)]="item.quantity" name="Item Quantity">
+                    </mat-form-field>
+                    
                     <div class="itemName">{{item.name}}</div>
                     <button mat-icon-button [matMenuTriggerFor]="itemMenu" class="itemButton">
-                        <mat-icon>more_vert</mat-icon>
+                        <mat-icon style="transform: scale(1.5);">more_vert</mat-icon>
                     </button>
                     <mat-menu #itemMenu="matMenu">
                         <button mat-menu-item (click)="editItem(item)">
