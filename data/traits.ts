@@ -69,7 +69,9 @@ export const traitData: Trait[] = [
     //Hjark Traits
     {name:'Cold Resistance',types:['Lineage','Hjark','Chilled Veins'],description:'You are immune to the effects of freezing travel tiles.',tier:0},
     {name:'Resistance Reduction Immunity',types:['Lineage','Hjark','Winterhide'],description:'You are immune to attribute ailments that reduce your resistance.',tier:0},
-    {name:'Steady Footing',types:['Lineage','Hjark','Highlander'],description:'Characters cannot gain a height advantage against you. Ignore effects of precarious tiles.',tier:0},
+    {name:'Steady Footing',types:['Lineage','Hjark','Highlander'],description:'Characters that target you with attacks do not gain height advantage bonuses on those attacks. Ignore the effects of precarious tiles.',tier:0},
+    {name:'Climbing',types:['Lineage','Hjark','Highlander'],description:'You may climb one tile per movement, rather than spending two points of movement per tile climbed.',tier:0},
+    
     {name:'Meticulous Crafts',types:['Lineage','Hjark','Family Business'],description:'You can create weapons and armor 1 tier higher than you normally could, paying 1.5 times the cost for that tier.',tier:0},
     {name:'Self-Reliant',types:['Lineage','Hjark','Needless'],description:'Your provision requirement is 0.',tier:0},
     {name:'Jolly',types:['Lineage','Hjark','Warmth of Winter'],description:'People will almost always converse with you at gatherings.',tier:0},
