@@ -64,7 +64,7 @@ export const abilityData: Ability[] =[
     
     //Mental Power Abilities
     {name:'Deduce',types:['Characteristic','Mental Power','Deduction'],primaryTags:['Energy 1','Combat'],secondaryTags:['Action'],tertiaryTags:['Range 3'],description:'Target a charater within range, and select one characteristic. You learn the target character\'s score for that characteristic.',tier:0,attack:0, energyDamage:0, scaling:''},
-    {name:'Forgesight',types:['Characteristic','Mental Power','Deduction'],primaryTags:['Energy 0'],secondaryTags:['Charged Action 1 minute'],tertiaryTags:['Limited 1'],description:'After this ability resolves, select one ability either you or a nearby ally can use. When you or the ally use that ability, it costs 0 energy.',tier:0,attack:0, energyDamage:0, scaling:''},
+    {name:'Foresight',types:['Characteristic','Mental Power','Deduction'],primaryTags:['Energy 0'],secondaryTags:['Charged Action 1 minute'],tertiaryTags:['Limited 1'],description:'After this ability resolves, select one ability either you or a nearby ally can use. When you or the ally use that ability, it costs 0 energy. This abiliy can not affect abilities with variable costs.',tier:0,attack:0, energyDamage:0, scaling:''},
     {name:'Frantic Foresight',types:['Characteristic','Mental Power','Expanded Mind'],primaryTags:['Energy 3','Combat'],secondaryTags:['Reaction'],tertiaryTags:[],description:'When you make a contest roll (before you know the result): add +1 to the total contest roll.',tier:0,attack:0, energyDamage:0, scaling:''},
     
     //Mental Acuity Abilities
