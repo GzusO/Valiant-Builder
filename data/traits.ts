@@ -277,8 +277,7 @@ export const traitData: Trait[] = [
     {name:'Cloak',types:['Accessory','Cloak'],description:'A simple, comfortable cloak. Keeps you dry and warm.',tier:0},
     {name:'Necklace',types:['Accessory','Necklace'],description:'A simple ornamental necklace with no inherent benefits. Often used as a vessel for enchantments.',tier:0},
     {name:'Ring',types:['Accessory','Ring'],description:'A simple ornamental ring with no inherent benefits. Often used as a vessel for enchantments.',tier:0},
-    {name:'Satchel Container',types:['Accessory','Satchel'],description:'This container can carry up to 10 lb. of small objects.',tier:0},
-    {name:'Satchel',types:['Accessory','Satchel'],description:'Increase your base weight threshold by 5 lb. Your travel group gains +1 provision score.',tier:0},
+    {name:'Munition Pouch',types:['Accessory','Munition Pouch'],description:'Your projectile weapons gain +1 use.',tier:0},
     {name:'Simple Charm',types:['Accessory','Simple Charm'],description:'You gain +1 death resistance.',tier:0},
     
     //Tier 1

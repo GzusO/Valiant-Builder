@@ -27,7 +27,7 @@ export const armorData: Item[] = [
     {name:'Cloak',tags:['Size-Medium',],weight:4,cost:25,abilities:[],traits:[],tier:0,description:'',types:['Accessory']},
     {name:'Necklace',tags:['Size-Small'],weight:0,cost:75,abilities:[],traits:[],tier:0,description:'',types:['Accessory']},
     {name:'Ring',tags:['Size-Tiny'],weight:0,cost:75,abilities:[],traits:[],tier:0,description:'',types:['Accessory']},
-    {name:'Satchel',tags:['Size-Small'],weight:1,cost:25,abilities:[],traits:[],tier:0,description:'',types:['Accessory']},
+    {name:'Munition Pouch',tags:['Size-Small'],weight:1,cost:100,abilities:[],traits:[],tier:0,description:'',types:['Accessory']},
     {name:'Simple Charm',tags:['Size-Small'],weight:1,cost:50,abilities:[],traits:[],tier:0,description:'',types:['Accessory']},
     
     //Tier 1
