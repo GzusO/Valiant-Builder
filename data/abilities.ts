@@ -46,14 +46,14 @@ export const abilityData: Ability[] =[
     {name:'Express Mutations',types:['Lineage','Vyld','Spontaneous Mutations'],primaryTags:['Energy 0','Combat'],secondaryTags:['Transformation'],tertiaryTags:[],description:'At each round begin phase (including when this ability was used), randomly gain either +1 lethality, +1 force, +1 defence, or +1 resistance. These status boons last until the end of combat. At each of your turn end phases, your energy is reduced by 2.',tier:0,attack:0, energyDamage:0, scaling:''},
     
     //Global Abilites
-
-
+    {name:'Shove',types:['Global'],primaryTags:['Energy 2','Combat'],secondaryTags:['Action'],tertiaryTags:['Melee'],description:'Move a target 1 tile directly away from you. Cannot target characters that are a larger size than you.',tier:0,attack:0, energyDamage:0, scaling:''},
+    {name:'Grab',types:['Global'],primaryTags:['Energy 3','Combat'],secondaryTags:['Action'],tertiaryTags:['Melee','Focus 12'],description:'You and Your target\'s movement is set to 0. You must have one free hand to use this ability. That hand becomes unusable while focusing on this ability. The effects of this ability end if the target becomes invalid.',tier:0,attack:0, energyDamage:0, scaling:''},
+    
     //Characteristic Abilities
 
     //Physical Power Abilities
-    {name:'Shove',types:['Global'],primaryTags:['Energy 2','Combat'],secondaryTags:['Action'],tertiaryTags:['Melee'],description:'Move a target 1 tile directly away from you. Cannot target characters that are a larger size than you.',tier:0,attack:0, energyDamage:0, scaling:''},
-    {name:'Grab',types:['Global'],primaryTags:['Energy 3','Combat'],secondaryTags:['Action'],tertiaryTags:['Melee','Focus 12'],description:'You and Your target\'s movement is set to 0. You must have one free hand to use this ability. That hand becomes unusable while focusing on this ability. The effects of this ability end if the target becomes invalid.',tier:0,attack:0, energyDamage:0, scaling:''},
-
+    {name:'Overpower',types:['Characteristic','Physical Power','Powerful Build'],primaryTags:['Energy 2'],secondaryTags:['Attack Modifier'],tertiaryTags:[],description:'The attack ability gains the blitz tag.',tier:0,attack:0,energyDamage:0,scaling:''},
+    
     //Physical Acuity Abilities
     {name:'Rush',types:['Characteristic','Physical Acuity','Quick Feet'],primaryTags:['Energy 2x','Combat'],secondaryTags:['Reaction'],tertiaryTags:[],description:'your move phase ends: move up to x tiles (up to your movement).',tier:0,attack:0, energyDamage:0, scaling:''},
     {name:'Quick Action',types:['Characteristic','Physical Acuity','Improved Dexterity'],primaryTags:['Energy 4','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1'],description:'Global: use an action ability.',tier:0,attack:0, energyDamage:0, scaling:''},

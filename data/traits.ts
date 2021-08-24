@@ -123,10 +123,11 @@ export const traitData: Trait[] = [
 
     //Physical Power Traits
     {name:'Weight Threshold',types:['Characteristic','Meek Form','Physical Power'],description:'Your base weight threshold is 75 lb. Your total weight threshold is your base threshold multiplied by your Physical Power score.',tier:0},
+    {name:'Battle Bully',types:['Characteristic','Phyiscal Power','Physical Training'],description:'When you use the Shove ability, increase the distance your target is pushed by 1 tile. When you use the Grab ability, increase the focus threshold of the ability by 8.',tier:0},
     {name:'Strength',types:['Characteristic','Athletic Form','Physical Power'],description:'When you gain this trait, choose one of the following bonuses: - Gain +2 Lethality and +2 Force. - Gain +3 Lethality and +1 Force. - Gain +1 Lethality and +3 Force.',tier:0},
     {name:'Improved Strength',types:['Characteristic','Perfect Form','Physical Power'],description:'When you gain this trait, choose one of the following bonuses: - Gain +2 Lethality and +2 Force. - Gain +3 Lethality and +1 Force. - Gain +1 Lethality and +3 Force',tier:0},
-    {name:'Improved Weight Threshold',types:['Characteristic','Powerful Build','Physical Power'],description:'Increase your base threshold by 25 lb.',tier:0},
-    
+
+
     //Physical Acuity Traits
     {name:'Basic Movement',types:['Characteristic','Physical Acuity','Simple Agility'],description:'You have a base movment of 5.',tier:0},
     {name:'Movement',types:['Characteristic','Physical Acuity','Honed Agility'],description:'Gain +1 movement.',tier:0},
@@ -217,7 +218,7 @@ export const traitData: Trait[] = [
     {name:'Passive Focus',types:['Class','Arcanist','Hyperconscious'],description:'You do not lose focus when incapacitated.',tier:3},
     {name:'Experimenter',types:['Class','Arcanist','Practiced Experimentation'],description:'Change the base energy cost of the Arcane Experimentation ability to 0 and increase its limited value by 1.',tier:3},
     
-    {name:'Remote Execution',types:['Class','Arcanist','Masterful Extensions'],description:'For all of your Range abilities not attached to weapons, you may treat a remote tile as the origin point for determining the ability range rather than the tile you inhabit. This remote tile can be any tile within a range equal to your mental power characteristic score.',tier:9},
+    {name:'Remote Execution',types:['Class','Arcanist','Masterful Extensions'],description:'For all of your Range abilities not attached to weapons, you may treat a remote tile as the origin point for determining the ability range rather than the tile you inhabit. This remote tile can be any tile within a range equal to twice your mental power characteristic score.',tier:9},
     {name:'Telepathy',types:['Class','Arcanist','Telepathic Communication'],description:'You can communicate telepathically with any creature within 10 ft. of you. The range of this trait is multiplied by your mental power characteristic score.',tier:3},
 
     {name:'Arcane Mastery',types:['Class','Arcanist','Utter Mastery'],description:'Reduce the cost of all of your repertoire abilities by 1. This is applied after all other energy cost reductions and cannot reduce the cost of abilities below 0.',tier:10},
