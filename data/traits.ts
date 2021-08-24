@@ -179,7 +179,7 @@ export const traitData: Trait[] = [
     {name:'Advantageous Attacks',types:['Class','Warrior','Martial Finesse'],description:'Gain +1 to the total roll of your attack contests that target enemies adjacent to one or more of your allies.',tier:1},
     {name:'Rage',types:['Class','Warrior','Adrenaline Rush'],description:'You gain +3 lethality and +3 force while you suffer the winded status.',tier:2},
     {name:'Heavy Armor Training',types:['Class','Warrior','Battle Conditioning'],description:'Ignore up to 1 points of Finesse reduction that come from your worn armor.',tier:2},
-    {name:'Weapon Flurry',types:['Class','Warrior','Dual-Wielding'],description:'Gain +2 lethality and +2 defence while wielding two one-handed, non-shield weapons.',tier:2},
+    {name:'Weapon Flurry',types:['Class','Warrior','Dual-Wielding'],description:'Gain +1 Lethality, +1 Force, and +2 Defence while wielding two one-handed, non-shield weapons.',tier:2},
     {name:'Gunslinger',types:['Class','Warrior','Dual-Wielding'],description:'Ignore the two-handed tag on short guns and arcane short guns.',tier:2},
     
     {name:'Force Buildup',types:['Class','Warrior','Trading Blows'],description:'Gain +1 force whenever you take energy damage. this boon lasts until combat ends.',tier:3},
