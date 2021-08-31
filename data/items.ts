@@ -24,9 +24,6 @@ export const armorData: Item[] = [
     //Accessories 
     //Tier 0
     {name:'Backpack',tags:[],weight:4,cost:75,abilities:[],traits:[],tier:0,description:'',types:['Accessory'],quantity:1},
-    {name:'Cloak',tags:[],weight:4,cost:25,abilities:[],traits:[],tier:0,description:'',types:['Accessory'],quantity:1},
-    {name:'Necklace',tags:[],weight:0,cost:75,abilities:[],traits:[],tier:0,description:'',types:['Accessory'],quantity:1},
-    {name:'Ring',tags:[],weight:0,cost:75,abilities:[],traits:[],tier:0,description:'',types:['Accessory'],quantity:1},
     {name:'Munition Pouch',tags:[],weight:1,cost:100,abilities:[],traits:[],tier:0,description:'',types:['Accessory'],quantity:1},
     {name:'Simple Charm',tags:[],weight:1,cost:50,abilities:[],traits:[],tier:0,description:'',types:['Accessory'],quantity:1},
     
@@ -41,9 +38,11 @@ export const armorData: Item[] = [
     {name:'Quick Stone',tags:[],weight:1,cost:4000,abilities:[],traits:[],tier:2,description:'',types:['Accessory'],quantity:1},
     
     //Tier 3
-    {name:'Arcane Necklace',tags:[],weight:0,cost:6000,abilities:[],traits:[],tier:3,description:'',types:['Accessory'],quantity:1},
-    {name:'Arcane Ring',tags:[],weight:0,cost:6000,abilities:[],traits:[],tier:3,description:'',types:['Accessory'],quantity:1},
     {name:'Mindspeak Amulet',tags:[],weight:0,cost:7500,abilities:[],traits:[],tier:3,description:'',types:['Accessory'],quantity:1},
+
+    //Tier 4
+    {name:'Arcane Communicator',tags:[],weight:2,cost:10000,abilities:[],traits:[],tier:4,description:'',types:[],quantity:1},
+    
     
 ];
 
@@ -75,10 +74,6 @@ export const gearData: Item[] = [
     {name:'Draining Toxin',tags:[],weight:1,cost:7000,abilities:[],traits:[],tier:3,description:'',types:[],quantity:1},
     {name:'Lethal Toxin',tags:[],weight:1,cost:7000,abilities:[],traits:[],tier:3,description:'',types:[],quantity:1},
     {name:'Mindbreak',tags:[],weight:1,cost:7500,abilities:[],traits:[],tier:3,description:'',types:[],quantity:1},
-    
-    
-    //Tier 4
-    {name:'Arcane Communicator',tags:[],weight:2,cost:10000,abilities:[],traits:[],tier:4,description:'',types:[],quantity:1},
     
 ];
 

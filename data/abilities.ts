@@ -303,11 +303,6 @@ export const abilityData: Ability[] =[
     {name:'Lethal Toxin',types:['Gear','Lethal Toxin'],primaryTags:['Energy 4'],secondaryTags:['Charged Action 10 minutes'],tertiaryTags:['Limited 1 Daily'],description:'All attached abilities of a target weapon gain +2 attack until the end of the next combat. The effects end after 4 fours if no combat occurs.',tier:0,attack:0,energyDamage:0,scaling:''},
     {name:'Ingest Mindbreak',types:['Gear','Mindbreak'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:['Limited 1 Daily'],description:'You gain +2 Lethality, Force, and Finesse and suffer -2 Resistance for the next hour. After one hour, your energy is reduced by half of your total energy(rounded down).',tier:3,attack:0,energyDamage:0,scaling:''},
     
-    //Tier 4
-    {name:'Pair Arcane Communicator',types:['Gear','Arcane Communicator'],primaryTags:['Energy 0'],secondaryTags:['Charged Action 5 minutes'],tertiaryTags:[],description:'This ability requires at least two nearby characters with Arcane Communicators to use this ability at the same time for it to resolve. After this ability resolves, all Arcane Communicators involved are considered paired. Any previous pairing are overwritten.',tier:0,attack:0,energyDamage:0,scaling:''},
-    {name:'Arcane Communicator',types:['Gear','Arcane Communicator'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:['Range 1000 miles','Indirect'],description:'Speak into the Arcane Communicator. Whatever you say can be heard from any paired Arcane Communicators within range.',tier:0,attack:0,energyDamage:0,scaling:''},
-    
-
     //Enchantment Abilities
     //Tier 0
     {name:'Cast Light',types:['Enchantment','Light-Casting'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:[],description:'Set this weapon alight, providing light in a 3 tile (15 ft.) sphere. You can also use this action to extinguish the light.',tier:0,attack:0,energyDamage:0,scaling:''},

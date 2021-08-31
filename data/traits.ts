@@ -275,9 +275,6 @@ export const traitData: Trait[] = [
     //Accessory Traits
     //Tier 0
     {name:'Backpack',types:['Accessory','Backpack'],description:'Increase you base weight threshold by 10 lb. Your travel group gains +3 provision score.',tier:0},
-    {name:'Cloak',types:['Accessory','Cloak'],description:'A simple, comfortable cloak. Keeps you dry and warm.',tier:0},
-    {name:'Necklace',types:['Accessory','Necklace'],description:'A simple ornamental necklace with no inherent benefits. Often used as a vessel for enchantments.',tier:0},
-    {name:'Ring',types:['Accessory','Ring'],description:'A simple ornamental ring with no inherent benefits. Often used as a vessel for enchantments.',tier:0},
     {name:'Munition Pouch',types:['Accessory','Munition Pouch'],description:'Your projectile weapons gain +1 use.',tier:0},
     {name:'Simple Charm',types:['Accessory','Simple Charm'],description:'You gain +1 death resistance.',tier:0},
     
@@ -292,8 +289,11 @@ export const traitData: Trait[] = [
     {name:'Quick Stone',types:['Accessory','Quick Stone'],description:'Gain +1 Finesse.',tier:2},
     
     //Tier 3
-    {name:'Enchantable',types:['Accessory','Arcane Necklace','Arcane Ring'],description:'When enchanting this item, you may imbue 1 more enchantment than you would normally be able to.',tier:3},
     {name:'Mindspeak Amulet',types:['Accessory','Mindspeak Amulet'],description:'You can communicate telepathically with any creature within 10 ft. of you.',tier:3},
+    
+    //Tier 4
+    {name:'Arcane Communicator',types:['Accessory','Arcane Communicator'],description:'You may choose to transmit anything you say to all characters with paired Arcane Communicators. You cna pair communicators with nearby willing characters. You can only clear pairings by clearing all existing pairings.',tier:4},
+    
     
     //Gear Traits
     //Tier 0
