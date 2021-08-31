@@ -99,7 +99,7 @@ export const abilityData: Ability[] =[
     {name:'Divine Guidance',types:['Class','Aspirant','Touched Mind'],primaryTags:['Energy 0'],secondaryTags:[],tertiaryTags:['Limited 1'],description:'You are possibly granted some directive, insight, or other sort of guidance by a greater power.',tier:0,attack:0, energyDamage:0, scaling:''},
     
     //Warrior Abilities
-    {name:'Fighting Spirit',types:['Class','Warrior','Warriors'],primaryTags:['Energy 0','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1'],description:'You suffer the winded status: restore energy equal to 10 plus your tier.',tier:0,attack:0, energyDamage:0, scaling:''},
+    {name:'Fighting Spirit',types:['Class','Warrior','Warriors'],primaryTags:['Energy 0','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1 Daily'],description:'You suffer the winded status: restore energy equal to 4 plus twice your tier.',tier:0,attack:0, energyDamage:0, scaling:''},
     {name:'Offensive Stance',types:['Class','Warrior','Martial Stances'],primaryTags:['Energy 2','Combat'],secondaryTags:['Stance'],tertiaryTags:[],description:'Gain +2 lethality and +2 force.',tier:1,attack:0, energyDamage:0, scaling:''},
     {name:'Defensive Stance',types:['Class','Warrior','Martial Stances'],primaryTags:['Energy 2','Combat'],secondaryTags:['Stance'],tertiaryTags:[],description:'Gain +2 defence and +2 resistance.',tier:1,attack:0, energyDamage:0, scaling:''},
     {name:'Momentum',types:['Class','Warrior','Martial Finesse'],primaryTags:['Energy 1','Combat'],secondaryTags:['Reaction'],tertiaryTags:[],description:'Your attack ability resolves: Move up to 1 tile.',tier:1,attack:0, energyDamage:0, scaling:''},
