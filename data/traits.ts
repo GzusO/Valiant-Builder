@@ -46,7 +46,7 @@ export const traitData: Trait[] = [
 
     //Girt Traits
     {name:'Diminutive',types:['Lineage','Girt','Skin and Bones'],description:'You require 1 less provision score when travelling. You are unable to intimidate other characters, even with the use of other traits or abilities, unless they are at least 3 tiers below your tier.',tier:0},
-    {name:'Resourceful',types:['Lineage','Girt','Master of Thrift'],description:'Your consumable gears and projectile weapons gain +1 use.',tier:0},
+    {name:'Resourceful',types:['Lineage','Girt','Master of Thrift'],description:'Your gear and projectile weapons limited abilities have their limited value increased by 1.',tier:0},
     {name:'Movement Reduction Immunity',types:['Lineage','Girt','Aspect of the Sands'],description:'You are immune to attribute ailments that reduce your movement.',tier:0},
     {name:'Gear Maintenance',types:['Lineage','Girt','Staunch Maintainer'],description:'You can prepare an additional gear item whenever you prepare gear.',tier:0},
     {name:'Bejeweled',types:['Lineage','Girt','Decorated Figure'],description:'You can wear on additional accessory.',tier:0},
