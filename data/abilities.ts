@@ -315,9 +315,9 @@ export const abilityData: Ability[] =[
 
     //Enchantment Abilities
     //Tier 0
-    {name:'Cast Light',types:['Enchantment','Light-Casting'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:[],description:'Set this weapon alight, providing light ina 3 tile (15 ft.) sphere. You can also use this action to extinguish the light.',tier:0,attack:0,energyDamage:0,scaling:''},
+    {name:'Cast Light',types:['Enchantment','Light-Casting'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:[],description:'Set this weapon alight, providing light in a 3 tile (15 ft.) sphere. You can also use this action to extinguish the light.',tier:0,attack:0,energyDamage:0,scaling:''},
     
     //Tier 3
-    {name:'Null Storage',types:['Enchantment','Null Storage'],primaryTags:['Energy 1','Combat'],secondaryTags:['Action'],tertiaryTags:[],description:'While wielding this item, stow it away in a personal pocket space. You can use this ability at any time to pull the item bak into an empty hand.',tier:3,attack:0,energyDamage:0,scaling:''},
+    {name:'Null Storage',types:['Enchantment','Null Storage'],primaryTags:['Energy 0','Combat'],secondaryTags:['Reaction'],tertiaryTags:[],description:'Global: While wielding this item, stow it away in a personal pocket space. You can use this ability at any time to pull the item back into an empty hand.',tier:2,attack:0,energyDamage:0,scaling:''},
     
 ];

@@ -300,14 +300,14 @@ export const traitData: Trait[] = [
     //Tier 0
 
     //Enchantment Traits
+    //Combat
     //Tier 0
-    {name:'Cleanliness',types:['Enchantment','Cleanliness'],description:'This item cannot become dirtied',tier:0},
+    {name:'Focused',types:['Enchantment','Focused'],description:'Increase your focus thresholds by 1.',tier:0},
+    {name:'Improved Focused',types:['Enchantment','Focused'],description:'Further increase your focus thresholds by 1 for every extra enchantment tier.',tier:0},
     {name:'Invigorating',types:['Enchantment','Invigorating'],description:'You gain +3 energy.',tier:0},
     {name:'Improved Invigorating',types:['Enchantment','Invigorating'],description:'You gain an additional +3 energy for every extra enchantment tier.',tier:0},
-    {name:'Lightness',types:['Enchantment','Lightness'],description:'This equipment\'s weight is reduced by 2 lb. This cannot reduce an item\'s weight below 0.',tier:0},
-    {name:'Improved Lightness',types:['Enchantment','Lightness'],description:'This equipment\'s weight is reduced by an additional 2 lb. for every extra enchantment tier. This cannot reduce an item\'s weight below 0.',tier:0},
-    {name:'Providing',types:['Enchantment','Providing'],description:'Your travel group gains +1 provision score.',tier:0},
-    {name:'Improved Providing',types:['Enchantment','Providing'],description:'Your travel group gains an additional +1 provision score for every extra enchantment tier.',tier:0},
+    {name:'Staunching',types:['Enchantment','Staunching'],description:'You gain +1 death resistance.',tier:0},
+    {name:'Improved Staunching',types:['Enchantment','Staunching'],description:'You gain an additional +1 death resistance for every extra enchantment tier.',tier:0},
     
     //Tier 1
     {name:'Forceful',types:['Enchantment','Forceful'],description:'All attack abilities attached to this weapon have their energy damage increased by 1.',tier:1},
@@ -321,24 +321,35 @@ export const traitData: Trait[] = [
     {name:'Improved Resistant',types:['Enchantment','Resistant'],description:'You gain an additional +1 resistance for every 2 extra enchantment tiers.',tier:1},
     
     //Tier 2
-    {name:'Dense',types:['Enchantment','Dense'],description:'Increase the consumable trait of this item by 1.',tier:2},
-    {name:'Improved Dense',types:['Enchantment','Dense'],description:'Increase the consumable trait of this item by an additional 1 point for every 2 extra enchantment tiers.',tier:2},
-    {name:'Elegance',types:['Enchantment','Elegance'],description:'Your speech and mannerisms are masked in an aura of poise. Everything you do or say is perceived as elegant.',tier:2},
-    {name:'Flight',types:['Enchantment','Flight'],description:'Your travel group gains +1 range.',tier:2},
-    {name:'Improved Flight',types:['Enchantment','Flight'],description:'Your travel group gains an additional +1 range for every 2 extra enchantment tiers.',tier:2},
-    {name:'Staunching',types:['Enchantment','Staunching'],description:'You gain +2 death resistance.',tier:2},
-    {name:'Improved Staunching',types:['Enchantment','Staunching'],description:'You gain an additional +1 death resistance for every extra enchantment tier.',tier:2},
-    {name:'Storage',types:['Enchantment','Storage'],description:'Items stored in this accessory do not count towards your carry weight limit. Containers with this trait always weigh their base weight, regardless of their content.',tier:2},
+    {name:'Calming',types:['Enchantment','Calming'],description:'You are immune to finesse reductions statuses.',tier:2},
     
     //Tier 3
-    {name:'Calming',types:['Enchantment','Calming'],description:'You are immune to finesse reductions statuses.',tier:3},
     {name:'Glasscharm',types:['Enchantment','Glasscharm'],description:'All attack abilities attached to this weapon have their attack increased by 4 (if they have a non-zero attack defined). You suffer -4 defence.',tier:3},
     {name:'Improved Glasscharm',types:['Enchantment','Glasscharm'],description:'All attack abilities attached to this weapon have their attack increased by 1 additional point (if they have a non-zero attack defined) for every extra enchantment tier. You suffer an additional -1 defence for every extra enchantment tier.',tier:3},
     {name:'Ragecharm',types:['Enchantment','Ragecharm'],description:'All attack abilities attached to this weapon have their energy damage increase by 4. You suffer -4 resistane.',tier:3},
     {name:'Improved Ragecharm',types:['Enchantment','Ragecharm'],description:'All attack abilities attached to this weapon have their energy damage increase by 1 additional point for every extra enchantment tier. You suffer an additional -1 resistane for every extra enchantment tier.',tier:3},
     
-    //Tier 4       
+    //Tier 4
     {name:'Hyperlethal',types:['Enchantment','Hyperlethal'],description:'Whenever abilities attached to this weapon reduce a target\'s endurance, reduce the target\'s endurance by an additional point.',tier:4},
-    {name:'Mercurial',types:['Enchantment','Mecurial'],description:'You gain immunity to the movement reduction ailments and your movement cannot be less than 1 while you\'re not unconscious (statuses that set it to 0 instead set it to 1).',tier:4},
+    {name:'Mercurial',types:['Enchantment','Mecurial'],description:'You are immune to the movement reduction ailments and your minimum movement is set to 1. ',tier:4},
+    
+    //Utility
+    //Tier 0
+    {name:'Cleanliness',types:['Enchantment','Cleanliness'],description:'This item cannot become dirtied',tier:0},
+    {name:'Lightness',types:['Enchantment','Lightness'],description:'This equipment\'s weight is reduced by 2 lb. This cannot reduce an item\'s weight below 0.',tier:0},
+    {name:'Improved Lightness',types:['Enchantment','Lightness'],description:'This equipment\'s weight is reduced by an additional 2 lb. for every extra enchantment tier. This cannot reduce an item\'s weight below 0.',tier:0},
+    {name:'Providing',types:['Enchantment','Providing'],description:'Your travel group gains +1 provision score.',tier:0},
+    {name:'Improved Providing',types:['Enchantment','Providing'],description:'Your travel group gains an additional +1 provision score for every extra enchantment tier.',tier:0},
+    
+    //Tier 1
+    
+    //Tier 2
+    {name:'Elegance',types:['Enchantment','Elegance'],description:'Your speech and mannerisms are masked in an aura of poise. Everything you do or say is perceived as elegant.',tier:2},
+    {name:'Flight',types:['Enchantment','Flight'],description:'Your travel group gains +1 range.',tier:2},
+    {name:'Improved Flight',types:['Enchantment','Flight'],description:'Your travel group gains an additional +1 range for every 2 extra enchantment tiers.',tier:2},
+
+    //Tier 3
+    
+    //Tier 4       
     
 ]
