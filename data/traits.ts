@@ -24,6 +24,7 @@ export const traitData: Trait[] = [
     {name: 'Physical Laborer Funds', types: ['Profession','Physical Laborer'], description: 'You start with 750 tins.',tier:0},
     {name: 'Submissive Demeanor', types: ['Profession','Servant'], description: 'Characters that don\'t know you will always dismiss you as unthreatening.',tier:0},
     {name: 'Servant Funds', types: ['Profession','Servant'], description: 'You start with 750 tins.',tier:0},
+    {name: 'Thrifty',types:['Profession','Assistant'],description:'You may purchase general items for half of their cost.',tier:0},
     {name: 'Assistant Funds', types: ['Profession','Assistant'], description: 'You start with 750 tins.',tier:0},
     {name: 'Educated', types: ['Profession','Scholar'], description: 'You are able to speak two additional languages.',tier:0},
     {name: 'Scholar Funds', types: ['Profession','Scholar'], description: 'You start with 1,000 tins.',tier:0},
@@ -46,7 +47,7 @@ export const traitData: Trait[] = [
 
     //Girt Traits
     {name:'Diminutive',types:['Lineage','Girt','Skin and Bones'],description:'You require 1 less provision score when travelling. You are unable to intimidate other characters, even with the use of other traits or abilities, unless they are at least 3 tiers below your tier.',tier:0},
-    {name:'Resourceful',types:['Lineage','Girt','Master of Thrift'],description:'Your consumable gears and projectile weapons gain +1 use.',tier:0},
+    {name:'Resourceful',types:['Lineage','Girt','Master of Thrift'],description:'Your gear and projectile weapons limited abilities have their limited value increased by 1.',tier:0},
     {name:'Movement Reduction Immunity',types:['Lineage','Girt','Aspect of the Sands'],description:'You are immune to attribute ailments that reduce your movement.',tier:0},
     {name:'Gear Maintenance',types:['Lineage','Girt','Staunch Maintainer'],description:'You can prepare an additional gear item whenever you prepare gear.',tier:0},
     {name:'Bejeweled',types:['Lineage','Girt','Decorated Figure'],description:'You can wear on additional accessory.',tier:0},
@@ -87,13 +88,13 @@ export const traitData: Trait[] = [
     {name:'Skilled Artist',types:['Lineage','Ingra','Precious Crafts'],description:'You can create art objects of 1 tier higher than you normally oculd, spending twice as long to create the art object than you normally would.',tier:0},
     {name:'Perception',types:['Lineage','Ingra','Silver Eyes'],description:'You can see twice as far as others, and can perceive hiddne items as long as they are at least partially visible.',tier:0},
     {name:'Tireless',types:['Lineage','Ingra','Tireless Sentinel'],description:'You only start incurring penalties due to lack of rest after 48 hours rather than 24 hours. After this, you incur repeating penalities as normal.',tier:0},
-    {name:'Resourceful Enchanting',types:['Lineage','Ingra','Runeweaver'],description:'When you apply an enchantment to an accessory, you may halve the cost required to apply the enchantment.',tier:0},
+    {name:'Resourceful Enchanting',types:['Lineage','Ingra','Runeweaver'],description:'When you apply an enchantment of a tier lower than your character tier, you may halve the cost required to apply the enchantment.',tier:0},
     
     //Marr Traits
     {name:'Adapt',types:['Lineage','Marr','Adaptive Form'],description:'If you spend 1 season in a specific region or city, you are able to mimic the dialect, mannerisms, and other norms to the point of being able to be mistaken for a native of the region or city. If you are away from a region you have adapted to for more than 1 season, you lose the adaptation.',tier:0},
     {name:'Quiet Movement',types:['Lineage','Marr','Unassuming Demeanor'],description:'Enemies cannot use reaction abilities at any point during your move phase.',tier:0},
     {name:'Opportunity',types:['Lineage','Marr','Simple Opportunist'],description:'Gain +4 to the total roll of your attack contests that target characters with the winded status.',tier:0},
-    {name:'Combat Adaptation',types:['Lineage','Marr','Unnatural Adaptation'],description:'At the beginning of every even round (up to and including round 10), gain your choice of +1 lethality, +1 force, +1 defence, or +1 resistance.',tier:0},
+    {name:'Combat Adaptation',types:['Lineage','Marr','Unnatural Adaptation'],description:'At each round begin phase, gain your choice of +1 lethality, +1 force, +1 defence, or +1 resistance. This boon lasts until the end of that round.',tier:0},
     {name:'Unassuming',types:['Lineage','Marr','Plain'],description:'Others will not suspect you of anything without direct evidence.',tier:0},
     {name:'Simple Crafts',types:['Lineage','Marr','Simple Means'],description:'You can only create items that are 1 tier lower than what you would usually be able to create. All items you create cost half as much as they normally would.',tier:0},
     {name:'Masterpiece',types:['Lineage','Marr','Flash of Brilliance'],description:'Every time you create weapons, armor sets, or art, there is a 1 in 100 chance of the result being a tier 10 item. Every time you create an art object, there is a 1 in 100 chance of the result being 100 times more valuable. This trait’s effects can only occur once per character, and the chance can only occur once per week (requiring a full 7 days between attempts). If any effect occurs, remove this trait from the character.',tier:0},
@@ -190,7 +191,7 @@ export const traitData: Trait[] = [
     
     {name:'Force Buildup',types:['Class','Warrior','Trading Blows'],description:'Gain +1 force whenever you take energy damage. this boon lasts until combat ends.',tier:3},
     {name:'Deflecting',types:['Class','Warrior','Active Defenses'],description:'Any parry abilities you use can be triggered on any attack abilities, instead of just melee attack abilities. Additionally, all medium shields grant you cover from ranged attack abilities while wielded in at least one hand.',tier:4},
-    {name:'Shielded Barrage',types:['Class','Warrior','Lancer'],description:'You may wield a shield while wielding a carbine, rifle, arcane carbine, or arcane rifle. Ignore the unwieldly tag on carbines, rifles, arcane carbines, or arcane rifles.',tier:5},
+    {name:'Shielded Barrage',types:['Class','Warrior','Lancer'],description:'You may wield a shield while wielding a crossbow, heavy crossbow, great crossbow, carbine, or rifle. Ignore the Unwieldly tag on crossbow, heavy crossbow, great crossbow, carbine, or rifle.',tier:5},
     
     {name:'Masterful Attacks',types:['Class','Warrior','Masterful Maneuvers'],description:'You may apply an additional attack modifier ability to your attack abilities.',tier:6},
     {name:'Additional Stance',types:['Class','Warrior','Masterful Stances'],description:'You may use an additional stance ability during the round begin phase.',tier:6},
@@ -215,7 +216,7 @@ export const traitData: Trait[] = [
     {name:'Enchanter',types:['Class','Arcanist','Arcanists'],description:'You may apply and remove enchantments and craft arcane items.',tier:0},
     {name:'Energy Efficiency',types:['Class','Arcanist','Practiced Repertoire'],description:'Reduce the energy cost of your Arcanist Repertoire abilities by 1. This cannot reduce the cost of abilities below 1.',tier:1},
     {name:'Steadfast Focus',types:['Class','Arcanist','Steady Mind'],description:'Increase your focus thresholds by your Mental Resilience score.',tier:1},
-    {name:'Hardened Focus',types:['Class','Arcanist','Steady Mind'],description:'You gain +1 resistance for each instance of focus you are maintaining.',tier:1},
+    {name:'Hardened Focus',types:['Class','Arcanist','Steady Mind'],description:'You gain +1 resistance for each focus ability you are maintaining.',tier:1},
     {name:'Arcane Medicine',types:['Class','Arcanist','Arcane Restoration'],description:'Whenever one of your effects restores a character\'s energy, that effect restores additional energy equal to your tier.',tier:2},
     {name:'Safe Recharging',types:['Class','Arcanist','Stable Recovery'],description:'While you suffer the Recharging status, gain defence and resistance equal to your tier.',tier:2},
     {name:'Arcane Shell',types:['Class','Arcanist','Arcane Armors'],description:'Gain Defence equal to your tier.',tier:2},
@@ -238,7 +239,6 @@ export const traitData: Trait[] = [
     
     {name:'Preparedness',types:['Class','Specialist','Munition Resupply'],description:'Your consumable gears and projectile weapons gain +1 use.',tier:1},
     {name:'Unfaltering',types:['Class','Specialist','Unfaltering Will'],description:'You gain the unshakable boon.',tier:10},
-    {name:'Efficient Gear',types:['Class','Specialist','Efficient Tinkering'],description:'All consumable gear you create has a consumable value of 1 higher than it would normally be.',tier:1},
     {name:'Supplies',types:['Class','Specialist','Quartermaster'],description:'Your travel group gains provision score equal to the number of characters in your travel group.',tier:1},
     {name:'Stable Travel Range',types:['Class','Specialist','Travel Planning'],description:'Your travel group gains +2 range. Your travel group\'s range cannot be reduced due to a negative total bonus.',tier:2},
     {name:'Organized',types:['Class','Specialist','Orderly Mind'],description:'You always know the date and time down to an hour of precision. You always know the chronological order of events you have experienced, even if you can\'t remember exact times.',tier:3},
@@ -265,7 +265,7 @@ export const traitData: Trait[] = [
     {name:'The Long Game',types:['Class','Specialist','Strategies'],description:'You and your allies may use stance abilities as if they were transformation abilities, paying twice the ability\'s energy cost.',tier:4},
     
     //Weapon Traits
-    {name:'Cover',types:['Weapon','Large Shield'],description:'You count as in cover against ranged attack abilities.',tier:0},
+    {name:'Cover',types:['Weapon','Heavy Shield'],description:'You count as in cover against ranged attack abilities.',tier:0},
 
     //Armor Traits
     {name:'Light Armor',types:['Armor','Light'],description:'You gain +3 defence. Defence bonus increases by 2 for every armor tier above 0.',tier:0},
@@ -275,11 +275,7 @@ export const traitData: Trait[] = [
     
     //Accessory Traits
     //Tier 0
-    {name:'Backpack Container',types:['Accessory','Backpack'],description:'This container can carry up to 75 lb. of up to medium objects.',tier:0},
     {name:'Backpack',types:['Accessory','Backpack'],description:'Increase you base weight threshold by 10 lb. Your travel group gains +3 provision score.',tier:0},
-    {name:'Cloak',types:['Accessory','Cloak'],description:'A simple, comfortable cloak. Keeps you dry and warm.',tier:0},
-    {name:'Necklace',types:['Accessory','Necklace'],description:'A simple ornamental necklace with no inherent benefits. Often used as a vessel for enchantments.',tier:0},
-    {name:'Ring',types:['Accessory','Ring'],description:'A simple ornamental ring with no inherent benefits. Often used as a vessel for enchantments.',tier:0},
     {name:'Munition Pouch',types:['Accessory','Munition Pouch'],description:'Your projectile weapons gain +1 use.',tier:0},
     {name:'Simple Charm',types:['Accessory','Simple Charm'],description:'You gain +1 death resistance.',tier:0},
     
@@ -294,21 +290,24 @@ export const traitData: Trait[] = [
     {name:'Quick Stone',types:['Accessory','Quick Stone'],description:'Gain +1 Finesse.',tier:2},
     
     //Tier 3
-    {name:'Enchantable',types:['Accessory','Arcane Necklace','Arcane Ring'],description:'When enchanting this item, you may imbue 1 more enchantment than you would normally be able to.',tier:3},
     {name:'Mindspeak Amulet',types:['Accessory','Mindspeak Amulet'],description:'You can communicate telepathically with any creature within 10 ft. of you.',tier:3},
+    
+    //Tier 4
+    {name:'Arcane Communicator',types:['Accessory','Arcane Communicator'],description:'You may choose to transmit anything you say to all characters with paired Arcane Communicators. You cna pair communicators with nearby willing characters. You can only clear pairings by clearing all existing pairings.',tier:4},
+    
     
     //Gear Traits
     //Tier 0
 
     //Enchantment Traits
+    //Combat
     //Tier 0
-    {name:'Cleanliness',types:['Enchantment','Cleanliness'],description:'This item cannot become dirtied',tier:0},
+    {name:'Focused',types:['Enchantment','Focused'],description:'Increase your focus thresholds by 1.',tier:0},
+    {name:'Improved Focused',types:['Enchantment','Focused'],description:'Further increase your focus thresholds by 1 for every extra enchantment tier.',tier:0},
     {name:'Invigorating',types:['Enchantment','Invigorating'],description:'You gain +3 energy.',tier:0},
     {name:'Improved Invigorating',types:['Enchantment','Invigorating'],description:'You gain an additional +3 energy for every extra enchantment tier.',tier:0},
-    {name:'Lightness',types:['Enchantment','Lightness'],description:'This equipment\'s weight is reduced by 2 lb. This cannot reduce an item\'s weight below 0.',tier:0},
-    {name:'Improved Lightness',types:['Enchantment','Lightness'],description:'This equipment\'s weight is reduced by an additional 2 lb. for every extra enchantment tier. This cannot reduce an item\'s weight below 0.',tier:0},
-    {name:'Providing',types:['Enchantment','Providing'],description:'Your travel group gains +1 provision score.',tier:0},
-    {name:'Improved Providing',types:['Enchantment','Providing'],description:'Your travel group gains an additional +1 provision score for every extra enchantment tier.',tier:0},
+    {name:'Staunching',types:['Enchantment','Staunching'],description:'You gain +1 death resistance.',tier:0},
+    {name:'Improved Staunching',types:['Enchantment','Staunching'],description:'You gain an additional +1 death resistance for every extra enchantment tier.',tier:0},
     
     //Tier 1
     {name:'Forceful',types:['Enchantment','Forceful'],description:'All attack abilities attached to this weapon have their energy damage increased by 1.',tier:1},
@@ -322,24 +321,35 @@ export const traitData: Trait[] = [
     {name:'Improved Resistant',types:['Enchantment','Resistant'],description:'You gain an additional +1 resistance for every 2 extra enchantment tiers.',tier:1},
     
     //Tier 2
-    {name:'Dense',types:['Enchantment','Dense'],description:'Increase the consumable trait of this item by 1.',tier:2},
-    {name:'Improved Dense',types:['Enchantment','Dense'],description:'Increase the consumable trait of this item by an additional 1 point for every 2 extra enchantment tiers.',tier:2},
-    {name:'Elegance',types:['Enchantment','Elegance'],description:'Your speech and mannerisms are masked in an aura of poise. Everything you do or say is perceived as elegant.',tier:2},
-    {name:'Flight',types:['Enchantment','Flight'],description:'Your travel group gains +1 range.',tier:2},
-    {name:'Improved Flight',types:['Enchantment','Flight'],description:'Your travel group gains an additional +1 range for every 2 extra enchantment tiers.',tier:2},
-    {name:'Staunching',types:['Enchantment','Staunching'],description:'You gain +2 death resistance.',tier:2},
-    {name:'Improved Staunching',types:['Enchantment','Staunching'],description:'You gain an additional +1 death resistance for every extra enchantment tier.',tier:2},
-    {name:'Storage',types:['Enchantment','Storage'],description:'Items stored in this accessory do not count towards your carry weight limit. Containers with this trait always weigh their base weight, regardless of their content.',tier:2},
+    {name:'Calming',types:['Enchantment','Calming'],description:'You are immune to finesse reductions statuses.',tier:2},
     
     //Tier 3
-    {name:'Calming',types:['Enchantment','Calming'],description:'You are immune to finesse reductions statuses.',tier:3},
     {name:'Glasscharm',types:['Enchantment','Glasscharm'],description:'All attack abilities attached to this weapon have their attack increased by 4 (if they have a non-zero attack defined). You suffer -4 defence.',tier:3},
     {name:'Improved Glasscharm',types:['Enchantment','Glasscharm'],description:'All attack abilities attached to this weapon have their attack increased by 1 additional point (if they have a non-zero attack defined) for every extra enchantment tier. You suffer an additional -1 defence for every extra enchantment tier.',tier:3},
     {name:'Ragecharm',types:['Enchantment','Ragecharm'],description:'All attack abilities attached to this weapon have their energy damage increase by 4. You suffer -4 resistane.',tier:3},
     {name:'Improved Ragecharm',types:['Enchantment','Ragecharm'],description:'All attack abilities attached to this weapon have their energy damage increase by 1 additional point for every extra enchantment tier. You suffer an additional -1 resistane for every extra enchantment tier.',tier:3},
     
-    //Tier 4       
+    //Tier 4
     {name:'Hyperlethal',types:['Enchantment','Hyperlethal'],description:'Whenever abilities attached to this weapon reduce a target\'s endurance, reduce the target\'s endurance by an additional point.',tier:4},
-    {name:'Mercurial',types:['Enchantment','Mecurial'],description:'You gain immunity to the movement reduction ailments and your movement cannot be less than 1 while you\'re not unconscious (statuses that set it to 0 instead set it to 1).',tier:4},
+    {name:'Mercurial',types:['Enchantment','Mecurial'],description:'You are immune to the movement reduction ailments and your minimum movement is set to 1. ',tier:4},
+    
+    //Utility
+    //Tier 0
+    {name:'Cleanliness',types:['Enchantment','Cleanliness'],description:'This item cannot become dirtied',tier:0},
+    {name:'Lightness',types:['Enchantment','Lightness'],description:'This equipment\'s weight is reduced by 2 lb. This cannot reduce an item\'s weight below 0.',tier:0},
+    {name:'Improved Lightness',types:['Enchantment','Lightness'],description:'This equipment\'s weight is reduced by an additional 2 lb. for every extra enchantment tier. This cannot reduce an item\'s weight below 0.',tier:0},
+    {name:'Providing',types:['Enchantment','Providing'],description:'Your travel group gains +1 provision score.',tier:0},
+    {name:'Improved Providing',types:['Enchantment','Providing'],description:'Your travel group gains an additional +1 provision score for every extra enchantment tier.',tier:0},
+    
+    //Tier 1
+    
+    //Tier 2
+    {name:'Elegance',types:['Enchantment','Elegance'],description:'Your speech and mannerisms are masked in an aura of poise. Everything you do or say is perceived as elegant.',tier:2},
+    {name:'Flight',types:['Enchantment','Flight'],description:'Your travel group gains +1 range.',tier:2},
+    {name:'Improved Flight',types:['Enchantment','Flight'],description:'Your travel group gains an additional +1 range for every 2 extra enchantment tiers.',tier:2},
+
+    //Tier 3
+    
+    //Tier 4       
     
 ]
