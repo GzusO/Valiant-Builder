@@ -216,7 +216,7 @@ export const traitData: Trait[] = [
     {name:'Enchanter',types:['Class','Arcanist','Arcanists'],description:'You may apply and remove enchantments and craft arcane items.',tier:0},
     {name:'Energy Efficiency',types:['Class','Arcanist','Practiced Repertoire'],description:'Reduce the energy cost of your Arcanist Repertoire abilities by 1. This cannot reduce the cost of abilities below 1.',tier:1},
     {name:'Steadfast Focus',types:['Class','Arcanist','Steady Mind'],description:'Increase your focus thresholds by your Mental Resilience score.',tier:1},
-    {name:'Hardened Focus',types:['Class','Arcanist','Steady Mind'],description:'You gain +1 resistance for each instance of focus you are maintaining.',tier:1},
+    {name:'Hardened Focus',types:['Class','Arcanist','Steady Mind'],description:'You gain +1 resistance for each focus ability you are maintaining.',tier:1},
     {name:'Arcane Medicine',types:['Class','Arcanist','Arcane Restoration'],description:'Whenever one of your effects restores a character\'s energy, that effect restores additional energy equal to your tier.',tier:2},
     {name:'Safe Recharging',types:['Class','Arcanist','Stable Recovery'],description:'While you suffer the Recharging status, gain defence and resistance equal to your tier.',tier:2},
     {name:'Arcane Shell',types:['Class','Arcanist','Arcane Armors'],description:'Gain Defence equal to your tier.',tier:2},
