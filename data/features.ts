@@ -234,7 +234,8 @@ export const featureData: Feature[] =[
     {name:'Practiced Repertoire',types:['Class','Primary','Arcanist'],description:'Minute optimizations accumulate into measureable improvements.', tier:1,abilities:[],traits:[]},
     {name:'Steady Mind',types:['Class','Primary','Arcanist'],description:'Many novice arcanists have fallen in battle, unable to focus over the sounds of conflict.', tier:1,abilities:[],traits:[]},
     {name:'Arcane Munitions',types:['Class','Primary','Arcanist'],description:'Certain arcanists find it useful to supplement their repertoire with projectile weaponry, and find that arcane missile can substitute mundane ones with great efficiency.', tier:1,abilities:[],traits:[]},
-     
+    {name:'Arc-Pyre',types:['Class','Primary','Arcanist'],description:'Conjuring flames is often seen as a foolish use of arcane energy, as the resulting blazes can quickly grow out of control. For some arcanists, however, this is considered a benefit.', tier:1,abilities:[],traits:[]},
+    
     {name:'Arcane Restoration',types:['Class','Primary','Arcanist'],description:'Very careful and exact manipulation of arcane forces can be used to mend and revitalize. Of course, this still requires a working understanding of your subject\'s physiology and some understanding of equivalent exchange.', tier:2,abilities:[],traits:[]},
     {name:'Stable Recovery',types:['Class','Primary','Arcanist'],description:'Your mastery over the fundamentals of energy conservation allow you to enter a more stable recovery state after substantial exertions.', tier:2,abilities:[],traits:[]},
     {name:'Arcane Armors',types:['Class','Primary','Arcanist'],description:'With enough practice, an arcanist can maintain a passive shell of force around themselves. This arcane shell is as effective as most light armors.', tier:2,abilities:[],traits:[]},
