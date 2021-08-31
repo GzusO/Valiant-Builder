@@ -275,7 +275,6 @@ export const traitData: Trait[] = [
     
     //Accessory Traits
     //Tier 0
-    {name:'Backpack Container',types:['Accessory','Backpack'],description:'This container can carry up to 75 lb. of up to medium objects.',tier:0},
     {name:'Backpack',types:['Accessory','Backpack'],description:'Increase you base weight threshold by 10 lb. Your travel group gains +3 provision score.',tier:0},
     {name:'Cloak',types:['Accessory','Cloak'],description:'A simple, comfortable cloak. Keeps you dry and warm.',tier:0},
     {name:'Necklace',types:['Accessory','Necklace'],description:'A simple ornamental necklace with no inherent benefits. Often used as a vessel for enchantments.',tier:0},
