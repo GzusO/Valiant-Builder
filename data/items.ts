@@ -110,6 +110,6 @@ export const weaponData: Item[] =[
     {name:'Rifle',tags:['Projectile','Two-Handed','Unwieldly','Heavy'],weight:7,cost:500,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
 
     {name:'Shield',tags:['Melee','Shield'],weight:6,cost:75,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
-    {name:'Large Shield',tags:['Melee','Shield','Heavy'],weight:20,cost:250,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
+    {name:'Heavy Shield',tags:['Melee','Shield','Heavy'],weight:20,cost:250,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
     
 ];

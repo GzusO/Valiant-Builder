@@ -265,7 +265,7 @@ export const traitData: Trait[] = [
     {name:'The Long Game',types:['Class','Specialist','Strategies'],description:'You and your allies may use stance abilities as if they were transformation abilities, paying twice the ability\'s energy cost.',tier:4},
     
     //Weapon Traits
-    {name:'Cover',types:['Weapon','Large Shield'],description:'You count as in cover against ranged attack abilities.',tier:0},
+    {name:'Cover',types:['Weapon','Heavy Shield'],description:'You count as in cover against ranged attack abilities.',tier:0},
 
     //Armor Traits
     {name:'Light Armor',types:['Armor','Light'],description:'You gain +3 defence. Defence bonus increases by 2 for every armor tier above 0.',tier:0},
