@@ -41,7 +41,7 @@ export const armorData: Item[] = [
     {name:'Mindspeak Amulet',tags:[],weight:0,cost:7500,abilities:[],traits:[],tier:3,description:'',types:['Accessory'],quantity:1},
 
     //Tier 4
-    {name:'Arcane Communicator',tags:[],weight:2,cost:10000,abilities:[],traits:[],tier:4,description:'',types:[],quantity:1},
+    {name:'Arcane Communicator',tags:[],weight:2,cost:10000,abilities:[],traits:[],tier:4,description:'',types:['Accessory'],quantity:1},
     
     
 ];
