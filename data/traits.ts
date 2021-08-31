@@ -238,7 +238,6 @@ export const traitData: Trait[] = [
     
     {name:'Preparedness',types:['Class','Specialist','Munition Resupply'],description:'Your consumable gears and projectile weapons gain +1 use.',tier:1},
     {name:'Unfaltering',types:['Class','Specialist','Unfaltering Will'],description:'You gain the unshakable boon.',tier:10},
-    {name:'Efficient Gear',types:['Class','Specialist','Efficient Tinkering'],description:'All consumable gear you create has a consumable value of 1 higher than it would normally be.',tier:1},
     {name:'Supplies',types:['Class','Specialist','Quartermaster'],description:'Your travel group gains provision score equal to the number of characters in your travel group.',tier:1},
     {name:'Stable Travel Range',types:['Class','Specialist','Travel Planning'],description:'Your travel group gains +2 range. Your travel group\'s range cannot be reduced due to a negative total bonus.',tier:2},
     {name:'Organized',types:['Class','Specialist','Orderly Mind'],description:'You always know the date and time down to an hour of precision. You always know the chronological order of events you have experienced, even if you can\'t remember exact times.',tier:3},

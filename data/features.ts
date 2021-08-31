@@ -284,16 +284,18 @@ export const featureData: Feature[] =[
     {name:'Ego Death',types:['Class','Primary','Specialist'],description:'There is no I.', tier:9,abilities:[],traits:[]},
     {name:'Unfaltering Will',types:['Class','Primary','Specialist'],description:'At this point, nothing surprises you.', tier:10,abilities:[],traits:[]},
     
-    {name:'Efficient Tinkering',types:['Class','Secondary','Specialist'],description:'Your crafts are hardier than others\', able to do much more before needing maintenance.', tier:1,abilities:[],traits:[]},
+    {name:'Orderly Mind',types:['Class','Secondary','Specialist'],description:'Your thoughts are naturally structured and logical, allowing you to passively keep track of things that others may easily confuse.', tier:1,abilities:[],traits:[]},
     {name:'Fledgling Investigator',types:['Class','Secondary','Specialist'],description:'You can get a good feel for a new place, even if nobody there will talk to you.', tier:1,abilities:[],traits:[]},
     {name:'Quartermaster',types:['Class','Secondary','Specialist'],description:'Provisions and supplies are critical to any operation. You take great pride in keeping strict stock of these, to the benefit of your party.', tier:1,abilities:[],traits:[]},
+    
     {name:'Investigator\'s Instinct',types:['Class','Secondary','Specialist'],description:'Whether your catching lies or confirming truths, you\'re adept at separating fact from fiction.', tier:2,abilities:[],traits:[]},
     {name:'Mercurial Tongue',types:['Class','Secondary','Specialist'],description:'You\'re way to comfortable with this.', tier:2,abilities:[],traits:[]},
     {name:'Travel Planning',types:['Class','Secondary','Specialist'],description:'You\'ve never been late to anything, and you don\'t plan to start anytime soon.', tier:2,abilities:[],traits:[]},
-    {name:'Orderly Mind',types:['Class','Secondary','Specialist'],description:'Your thoughts are naturally structured and logical, allowing you to passively keep track of things that others may easily confuse.', tier:3,abilities:[],traits:[]},
+    
     {name:'Peddling Flourishes',types:['Class','Secondary','Specialist'],description:'Making a sale is mroe an art than a science, and you are an artist.', tier:3,abilities:[],traits:[]},
     {name:'Quiet Sneak',types:['Class','Secondary','Specialist'],description:'You find it hard to be loud even when you mean to.', tier:3,abilities:[],traits:[]},
-    {name:'Enthralling Speech',types:['Class','Secondary','Specialist'],description:'Anyone can be convinced of anything if they believe it\'s in their best interest.', tier:4,abilities:[],traits:[]},
+    {name:'Enthralling Speech',types:['Class','Secondary','Specialist'],description:'Anyone can be convinced of anything if they believe it\'s in their best interest.', tier:3,abilities:[],traits:[]},
+
     {name:'Deep Insight',types:['Class','Secondary','Specialist'],description:'Society is a complex web of relationships, and you can see every strand.', tier:6,abilities:[],traits:[]},
     
 ]
