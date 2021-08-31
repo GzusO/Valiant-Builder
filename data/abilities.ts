@@ -42,7 +42,7 @@ export const abilityData: Ability[] =[
     {name:'Clarity',types:['Lineage','Selk','Purity of Focus'],primaryTags:['Energy 2','Combat'],secondaryTags:['Transformation'],tertiaryTags:['Limited 1'],description:'Gain +1 focus slots.',tier:0,attack:0, energyDamage:0, scaling:''},
 
     //Vyld Abilities 
-    {name:'Combat Breather',types:['Lineage','Vyld','Martial Endurance'],primaryTags:['Energy 0','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1'],description:'When your act phase begins: Restore energy equal to 4 plus twice your tier.',tier:0,attack:0, energyDamage:0, scaling:''},
+    {name:'Combat Breather',types:['Lineage','Vyld','Martial Endurance'],primaryTags:['Energy 0','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1'],description:'When your act phase begins: Restore energy equal to 4 plus twice your tier. This ability can only be used during combat.',tier:0,attack:0, energyDamage:0, scaling:''},
     {name:'Express Mutations',types:['Lineage','Vyld','Spontaneous Mutations'],primaryTags:['Energy 0','Combat'],secondaryTags:['Transformation'],tertiaryTags:[],description:'At each round begin phase (including when this ability was used), randomly gain either +1 lethality, +1 force, +1 defence, or +1 resistance. These status boons last until the end of combat. At each of your turn end phases, your energy is reduced by 2.',tier:0,attack:0, energyDamage:0, scaling:''},
     
     //Global Abilites
