@@ -2,7 +2,6 @@ import { Ability } from "src/app/Ability";
 
 export const abilityData: Ability[] =[
     //Profession Abilties
-    {name:'Temp Work',types:['Profession','Assistant'],primaryTags:['Energy 14'],secondaryTags:['Charged Action 8 hours'],tertiaryTags:['Limited 1'],description:'Find and work a temporary, day-long job in any town or city you find yourself in. These jobs pay 1d4 times 5 tins per day, multiplied by your tier plus 1.',tier:0,attack:0, energyDamage:0, scaling:''},
     {name:'Coin Acquisition',types:['Profession','Criminal'],primaryTags:['Energy 14'],secondaryTags:['Charged Action 8 hours'],tertiaryTags:['Limited 1'],description:'Spend an entire day in any town or city you find yourself in acquiring people\'s coins by less-than-legitimate means. Make a non-resilience single-character characteristic contest of your choice, with the target value based on your tier. If you succeed, you earn 1d4 times 10 tins, multiplied by your tier plus 1. If you fail, you must face the consequences of your actions. In most situations, you must pay off your own bounty(your tier multiplied by 100 tins) or spend a number of weeks in jail equal to your tier(minimum 1 night).',tier:0,attack:0, energyDamage:0, scaling:''},
 
     //Lineage Abilties

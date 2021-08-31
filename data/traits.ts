@@ -24,6 +24,7 @@ export const traitData: Trait[] = [
     {name: 'Physical Laborer Funds', types: ['Profession','Physical Laborer'], description: 'You start with 750 tins.',tier:0},
     {name: 'Submissive Demeanor', types: ['Profession','Servant'], description: 'Characters that don\'t know you will always dismiss you as unthreatening.',tier:0},
     {name: 'Servant Funds', types: ['Profession','Servant'], description: 'You start with 750 tins.',tier:0},
+    {name: 'Thrifty',types:['Profession','Assistant'],description:'You may purchase general items for half of their cost.',tier:0},
     {name: 'Assistant Funds', types: ['Profession','Assistant'], description: 'You start with 750 tins.',tier:0},
     {name: 'Educated', types: ['Profession','Scholar'], description: 'You are able to speak two additional languages.',tier:0},
     {name: 'Scholar Funds', types: ['Profession','Scholar'], description: 'You start with 1,000 tins.',tier:0},
