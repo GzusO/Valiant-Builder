@@ -19,13 +19,13 @@ export const abilityData: Ability[] =[
     {name:'Foolproof Sale',types:['Lineage','Girt','The Perfect Pitch'],primaryTags:['Energy 12'],secondaryTags:['Charged Action 15 minutes'],tertiaryTags:['Limited 1'],description:'You sell an item to the target character for its full common price. If the character cannot afford the item, they will offer all of the money thay have on them.',tier:0,attack:0, energyDamage:0, scaling:''},
     
     //Derge Abilities
-    {name:'Surge',types:['Lineage','Derge','Unstoppable Fury'],primaryTags:['Energy 10','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1'],description:'Your act phase ends: take another act phase.',tier:0,attack:0, energyDamage:0, scaling:''},
+    {name:'Surge',types:['Lineage','Derge','Unstoppable Fury'],primaryTags:['Energy 8','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1'],description:'Your act phase ends: take another act phase.',tier:0,attack:0, energyDamage:0, scaling:''},
     {name:'Savage Trance',types:['Lineage','Derge','Savage Instincts'],primaryTags:['Energy 3','Combat'],secondaryTags:['Stance'],tertiaryTags:[],description:'Gain +1 Finesse and +2 lethality.',tier:0,attack:0, energyDamage:0, scaling:''},
     
     //Hjark Abilities
     {name:'Martial Trance',types:['Lineage','Hjark','Martial Tradition'],primaryTags:['Energy 3','Combat'],secondaryTags:['Stance'],tertiaryTags:[],description:'Gain +2 defence and +2 resistance.',tier:0,attack:0, energyDamage:0, scaling:''},
     {name:'Singular Strike',types:['Lineage','Hjark','Legendary Strikes'],primaryTags:['Energy 5','Combat'],secondaryTags:['Attack Modifier'],tertiaryTags:['Limited 1'],description:'Gain +4 lethality and +4 force.',tier:0,attack:0, energyDamage:0, scaling:''},
-    {name:'Hasty Preparations',types:['Lineage','Hjark','Battlefield Maintenance'],primaryTags:['Energy 2','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1'],description:'Combat begins: you may prepare your gear.',tier:0,attack:0, energyDamage:0, scaling:''},
+    {name:'Hasty Preparations',types:['Lineage','Hjark','Battlefield Maintenance'],primaryTags:['Energy 2','Combat'],secondaryTags:['Reaction'],tertiaryTags:[],description:'Combat begins: you may prepare your gear.',tier:0,attack:0, energyDamage:0, scaling:''},
     
     //Ingra Abilities
     {name:'Harry',types:['Lineage','Ingra','Aspect of the Vulture'],primaryTags:['Energy 1','Combat'],secondaryTags:['Stance'],tertiaryTags:[],description:'When you use this ability, select an enemy character. Ignore the slow tag on attack abilities as long as they target only that character.',tier:0,attack:0, energyDamage:0, scaling:''},
