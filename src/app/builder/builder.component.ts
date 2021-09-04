@@ -62,11 +62,11 @@ export class BuilderComponent implements OnInit {
   }
 
   primary(feats: Feature[]): Feature[] {
-    const result =feats.filter(x=> x.types.includes("Primary"));
+    const result =feats.filter(x=> x.types.includes("Combat"));
     return result;
   }
   secondary(feats: Feature[]): Feature[] {
-    const result = feats.filter(x=> x.types.includes("Secondary"));
+    const result = feats.filter(x=> x.types.includes("Utility"));
     return result;
   }
   consumePoint(name: string, amount: number){

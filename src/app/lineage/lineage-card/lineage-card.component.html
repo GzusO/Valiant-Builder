@@ -27,8 +27,8 @@
               </div>
             </mat-expansion-panel>
         </mat-tab>
-        <mat-tab label="Primary">
-          <h3>Primary Features</h3>
+        <mat-tab label="Combat">
+          <h3>Combat Features</h3>
           <mat-accordion>
             <mat-expansion-panel *ngFor="let feature of primary(lineage.features)">
               <mat-expansion-panel-header>
@@ -45,8 +45,8 @@
             </mat-expansion-panel>
           </mat-accordion>
         </mat-tab>
-        <mat-tab label="Secondary">
-          <h3>Secondary Features</h3>
+        <mat-tab label="Utility">
+          <h3>Utility Features</h3>
           <mat-accordion>
             <mat-expansion-panel *ngFor="let feature of secondary(lineage.features)">
               <mat-expansion-panel-header>
