@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Enchantment } from 'data/enchantments';
@@ -9,7 +9,7 @@ import { DataService } from 'src/app/data.service';
   templateUrl: './enchantment-list.component.html',
   styleUrls: ['./enchantment-list.component.scss']
 })
-export class EnchantmentListComponent implements OnInit {
+export class EnchantmentListComponent implements OnInit, AfterViewInit {
   enchantments: Enchantment[] =[];
   enchantmentDataSource = new MatTableDataSource<Enchantment>();
   displayedColumns: string[] = ['tier','name', 'valid', 'cost','traits'];

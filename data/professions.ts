@@ -16,5 +16,6 @@ export const professionData: Profession[] =[
     {name:'Scholar', type: 'Other',features:[]},
     {name:'Priest', type: 'Other',features:[]},
     {name:'Physician', type: 'Other',features:[]},
-    {name:'Criminal', type: 'Other',features:[]}
+    {name:'Criminal', type: 'Other',features:[]},
+    {name:'Sailor',type:'Other',features:[]}
 ]

@@ -19,9 +19,9 @@ export class LineageCardComponent implements OnInit {
     return data.filter(x => x.types.includes('Persistent'))
   }
   primary(data: Feature[]): Feature[]{
-    return data.filter(x=> x.types.includes('Primary'))
+    return data.filter(x=> x.types.includes('Combat'))
   }
   secondary(data: Feature[]): Feature[]{
-    return data.filter(x=> x.types.includes('Secondary'))
+    return data.filter(x=> x.types.includes('Utility'))
   }
 }

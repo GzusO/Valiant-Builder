@@ -17,10 +17,10 @@ export class ClassDetailComponent implements OnInit {
   }
 
   primary(data: Feature[]): Feature[] {
-    return data.filter(x=>x.types.includes('Primary'));
+    return data.filter(x=>x.types.includes('Combat'));
   }
   secondary(data: Feature[]): Feature[] {
-    return data.filter(x=>x.types.includes('Secondary'));
+    return data.filter(x=>x.types.includes('Utility'));
   }
   global(data: Feature[]): Feature[] {
     return data.filter(x=>x.types.includes('Global'));

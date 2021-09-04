@@ -1,31 +1,27 @@
-<mat-toolbar>
+<mat-toolbar color="primary">
     <div class="title">
         Valiance Character Builder
     </div>
     <span class="buttons">
-        <a mat-stroked-button routerLink="/characteristics">Characteristics</a>
-        <a mat-stroked-button routerLink="/classes">Classes</a>
-        <a mat-stroked-button routerLink="/lineages">Lineages</a>
-        <button mat-stroked-button [matMenuTriggerFor]="itemMenu" class="menu">Items 
+        <a mat-button routerLink="/characteristics">Characteristics</a>
+        <a mat-button routerLink="/classes">Classes</a>
+        <a mat-button routerLink="/lineages">Lineages</a>
+        <button mat-button [matMenuTriggerFor]="itemMenu" class="menu">Items 
             <mat-icon>expand_more</mat-icon>
         </button>
-        <a mat-stroked-button routerLink="/professions">Professions</a>
-        <a mat-stroked-button routerLink="/builder">Valiant Builder</a>
-        <a mat-stroked-button routerLink="/valiants">My Valiants</a>
+        <a mat-button routerLink="/professions">Professions</a>
+        <a mat-button routerLink="/builder">Valiant Builder</a>
+        <a mat-button routerLink="/valiants">My Valiants</a>
         <mat-menu #itemMenu="matMenu">
-            <a mat-stroked-button routerLink="/armor" class="menuItem">Armor</a>
-            <a mat-stroked-button routerLink="/weapon" class="menuItem">Weapons</a>
-            <a mat-stroked-button routerLink="/gear" class="menuItem">Gear</a>
-            <a mat-stroked-button routerLink="/enchantments" class="menuItem">Enchantments</a>
+            <a mat-button routerLink="/armor" class="menuItem">Armor</a>
+            <a mat-button routerLink="/weapon" class="menuItem">Weapons</a>
+            <a mat-button routerLink="/gear" class="menuItem">Gear</a>
+            <a mat-button routerLink="/enchantments" class="menuItem">Enchantments</a>
         </mat-menu>
         
     </span>
     <span class="spacer"></span>
-    <span class="toggle">
-        <mat-slide-toggle [formControl]="toggleControl" class="mr-8"></mat-slide-toggle>
-        <mat-icon>bedtime</mat-icon>
-    </span>
-    <a href="https://github.com/GzusO/Valiant-Builder" mat-stroked-button title="Github">GitHub</a>
+    <a href="https://github.com/GzusO/Valiant-Builder" mat-button title="Github">GitHub</a>
 </mat-toolbar>
 <main class="content mat-app-background" >
     <router-outlet ></router-outlet>

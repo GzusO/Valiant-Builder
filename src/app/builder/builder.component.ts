@@ -7,6 +7,7 @@ import { DataService } from '../data.service';
 import { MatSelectionListChange } from '@angular/material/list';
 import { CharacteristicScore, Valiant } from 'data/valiant';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Ability } from '../Ability';
 
 @Component({
   selector: 'app-builder',
@@ -26,6 +27,7 @@ export class BuilderComponent implements OnInit {
     valiantClassSecondaryFeatures: Feature[] = [];
     valiantCharacteristicFeautres: Feature[] =[];
     valiantName: string= "";
+    valiantGlobalAbilities: Ability[] = [];
     
 
     lineages: Lineage[] = [];
@@ -34,16 +36,19 @@ export class BuilderComponent implements OnInit {
     classFeatures: Feature[] = [];
 
   constructor(private dataService: DataService,private snackBar: MatSnackBar) {
-      this.getCharacteristics();
-      this.getLineages();
-      this.getLineageFeatures();
-      this.getProfessions();
-      this.getClassFeatures();
-      this.characteristics.forEach(char =>this.valiantCharacteristics.push({name:char.name,score:1}));
-      this.characteristics.forEach(x=> this.updateCharacteristicFeatures(x.name,1));
+      
    }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getCharacteristics();
+    this.getLineages();
+    this.getLineageFeatures();
+    this.getProfessions();
+    this.getClassFeatures();
+    this.getGlobalAbilities();
+    this.characteristics.forEach(char =>this.valiantCharacteristics.push({name:char.name,score:1}));
+    this.characteristics.forEach(x=> this.updateCharacteristicFeatures(x.name,1));
+  }
 
   getCharacteristics(): void {
     this.dataService.getCharacteristics().subscribe(characteristics => this.characteristics = characteristics);
@@ -60,13 +65,16 @@ export class BuilderComponent implements OnInit {
   getClassFeatures(): void {
     this.dataService.getFeaturesByType('Aspirant').subscribe(feats => this.classFeatures= feats);
   }
+  getGlobalAbilities(): void {
+    this.dataService.getGlobalAbilities().subscribe(abl => this.valiantGlobalAbilities = abl);
+  }
 
   primary(feats: Feature[]): Feature[] {
-    const result =feats.filter(x=> x.types.includes("Primary"));
+    const result =feats.filter(x=> x.types.includes("Combat"));
     return result;
   }
   secondary(feats: Feature[]): Feature[] {
-    const result = feats.filter(x=> x.types.includes("Secondary"));
+    const result = feats.filter(x=> x.types.includes("Utility"));
     return result;
   }
   consumePoint(name: string, amount: number){
@@ -123,6 +131,7 @@ export class BuilderComponent implements OnInit {
     valiant.features.push(...this.valiantClassPrimaryFeatures);
     valiant.features.push(...this.valiantClassSecondaryFeatures);
     valiant.features.push(...this.valiantProfession[0].features);
+    valiant.abilities.push(...this.valiantGlobalAbilities);
     
     this.dataService.addValiant(valiant);
 
