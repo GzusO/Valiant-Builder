@@ -24,6 +24,7 @@ import { Valiant } from 'data/valiant';
   providedIn: 'root'
 })
 export class DataService {
+  
   professions = professionData;
   features = featureData; 
   traits = traitData;
@@ -93,6 +94,9 @@ export class DataService {
   }
   getValiant(id: number): Observable<Valiant> {
     return of(this.valiants.find(x=> x.id===id)!);
+  }
+  getGlobalAbilities(): Observable<Ability[]> {
+    return of(this.abilities.filter(x=> x.types.includes("Global")));
   }
 
   constructor() {
