@@ -1,9 +1,9 @@
 @import "~@angular/material/theming";
-@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "~@angular/material/prebuilt-themes/purple-green.css";
 @include mat-core();
-$angular-primary: mat-palette($mat-deep-purple, 500, 100, 900);
-$angular-accent: mat-palette($mat-amber, A200, A100, A400);
-$angular-warn: mat-palette($mat-red);
+$angular-primary: mat-palette($mat-purple);
+$angular-accent: mat-palette($mat-green);
+$angular-warn: mat-palette($mat-pink);
 
 $angular-default-theme: mat-light-theme(
   (
@@ -49,4 +49,8 @@ p {
 .fixed-width-dialog .mat-dialog-container {
   max-width: 80vw !important;
   width: 80vw !important;
+}
+.mat-button:hover {
+  color: #a5d6a7;
+  background: rgba($color: #000000, $alpha: .4);
 }
