@@ -9,9 +9,9 @@ export const traitData: Trait[] = [
     {name: 'Gear Crafting', types: ['Profession', 'Tinkerer'], description: 'You can create gear.',tier:0},
     {name: 'Tinkerer Funds', types: ['Profession', 'Tinkerer'], description: 'You start with 1,000 tins.',tier:0},
     {name: 'Salesperson', types: ['Profession','Merchant'], description: 'You can reliably sell items to any character that can afford them, instead of just merchants.',tier:0},
-    {name: 'Merchant Funds', types: ['Profession','Merchant'], description: 'You start with 1,500 tins.',tier:0},
+    {name: 'Merchant Funds', types: ['Profession','Merchant'], description: 'You start with 1,250 tins.',tier:0},
     {name: 'Noble Air', types: ['Profession','Noble'], description: 'Your status allows you into exclusive areas and events.',tier:0},
-    {name: 'Noble Funds', types: ['Profession','Noble'], description: 'You start with 2,000 tins.',tier:0},
+    {name: 'Noble Funds', types: ['Profession','Noble'], description: 'You start with 1,500 tins.',tier:0},
     {name: 'Natural Explorer', types: ['Profession','Traveler'], description: 'Your travel groups gain a +1 to their range and a +3 to their provision score.',tier:0},
     {name: 'Traveler Funds', types: ['Profession','Traveler'], description: 'You start with 750 tins.',tier:0},
     {name: 'Peacekeeper', types: ['Profession','Guard'], description: 'You are always welcomed into neutral towns or cities.',tier:0},
@@ -19,7 +19,7 @@ export const traitData: Trait[] = [
     {name: 'Discipline', types: ['Profession','Soldier'], description: 'You gain a +1 to all resilience contests.',tier:0},
     {name: 'Soldier Funds', types: ['Profession','Soldier'], description: 'You start with 1,000 tins.',tier:0},
     {name: 'Tracking', types: ['Profession','Bounty Hunter'], description: 'You can pick up any creature\'s trail as long as the trail is less than 5 days old.',tier:0},
-    {name: 'Bounty Hunter Funds', types: ['Profession','Bounty Hunter'], description: 'You start with 1,500 tins.',tier:0},
+    {name: 'Bounty Hunter Funds', types: ['Profession','Bounty Hunter'], description: 'You start with 1,250 tins.',tier:0},
     {name: 'Tempered Body', types: ['Profession','Physical Laborer'], description: 'Gain +2 energy.',tier:0},
     {name: 'Physical Laborer Funds', types: ['Profession','Physical Laborer'], description: 'You start with 750 tins.',tier:0},
     {name: 'Submissive Demeanor', types: ['Profession','Servant'], description: 'Characters that don\'t know you will always dismiss you as unthreatening.',tier:0},
@@ -31,8 +31,10 @@ export const traitData: Trait[] = [
     {name: 'Open Arms', types: ['Profession','Priest'], description: 'You and any characters allied with you are able to find sanctuary in any temple belonging to your religion, given you are not a known enemy of the temple.',tier:0},
     {name: 'Priest Funds', types: ['Profession','Priest'], description: 'You start with 1,000 tins.',tier:0},
     {name: 'Disease Cure', types: ['Profession','Physician'], description: 'You are able to cure diseases. It costs you half of the usual cost to procure the treatments and cure the disease (given the reagents are available). To cure a disease, you must spend a number of days equal to 1 plus the disease\'s tier with the patient.',tier:0},
-    {name: 'Physician Funds', types: ['Profession','Physician'], description: 'You start with 1,500 tins.',tier:0},
+    {name: 'Physician Funds', types: ['Profession','Physician'], description: 'You start with 1,250 tins.',tier:0},
     {name: 'Criminal Funds', types: ['Profession','Criminal'], description: 'You start with 1,000 tins.',tier:0},
+    {name: 'Seafarer',types:['Profession','Sailor'],description:'You count as two people when crewing a manual aquatic vehicle.',tier:0},
+    {name: 'Sailor Funds',types:['Profession','Sailor'],description:'You start with 750 tins.',tier:0},
     
     //Lineage Traits
     
@@ -47,7 +49,7 @@ export const traitData: Trait[] = [
 
     //Girt Traits
     {name:'Diminutive',types:['Lineage','Girt','Skin and Bones'],description:'You require 1 less provision score when travelling. You are unable to intimidate other characters, even with the use of other traits or abilities, unless they are at least 3 tiers below your tier.',tier:0},
-    {name:'Resourceful',types:['Lineage','Girt','Master of Thrift'],description:'Your gear and projectile weapons limited abilities have their limited value increased by 1.',tier:0},
+    {name:'Resourceful',types:['Lineage','Girt','Master of Thrift'],description:'Your gear and weapon limited abilities have their limited value increased by 1.',tier:0},
     {name:'Movement Reduction Immunity',types:['Lineage','Girt','Aspect of the Sands'],description:'You are immune to attribute ailments that reduce your movement.',tier:0},
     {name:'Gear Maintenance',types:['Lineage','Girt','Staunch Maintainer'],description:'You can prepare an additional gear item whenever you prepare gear.',tier:0},
     {name:'Bejeweled',types:['Lineage','Girt','Decorated Figure'],description:'You can wear on additional accessory.',tier:0},
@@ -170,7 +172,7 @@ export const traitData: Trait[] = [
     {name:'Marked Assault',types:['Class','Aspirant','Marked Prey'],description:'Attack modifier abilities appplied to attack abilities targeting only your marked character cost 0 energy.',tier:0},
     {name:'Marked Tracking',types:['Class','Aspirant','Marked Prey'],description:'You can always track your marked character given there are tracks to follow. You can identify a marked character as long as you can see them, even if they are disguised (excluding invisible characters).',tier:0},
     
-    {name:'Thrill of Combat',types:['Class','Aspirant','Daring Flair'],description:'You gain +1 lethality and +1 defence for every enemy character that is adjacent to you.',tier:0},
+    {name:'Thrill of Combat',types:['Class','Aspirant','Daring Flair'],description:'You gain +1 lethality, +1 force, +1 defence, and +1 resistance for every enemy character that is adjacent to you.',tier:0},
     {name:'Lightened Loads',types:['Class','Aspirant','Light Traveler'],description:'Your tavel group gains +2 range.',tier:0},
     {name:'Simple Market Knowledge',types:['Class','Aspirant','Basic Economy'],description:'You always know if a trade you are making is not in your favor.',tier:0},
     {name:'Salesman',types:['Class','Aspirant','Basic Economy'],description:'When you sell items to merchants, you always get at least half of the Cost of the Item, granted the merchant is willing to buy that item and can afford it.',tier:0},
@@ -187,14 +189,15 @@ export const traitData: Trait[] = [
     {name:'Rage',types:['Class','Warrior','Adrenaline Rush'],description:'You gain +3 lethality and +3 force while you suffer the winded status.',tier:2},
     {name:'Heavy Armor Training',types:['Class','Warrior','Battle Conditioning'],description:'Ignore up to 1 points of Finesse reduction that come from your worn armor.',tier:2},
     {name:'Weapon Flurry',types:['Class','Warrior','Dual-Wielding'],description:'Gain +1 Lethality, +1 Force, and +2 Defence while wielding two one-handed, non-shield weapons.',tier:2},
-    {name:'Gunslinger',types:['Class','Warrior','Dual-Wielding'],description:'Ignore the two-handed tag on short guns and arcane short guns.',tier:2},
+    {name:'Gunslinger',types:['Class','Warrior','Dual-Wielding'],description:'Ignore the two-handed tag on Guns and arcane Guns.',tier:2},
     
     {name:'Force Buildup',types:['Class','Warrior','Trading Blows'],description:'Gain +1 force whenever you take energy damage. this boon lasts until combat ends.',tier:3},
     {name:'Deflecting',types:['Class','Warrior','Active Defenses'],description:'Any parry abilities you use can be triggered on any attack abilities, instead of just melee attack abilities. Additionally, all medium shields grant you cover from ranged attack abilities while wielded in at least one hand.',tier:4},
-    {name:'Shielded Barrage',types:['Class','Warrior','Lancer'],description:'You may wield a shield while wielding a crossbow, heavy crossbow, great crossbow, carbine, or rifle. Ignore the Unwieldly tag on crossbow, heavy crossbow, great crossbow, carbine, or rifle.',tier:5},
+    {name:'Shielded Barrage',types:['Class','Warrior','Lancer'],description:'You may wield a shield while wielding a crossbow, heavy crossbow, great crossbow, Heavy Gun, or Great Gun. Ignore the Unwieldly tag on crossbow, heavy crossbow, great crossbow, Heavy Gun, or Great Gun.',tier:5},
     
     {name:'Masterful Attacks',types:['Class','Warrior','Masterful Maneuvers'],description:'You may apply an additional attack modifier ability to your attack abilities.',tier:6},
     {name:'Additional Stance',types:['Class','Warrior','Masterful Stances'],description:'You may use an additional stance ability during the round begin phase.',tier:6},
+    {name:'Heroic Endurance',types:['Class','Warrior','Enduring'],description:'Gain +1 endurance',tier:6},
     
     {name:'Eternal',types:['Class','Warrior','Eternal Body'],description:'If you would die, restore 1 endurance and permanently suffer -2 energy.',tier:10},
     
@@ -237,7 +240,7 @@ export const traitData: Trait[] = [
     {name:'Stratagem Studies',types:['Class','Specialist','Specialists'],description:'You can acquire new Specialist Strategy traits, as long as thier tier is equal to or less than your Specialist class path invested tier. To add a new ability to your repertoire, the following requirements must be satistfied: You must spend a week of downtime per ability tier with no breaks or major interruptions. You must have uninterrupted access to at least one other cahracter or a study amenity of your tier or higher. You must spend 1000t tins, where t is the ability tier, to gain access to the proper materials needed to learn the ability. After these conditions are satisfied, you gain access to the ability.',tier:0},
     {name:'Embargo',types:['Class','Specialist','Specialists'],description:'When combat begins, you may select one character on another team. That character cannot be the first character to act for that team. If no characters on a team are able to go first, any characters on that team may go first.',tier:0},
     
-    {name:'Preparedness',types:['Class','Specialist','Munition Resupply'],description:'Your consumable gears and projectile weapons gain +1 use.',tier:1},
+    {name:'Preparedness',types:['Class','Specialist','Munition Resupply'],description:'Your gears and weapon limited abilities have their limited value increased by 1.',tier:1},
     {name:'Unfaltering',types:['Class','Specialist','Unfaltering Will'],description:'You gain the unshakable boon.',tier:10},
     {name:'Supplies',types:['Class','Specialist','Quartermaster'],description:'Your travel group gains provision score equal to the number of characters in your travel group.',tier:1},
     {name:'Stable Travel Range',types:['Class','Specialist','Travel Planning'],description:'Your travel group gains +2 range. Your travel group\'s range cannot be reduced due to a negative total bonus.',tier:2},
@@ -254,7 +257,7 @@ export const traitData: Trait[] = [
     {name:'Brutal Aggressions',types:['Class','Specialist','Strategies'],description:'All enemy characters suffer -1 Finesse.',tier:2},
     {name:'Calm and Collected',types:['Class','Specialist','Strategies'],description:'You and all allied characters gain +1 Finesse.',tier:2},
     {name:'Combat Drills',types:['Class','Specialist','Strategies'],description:'You and all allied characters gain +1 movement.',tier:2},
-    {name:'Munition Packing',types:['Class','Specialist','Strategies'],description:'You and your allies\' projectile weapons gain +2 uses. This effect increases any affected projectile weapon\'s current uses by 2 when it is applied, and reduces the current uses by 2 when it expires.',tier:2},
+    {name:'Munition Packing',types:['Class','Specialist','Strategies'],description:'You and your allies\' weapon limited abilities have their limited value increased by 2.',tier:2},
     {name:'Pre-Prepared Equipment',types:['Class','Specialist','Strategies'],description:'You and your allies\' gear items can be used once this combat without counting towards their Consumable values. This allows otherwise consumed gear to be used.',tier:2},
     {name:'Last Stand',types:['Class','Specialist','Strategies'],description:'Whenever you or an allied character is reduced to 0 endurance, you and your allied characters gain +2 lethality and +2 defence until combat ends.',tier:3},
     {name:'Reinforced Focus',types:['Class','Specialist','Strategies'],description:'You and all allied characters gain a bonus to their focus thresholds equal to half of their tier (rounded down).',tier:3},
@@ -276,7 +279,7 @@ export const traitData: Trait[] = [
     //Accessory Traits
     //Tier 0
     {name:'Backpack',types:['Accessory','Backpack'],description:'Increase you base weight threshold by 10 lb. Your travel group gains +3 provision score.',tier:0},
-    {name:'Munition Pouch',types:['Accessory','Munition Pouch'],description:'Your projectile weapons gain +1 use.',tier:0},
+    {name:'Munition Pouch',types:['Accessory','Munition Pouch'],description:'Your weapon limited abilities have their limited value increased by 1.',tier:0},
     {name:'Simple Charm',types:['Accessory','Simple Charm'],description:'You gain +1 death resistance.',tier:0},
     
     //Tier 1

@@ -18,6 +18,7 @@ export const featureData: Feature[] =[
     {name:'Priest',types:['Profession','Priest'],abilities:[],traits:[], description:'You’ve devoted yourself to some higher power. Besides some sense of inner piece, this devotion has given you access to a network of safe places, granted you’re travelling in friendly territory.',tier:0},
     {name:'Physician',types:['Profession','Physician'],abilities:[],traits:[], description:'There are many ailments on the Barrier Sea, and you’ve spent much of your life learning to cure them.',tier:0},
     {name:'Criminal',types:['Profession','Criminal'],abilities:[],traits:[], description:'Regardless of how you spin your tale, the truth is quite simple: you take things from people.',tier:0},
+    {name:'Sailor',types:['Profession','Sailor'],description:'Whatever your role, you have ample experience navigating the vast oceans of the Barrier Sea.', tier:0,abilities:[],traits:[]},
    
     //Lineage Features
 
@@ -200,16 +201,20 @@ export const featureData: Feature[] =[
     {name:'Bided Time',types:['Class','Primary','Warrior'],description:'Patience often precedes greatness.', tier:3,abilities:[],traits:[]},
     {name:'Stalwart Challenger',types:['Class','Primary','Warrior'],description:'In the heat of battle, none can deny your challenge.', tier:3,abilities:[],traits:[]},
     {name:'Trading Blows',types:['Class','Primary','Warrior'],description:'You\'re confident that you can take a hit, and more confident that your opponents won\'t be able to take yours.', tier:3,abilities:[],traits:[]},
+    {name:'Focused Martial Stances',types:['Class','Primary','Warrior'],description:'Greater powers require greater sacrifices.', tier:3,abilities:[],traits:[]},
+    
+    
     {name:'Active Defenses',types:['Class','Primary','Warrior'],description:'Heavy armor may ward off most blows, but skilled opponents require more active defensive measures.', tier:4,abilities:[],traits:[]},
     {name:'Advanced Martial Stances',types:['Class','Primary','Warrior'],description:'You\'ve mastered the fundamentals, and have delved into advanced martial arts.', tier:4,abilities:[],traits:[]},
+    {name:'Flashing Steel',types:['Class','Primary','Warrior'],description:'In and out in a single, blinding flash.', tier:4,abilities:[],traits:[]},
     
-
     {name:'Deathless',types:['Class','Primary','Warrior'],description:'Heros often live on borrowed time.', tier:5,abilities:[],traits:[]},
     {name:'Lancer',types:['Class','Primary','Warrior'],description:'Who said you need two hands to fire high-caliber weaponry?', tier:5,abilities:[],traits:[]},
+    {name:'Savior',types:['Class','Primary','Warrior'],description:'Taking additional blows is as necessary as it is unpleasant, for not everyone is as sturdy as you are.', tier:5,abilities:[],traits:[]},
     
     {name:'Masterful Maneuvers',types:['Class','Primary','Warrior'],description:'A single, deliberate strike is all you need.', tier:6,abilities:[],traits:[]},
     {name:'Masterful Stances',types:['Class','Primary','Warrior'],description:'You exist in a martial superposition.', tier:6,abilities:[],traits:[]},
-    {name:'Savior',types:['Class','Primary','Warrior'],description:'Taking additional blows is as necessary as it is unpleasant, for not everyone is as sturdy as you are.', tier:6,abilities:[],traits:[]},
+    {name:'Enduring',types:['Class','Primary','Warrior'],description:'After so many near-death experiences, you\'ve built up a strange sort of resistance to dying.', tier:6,abilities:[],traits:[]},
     
     {name:'Eternal Body',types:['Class','Primary','Warrior'],description:'Your legacy may outlive your body, but not by much.', tier:10,abilities:[],traits:[]},
     
