@@ -62,6 +62,7 @@ import { AbilitySelectDialogComponent } from './ability/ability-select-dialog/ab
 import { TraitSelectDialogComponent } from './trait/trait-select-dialog/trait-select-dialog.component';
 import { ValiantRandomizerComponent } from './valiant/valiant-randomizer/valiant-randomizer.component';
 import { ItemEditDialogComponent } from './item/item-edit-dialog/item-edit-dialog.component';
+import { TrackerComponent } from './tracker/tracker/tracker.component';
 
 
 @NgModule({
@@ -98,7 +99,8 @@ import { ItemEditDialogComponent } from './item/item-edit-dialog/item-edit-dialo
     AbilitySelectDialogComponent,
     TraitSelectDialogComponent,
     ValiantRandomizerComponent,
-    ItemEditDialogComponent
+    ItemEditDialogComponent,
+    TrackerComponent
   ],
   imports: [
     BrowserModule,

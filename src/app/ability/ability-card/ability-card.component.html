@@ -4,8 +4,7 @@
           <span class="name">{{ability.name}}</span>  
         </mat-card-title>
         <mat-card-subtitle>
-          <span>{{ability.types.join(", ")}}</span>
-          <mat-divider></mat-divider>
+          <app-tracker [limit]="getLimit(ability)" [marked]=0 *ngIf="true"></app-tracker>
         </mat-card-subtitle>
         <div style="flex-grow: 1"></div>
         <button mat-icon-button [matMenuTriggerFor]="menu" *ngIf="enableMenu">
