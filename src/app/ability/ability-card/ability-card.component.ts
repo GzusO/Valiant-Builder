@@ -11,6 +11,7 @@ export class AbilityCardComponent implements OnInit {
   
   @Input() ability?: Ability;
   @Input() enableMenu: Boolean = false;
+  @Input() enableTracker: Boolean = true;
   @Output() deleteClicked: EventEmitter<Ability> = new EventEmitter<Ability>();
   constructor() { }
 
@@ -19,5 +20,14 @@ export class AbilityCardComponent implements OnInit {
 
   clickDelete(): void {
     this.deleteClicked.emit(this.ability);
+  }
+  getLimit(ability:Ability): number{
+    let limit = ability.tertiaryTags.find(x=> x.startsWith("Limited"));
+    if (limit === undefined)
+      return 0;
+    let val = parseInt(limit.split(' ')[1]);
+    if(val=== undefined)
+      return 0;
+    return val;
   }
 }
