@@ -1,0 +1,102 @@
+<div class="flex">
+    <div class="half">
+        <h2>Featues
+            <button mat-button>Add</button>
+        </h2>
+        <div *ngFor="let feat of features">{{FeatToTS(feat)}}</div>
+        
+        <h2>Abilities
+            <button mat-button>Add</button>
+        </h2>
+        <div *ngFor="let abl of abilities">{{AblToTS(abl)}}</div>
+        
+        <h2>Traits
+            <button mat-button>Add</button>
+        </h2>
+        <div *ngFor="let trait of traits">{{TrtToTS(trait)}}</div>
+    </div>
+    <div class="half">
+        <h2>Import</h2>
+          <mat-form-field appearance="fill" class="full">
+            <mat-label>Textarea</mat-label>
+            <textarea cdkTextareaAutosize cdkAutosizeMinRows="10" matInput [(ngModel)]="importText" (ngModelChange)="ParseImport($event)"></textarea>
+          </mat-form-field>
+
+          <form>
+            <table class="full" cellspacing="0"><tr>
+                <td><mat-form-field class="full" appearance="fill">
+                  <mat-label>Name</mat-label>
+                  <input matInput placeholder="Ability Name" [(ngModel)]="importAbility.name" name="name">
+                </mat-form-field></td>
+                <td><mat-form-field class="full" appearance="fill">
+                  <mat-label>Tier</mat-label>
+                  <input matInput type="number" placeholder="1" [(ngModel)]="importAbility.tier" name="tier">
+                </mat-form-field></td>
+              </tr></table>
+              <mat-form-field class="full">
+                <mat-label>Primary Tags</mat-label>
+                <mat-chip-list #chipListPrimary aria-label="Tag selection">
+                  <mat-chip *ngFor="let pTag of importAbility.primaryTags" [selectable]="selectable"
+                           [removable]="removable" (removed)="removePTag(pTag)">
+                    {{pTag}}
+                    <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                  </mat-chip>
+                  <input placeholder="New tag..."
+                         [matChipInputFor]="chipListPrimary"
+                         [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                         [matChipInputAddOnBlur]="addOnBlur"
+                         (matChipInputTokenEnd)="addPTag($event)">
+                </mat-chip-list>
+            </mat-form-field>
+            <mat-form-field class="full">
+                <mat-label>Secondary Tags</mat-label>
+                <mat-chip-list #chipListSecondary aria-label="Tag selection">
+                  <mat-chip *ngFor="let pTag of importAbility.secondaryTags" [selectable]="selectable"
+                           [removable]="removable" (removed)="removeSTag(pTag)">
+                    {{pTag}}
+                    <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                  </mat-chip>
+                  <input placeholder="New tag..."
+                         [matChipInputFor]="chipListSecondary"
+                         [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                         [matChipInputAddOnBlur]="addOnBlur"
+                         (matChipInputTokenEnd)="addSTag($event)">
+                </mat-chip-list>
+            </mat-form-field>
+            <mat-form-field class="full">
+                <mat-label>Tertiary Tags</mat-label>
+                <mat-chip-list #chipListTertiary aria-label="Tag selection">
+                  <mat-chip *ngFor="let pTag of importAbility.tertiaryTags" [selectable]="selectable"
+                           [removable]="removable" (removed)="removeTTag(pTag)">
+                    {{pTag}}
+                    <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                  </mat-chip>
+                  <input placeholder="New tag..."
+                         [matChipInputFor]="chipListTertiary"
+                         [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                         [matChipInputAddOnBlur]="addOnBlur"
+                         (matChipInputTokenEnd)="addTTag($event)">
+                </mat-chip-list>
+            </mat-form-field>
+            <table class="full" cellspacing="0"><tr>
+                <td><mat-form-field class="full" appearance="fill">
+                  <mat-label>Attack</mat-label>
+                  <input matInput type="number" placeholder="Ability Name" [(ngModel)]="importAbility.attack" name="attack">
+                </mat-form-field></td>
+                <td><mat-form-field class="full" appearance="fill">
+                  <mat-label>Energy</mat-label>
+                  <input matInput type="number" placeholder="1" [(ngModel)]="importAbility.energyDamage" name="energyDamage">
+                </mat-form-field></td>
+              </tr></table>
+            <mat-form-field appearance="fill" class="full">
+                <mat-label>Description</mat-label>
+                <textarea matInput [(ngModel)]="importAbility.description" name="description"></textarea>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="full">
+                <mat-label>Scaling</mat-label>
+                <textarea matInput [(ngModel)]="importAbility.scaling" name="scaling"></textarea>
+            </mat-form-field>
+            <button mat-button (click)="addAbility()">Submit</button>
+          </form>
+    </div>    
+</div>
