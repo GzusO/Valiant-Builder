@@ -1,28 +1,27 @@
 <div class="flex">
-    <div class="half">
-        <h2>Featues
-            <button mat-button>Add</button>
-        </h2>
-        <div *ngFor="let feat of features">{{FeatToTS(feat)}}</div>
-        
-        <h2>Abilities
-            <button mat-button>Add</button>
-        </h2>
-        <div *ngFor="let abl of abilities">{{AblToTS(abl)}}</div>
-        
-        <h2>Traits
-            <button mat-button>Add</button>
-        </h2>
-        <div *ngFor="let trait of traits">{{TrtToTS(trait)}}</div>
-    </div>
-    <div class="half">
-        <h2>Import</h2>
+    <div class="third">
+        <h2>Import Ability</h2>
           <mat-form-field appearance="fill" class="full">
             <mat-label>Textarea</mat-label>
-            <textarea cdkTextareaAutosize cdkAutosizeMinRows="10" matInput [(ngModel)]="importText" (ngModelChange)="ParseImport($event)"></textarea>
+            <textarea cdkTextareaAutosize cdkAutosizeMinRows="10" matInput [(ngModel)]="importAbilityText" (ngModelChange)="ParseAbilityImport($event)"></textarea>
           </mat-form-field>
 
           <form>
+            <mat-form-field class="full">
+              <mat-label>Source</mat-label>
+              <mat-chip-list #chipAbilitySoruce aria-label="Tag selection">
+                <mat-chip *ngFor="let pTag of importAbility.types" [selectable]="selectable"
+                         [removable]="removable" (removed)="removeAbilitySource(pTag)">
+                  {{pTag}}
+                  <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                </mat-chip>
+                <input placeholder="New tag..."
+                       [matChipInputFor]="chipAbilitySoruce"
+                       [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                       [matChipInputAddOnBlur]="addOnBlur"
+                       (matChipInputTokenEnd)="addAbilitySource($event)">
+              </mat-chip-list>
+            </mat-form-field>
             <table class="full" cellspacing="0"><tr>
                 <td><mat-form-field class="full" appearance="fill">
                   <mat-label>Name</mat-label>
@@ -98,5 +97,104 @@
             </mat-form-field>
             <button mat-button (click)="addAbility()">Submit</button>
           </form>
-    </div>    
+          <div class="full">
+            <h2>Abilities
+                <button mat-button>Add</button>
+            </h2>
+            <div *ngFor="let abl of abilities">{{AblToTS(abl)}}</div>
+          </div>
+    </div>
+    <div class="third">
+      <h2>Import Trait</h2>
+        <mat-form-field appearance="fill" class="full">
+          <mat-label>Textarea</mat-label>
+          <textarea cdkTextareaAutosize cdkAutosizeMinRows="10" matInput [(ngModel)]="importTraitText" (ngModelChange)="ParseTraitImport($event)"></textarea>
+        </mat-form-field>
+
+        <form>
+          <mat-form-field class="full">
+            <mat-label>Source</mat-label>
+            <mat-chip-list #chipTraitSource aria-label="Tag selection">
+              <mat-chip *ngFor="let pTag of importTrait.types" [selectable]="selectable"
+                       [removable]="removable" (removed)="removeTraitSource(pTag)">
+                {{pTag}}
+                <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+              </mat-chip>
+              <input placeholder="New tag..."
+                     [matChipInputFor]="chipTraitSource"
+                     [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                     [matChipInputAddOnBlur]="addOnBlur"
+                     (matChipInputTokenEnd)="addTraitSource($event)">
+            </mat-chip-list>
+          </mat-form-field>
+          <table class="full" cellspacing="0"><tr>
+              <td><mat-form-field class="full" appearance="fill">
+                <mat-label>Name</mat-label>
+                <input matInput placeholder="Ability Name" [(ngModel)]="importTrait.name" name="name">
+              </mat-form-field></td>
+              <td><mat-form-field class="full" appearance="fill">
+                <mat-label>Tier</mat-label>
+                <input matInput type="number" placeholder="1" [(ngModel)]="importTrait.tier" name="tier">
+              </mat-form-field></td>
+            </tr>
+          </table>
+          <mat-form-field appearance="fill" class="full">
+              <mat-label>Description</mat-label>
+              <textarea matInput [(ngModel)]="importTrait.description" name="description"></textarea>
+          </mat-form-field>
+          <button mat-button (click)="addTrait()">Submit</button>
+        </form>
+        <div class="full">
+          <h2>Traits
+              <button mat-button>Copy</button>
+          </h2>
+          <div *ngFor="let abl of traits">{{TrtToTS(abl)}}</div>
+        </div>
+  </div>
+  <div class="third">
+    <h2>Import Feature</h2>
+      <mat-form-field appearance="fill" class="full">
+        <mat-label>Textarea</mat-label>
+        <textarea cdkTextareaAutosize cdkAutosizeMinRows="10" matInput [(ngModel)]="importFeatureText" (ngModelChange)="ParseFeatureImport($event)"></textarea>
+      </mat-form-field>
+
+      <form>
+        <table class="full" cellspacing="0"><tr>
+            <td><mat-form-field class="full" appearance="fill">
+              <mat-label>Name</mat-label>
+              <input matInput placeholder="Ability Name" [(ngModel)]="importFeature.name" name="name">
+            </mat-form-field></td>
+            <td><mat-form-field class="full" appearance="fill">
+              <mat-label>Tier</mat-label>
+              <input matInput type="number" placeholder="1" [(ngModel)]="importFeature.tier" name="tier">
+            </mat-form-field></td>
+          </tr></table>
+          <mat-form-field class="full">
+            <mat-label>Types</mat-label>
+            <mat-chip-list #chipListFeatType aria-label="Tag selection">
+              <mat-chip *ngFor="let pTag of importFeature.types" [selectable]="selectable"
+                       [removable]="removable" (removed)="removeFeatType(pTag)">
+                {{pTag}}
+                <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+              </mat-chip>
+              <input placeholder="New tag..."
+                     [matChipInputFor]="chipListFeatType"
+                     [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                     [matChipInputAddOnBlur]="addOnBlur"
+                     (matChipInputTokenEnd)="addFeatType($event)">
+            </mat-chip-list>
+          </mat-form-field>
+        <mat-form-field appearance="fill" class="full">
+            <mat-label>Description</mat-label>
+            <textarea matInput [(ngModel)]="importFeature.description" name="description"></textarea>
+        </mat-form-field>
+        <button mat-button (click)="addFeature()">Submit</button>
+      </form>
+      <div class="full">
+        <h2>Features
+            <button mat-button>Add</button>
+        </h2>
+        <div *ngFor="let abl of features">{{FeatToTS(abl)}}</div>
+      </div>
+  </div>    
 </div>
