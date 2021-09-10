@@ -11,6 +11,15 @@ import { Trait } from '../Trait';
   styleUrls: ['./dev.component.scss']
 })
 export class DevComponent implements OnInit {
+  EmptyFeature(): Feature {
+    return {name:'',types:[],description:'', tier:-1,abilities:[],traits:[]};
+  }
+  EmptyTrait(): Trait {
+    return {name:'',types:[],description:'',tier:-1};
+  }
+  EmptyAbility(): Ability {
+    return {name:'',types:[],primaryTags:[],secondaryTags:[],tertiaryTags:[],description:'',tier:-1,attack:0,energyDamage:0,scaling:''};
+  }
   selectable = true;
   removable = true;
   addOnBlur = true;
@@ -19,8 +28,15 @@ export class DevComponent implements OnInit {
   features: Feature[] = [];
   traits: Trait[] = [];
   abilities: Ability[] = [];
-  importText: string= ""
+
+  importAbilityText: string= ""
   importAbility: Ability = this.EmptyAbility();
+
+  importTraitText: string= ""
+  importTrait: Trait = this.EmptyTrait();
+
+  importFeatureText: string= ""
+  importFeature: Feature = this.EmptyFeature();
   constructor() { }
 
   ngOnInit(): void {
@@ -49,18 +65,15 @@ export class DevComponent implements OnInit {
     return s.replace("'","\\'");
   }
   AblToTS(abl: Ability): string {
-    return `{name:'${this.escapeQuote(abl.name)}',types:[],primaryTags:[${this.formatStringArray(abl.primaryTags)}],secondaryTags:[${this.formatStringArray(abl.secondaryTags)}],tertiaryTags:[${this.formatStringArray(abl.tertiaryTags)}],description:'${this.escapeQuote(abl.description)}',tier:${abl.tier},attack:${abl.attack},energyDamage:${abl.energyDamage},scaling:'${this.escapeQuote(abl.scaling)}'},`;
+    return `{name:'${this.escapeQuote(abl.name)}',types:[${this.formatStringArray(abl.types)}],primaryTags:[${this.formatStringArray(abl.primaryTags)}],secondaryTags:[${this.formatStringArray(abl.secondaryTags)}],tertiaryTags:[${this.formatStringArray(abl.tertiaryTags)}],description:'${this.escapeQuote(abl.description)}',tier:${abl.tier},attack:${abl.attack},energyDamage:${abl.energyDamage},scaling:'${this.escapeQuote(abl.scaling)}'},`;
   }
   FeatToTS(abl: Feature): string {
-    return abl.name;
+    return `{name:'${this.escapeQuote(abl.name)}',types:[${this.formatStringArray(abl.types)}],description:'${this.escapeQuote(abl.description)}', tier:${abl.tier},abilities:[],traits:[]},`
   }
   TrtToTS(abl: Trait): string {
-    return abl.name;
+    return `{name:'${this.escapeQuote(abl.name)}',types:[${this.formatStringArray(abl.types)}],description:'${this.escapeQuote(abl.description)}',tier:${abl.tier}},`;
   }
-  EmptyAbility(): Ability {
-    return {name:'',types:[],primaryTags:[],secondaryTags:[],tertiaryTags:[],description:'',tier:-1,attack:0,energyDamage:0,scaling:''};
-    
-  }
+  
   formatTag(tag:string):string {
     if(tag.includes("Energy")){
       return "Energy "+tag.split(" ")[0].trim();
@@ -69,8 +82,8 @@ export class DevComponent implements OnInit {
       return tag.trim();
     }
   }
-  ParseImport($event:any): void {
-    let data = this.importText;
+  ParseAbilityImport($event:any): void {
+    let data = this.importAbilityText;
     let lines = data.split("\n");
 
     let name =lines[0].split('(')[0];
@@ -93,16 +106,103 @@ export class DevComponent implements OnInit {
     this.importAbility.description= dLine.trim();
   }
 
+  ParseTraitImport($event:any): void {
+    let data = this.importTraitText;
+    let lines = data.split("\n");
+
+    this.importTrait.name = lines[0].trim();
+
+    let dLine = lines.slice(1).join(' ');
+    this.importTrait.description= dLine.trim();
+  }
+  ParseFeatureImport($event:any): void {
+    let data = this.importFeatureText;
+    let lines = data.split("\n");
+
+    this.importFeature.name = lines[0].trim();
+
+    this.importFeature.types = lines[1].split(" ");
+
+    let dLine = lines.slice(2).join(' ');
+    this.importFeature.description= dLine.trim();
+  }
+
   addAbility():void {
     this.abilities.push(this.importAbility);
     this.importAbility = this.EmptyAbility();
-    this.importText = "";
+    this.importAbilityText = "";
+  }
+  addTrait():void {
+    this.traits.push(this.importTrait);
+    this.importTrait = this.EmptyTrait();
+    this.importTraitText = "";
+  }
+  addFeature():void {
+    this.features.push(this.importFeature);
+    this.importFeature = this.EmptyFeature();
+    this.importFeatureText = "";
+  }
+
+  addAbilitySource(event: MatChipInputEvent): void {
+    const value = (event.value || '').trim();
+
+    if (value) {
+      this.importAbility.types.push(value);
+    }
+
+    // Clear the input value
+    event.chipInput!.clear();
+  }
+
+  removeAbilitySource(tag: string): void {
+    const index = this.importAbility.types.indexOf(tag);
+
+    if (index >= 0) {
+      this.importAbility.types.splice(index, 1);
+    }
+  }
+
+  addTraitSource(event: MatChipInputEvent): void {
+    const value = (event.value || '').trim();
+
+    if (value) {
+      this.importTrait.types.push(value);
+    }
+
+    // Clear the input value
+    event.chipInput!.clear();
+  }
+
+  removeTraitSource(tag: string): void {
+    const index = this.importTrait.types.indexOf(tag);
+
+    if (index >= 0) {
+      this.importTrait.types.splice(index, 1);
+    }
+  }
+
+  addFeatType(event: MatChipInputEvent): void {
+    const value = (event.value || '').trim();
+
+    if (value) {
+      this.importFeature.types.push(value);
+    }
+
+    // Clear the input value
+    event.chipInput!.clear();
+  }
+
+  removeFeatType(tag: string): void {
+    const index = this.importAbility.types.indexOf(tag);
+
+    if (index >= 0) {
+      this.importFeature.types.splice(index, 1);
+    }
   }
 
   addSTag(event: MatChipInputEvent): void {
     const value = (event.value || '').trim();
 
-    // Add our fruit
     if (value) {
       this.importAbility.secondaryTags.push(value);
     }
@@ -122,7 +222,6 @@ export class DevComponent implements OnInit {
   addTTag(event: MatChipInputEvent): void {
     const value = (event.value || '').trim();
 
-    // Add our fruit
     if (value) {
       this.importAbility.tertiaryTags.push(value);
     }
@@ -142,7 +241,6 @@ export class DevComponent implements OnInit {
   addPTag(event: MatChipInputEvent): void {
     const value = (event.value || '').trim();
 
-    // Add our fruit
     if (value) {
       this.importAbility.primaryTags.push(value);
     }
