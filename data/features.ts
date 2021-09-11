@@ -151,4 +151,23 @@ export const featureData: Feature[] =[
     {name:'Path of the Warrior',types:['Utility','Lineage','Feature','Vyld'],description:'The Vyld have earned a reputation as a warrior people. While not always true, a clever Vyld can use this to their advantage.', tier:0,abilities:[],traits:[]},
     {name:'Warrior Culture',types:['Utility','Lineage','Feature','Vyld'],description:'Living amongst accomplished warriors, you have a good eye for the capabilities of others.', tier:0,abilities:[],traits:[]},
 
+    //Professions
+    {name:'Artist',types:['Profession','Feature','Artist'],description:'You make your living creating decorative objects. Whether you create paintings, sculptures, or something more exotic, you make a reasonable amount of money.', tier:0,abilities:[],traits:[]},
+    {name:'Assistant',types:['Profession','Feature','Assistant'],description:'Bar hands, store clerks, and other peoples employed by business owners to do simple labor. They make a meager living, but are adept at scraping together enough spare coins to live comfortably.', tier:0,abilities:[],traits:[]},
+    {name:'Blacksmith',types:['Profession','Feature','Blacksmith'],description:'You make your living crafting equipment for commoners, soldiers, guards, and travelers alike.', tier:0,abilities:[],traits:[]},
+    {name:'Bounty Hunter',types:['Profession','Feature','Bounty Hunter'],description:'You make your living hunting bounties. Whether you bring in dangerous criminals or slay encroaching beasts, you make a reasonable amount of coin for dangerous work.', tier:0,abilities:[],traits:[]},
+    {name:'Criminal',types:['Profession','Feature','Criminal'],description:'Regardless of how you spin your tale, the truth is quite simple: you take things from people.', tier:0,abilities:[],traits:[]},
+    {name:'Guard',types:['Profession','Feature','Guard'],description:'You spent most of your adult life posted as a guard, whether you were keeping the wilds at bay in a small settlement or keeping the peace in a larger city.', tier:0,abilities:[],traits:[]},
+    {name:'Merchant',types:['Profession','Feature','Merchant'],description:'You make your living buying and selling goods. Some merchants specialize in moving commodities where they are needed, while other peddle exotic goods.', tier:0,abilities:[],traits:[]},
+    {name:'Noble',types:['Profession','Feature','Noble'],description:'You don’t work for a living, instead spending your time mingling and mixing with other high-class individuals.', tier:0,abilities:[],traits:[]},
+    {name:'Physical Laborer',types:['Profession','Feature','Physical Laborer'],description:'You make your living doing manual, physical labor. It doesn’t pay much, but It’s honest work.', tier:0,abilities:[],traits:[]},
+    {name:'Physician',types:['Profession','Feature','Physician'],description:'There are many ailments on the Barrier Sea, and you’ve spent much of your life learning to cure them.', tier:0,abilities:[],traits:[]},
+    {name:'Priest',types:['Profession','Feature','Priest'],description:'You’ve devoted yourself to some higher power. Besides some sense of inner piece, this devotion has given you access to a network of safe places, granted you’re travelling in friendly territory.', tier:0,abilities:[],traits:[]},
+    {name:'Sailor',types:['Profession','Feature','Sailor'],description:'Whatever your role, you have ample experience navigating the vast oceans of the Barrier Sea.', tier:0,abilities:[],traits:[]},
+    {name:'Scholar',types:['Profession','Feature','Scholar'],description:'You are educated above the basic standards of society. In your endeavors to learn, you’ve picked up a few new languages.', tier:0,abilities:[],traits:[]},
+    {name:'Servant',types:['Profession','Feature','Servant'],description:'You worked under a wealthy individual or household, trading almost all of your time and autonomy for a comfortable life.', tier:0,abilities:[],traits:[]},
+    {name:'Soldier',types:['Profession','Feature','Soldier'],description:'You were a professional soldier in an army. Regardless of your specific role, you have developed a strong sense of discipline.', tier:0,abilities:[],traits:[]},
+    {name:'Tinkerer',types:['Profession','Feature','Tinkerer'],description:'You make your living crafting useful tools. Some tinkerers focus on useful, practical tools, while others devise more experimental equipment.', tier:0,abilities:[],traits:[]},
+    {name:'Traveler',types:['Profession','Feature','Traveler'],description:'You decided to travel the world rather than pursue a traditional career.', tier:0,abilities:[],traits:[]},
+
 ]

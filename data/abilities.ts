@@ -65,7 +65,8 @@ export const abilityData: Ability[] =[
     {name:'Combat Breather',types:['Martial Endurance'],primaryTags:['Energy 0','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1 Daily'],description:'When your turn begins: Restore 10 energy.',tier:0,attack:0,energyDamage:0,scaling:''},
     {name:'Express Mutations',types:['Spontaneous Mutations'],primaryTags:['Energy 0','Combat'],secondaryTags:['Transformation'],tertiaryTags:[],description:'Gain your choice of +1 lethality or +1 defence. The boon you choose lasts until the end of combat. At the end of each of your turns, your energy is reduced by 3.',tier:0,attack:0,energyDamage:0,scaling:''},
 
-
+    //Professions
+    {name:'Disease Treatment',types:['Physician'],primaryTags:['Energy 0'],secondaryTags:['Charged Action 1 Hour'],tertiaryTags:['Limited 1 Daily'],description:'Prevent a single disease affecting a character other than yourself from progressing or transmitting for 24 hours.',tier:0,attack:0,energyDamage:0,scaling:''},
 
 
     //Weapon Abilities
