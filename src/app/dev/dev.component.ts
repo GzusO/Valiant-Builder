@@ -42,6 +42,15 @@ export class DevComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  copyFeatToTrait():void{
+    this.importTrait.types.push(this.importFeature.name);
+    this.importTrait.tier = this.importFeature.tier;
+  }
+  copyFeatToAbility():void{
+    this.importAbility.types.push(this.importFeature.name);
+    this.importAbility.tier = this.importFeature.tier;
+  }
+
   formatStringArray(strings: string[]): string {
 
     for(let i = 0;i<strings.length;i++)

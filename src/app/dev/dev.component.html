@@ -1,6 +1,6 @@
 <div class="flex">
     <div class="third">
-        <h2>Import Ability</h2>
+        <h2>Import Ability <button mat-button (click)="copyFeatToAbility()">Copy From Feature</button></h2>
           <mat-form-field appearance="fill" class="full">
             <mat-label>Textarea</mat-label>
             <textarea cdkTextareaAutosize cdkAutosizeMinRows="10" matInput [(ngModel)]="importAbilityText" (ngModelChange)="ParseAbilityImport($event)"></textarea>
@@ -105,7 +105,7 @@
           </div>
     </div>
     <div class="third">
-      <h2>Import Trait</h2>
+      <h2>Import Trait <button mat-button (click)="copyFeatToTrait()">Copy From Feature</button></h2>
         <mat-form-field appearance="fill" class="full">
           <mat-label>Textarea</mat-label>
           <textarea cdkTextareaAutosize cdkAutosizeMinRows="10" matInput [(ngModel)]="importTraitText" (ngModelChange)="ParseTraitImport($event)"></textarea>

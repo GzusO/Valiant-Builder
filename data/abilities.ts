@@ -1,7 +1,73 @@
 import { Ability } from "src/app/Ability";
 
 export const abilityData: Ability[] =[
-    
+    //Characteristic Abilities
+    //Physical Power
+    {name:'Overpower',types:['Powerful Build','Characteristic'],primaryTags:['Energy 2'],secondaryTags:['Attack Modifier'],tertiaryTags:[],description:'This ability gains the blitz tag.',tier:4,attack:0,energyDamage:0,scaling:''},
+
+    //Physical Acuity
+    {name:'Rush',types:['Quick Feet'],primaryTags:['Energy 3','Combat'],secondaryTags:['Reaction'],tertiaryTags:[],description:'Your move phase ends: move.',tier:2,attack:0,energyDamage:0,scaling:''},
+    {name:'Quick Action',types:['Improved Dexterity'],primaryTags:['Energy 2','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1'],description:'Global: use an action ability.',tier:4,attack:0,energyDamage:0,scaling:''},
+
+    //Physical Resilience
+    {name:'Close Call',types:['Natural Defence'],primaryTags:['Energy 2','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1'],description:'You would lose endurance points: negate the loss of endurance points.',tier:2,attack:0,energyDamage:0,scaling:''},
+    {name:'Deflect',types:['Reinforced Body'],primaryTags:['Energy 3'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1'],description:'You are targeted by an attack ability: ignore all effects of the triggering ability.',tier:4,attack:0,energyDamage:0,scaling:''},
+
+    //Mental Power
+    {name:'Deduce',types:['Deduction'],primaryTags:['Energy 1','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Range 7'],description:'The target character begins their turn: You learn the value of one attribute for the target character.',tier:2,attack:0,energyDamage:0,scaling:''},
+    {name:'Foresight',types:['Deduction'],primaryTags:['Energy 0'],secondaryTags:['Charged Action 1 Minute'],tertiaryTags:['Limited 1 Daily'],description:'After this ability resolves, select one ability either you or a nearby ally can use. When you or an ally use that ability, it costs 0 energy. This cannot not affect variable cost abilities.',tier:2,attack:0,energyDamage:0,scaling:''},
+
+    //Mental Resilience
+    {name:'Resist Ailment',types:['Mental Fortitude'],primaryTags:['Energy 0','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1'],description:'You suffer an ailment: remove that ailment.',tier:2,attack:0,energyDamage:0,scaling:''},
+    {name:'Brace',types:['Tested Psyche'],primaryTags:['Energy 0','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1'],description:'Counter: halve the energy damage of the triggering attack ability.',tier:4,attack:0,energyDamage:0,scaling:''},
+
+
+    //Lineage
+
+    //Cossim
+    {name:'Cosmic Sight',types:['Cosmic Visions'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:['Limited 1 Daily'],description:'You gain truesight for 1 minute.',tier:0,attack:0,energyDamage:0,scaling:''},
+    {name:'Cosmic Flash',types:['Dazing Brilliance'],primaryTags:['Energy 3','Combat'],secondaryTags:['Action'],tertiaryTags:['Sphere 1',' Limited 1'],description:'Target characters, excluding yourself, suffer the blind ailment until the end of their next turn.',tier:0,attack:0,energyDamage:0,scaling:''},
+    {name:'Auto-Stabilize',types:['Deathless Being'],primaryTags:['Energy 0','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1 Daily'],description:'You suffer the down status: gain the stable status.',tier:0,attack:0,energyDamage:0,scaling:''},
+    {name:'Shift',types:['Fitful Existence'],primaryTags:['Energy 2','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Range 1'],description:'The round begin phase ends: move instantaneously to an unoccupied tile within range.',tier:0,attack:0,energyDamage:0,scaling:''},
+    {name:'Nova Counter',types:['Nova Rebound'],primaryTags:['Energy x','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1'],description:'You lose endurance due to an attack ability: the character that used the triggering attack ability takes 2x energy damage.',tier:0,attack:0,energyDamage:0,scaling:''},
+
+    //Girt
+    {name:'Pouch Dust',types:['Cunning Tactics'],primaryTags:['Energy 0','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1',' Melee'],description:'Global: a target character suffers -1 finesse until the end of this combat.',tier:0,attack:0,energyDamage:0,scaling:''},
+    {name:'Foolproof Sale',types:['The Perfect Pitch'],primaryTags:['Energy 0'],secondaryTags:['Charged Action 15 minutes'],tertiaryTags:['Limited 1 Daily'],description:'You sell an item to the target character for its full common price. If the character cannot afford the item, they will offer all of the money they have on them.',tier:0,attack:0,energyDamage:0,scaling:''},
+
+    //Derge
+    {name:'Savage Trance',types:['Savage Instincts'],primaryTags:['Energy 0','Combat'],secondaryTags:['Transformation'],tertiaryTags:[],description:'Set your focus slots to 0, immediately ending all of your focus and stance abilities. Gain +1 finesse and +1 movement.',tier:0,attack:0,energyDamage:0,scaling:''},
+    {name:'Surge',types:['Unstoppable Fury'],primaryTags:['Energy 10','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1'],description:'Your act phase ends: take another act phase.',tier:0,attack:0,energyDamage:0,scaling:''},
+
+    //Hjark
+    {name:'Hasty Preparations',types:['Battlefield Maintenance'],primaryTags:['Energy 2','Combat'],secondaryTags:['Reaction'],tertiaryTags:[],description:'Combat begins: you may prepare your gear.',tier:0,attack:0,energyDamage:0,scaling:''},
+    {name:'Singular Strike',types:['Glory Seeker'],primaryTags:['Energy 10','Combat'],secondaryTags:['Action'],tertiaryTags:['Limited 1',' Recharge 1'],description:'Use any non-variable cost attack ability, ignoring the energy cost and usage restrictions. The attack ability deals double energy damage and a direct hit reduces the target’s endurance by an additional point.',tier:0,attack:0,energyDamage:0,scaling:''},
+    {name:'Martial Trance',types:['Martial Tradition'],primaryTags:['Energy 2','Combat'],secondaryTags:['Stance'],tertiaryTags:[],description:'Whenever your energy is reduced by any means, reduce it by 1 less. This cannot decrease the energy reduction below 0.',tier:0,attack:0,energyDamage:0,scaling:''},
+
+    //Ingra
+    {name:'Harry',types:['Aspect of the Vulture'],primaryTags:['Energy 1','Combat'],secondaryTags:['Stance'],tertiaryTags:['Limited 1'],description:'When you use this ability, select an enemy character. Ignore the slow tag on attack abilities as long as they target only that character.',tier:0,attack:0,energyDamage:0,scaling:''},
+    {name:'Sway',types:['Graceful Form'],primaryTags:['Energy 0','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Blitz',' Limited 3'],description:'Any character ends their turn: move up to 1 tile.',tier:0,attack:0,energyDamage:0,scaling:''},
+    {name:'Runic Decor',types:['Runeweaver'],primaryTags:['Energy 0','Combat'],secondaryTags:['Charged Action 5 Minutes'],tertiaryTags:['Limited 3 Daily'],description:'Cover a person or object in cosmetic glowing runes that last for 24 hours. These runes emit no useable light, but can be seen even in total darkness.',tier:0,attack:0,energyDamage:0,scaling:''},
+
+    //Marr
+    {name:'Change Position',types:['Malleable Reality'],primaryTags:['Energy 2','Combat'],secondaryTags:['Reaction'],tertiaryTags:[],description:'Combat begins: move.',tier:0,attack:0,energyDamage:0,scaling:''},
+    {name:'Stumble',types:['Practical Survival'],primaryTags:['Energy 0','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1'],description:'You are targeted by an ability: move up to 1 tile.',tier:0,attack:0,energyDamage:0,scaling:''},
+    {name:'Follow',types:['Sidekick'],primaryTags:['Energy 2','Combat'],secondaryTags:['Reaction'],tertiaryTags:[],description:'An ally character finishes moving: move to a tile adjacent to the target character. If you cannot reach a tile adjacent to the target character this ability fails to resolve.',tier:0,attack:0,energyDamage:0,scaling:''},
+    {name:'Brilliant Solution',types:['Flash of Brilliance'],primaryTags:['Energy 0'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1 Daily'],description:'You must make a contest outside of combat: treat the d4 contest roll as a 4.',tier:0,attack:0,energyDamage:0,scaling:''},
+    {name:'Simple Crafts',types:['Simple Means'],primaryTags:['Energy 0'],secondaryTags:['Charged Action 5 Minutes'],tertiaryTags:['Limited 3 Daily'],description:'Create one homemade Tool (Simple) item. The item falls apart after 24 hours.',tier:0,attack:0,energyDamage:0,scaling:''},
+
+    //Selk
+    {name:'Rehearsed Action',types:['Combat Deduction'],primaryTags:['Energy 0','Combat'],secondaryTags:['Stance'],tertiaryTags:['Limited 1'],description:'Action abilities you use during your act phase cost 0 energy. This does not affect variable cost abilities.',tier:0,attack:0,energyDamage:0,scaling:''},
+    {name:'Move Command',types:['Commanding Presence'],primaryTags:['Energy 3','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Range 10'],description:'A target character begins their move phase: the target character gains +3 movement until the end of their move phase.',tier:0,attack:0,energyDamage:0,scaling:''},
+    {name:'Clarity',types:['Purity of Focus'],primaryTags:['Energy 2','Combat'],secondaryTags:['Transformation'],tertiaryTags:[],description:'Gain +1 focus slot.',tier:0,attack:0,energyDamage:0,scaling:''},
+
+    //Vyld
+    {name:'Combat Breather',types:['Martial Endurance'],primaryTags:['Energy 0','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1 Daily'],description:'When your turn begins: Restore 10 energy.',tier:0,attack:0,energyDamage:0,scaling:''},
+    {name:'Express Mutations',types:['Spontaneous Mutations'],primaryTags:['Energy 0','Combat'],secondaryTags:['Transformation'],tertiaryTags:[],description:'Gain your choice of +1 lethality or +1 defence. The boon you choose lasts until the end of combat. At the end of each of your turns, your energy is reduced by 3.',tier:0,attack:0,energyDamage:0,scaling:''},
+
+
+
+
     //Weapon Abilities
     {name:'Bash',types:['Weapon','Club','Axe'],primaryTags:['Energy 3','Combat'],secondaryTags:['Action'],tertiaryTags:['Attack','Melee'],description:'',tier:0,attack:2,energyDamage:6,scaling:'This ability gains 2 energy damage for every weapon tier above 0.'},
     {name:'Crush',types:['Weapon','Club'],primaryTags:['Energy 5','Combat'],secondaryTags:['Action'],tertiaryTags:['Attack','Melee','Blitz'],description:'',tier:0,attack:2,energyDamage:6,scaling:'This ability gains 2 energy damage for every weapon tier above 0.'},
