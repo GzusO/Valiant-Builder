@@ -16,33 +16,46 @@ export interface Item {
 
 export const armorData: Item[] = [
     //Armor Sets
-    {name:'Light',tags:[],weight:10,cost:100,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
-    {name:'Medium',tags:[],weight:20,cost:250,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
-    {name:'Heavy',tags:[],weight:35,cost:400,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
-    {name:'Ultra-Heavy',tags:[],weight:50,cost:500,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
+    {name:'Light',tags:[],weight:10,cost:100,abilities:[],traits:[],tier:0,description:'',types:['Armor'],quantity:1},
+    {name:'Medium',tags:[],weight:20,cost:250,abilities:[],traits:[],tier:0,description:'',types:['Armor'],quantity:1},
+    {name:'Heavy',tags:[],weight:35,cost:400,abilities:[],traits:[],tier:0,description:'',types:['Armor'],quantity:1},
+    {name:'Ultra-Heavy',tags:[],weight:50,cost:500,abilities:[],traits:[],tier:0,description:'',types:['Armor'],quantity:1},
 
-    //Accessories 
+
+    //Accessories Combat
     //Tier 0
-    {name:'Backpack',tags:[],weight:4,cost:75,abilities:[],traits:[],tier:0,description:'',types:['Accessory'],quantity:1},
-    {name:'Munition Pouch',tags:[],weight:1,cost:100,abilities:[],traits:[],tier:0,description:'',types:['Accessory'],quantity:1},
-    {name:'Simple Charm',tags:[],weight:1,cost:50,abilities:[],traits:[],tier:0,description:'',types:['Accessory'],quantity:1},
+    {name:'Munition Pouch',tags:[],weight:1,cost:100,abilities:[],traits:[],tier:0,description:'',types:['Combat Accessory'],quantity:1},
+    {name:'Simple Charm',tags:[],weight:1,cost:100,abilities:[],traits:[],tier:0,description:'',types:['Combat Accessory'],quantity:1},
     
     //Tier 1
-    {name:'Arcanist\'s Mess Kit',tags:[],weight:2,cost:1000,abilities:[],traits:[],tier:1,description:'',types:['Accessory'],quantity:1},
-    {name:'Shepard\'s Compass',tags:[],weight:1,cost:1500,abilities:[],traits:[],tier:1,description:'',types:['Accessory'],quantity:1},
-    {name:'Soothe Stone',tags:[],weight:1,cost:1250,abilities:[],traits:[],tier:1,description:'',types:['Accessory'],quantity:1},
-    
+    {name:'Heart Protector',tags:[],weight:2,cost:1250,abilities:[],traits:[],tier:1,description:'',types:['Combat Accessory'],quantity:1},
+    {name:'Padded Cloak',tags:[],weight:2,cost:1500,abilities:[],traits:[],tier:1,description:'',types:['Combat Accessory'],quantity:1},
+
     //Tier 2
-    {name:'Gleaming Goggles',tags:[],weight:1,cost:4500,abilities:[],traits:[],tier:2,description:'',types:['Accessory'],quantity:1},
-    {name:'Spelljammer\'s Bracer',tags:[],weight:2,cost:3500,abilities:[],traits:[],tier:2,description:'',types:['Accessory'],quantity:1},
-    {name:'Quick Stone',tags:[],weight:1,cost:4000,abilities:[],traits:[],tier:2,description:'',types:['Accessory'],quantity:1},
+    {name:'Gleaming Goggles',tags:[],weight:1,cost:4000,abilities:[],traits:[],tier:2,description:'',types:['Combat Accessory'],quantity:1},
+    {name:'Spelljammer\'s Bracer',tags:[],weight:2,cost:3500,abilities:[],traits:[],tier:2,description:'',types:['Combat Accessory'],quantity:1},
     
     //Tier 3
-    {name:'Mindspeak Amulet',tags:[],weight:0,cost:7500,abilities:[],traits:[],tier:3,description:'',types:['Accessory'],quantity:1},
-
-    //Tier 4
-    {name:'Arcane Communicator',tags:[],weight:2,cost:10000,abilities:[],traits:[],tier:4,description:'',types:['Accessory'],quantity:1},
+    {name:'Light Stone',tags:[],weight:1,cost:7500,abilities:[],traits:[],tier:3,description:'',types:['Combat Accessory'],quantity:1},
+    {name:'Quick Stone',tags:[],weight:1,cost:7500,abilities:[],traits:[],tier:3,description:'',types:['Combat Accessory'],quantity:1},
     
+
+    //Accessories Utility
+    //Tier 0
+    {name:'Arcanist\'s Mess Kit',tags:[],weight:2,cost:100,abilities:[],traits:[],tier:0,description:'',types:['Utility Accessory'],quantity:1},
+    {name:'Backpack',tags:[],weight:4,cost:75,abilities:[],traits:[],tier:0,description:'',types:['Utility Accessory'],quantity:1},
+    
+    //Tier 1
+    {name:'Seafarer\'s Compass',tags:[],weight:1,cost:1000,abilities:[],traits:[],tier:1,description:'',types:['Utility Accessory'],quantity:1},
+    {name:'Soothe Stone',tags:[],weight:1,cost:1250,abilities:[],traits:[],tier:1,description:'',types:['Utility Accessory'],quantity:1},
+    
+    //Tier 2
+    {name:'Regenerative Garments',tags:[],weight:5,cost:3000,abilities:[],traits:[],tier:2,description:'',types:['Utility Accessory'],quantity:1},
+    {name:'Shepard\'s Gloves',tags:[],weight:1,cost:3000,abilities:[],traits:[],tier:2,description:'',types:['Utility Accessory'],quantity:1},
+    
+    //Tier 3
+    {name:'Arcane Communicator',tags:[],weight:2,cost:8000,abilities:[],traits:[],tier:3,description:'',types:['Utility Accessory'],quantity:1},
+    {name:'Mindspeak Amulet',tags:[],weight:0,cost:7500,abilities:[],traits:[],tier:3,description:'',types:['Utility Accessory'],quantity:1},
     
 ];
 

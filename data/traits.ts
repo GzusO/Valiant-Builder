@@ -168,4 +168,42 @@ export const traitData: Trait[] = [
     {name:'Slight of Mind',types:['People Person'],description:'When you make mental acuity contests outside of combat, you gain +1 to the contest roll.',tier:0},
     {name:'Able Frame',types:['Pack Mule'],description:'Your base weight threshold is increased by 10 lb.',tier:0},
     {name:'Pocket Snacks',types:['Pack Mule'],description:'You’ve always got snacks handy. Gods know where you keep them.',tier:0},
+
+
+
+
+    //Armor
+    {name:'Light Armor',types:['Light'],description:'You gain +4 Defence. This defence bonus increases by 1 for every armor tier above 0.',tier:0},
+    {name:'Medium Armor',types:['Medium'],description:'You gain +6 Defence. You suffer -1 Finesse. This defence bonus increases by 1 for every armor tier above 0.',tier:0},
+    {name:'Heavy Armor',types:['Heavy'],description:'You gain +8 Defence. You suffer -1 Finesse and -1 Movement. This defence bonus increases by 1 for every armor tier above 0.',tier:0},
+    {name:'Ultra-Heavy Armor',types:['Ultra-Heavy'],description:'You gain +10 Defence. You suffer -2 Finesse and -1 Movement. This defence bonus increases by 1 for every armor tier above 0.',tier:0},
+    
+    //Combat Accessories
+        //Tier 0 
+        {name:'Munition Pouch',types:['Munition Pouch'],description:'Your weapon limited abilities have thier limited value increased by 1.',tier:0},
+        {name:'Simple Charm',types:['Simple Charm'],description:'You gain +1 death resistance.',tier:0},
+        //Tier 1
+        {name:'Heart Protector',types:['Heart Protector'],description:'You gain +1 defence.',tier:1},
+        {name:'Padded Cloak',types:['Padded Cloak'],description:'You gain +1 resistance.',tier:1},
+        //Tier 2
+        {name:'Gleaming Goggles',types:['Gleaming Goggles'],description:'You are immune to the blind ailment.',tier:2},
+        {name:'Spelljammer\'s Bracer',types:['Spelljammer\'s Bracer'],description:'When you deal energy damage to a focusing character, treat it as doubled when accruing it against the focus threshold.',tier:2},
+        //Tier 3
+        {name:'Light Stone',types:['Light Stone'],description:'Gain +1 finesse.',tier:3},
+        {name:'Quick Stone',types:['Quick Stone'],description:'Gain +1 movement.',tier:3},
+
+    //Utility Accessories
+        //Tier 0
+        {name:'Arcanist\'s Mess Kit',types:['Arcanist\'s Mess Kit'],description:'Your Arcanist’s Mess Kit cleans itself after use.',tier:0},
+        {name:'Backpack',types:['Backpack'],description:'Increase your base weight threshold by 10 lb. Your travel group gains +3 provision score.',tier:0},
+        //Tier 1
+        {name:'Seafarer\'s Compass',types:['Seafarer\'s Compass'],description:'Always points towards the Anchor.',tier:1},
+        {name:'Soothe Stone',types:['Soothe Stone'],description:'Characters within 10 ft. of you are soothed, and become slightly more reasonable.',tier:1},
+        //Tier 2
+        {name:'Regenerative Garments',types:['Regenerative Garments'],description:'Your clothes repair and clean themselves over time, given at least half of the garment’s materials is intact.',tier:2},
+        {name:'Shepard\'s Gloves',types:['Shepard\'s Gloves'],description:'Beasts of your tier or lower will not be hostile to you unless you threaten or harm them.',tier:2},
+        //Tier 3
+        {name:'Arcane Communicator',types:['Arcane Communicator'],description:'You may choose to transmit anything you say to all characters with paired Arcane Communicators. You can pair communicators with nearby willing characters. You can only clear pairings by clearing all existing pairings.',tier:3},
+        {name:'Mindspeak Amulet',types:['Mindspeak Amulet'],description:'You can communicate telepathically with any creature within 10 ft. of you.',tier:3},
+        
 ]

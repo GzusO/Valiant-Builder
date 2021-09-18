@@ -31,24 +31,24 @@
             </td>
       </ng-container>
     
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-header-row *matHeaderRowDef="armorDisplayedColumns"></tr>
       <tr mat-row *matRowDef="let row; 
                               let even = even
-                              columns: displayedColumns;"
+                              columns: armorDisplayedColumns;"
                               [ngClass]="{gray: even}"></tr>
 </table>
 
 <br>
-<table mat-table #accessorySort="matSort" [dataSource]="accessoryDataSource" matSort class="mat-elevation-z8">
+<table mat-table #CombatAccessorySort="matSort" [dataSource]="combatAccessoryDataSource" matSort class="mat-elevation-z8">
     <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Accessories </th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Combat Accessories </th>
         <td mat-cell *matCellDef="let armor"> {{armor.name}} </td>
       </ng-container>
     
       <!-- Name Column -->
-      <ng-container matColumnDef="tags">
-        <th mat-header-cell *matHeaderCellDef > Tags </th>
-        <td mat-cell *matCellDef="let armor"> {{armor.tags.join(", ")}}</td>
+      <ng-container matColumnDef="tier" >
+        <th mat-header-cell *matHeaderCellDef mat-sort-header > Tier </th>
+        <td mat-cell *matCellDef="let armor"> {{armor.tier}}</td>
       </ng-container>
     
       <!-- Weight Column -->
@@ -78,6 +78,49 @@
             </td>
       </ng-container>
     
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; let even = even columns: displayedColumns;" [ngClass]="{gray: even}"></tr>
+      <tr mat-header-row *matHeaderRowDef="accessoryDisplayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; let even = even columns: accessoryDisplayedColumns;" [ngClass]="{gray: even}"></tr>
+</table>
+<br>
+<table mat-table #utilityAccessorySort="matSort" [dataSource]="utilityAccessoryDataSource" matSort class="mat-elevation-z8">
+  <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Utility Accessories </th>
+      <td mat-cell *matCellDef="let armor"> {{armor.name}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="tier">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Tier </th>
+      <td mat-cell *matCellDef="let armor"> {{armor.tier}}</td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="class">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Class </th>
+      <td mat-cell *matCellDef="let armor"> {{armor.class}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="weight">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Weight </th>
+      <td mat-cell *matCellDef="let armor"> {{armor.weight}} lb.</td>
+    </ng-container>
+
+    <ng-container matColumnDef="cost">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Tier 0 Cost (tins) </th>
+      <td mat-cell *matCellDef="let armor"> {{armor.cost}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="traits">
+      <th mat-header-cell *matHeaderCellDef > Traits </th>
+      <td mat-cell *matCellDef="let armor">
+          <div *ngFor="let trait of armor.traits">
+              <span class="trait-name">{{trait.name}}</span>
+              <p>{{trait.description}}</p>
+            </div>
+          </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="accessoryDisplayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; let even = even columns: accessoryDisplayedColumns;" [ngClass]="{gray: even}"></tr>
 </table>
