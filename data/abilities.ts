@@ -129,33 +129,34 @@ export const abilityData: Ability[] =[
     {name:'Heavy Block',types:['Weapon','Heavy Shield'],primaryTags:['Energy 5','Combat'],secondaryTags:['Reaction'],tertiaryTags:[],description:'Counter: Gain +8 Defence during the contest of the triggering attack ability.',tier:0,attack:0,energyDamage:0,scaling:''},
     
     //Gear Abilities 
-    //Tier 0
-    {name:'Alarm System',types:['Gear','Alarm System'],primaryTags:['Energy 0','Combat'],secondaryTags:['Charged Action 5 minutes'],tertiaryTags:['Limited 1 Daily'],description:'Set up an alarm perimeter of up to 100 ft. that lasts for 10 hours. Any character crossing the perimeter sounds the alarm. This ability can also be used to pick up the alarms, restoring one of this gear\'s consumable uses.',tier:0,attack:0,energyDamage:0,scaling:''},
-    {name:'Lantern',types:['Gear','Lantern'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:[],description:'While wearing or wielding the lantern you can set it alight, providing light in a 5 tile (25 ft.) sphere. You can use this action to extinguish the lantern.',tier:0,attack:0,energyDamage:0,scaling:''},
-    {name:'Trauma Kit',types:['Gear','Trauma Kit'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:['Melee'],description:'Target character gains the stable status.',tier:0,attack:0,energyDamage:0,scaling:''},
-    {name:'Pavise Shield',types:['Gear','Pavise Shield'],primaryTags:['Energy 2','Combat'],secondaryTags:['Action'],tertiaryTags:['Limited 1'],description:'Plant the shield between your own and an adjacent tile, creating cover. This ability can also be used to pick up a planted Pavise, restoring one of this gear\'s consumable uses.',tier:0,attack:0,energyDamage:0,scaling:''},
-    {name:'Fire Bomb',types:['Gear','Fire Bomb'],primaryTags:['Energy 3','Combat'],secondaryTags:['Action'],tertiaryTags:['Range 5 Sphere 1','Limited 2'],description:'Target characters suffer the burning 1 ailment.',tier:0,attack:0,energyDamage:0,scaling:''},
-    
-    //Tier 1
-    {name:'Caffeinated Brew',types:['Gear','Caffeinated Brew'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:['Melee','Limited 1 Daily'],description:'Restore energy equal to 4 plus your tier to the target character.',tier:0,attack:0,energyDamage:0,scaling:''},
-    {name:'Caltrops',types:['Gear','Caltrops'],primaryTags:['Energy 0'],secondaryTags:['Action'],tertiaryTags:['Melee','Limited 1'],description:'Drop caltrops on a target tile that last ntil the end of this combat. Any character that enters that tile takes energy damage equal to 4 plus twice your tier.',tier:0,attack:0,energyDamage:0,scaling:''},
-    {name:'Flare',types:['Gear','Flare'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:['Range 5','Limited 1'],description:'Light and toss a flare to a tile in range, creating a bright light in a 10 tile (50 ft.) radius at that tile. This light lasts for 12 turns (1 minute).',tier:0,attack:0,energyDamage:0,scaling:''},
-    {name:'Smokescreen',types:['Gear','Smokescreen'],primaryTags:['Energy 0','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Range 1 Sphere','Limited 1'],description:'Global: The target area become opaque for 12 turns (1 minute).',tier:0,attack:0,energyDamage:0,scaling:''},
-    {name:'Ingest Syrhja',types:['Gear','Syrjha'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:['Limited 1 Daily'],description:'Reduce your Death Resistance by 1 and gain +2 Movement for the next hour.',tier:1,attack:0,energyDamage:0,scaling:''},
-    
-    //Tier 2
-    {name:'Parachute',types:['Gear','Parachute'],primaryTags:['Energy 0','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1 Daily'],description:'While you are falling: Slow your fall to 25 tiles per turn (25 ft. per second). Take no energy damage when you land.',tier:0,attack:0,energyDamage:0,scaling:''},
-    {name:'Stun Bomb',types:['Gear','Stun Bomb'],primaryTags:['Energy 3','Combat'],secondaryTags:['Action'],tertiaryTags:['Range 5','Limited 1'],description:'The target character is incapacitated for an instant. In addition to any other potential effects, this causes the target character to lose focus on all of their focus abilities.',tier:0,attack:0,energyDamage:0,scaling:''},
-    {name:'Witch-Hunter Charm',types:['Gear','Witch-Hunter Charm'],primaryTags:['Energy 2','Combat'],secondaryTags:['Attack Modifier'],tertiaryTags:[],description:'End one focus ability of your choice that the target is maintaining.',tier:0,attack:0,energyDamage:0,scaling:''},
-    {name:'Ingest Crystalline',types:['Gear','Crystalline'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:['Limited 1 Daily'],description:'You have unlimited focus slots and suffer -3 Finesse for the next hour. After one hour, you restore to yourself energy equal to 3 plus your tier.',tier:2,attack:0,energyDamage:0,scaling:''},
-    
-
-    //Tier 3
-    {name:'Arcane Flare',types:['Gear','Arcane Flare'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:['Range 5','Limited 1'],description:'Light and toss a flare to a tile in range, creating a bright light in a 20 tile (100 ft.) radius at that tile. This light lasts for 1 hour and can burn in any environments.',tier:0,attack:0,energyDamage:0,scaling:''},
-    {name:'Draining Toxin',types:['Gear','Draining Toxin'],primaryTags:['Energy 4'],secondaryTags:['Charged Action 10 minutes'],tertiaryTags:['Limited 1 Daily'],description:'All attached abilities of a target weapon gain +2 energy damage until the end of the next combat. This bonus ends when you resolve the Rest ability.',tier:0,attack:0,energyDamage:0,scaling:''},
-    {name:'Lethal Toxin',types:['Gear','Lethal Toxin'],primaryTags:['Energy 4'],secondaryTags:['Charged Action 10 minutes'],tertiaryTags:['Limited 1 Daily'],description:'All attached abilities of a target weapon gain +2 attack until the end of the next combat. This bonus ends when you resolve the Rest ability.',tier:0,attack:0,energyDamage:0,scaling:''},
-    {name:'Ingest Mindbreak',types:['Gear','Mindbreak'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:['Limited 1 Daily'],description:'You gain +2 Lethality, Force, and Finesse and suffer -2 Resistance for the next hour. After one hour, your energy is reduced by half of your total energy(rounded down).',tier:3,attack:0,energyDamage:0,scaling:''},
-    
+        //Tier 0
+        {name:'Lantern',types:['Gear','Lantern'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:['Range 5'],description:'This ability can be used to light or snuff your lantern. When lit, your lantern provides light within range.',tier:0,attack:0,energyDamage:0,scaling:''},
+        {name:'Pavise Shield',types:['Gear','Pavise Shield'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:['Limited 1'],description:'This ability can be used to plant or retrieve a pavise shield onto or from one of the faces of the tile you occupy. When planted, the pavise shield provides cover from range attack abilities.',tier:0,attack:0,energyDamage:0,scaling:''},
+        {name:'Fire Bomb',types:['Gear','Fire Bomb'],primaryTags:['Energy 3','Combat'],secondaryTags:['Action'],tertiaryTags:['Limited 2','Range 7','Sphere 1'],description:'Target characters suffer the burning 1 ailment.',tier:0,attack:0,energyDamage:0,scaling:''},
+        
+        //Tier 1
+        {name:'Caltrops',types:['Gear','Caltrops'],primaryTags:['Energy 0'],secondaryTags:['Action'],tertiaryTags:['Melee','Limited 1'],description:'Drop caltrops on a target tile that last ntil the end of this combat. Any character that enters that tile takes energy damage equal to 4 plus twice your tier.',tier:1,attack:0,energyDamage:0,scaling:''},
+        {name:'Flare',types:['Gear','Flare'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:['Range 5','Limited 2'],description:'Light and toss a flare to a tile in range, creating a bright light in a 10 tile (50 ft.) radius at that tile. This light lasts for 12 turns (1 minute).',tier:1,attack:0,energyDamage:0,scaling:''},
+        {name:'Ingest Syrhja',types:['Gear','Syrjha'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:['Limited 1 Daily'],description:'Reduce your Death Resistance by 1 and gain +2 Movement for the next hour.',tier:1,attack:0,energyDamage:0,scaling:''},
+        
+        //Tier 2
+        {name:'Caffeinated Brew',types:['Gear','Caffeinated Brew'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:['Melee','Limited 2 Daily'],description:'Restore energy equal to 5 plus your tier to the target character.',tier:2,attack:0,energyDamage:0,scaling:''},
+        {name:'Parachute',types:['Gear','Parachute'],primaryTags:['Energy 0','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1 Daily'],description:'While you are falling: Slow your fall to 25 tiles per turn (25 ft. per second). Take no energy damage when you land.',tier:2,attack:0,energyDamage:0,scaling:''},
+        {name:'Smokescreen',types:['Gear','Smokescreen'],primaryTags:['Energy 0','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1','Melee','Sphere 1'],description:'Global: The target area become opaque for 12 turns (1 minute).',tier:2,attack:0,energyDamage:0,scaling:''},
+        
+        //Tier 3
+        {name:'Arcane Flare',types:['Gear','Arcane Flare'],primaryTags:['Energy 3','Combat'],secondaryTags:['Action'],tertiaryTags:['Range 5','Limited 2'],description:'Light and toss a flare to a tile in range, creating a bright light in a 20 tile (100 ft.) radius at that tile. This light lasts for 1 hour and can burn in any environments.',tier:3,attack:0,energyDamage:0,scaling:''},
+        {name:'Crystal Mirror',types:['Gear','Crystal Mirror'],primaryTags:['Energy 0','Combat'],secondaryTags:['Reaction'],tertiaryTags:[],description:'Counter: Change the taret of the triggering attack to an adjacent allied character.',tier:3,attack:0,energyDamage:0,scaling:''},
+        {name:'Witch-Hunter Charm',types:['Gear','Witch-Hunter Charm'],primaryTags:['Energy 5','Combat'],secondaryTags:['Attack Modifier'],tertiaryTags:[],description:'End one focus ability of your choice that the target is maintaining.',tier:3,attack:0,energyDamage:0,scaling:''},
+        
+        //Tier 4
+        {name:'Ingest Crystalline',types:['Gear','Crystalline'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:['Limited 1 Daily'],description:'You gain +2 focus slots and suffer -2 finesse for the next hour.',tier:4,attack:0,energyDamage:0,scaling:''},
+        {name:'Lethal Toxin',types:['Gear','Lethal Toxin'],primaryTags:['Energy 0'],secondaryTags:['Charged Action 10 minutes'],tertiaryTags:['Limited 1 Daily'],description:'A target weapon gains 1 attack to its attached attack abilities until the end of the next combat or until you resolve the Rest ability.',tier:4,attack:0,energyDamage:0,scaling:''},
+        {name:'Stun Bomb',types:['Gear','Stun Bomb'],primaryTags:['Energy 3','Combat'],secondaryTags:['Action'],tertiaryTags:['Range 5','Limited 1'],description:'The target character suffers the stunned ailment.',tier:4,attack:0,energyDamage:0,scaling:''},
+        
+        //Tier 5
+        {name:'Ingest Mindbreak',types:['Gear','Mindbreak'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:['Limited 1 Daily'],description:'You gain +1 lethality and +1 finesse and suffer -2 resistance for the next hour.',tier:3,attack:0,energyDamage:0,scaling:''},
+        
     //Enchantment Abilities
         //Tier 0
         {name:'Cast Light',types:['Enchantment','Light-Casting'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:['Range 3'],description:'Set this weapon alight, providing light in a 3 tile (15 ft.) sphere. You can also use this action to extinguish the light.',tier:0,attack:0,energyDamage:0,scaling:''},

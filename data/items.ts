@@ -61,32 +61,32 @@ export const armorData: Item[] = [
 
 export const gearData: Item[] = [
     //Tier 0
-    {name:'Alarm System',tags:[],weight:15,cost:100,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
+    {name:'Fire Bomb',tags:[],weight:2,cost:75,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
     {name:'Lantern',tags:[],weight:2,cost:50,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
-    {name:'Trauma Kit',tags:[],weight:5,cost:100,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
-    {name:'Pavise Shield',tags:[],weight:10,cost:75,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
-    {name:'Fire Bomb',tags:[],weight:2,cost:50,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
+    {name:'Pavise Shield',tags:[],weight:10,cost:100,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
     
     //Tier 1
-    {name:'Caffeinated Brew',tags:[],weight:1,cost:1500,abilities:[],traits:[],tier:1,description:'',types:[],quantity:1},
     {name:'Caltrops',tags:[],weight:2,cost:1000,abilities:[],traits:[],tier:1,description:'',types:[],quantity:1},
     {name:'Flare',tags:[],weight:2,cost:1250,abilities:[],traits:[],tier:1,description:'',types:[],quantity:1},
-    {name:'Smokescreen',tags:[],weight:2,cost:1000,abilities:[],traits:[],tier:1,description:'',types:[],quantity:1},
     {name:'Syrjha',tags:[],weight:1,cost:1250,abilities:[],traits:[],tier:1,description:'',types:[],quantity:1},
     
-    
     //Tier 2
+    {name:'Caffeinated Brew',tags:[],weight:1,cost:3000,abilities:[],traits:[],tier:2,description:'',types:[],quantity:1},
     {name:'Parachute',tags:[],weight:30,cost:3000,abilities:[],traits:[],tier:2,description:'',types:[],quantity:1},
-    {name:'Stun Bomb',tags:[],weight:1,cost:4000,abilities:[],traits:[],tier:2,description:'',types:[],quantity:1},
-    {name:'Witch-Hunter Charm',tags:[],weight:1,cost:3500,abilities:[],traits:[],tier:2,description:'',types:[],quantity:1},
-    {name:'Crystalline',tags:[],weight:1,cost:3500,abilities:[],traits:[],tier:2,description:'',types:[],quantity:1},
-    
+    {name:'Smokescreen',tags:[],weight:2,cost:1000,abilities:[],traits:[],tier:2,description:'',types:[],quantity:1},
 
     //Tier 3
     {name:'Arcane Flare',tags:[],weight:2,cost:6500,abilities:[],traits:[],tier:3,description:'',types:[],quantity:1},
-    {name:'Draining Toxin',tags:[],weight:1,cost:7000,abilities:[],traits:[],tier:3,description:'',types:[],quantity:1},
-    {name:'Lethal Toxin',tags:[],weight:1,cost:7000,abilities:[],traits:[],tier:3,description:'',types:[],quantity:1},
-    {name:'Mindbreak',tags:[],weight:1,cost:7500,abilities:[],traits:[],tier:3,description:'',types:[],quantity:1},
+    {name:'Crystal Mirror',tags:[],weight:1,cost:7500,abilities:[],traits:[],tier:3,description:'',types:[],quantity:1},
+    {name:'Witch-Hunter Charm',tags:[],weight:1,cost:3500,abilities:[],traits:[],tier:3,description:'',types:[],quantity:1},
+
+    //Tier 4
+    {name:'Crystalline',tags:[],weight:1,cost:7500,abilities:[],traits:[],tier:4,description:'',types:[],quantity:1},
+    {name:'Lethal Toxin',tags:[],weight:1,cost:7000,abilities:[],traits:[],tier:4,description:'',types:[],quantity:1},
+    {name:'Stun Bomb',tags:[],weight:1,cost:4000,abilities:[],traits:[],tier:4,description:'',types:[],quantity:1},
+    
+    //Tier 5
+    {name:'Mindbreak',tags:[],weight:1,cost:7500,abilities:[],traits:[],tier:5,description:'',types:[],quantity:1},
     
 ];
 
