@@ -173,10 +173,10 @@ export const traitData: Trait[] = [
 
 
     //Armor
-    {name:'Light Armor',types:['Light'],description:'You gain +4 Defence. This defence bonus increases by 1 for every armor tier above 0.',tier:0},
-    {name:'Medium Armor',types:['Medium'],description:'You gain +6 Defence. You suffer -1 Finesse. This defence bonus increases by 1 for every armor tier above 0.',tier:0},
-    {name:'Heavy Armor',types:['Heavy'],description:'You gain +8 Defence. You suffer -1 Finesse and -1 Movement. This defence bonus increases by 1 for every armor tier above 0.',tier:0},
-    {name:'Ultra-Heavy Armor',types:['Ultra-Heavy'],description:'You gain +10 Defence. You suffer -2 Finesse and -1 Movement. This defence bonus increases by 1 for every armor tier above 0.',tier:0},
+    {name:'Light Armor',types:['Light Armor'],description:'You gain +4 Defence. This defence bonus increases by 1 for every armor tier above 0.',tier:0},
+    {name:'Medium Armor',types:['Medium Armor'],description:'You gain +6 Defence. You suffer -1 Finesse. This defence bonus increases by 1 for every armor tier above 0.',tier:0},
+    {name:'Heavy Armor',types:['Heavy Armor'],description:'You gain +8 Defence. You suffer -1 Finesse and -1 Movement. This defence bonus increases by 1 for every armor tier above 0.',tier:0},
+    {name:'Ultra-Heavy Armor',types:['Ultra-Heavy Armor'],description:'You gain +10 Defence. You suffer -2 Finesse and -1 Movement. This defence bonus increases by 1 for every armor tier above 0.',tier:0},
     
     //Combat Accessories
         //Tier 0 
@@ -205,5 +205,28 @@ export const traitData: Trait[] = [
         //Tier 3
         {name:'Arcane Communicator',types:['Arcane Communicator'],description:'You may choose to transmit anything you say to all characters with paired Arcane Communicators. You can pair communicators with nearby willing characters. You can only clear pairings by clearing all existing pairings.',tier:3},
         {name:'Mindspeak Amulet',types:['Mindspeak Amulet'],description:'You can communicate telepathically with any creature within 10 ft. of you.',tier:3},
-        
+    //Combat Enchantments
+        //Tier 0
+        {name:'Focused',types:['Focused'],description:'Increase your focus thresholds by 6.',tier:0},
+        {name:'Staunching',types:['Staunching'],description:'You gain +1 death resistance.',tier:0},
+        //Tier 1
+        {name:'Hardened',types:['Hardened'],description:'You gain +1 defence.',tier:1},
+        {name:'Lethal',types:['Lethal'],description:'You gain +1 lethality.',tier:1},
+        {name:'Resistant',types:['Resistant'],description:'You gain +1 resistance.',tier:1},
+        //Tier 2
+        {name:'Calming',types:['Calming'],description:'You are immune to finesse reduction statuses.',tier:2},
+        {name:'Thorned',types:['Thorned'],description:'When you take energy damage due to a melee attack, the attacker takes 3 energy damage.',tier:2},
+        //Tier 3
+        {name:'Glasscharm',types:['Glasscharm'],description:'Gain +2 lethality. When you suffer the winded status, also suffer the stunned ailment.',tier:3},
+        {name:'Invigorating',types:['Invigorating'],description:'You gain +10 energy.',tier:3},
+        {name:'Reactive',types:['Reactive'],description:'When you take energy damage, gain +1 resistance until the beginning of your next turn.',tier:3},
+        //Tier 4
+        {name:'Arc-Powered',types:['Arc-Powered'],description:'Ignore 1 point of finesse and 1 point of movement reductions that come from your worn armor.',tier:4},
+        {name:'Hyperlethal',types:['Hyperlethal'],description:'When your attack abilities attached to weapons with the Hyperlethal enchantment score a direct hit, the target’s endurance is reduced by an additional point.',tier:4},
+        {name:'Mercurial',types:['Mercurial'],description:'Gain +1 movement. You are immune to attribute ailments that reduce your movement.',tier:4},
+
+    //Utility Enchantments
+    {name:'Clean',types:['Clean'],description:'This item cannot be dirtied.',tier:1},
+    {name:'Light',types:['Light'],description:'This item’s weight is reduced by 2 lb.',tier:0},
+    {name:'Regenerative',types:['Regenerative'],description:'This item repairs and maintains itself over time.',tier:0},
 ]

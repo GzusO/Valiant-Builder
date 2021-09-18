@@ -16,10 +16,10 @@ export interface Item {
 
 export const armorData: Item[] = [
     //Armor Sets
-    {name:'Light',tags:[],weight:10,cost:100,abilities:[],traits:[],tier:0,description:'',types:['Armor'],quantity:1},
-    {name:'Medium',tags:[],weight:20,cost:250,abilities:[],traits:[],tier:0,description:'',types:['Armor'],quantity:1},
-    {name:'Heavy',tags:[],weight:35,cost:400,abilities:[],traits:[],tier:0,description:'',types:['Armor'],quantity:1},
-    {name:'Ultra-Heavy',tags:[],weight:50,cost:500,abilities:[],traits:[],tier:0,description:'',types:['Armor'],quantity:1},
+    {name:'Light Armor',tags:[],weight:10,cost:100,abilities:[],traits:[],tier:0,description:'',types:['Armor'],quantity:1},
+    {name:'Medium Armor',tags:[],weight:20,cost:250,abilities:[],traits:[],tier:0,description:'',types:['Armor'],quantity:1},
+    {name:'Heavy Armor',tags:[],weight:35,cost:400,abilities:[],traits:[],tier:0,description:'',types:['Armor'],quantity:1},
+    {name:'Ultra-Heavy Armor',tags:[],weight:50,cost:500,abilities:[],traits:[],tier:0,description:'',types:['Armor'],quantity:1},
 
 
     //Accessories Combat
