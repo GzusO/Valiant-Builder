@@ -24,7 +24,7 @@ export const traitData: Trait[] = [
     {name:'Improved Focus',types:['Ascended Cognition'],description:'Gain +1 focus slot.',tier:5},
 
     //Mental Acuity
-    {name:'Fast Reactions',types:['Instincts'],description:'The first reaction you use each combat is free.',tier:2},
+    {name:'Fast Reactions',types:['Instincts'],description:'The first non-variable cost reaction you use each combat is free.',tier:2},
     {name:'Speed',types:['Advanced Wit'],description:'Gain +1 finesse.',tier:3},
     {name:'Finesse Reduction Immunity',types:['Razor Instincts'],description:'You are immune to attribute ailments that reduce your finesse.',tier:4},
     {name:'Improved Speed',types:['Perfect Wit'],description:'Gain +1 finesse.',tier:5},
@@ -88,7 +88,7 @@ export const traitData: Trait[] = [
 
     //Marr
     {name:'Adapt',types:['Adaptive Form'],description:'If you spend 1 season in a specific region or city, you are able to mimic the dialect, mannerisms, and other norms to the point of being able to be mistaken for a native of the region or city. If you are away from a region you have adapted to for more than 1 season, you lose the adaptation.',tier:0},
-    {name:'Opportunity',types:['Simple Opportunist'],description:'Double the attack of your attack abilities that target characters suffering the winded status.',tier:0},
+    {name:'Opportunity',types:['Simple Opportunist'],description:'Your attack abilities that target characters suffering the winded status gain +4 attack.',tier:0},
     {name:'Threatless Stride',types:['Unassuming Demeanor'],description:'Enemy characters cannot use reaction abilities at any point during your move phase.',tier:0},
     {name:'Quiet Downtime',types:['Comfortable and Quiet'],description:'You are always able to spend your downtime without interruptions.',tier:0},
     {name:'Unassuming',types:['Plain'],description:'Others will not suspect you of anything without direct evidence.',tier:0},
@@ -152,4 +152,14 @@ export const traitData: Trait[] = [
     {name:'Tinkerer Funds',types:['Tinkerer'],description:'You start with 1,000 Tins.',tier:0},
     {name:'Natural Explorer',types:['Traveler'],description:'You can always figure out your position on a map and always know which direction is North.',tier:0},
     {name:'Traveler Funds',types:['Traveler'],description:'You start with 750 Tins.',tier:0},
+
+
+    //Class
+
+    //Aspirant
+    {name:'Arcane Field Manipulation',types:['Arcane Mind'],description:'You may choose up to one targeted character to be immune to the effects of any of your shape abilities.',tier:0},
+    {name:'Ascendant',types:['Ascendant Bond'],description:'A small, sentient being (your ascendant) capable of flight follows you, taking a form of your choosing. Your ascendant can move up to 100 ft. away from you before its form dissipates and it is destroyed. ascendant is destroyed, it reforms in 1 hour. Your ascendant can manipulate objects no heavier than 5 lb. Your ascendant is not a character. Your ascendant must be alive to use the Ascendant Binding, Ascendant Charge, and Ascendant Sacrifice abilities.',tier:0},
+    {name:'Ascendant Link',types:['Ascendant Bond'],description:'You and your Ascendant can communicate telepathically if you are within 10 ft. of each other. Due to your Ascendant’s innate senses, you cannot be blind or conditionally blind to any characters within 10 ft. of you while your Ascendant is alive. Using and maintaining the effects of any of your Ascendant abilities requires your Ascendant to be alive.',tier:0},
+    {name:'Marked Assault',types:['Marked Prey'],description:'Attack modifier abilities applied to attack abilities targeting only your marked character cost 0 energy.',tier:0},
+    {name:'Marked Tracking',types:['Marked Prey'],description:'You can always track your marked character given there are tracks to follow. You can identify a marked character as long as you can see them, even if they are disguised.',tier:0},
 ]

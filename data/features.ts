@@ -170,4 +170,17 @@ export const featureData: Feature[] =[
     {name:'Tinkerer',types:['Profession','Feature','Tinkerer'],description:'You make your living crafting useful tools. Some tinkerers focus on useful, practical tools, while others devise more experimental equipment.', tier:0,abilities:[],traits:[]},
     {name:'Traveler',types:['Profession','Feature','Traveler'],description:'You decided to travel the world rather than pursue a traditional career.', tier:0,abilities:[],traits:[]},
 
+
+    //Class
+
+    //Aspirant
+    {name:'Alchemical Experimentations',types:['Combat','Class','Feature','Aspirant'],description:'The practice of alchemy has largely been replaced by more practical processes. However, this doesn’t keep an eccentric few from honing the talent anyways.', tier:0,abilities:[],traits:[]},
+    {name:'Arcane Mind',types:['Combat','Class','Feature','Aspirant'],description:'You’re one of the few people that can naturally sense the arcane energy of the world, like a transient tapestry influencing all things. Most people with this gift go mad.', tier:0,abilities:[],traits:[]},
+    {name:'Ascendant Bond',types:['Combat','Class','Feature','Aspirant'],description:'Infrequently, ambient energies manifest into peculiar phenomena known as an Ascendants. Ascendants require some sort of host to survive, else they burn up their available energy soon after forming.', tier:0,abilities:[],traits:[]},
+    {name:'Charged Blood',types:['Combat','Class','Feature','Aspirant'],description:'Whether it’s hereditary or a freak mutation, your blood contains a significant amount of natural arcane energy. Having most likely lived like this for most of your life, you’ve become quite adept at making use of this stored energy.', tier:0,abilities:[],traits:[]},
+    {name:'Daring Flair',types:['Combat','Class','Feature','Aspirant'],description:'Many adventurers learn to fight as a grim necessity. For you, however, a good fight is a great opportunity to try out some fancy new maneuvers.', tier:0,abilities:[],traits:[]},
+    {name:'Frenzied Combatant',types:['Combat','Class','Feature','Aspirant'],description:'You’ve a short temper and an animal-like savagery in battle. Once you submit to this savagery, however, it takes a fair amount of bloodshed to bring you back to your senses.', tier:0,abilities:[],traits:[]},
+    {name:'Marked Prey',types:['Combat','Class','Feature','Aspirant'],description:'Once you’ve got your sights set on something, it’s only a matter of time before it meets its demise.', tier:0,abilities:[],traits:[]},
+    {name:'Pugilism',types:['Combat','Class','Feature','Aspirant'],description:'Bare-knuckled brawlers are a rare sight on the battlefield. Fighting with flesh alone is not easy, but masters of the craft are well-respected.', tier:0,abilities:[],traits:[]},
+    {name:'Street Tactics',types:['Combat','Class','Feature','Aspirant'],description:'There’s no honor in a brawl, only winners and losers.', tier:0,abilities:[],traits:[]},
 ]
