@@ -63,6 +63,7 @@ import { TraitSelectDialogComponent } from './trait/trait-select-dialog/trait-se
 import { ValiantRandomizerComponent } from './valiant/valiant-randomizer/valiant-randomizer.component';
 import { ItemEditDialogComponent } from './item/item-edit-dialog/item-edit-dialog.component';
 import { TrackerComponent } from './tracker/tracker/tracker.component';
+import { DevComponent } from './dev/dev.component';
 
 
 @NgModule({
@@ -100,7 +101,8 @@ import { TrackerComponent } from './tracker/tracker/tracker.component';
     TraitSelectDialogComponent,
     ValiantRandomizerComponent,
     ItemEditDialogComponent,
-    TrackerComponent
+    TrackerComponent,
+    DevComponent
   ],
   imports: [
     BrowserModule,

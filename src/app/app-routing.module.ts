@@ -12,6 +12,7 @@ import { EnchantmentListComponent } from './item/enchantment-list/enchantment-li
 import { ValiantListComponent } from './valiant/valiant-list/valiant-list.component';
 import { ValiantDetailComponent } from './valiant/valiant-detail/valiant-detail.component';
 import { ValiantRandomizerComponent } from './valiant/valiant-randomizer/valiant-randomizer.component';
+import { DevComponent } from './dev/dev.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/lineages', pathMatch: 'full' },
@@ -26,7 +27,8 @@ const routes: Routes = [
   { path: 'enchantments', component:EnchantmentListComponent},
   { path: 'valiants', component:ValiantListComponent},
   { path: 'valiant/:id', component:ValiantDetailComponent},
-  { path: 'random', component:ValiantRandomizerComponent}
+  { path: 'random', component:ValiantRandomizerComponent},
+  { path: 'dev',component:DevComponent}
 ];
 
 @NgModule({

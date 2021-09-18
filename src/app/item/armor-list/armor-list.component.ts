@@ -12,11 +12,13 @@ import { MatSort } from '@angular/material/sort';
 export class ArmorListComponent implements OnInit, AfterViewInit{
   armors: Item[] =[];
   armorsDataSource = new MatTableDataSource<Item>();
-  accessoryDataSource = new MatTableDataSource<Item>();
-  displayedColumns: string[] = ['name', 'tags', 'weight','cost','traits'];
-
+  combatAccessoryDataSource = new MatTableDataSource<Item>();
+  utilityAccessoryDataSource = new MatTableDataSource<Item>();
+  armorDisplayedColumns: string[] = ['name','weight','cost','traits'];
+  accessoryDisplayedColumns: string[] = ['tier','name','weight','cost','traits'];
   @ViewChild('armorSort') sortArmor: MatSort =new MatSort();
-  @ViewChild('accessorySort') sortAccessory: MatSort =new MatSort();
+  @ViewChild('utilityAccessorySort') sortUtilityAccessory: MatSort =new MatSort();
+  @ViewChild('combatAccessoryCombatSort') sortCombatAccessory: MatSort =new MatSort();
 
   constructor(private dataService: DataService) { }
 
@@ -25,9 +27,13 @@ export class ArmorListComponent implements OnInit, AfterViewInit{
   }
   ngAfterViewInit() {
     this.armorsDataSource.sort = this.sortArmor;
-    this.accessoryDataSource.sort = this.sortAccessory;
-    this.armorsDataSource.data = this.armors.filter(x=>!x.types.includes('Accessory'));
-    this.accessoryDataSource.data = this.armors.filter(x=> x.types.includes('Accessory'));
+    this.combatAccessoryDataSource.sort = this.sortCombatAccessory;
+    this.utilityAccessoryDataSource.sort = this.sortUtilityAccessory
+
+    this.armorsDataSource.data = this.armors.filter(x=>x.types.includes('Armor'));
+    this.combatAccessoryDataSource.data = this.armors.filter(x=> x.types.includes('Combat Accessory'));
+    this.utilityAccessoryDataSource.data = this.armors.filter(x=> x.types.includes('Utility Accessory'))
+
   }
 
   getArmors():void{
