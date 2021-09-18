@@ -22,10 +22,10 @@ export class Valiant {
     weightThreshold: number =75;
     inventoryWeight: number =0;
     //Attributes
-    enduranceMax: number=1;
-    enduranceCurrent: number=1;
-    energyMax: number=28;
-    energyCurrent: number=28;
+    enduranceMax: number=2;
+    enduranceCurrent: number=2;
+    energyMax: number=50;
+    energyCurrent: number=50;
     deathResistanceMax: number=3;
     deathResistanceCurrent: number =3;
     focusSlotsMax: number = 1;
@@ -34,7 +34,7 @@ export class Valiant {
     combatSpeed: number= 0;
     lethality: number= 0;
     force: number = 0;
-    defence: number = 7;
+    defence: number = 20;
     resistance: number = 0;
     finesse: number = 0;
     

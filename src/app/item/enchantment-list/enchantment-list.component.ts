@@ -11,9 +11,15 @@ import { DataService } from 'src/app/data.service';
 })
 export class EnchantmentListComponent implements OnInit, AfterViewInit {
   enchantments: Enchantment[] =[];
+
   enchantmentDataSource = new MatTableDataSource<Enchantment>();
+  utilityEnchantmentDataSource= new MatTableDataSource<Enchantment>();
+
   displayedColumns: string[] = ['tier','name', 'valid', 'cost','traits'];
+  utilityDisplayedColumns: string[] = ['name', 'valid', 'cost','traits'];
+
   @ViewChild('enchantmentSort') sortEnchantments: MatSort = new MatSort();
+  @ViewChild('utilityEnchantmentSort') sortUtilityEnchantments: MatSort = new MatSort();
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
@@ -22,7 +28,10 @@ export class EnchantmentListComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.enchantmentDataSource.sort = this.sortEnchantments;
-    this.enchantmentDataSource.data = this.enchantments;
+    this.utilityEnchantmentDataSource.sort =this.sortUtilityEnchantments;
+
+    this.enchantmentDataSource.data = this.enchantments.filter(x=>x.types.includes("Combat"));
+    this.utilityEnchantmentDataSource.data = this.enchantments.filter(x=> x.types.includes("Utility"));
   }
 
   getEnchantments():void {
