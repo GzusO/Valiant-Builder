@@ -183,4 +183,9 @@ export const featureData: Feature[] =[
     {name:'Marked Prey',types:['Combat','Class','Feature','Aspirant'],description:'Once you’ve got your sights set on something, it’s only a matter of time before it meets its demise.', tier:0,abilities:[],traits:[]},
     {name:'Pugilism',types:['Combat','Class','Feature','Aspirant'],description:'Bare-knuckled brawlers are a rare sight on the battlefield. Fighting with flesh alone is not easy, but masters of the craft are well-respected.', tier:0,abilities:[],traits:[]},
     {name:'Street Tactics',types:['Combat','Class','Feature','Aspirant'],description:'There’s no honor in a brawl, only winners and losers.', tier:0,abilities:[],traits:[]},
+    {name:'Charlatan’s Poise',types:['Utility','Class','Feature','Aspirant'],description:'You are used to travelling light, much to the delight of your travelling groups.', tier:0,abilities:[],traits:[]},
+    {name:'Basic Economy',types:['Utility','Class','Feature','Aspirant'],description:'You’ve made a few good deals in your time. However, more importantly, you’ve been ripped off enough times to know a bad trade.', tier:0,abilities:[],traits:[]},
+    {name:'People Person',types:['Utility','Class','Feature','Aspirant'],description:'Your pleasant demeanor may not get you far in a fight, but it can help prevent them!', tier:0,abilities:[],traits:[]},
+    {name:'Pack Mule',types:['Utility','Class','Feature','Aspirant'],description:'You’re good at carrying things. It’s not flashy, but by the gods it’s useful.', tier:0,abilities:[],traits:[]},
+    {name:'Touched Mind',types:['Utility','Class','Feature','Aspirant'],description:'Whether it be a higher power, a deeper power, or just manic tendencies, your mind is not entirely under your control.', tier:0,abilities:[],traits:[]},
 ]

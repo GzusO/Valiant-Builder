@@ -162,4 +162,10 @@ export const traitData: Trait[] = [
     {name:'Ascendant Link',types:['Ascendant Bond'],description:'You and your Ascendant can communicate telepathically if you are within 10 ft. of each other. Due to your Ascendant’s innate senses, you cannot be blind or conditionally blind to any characters within 10 ft. of you while your Ascendant is alive. Using and maintaining the effects of any of your Ascendant abilities requires your Ascendant to be alive.',tier:0},
     {name:'Marked Assault',types:['Marked Prey'],description:'Attack modifier abilities applied to attack abilities targeting only your marked character cost 0 energy.',tier:0},
     {name:'Marked Tracking',types:['Marked Prey'],description:'You can always track your marked character given there are tracks to follow. You can identify a marked character as long as you can see them, even if they are disguised.',tier:0},
+    {name:'Charlatan’s Poise',types:['Charlatan’s Poise'],description:'You are almost always able to convince others that you are wealthier than and better connected that you actually are.',tier:0},
+    {name:'Simple Market Knowledge',types:['Basic Economy'],description:'You always know if a trade you are making is not in your favor.',tier:0},
+    {name:'Pleasantly Disarming',types:['People Person'],description:'Characters won’t be openly hostile towards you without provocation.',tier:0},
+    {name:'Slight of Mind',types:['People Person'],description:'When you make mental acuity contests outside of combat, you gain +1 to the contest roll.',tier:0},
+    {name:'Able Frame',types:['Pack Mule'],description:'Your base weight threshold is increased by 10 lb.',tier:0},
+    {name:'Pocket Snacks',types:['Pack Mule'],description:'You’ve always got snacks handy. Gods know where you keep them.',tier:0},
 ]

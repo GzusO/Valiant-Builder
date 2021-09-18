@@ -94,7 +94,7 @@ export const abilityData: Ability[] =[
     {name:'Heavy Lethal Strike',types:['Pugilism'],primaryTags:['Energy 5','Combat'],secondaryTags:['Action'],tertiaryTags:['Attack',' Melee',' Slow'],description:'',tier:0,attack:8,energyDamage:5,scaling:'This ability gains 1 attack for every character tier above 0.'},
     {name:'Taunt',types:['Street Tactics'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:['Range 10'],description:'The target character suffers -2 finesse until the end of their next turn.',tier:0,attack:0,energyDamage:0,scaling:''},
     {name:'Exposing Strike',types:['Street Tactics'],primaryTags:['Energy 0','Combat'],secondaryTags:['Attack Modifier'],tertiaryTags:[],description:'The base energy cost of this ability is 0, it deals no energy damage, and it automatically fails its attack contest. The base energy cost of the next attack ability that targets the target character during this combat is 0.',tier:0,attack:0,energyDamage:0,scaling:''},
-
+    {name:'Divine Guidance',types:['Touched Mind'],primaryTags:['Energy 0'],secondaryTags:[],tertiaryTags:['Limited 1 Daily'],description:'You are possibly granted some directive, insight, or other sort of guidance by a greater power.',tier:0,attack:0,energyDamage:0,scaling:''},
 
 
     //Weapon Abilities
