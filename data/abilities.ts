@@ -145,7 +145,7 @@ export const abilityData: Ability[] =[
         {name:'Smokescreen',types:['Gear','Smokescreen'],primaryTags:['Energy 0','Combat'],secondaryTags:['Reaction'],tertiaryTags:['Limited 1','Melee','Sphere 1'],description:'Global: The target area become opaque for 12 turns (1 minute).',tier:2,attack:0,energyDamage:0,scaling:''},
         
         //Tier 3
-        {name:'Arcane Flare',types:['Gear','Arcane Flare'],primaryTags:['Energy 3','Combat'],secondaryTags:['Action'],tertiaryTags:['Range 5','Limited 2'],description:'Light and toss a flare to a tile in range, creating a bright light in a 20 tile (100 ft.) radius at that tile. This light lasts for 1 hour and can burn in any environments.',tier:3,attack:0,energyDamage:0,scaling:''},
+        {name:'Arcane Flare',types:['Gear','Arcane Flare'],primaryTags:['Energy 0','Combat'],secondaryTags:['Action'],tertiaryTags:['Range 5','Limited 2'],description:'Light and toss a flare to a tile in range, creating a bright light in a 20 tile (100 ft.) radius at that tile. This light lasts for 1 hour and can burn in any environments.',tier:3,attack:0,energyDamage:0,scaling:''},
         {name:'Crystal Mirror',types:['Gear','Crystal Mirror'],primaryTags:['Energy 0','Combat'],secondaryTags:['Reaction'],tertiaryTags:[],description:'Counter: Change the taret of the triggering attack to an adjacent allied character.',tier:3,attack:0,energyDamage:0,scaling:''},
         {name:'Witch-Hunter Charm',types:['Gear','Witch-Hunter Charm'],primaryTags:['Energy 5','Combat'],secondaryTags:['Attack Modifier'],tertiaryTags:[],description:'End one focus ability of your choice that the target is maintaining.',tier:3,attack:0,energyDamage:0,scaling:''},
         
