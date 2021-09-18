@@ -90,24 +90,20 @@ export const weaponData: Item[] =[
     {name:'Heavy Axe',tags:['Two-Handed'],weight:3,cost:200,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
     {name:'Great Axe',tags:['Two-Handed','Heavy'],weight:15,cost:400,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
     
-    {name:'Polearm',tags:['Reach 1'],weight:4,cost:75,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
-    {name:'Bladed Polearm',tags:['Reach 1'],weight:4,cost:75,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
-    {name:'Hybrid Polearm',tags:['Reach 1','Two-Handed'],weight:7,cost:150,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
-    {name:'Heavy Polearm',tags:['Two-Handed','Reach 1'],weight:7,cost:200,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
-    {name:'Heavy Bladed Polearm',tags:['Two-Handed','Reach 1'],weight:7,cost:200,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
-    {name:'Heavy Hybrid Polearm',tags:['Two-Handed','Reach 1','Heavy'],weight:9,cost:300,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
-    {name:'Great Polearm',tags:['Two-Handed','Reach 1','Heavy'],weight:9,cost:400,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
-    {name:'Great Bladed Polearm',tags:['Two-Handed','Reach 1','Heavy'],weight:9,cost:400,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
+    {name:'Polearm',tags:['Reach 1', 'Two-Handed'],weight:7,cost:200,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
+    {name:'Heavy Polearm',tags:['Reach 1','Two-Handed','Heavy'],weight:9,cost:400,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
 
     {name:'Bow',tags:['Two-Handed'],weight:3,cost:100,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
-    {name:'Crossbow',tags:['Two-Handed'],weight:8,cost:100,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
-    {name:'Gun',tags:['Two-Handed'],weight:3,cost:150,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
     {name:'Heavy Bow',tags:['Two-Handed','Unwieldly'],weight:6,cost:200,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
-    {name:'Heavy Crossbow',tags:['Two-Handed','Unwieldly'],weight:12,cost:250,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
-    {name:'Heavy Gun',tags:['Two-Handed','Unwieldly'],weight:5,cost:400,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
     {name:'Great Bow',tags:['Two-Handed','Unwieldly','Heavy'],weight:12,cost:400,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
+
+    {name:'Crossbow',tags:['Two-Handed'],weight:8,cost:100,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
+    {name:'Heavy Crossbow',tags:['Two-Handed','Unwieldly'],weight:12,cost:250,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
     {name:'Great Crossbow',tags:['Two-Handed','Unwieldly','Heavy'],weight:18,cost:450,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
-    {name:'Great Gun',tags:['Two-Handed','Unwieldly','Heavy'],weight:7,cost:500,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
+
+    {name:'Firearm',tags:['Two-Handed'],weight:3,cost:150,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
+    {name:'Heavy Firearm',tags:['Two-Handed','Unwieldly'],weight:5,cost:400,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
+    {name:'Great Firearm',tags:['Two-Handed','Unwieldly','Heavy'],weight:7,cost:500,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
 
     {name:'Shield',tags:[],weight:6,cost:75,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
     {name:'Heavy Shield',tags:['Heavy'],weight:20,cost:250,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
