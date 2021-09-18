@@ -67,7 +67,7 @@ export const traitData: Trait[] = [
 
     //Hjark
     {name:'Cold Resistance',types:['Chilled Veins'],description:'You are only affected by extremely cold temperatures.',tier:0},
-    {name:'Steady Footing',types:['Highlander'],description:'Ignore the effects of precarious tiles. You are immune to the effects of the Shove ability.',tier:0},
+    {name:'Steady Footing',types:['Highlander'],description:'Ignore the effects of precarious tiles. You are immune to effects that would move you against your will.',tier:0},
     {name:'Climbing',types:['Highlander'],description:'You may climb one tile per movement, rather than spending two points of movement per tile climbed.',tier:0},
     {name:'Frozen Immunity',types:['Winterhide'],description:'You are immune to the frozen ailment.',tier:0},
     {name:'Alcohol Resistance',types:['Cast-Iron Kidneys'],description:'You never pass out from alcohol consumption. You can still die from acute alcohol poisoning, but at twice the blood-alcohol content as a normal person of your height and weight.',tier:0},
@@ -97,7 +97,7 @@ export const traitData: Trait[] = [
 
     //Selk
     {name:'Deliberation',types:['Deliberate Process'],description:'You know if contests outside of combat are possible for you to succeed in.',tier:0},
-    {name:'Selk Death Resistance',types:['Fated Longevity'],description:'Gain +4 death resistance.',tier:0},
+    {name:'Longevity',types:['Fated Longevity'],description:'Gain +2 death resistance.',tier:0},
     {name:'Fast Recharge',types:['Lightning Recovery'],description:'The value of recharging ailments you suffer can never exceed 1.',tier:0},
     {name:'Technophile',types:['Arcane Tinkering'],description:'You are able to operate any arcane technology, assuming it’s possible for you to operate it.',tier:0},
     {name:'Keen Mind',types:['Bright Minded'],description:'You know the origin of any technology you come across, as long as it has a knowable origin.',tier:0},
