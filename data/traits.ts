@@ -4,7 +4,7 @@ export const traitData: Trait[] = [
 
     //Characteristic 
     //Physical Power
-    {name:'Combat Athleticism',types:['Physical Training','Characteristic'],description:'You gain bonuses to the following global abilities: • Shove: your target is pushed away an additional tile • Grab: increase the focus threshold by 12 • Leap: increase the range by 1 • Sprint: change the base cost to 0.',tier:2},
+    {name:'Combat Athleticism',types:['Physical Training','Characteristic'],description:'You gain bonuses to the following global abilities: • Shove: your target is pushed away an additional tile • Grab: increase the focus threshold by 5 • Leap: increase the range by 1 • Sprint: change the base cost to 0.',tier:2},
     {name:'Strength',types:['Athletic Form','Characteristic'],description:'Gain +1 lethality.',tier:3},
     {name:'Improved Strength',types:['Perfect Form','Characteristic'],description:'Gain +1 lethality.',tier:5},
 
@@ -24,7 +24,7 @@ export const traitData: Trait[] = [
     {name:'Improved Focus',types:['Ascended Cognition'],description:'Gain +1 focus slot.',tier:5},
 
     //Mental Acuity
-    {name:'Fast Reactions',types:['Instincts'],description:'The first non-variable cost reaction you use each combat is free.',tier:2},
+    {name:'Fast Reactions',types:['Instincts'],description:'The first non-variable cost reaction ability you use each combat has its base energy cost changed to 0.',tier:2},
     {name:'Speed',types:['Advanced Wit'],description:'Gain +1 finesse.',tier:3},
     {name:'Finesse Reduction Immunity',types:['Razor Instincts'],description:'You are immune to attribute ailments that reduce your finesse.',tier:4},
     {name:'Improved Speed',types:['Perfect Wit'],description:'Gain +1 finesse.',tier:5},
@@ -58,7 +58,7 @@ export const traitData: Trait[] = [
     {name:'Derge Stature',types:['Savage Stature'],description:'Commoners tend to either fear or respect you.',tier:0},
     {name:'Derge Endurance',types:['Bloody Resilience'],description:'Gain +1 endurance.',tier:0},
     {name:'Terrified Immunity',types:['Savage Resolve'],description:'You are immune to the terrified ailment.',tier:0},
-    {name:'Bloody Slaughter',types:['Violent Soul'],description:'When you reduce a character’s endurance, restore 5 energy.',tier:0},
+    {name:'Bloody Slaughter',types:['Violent Soul'],description:'When you reduce a character’s endurance to 0, restore 5 energy.',tier:0},
     {name:'Brutality Desensitization',types:['Brutal Tradition'],description:'You are almost entirely unaffected by torture or trauma.',tier:0},
     {name:'Hunter-Gatherer',types:['Clan Provider'],description:'You are always able to find ample food in the wild, given the region is at least moderately bountiful.',tier:0},
     {name:'Intimidating',types:['Imposing Presence'],description:'When you attempt to intimidate another character of a tier less than your own, you always succeed (as long as that character is capable of being intimidated).',tier:0},
@@ -98,7 +98,7 @@ export const traitData: Trait[] = [
     //Selk
     {name:'Deliberation',types:['Deliberate Process'],description:'You know if contests outside of combat are possible for you to succeed in.',tier:0},
     {name:'Longevity',types:['Fated Longevity'],description:'Gain +2 death resistance.',tier:0},
-    {name:'Fast Recharge',types:['Lightning Recovery'],description:'The value of recharging ailments you suffer can never exceed 1.',tier:0},
+    {name:'Stunned Immunity',types:['Lightning Recovery'],description:'You are immune to the stunned ailment.',tier:0},
     {name:'Technophile',types:['Arcane Tinkering'],description:'You are able to operate any arcane technology, assuming it’s possible for you to operate it.',tier:0},
     {name:'Keen Mind',types:['Bright Minded'],description:'You know the origin of any technology you come across, as long as it has a knowable origin.',tier:0},
     {name:'First Impressions',types:['Grandiosity'],description:'Regardless of your actual physical appearance, those that don’t know you assume you are of noble status.',tier:0},
@@ -171,13 +171,15 @@ export const traitData: Trait[] = [
 
 
 
+    //Weapons
+    {name:'Cover',types:['Heavy Shield'],description:'You count as in cover against ranged attack abiltiies',tier:0},
+        
 
     //Armor
-    {name:'Light Armor',types:['Light Armor'],description:'You gain +4 Defence. This defence bonus increases by 1 for every armor tier above 0.',tier:0},
-    {name:'Medium Armor',types:['Medium Armor'],description:'You gain +6 Defence. You suffer -1 Finesse. This defence bonus increases by 1 for every armor tier above 0.',tier:0},
-    {name:'Heavy Armor',types:['Heavy Armor'],description:'You gain +8 Defence. You suffer -1 Finesse and -1 Movement. This defence bonus increases by 1 for every armor tier above 0.',tier:0},
-    {name:'Ultra-Heavy Armor',types:['Ultra-Heavy Armor'],description:'You gain +10 Defence. You suffer -2 Finesse and -1 Movement. This defence bonus increases by 1 for every armor tier above 0.',tier:0},
-    
+    {name:'Light Armor',types:['Light Armor'],description:'You gain +4 Defence.',tier:0},
+    {name:'Medium Armor',types:['Medium Armor'],description:'You gain +6 Defence. You suffer -1 Finesse.',tier:0},
+    {name:'Heavy Armor',types:['Heavy Armor'],description:'You gain +8 Defence. You suffer -1 Finesse and -1 Movement.',tier:0},
+
     //Combat Accessories
         //Tier 0 
         {name:'Munition Pouch',types:['Munition Pouch'],description:'Your weapon limited abilities have thier limited value increased by 1.',tier:0},
