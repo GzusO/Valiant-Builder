@@ -19,8 +19,6 @@ export const armorData: Item[] = [
     {name:'Light Armor',tags:[],weight:10,cost:100,abilities:[],traits:[],tier:0,description:'',types:['Armor'],quantity:1},
     {name:'Medium Armor',tags:[],weight:20,cost:250,abilities:[],traits:[],tier:0,description:'',types:['Armor'],quantity:1},
     {name:'Heavy Armor',tags:[],weight:35,cost:400,abilities:[],traits:[],tier:0,description:'',types:['Armor'],quantity:1},
-    {name:'Ultra-Heavy Armor',tags:[],weight:50,cost:500,abilities:[],traits:[],tier:0,description:'',types:['Armor'],quantity:1},
-
 
     //Accessories Combat
     //Tier 0
@@ -73,50 +71,49 @@ export const gearData: Item[] = [
     //Tier 2
     {name:'Caffeinated Brew',tags:[],weight:1,cost:3000,abilities:[],traits:[],tier:2,description:'',types:[],quantity:1},
     {name:'Parachute',tags:[],weight:30,cost:3000,abilities:[],traits:[],tier:2,description:'',types:[],quantity:1},
-    {name:'Smokescreen',tags:[],weight:2,cost:1000,abilities:[],traits:[],tier:2,description:'',types:[],quantity:1},
+    {name:'Smokescreen',tags:[],weight:2,cost:3500,abilities:[],traits:[],tier:2,description:'',types:[],quantity:1},
 
     //Tier 3
     {name:'Arcane Flare',tags:[],weight:2,cost:6500,abilities:[],traits:[],tier:3,description:'',types:[],quantity:1},
     {name:'Crystal Mirror',tags:[],weight:1,cost:7500,abilities:[],traits:[],tier:3,description:'',types:[],quantity:1},
-    {name:'Witch-Hunter Charm',tags:[],weight:1,cost:3500,abilities:[],traits:[],tier:3,description:'',types:[],quantity:1},
+    {name:'Witch-Hunter Charm',tags:[],weight:1,cost:7000,abilities:[],traits:[],tier:3,description:'',types:[],quantity:1},
 
     //Tier 4
-    {name:'Crystalline',tags:[],weight:1,cost:7500,abilities:[],traits:[],tier:4,description:'',types:[],quantity:1},
-    {name:'Lethal Toxin',tags:[],weight:1,cost:7000,abilities:[],traits:[],tier:4,description:'',types:[],quantity:1},
-    {name:'Stun Bomb',tags:[],weight:1,cost:4000,abilities:[],traits:[],tier:4,description:'',types:[],quantity:1},
+    {name:'Crystalline',tags:[],weight:1,cost:11000,abilities:[],traits:[],tier:4,description:'',types:[],quantity:1},
+    {name:'Lethal Toxin',tags:[],weight:1,cost:10000,abilities:[],traits:[],tier:4,description:'',types:[],quantity:1},
+    {name:'Stun Bomb',tags:[],weight:1,cost:10500,abilities:[],traits:[],tier:4,description:'',types:[],quantity:1},
     
     //Tier 5
-    {name:'Mindbreak',tags:[],weight:1,cost:7500,abilities:[],traits:[],tier:5,description:'',types:[],quantity:1},
+    {name:'Mindbreak',tags:[],weight:1,cost:15000,abilities:[],traits:[],tier:5,description:'',types:[],quantity:1},
     
 ];
 
 export const weaponData: Item[] =[
     {name:'Blade',tags:[],weight:3,cost:250,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
     {name:'Heavy Blade',tags:['Two-Handed'],weight:4,cost:300,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
-    {name:'Great Blade',tags:['Two-Handed','Heavy'],weight:10,cost:500,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
     
     {name:'Club',tags:[],weight:3,cost:50,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
     {name:'Heavy Club',tags:['Two-Handed'],weight:5,cost:150,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
-    {name:'Great Club',tags:['Two-Handed','Heavy'],weight:25,cost:300,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
+    
     
     {name:'Axe',tags:[],weight:6,cost:75,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
     {name:'Heavy Axe',tags:['Two-Handed'],weight:3,cost:200,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
-    {name:'Great Axe',tags:['Two-Handed','Heavy'],weight:15,cost:400,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
+    
     
     {name:'Polearm',tags:['Reach 1', 'Two-Handed'],weight:7,cost:200,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
     {name:'Heavy Polearm',tags:['Reach 1','Two-Handed','Heavy'],weight:9,cost:400,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
 
     {name:'Bow',tags:['Two-Handed'],weight:3,cost:100,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
     {name:'Heavy Bow',tags:['Two-Handed','Unwieldly'],weight:6,cost:200,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
-    {name:'Great Bow',tags:['Two-Handed','Unwieldly','Heavy'],weight:12,cost:400,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
+   
 
     {name:'Crossbow',tags:['Two-Handed'],weight:8,cost:100,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
     {name:'Heavy Crossbow',tags:['Two-Handed','Unwieldly'],weight:12,cost:250,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
-    {name:'Great Crossbow',tags:['Two-Handed','Unwieldly','Heavy'],weight:18,cost:450,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
+   
 
     {name:'Firearm',tags:['Two-Handed'],weight:3,cost:150,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
     {name:'Heavy Firearm',tags:['Two-Handed','Unwieldly'],weight:5,cost:400,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
-    {name:'Great Firearm',tags:['Two-Handed','Unwieldly','Heavy'],weight:7,cost:500,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
+   
 
     {name:'Shield',tags:[],weight:6,cost:75,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
     {name:'Heavy Shield',tags:['Heavy'],weight:20,cost:250,abilities:[],traits:[],tier:0,description:'',types:[],quantity:1},
