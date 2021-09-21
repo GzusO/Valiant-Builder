@@ -1,4 +1,31 @@
 <div class="flex">
+  <div class="third">
+    <form>
+      <mat-form-field appearance="fill" class="full">
+        <mat-label>Ability Default Tier</mat-label>
+          <input matInput type="number" placeholder="1" [(ngModel)]="defaultAbilityTier" name="tier">
+      </mat-form-field>
+    </form>
+  </div>
+  <div class="third">
+    <form>
+      <mat-form-field appearance="fill" class="full">
+        <mat-label>Trait Default Tier</mat-label>
+          <input matInput type="number" placeholder="1" [(ngModel)]="defaultTraitTier" name="tier">
+      </mat-form-field>
+    </form>
+  </div>
+  <div class="third">
+    <form>
+      <mat-form-field appearance="fill" class="full">
+        <mat-label>Feature Default Tier</mat-label>
+          <input matInput type="number" placeholder="1" [(ngModel)]="defaultFeatureTier" name="tier">
+      </mat-form-field>
+    </form>
+  </div>
+</div>
+
+<div class="flex">
     <div class="third">
         <h2>Import Ability <button mat-button (click)="copyFeatToAbility()">Copy From Feature</button></h2>
           <mat-form-field appearance="fill" class="full">

@@ -12,13 +12,13 @@ import { Trait } from '../Trait';
 })
 export class DevComponent implements OnInit {
   EmptyFeature(): Feature {
-    return {name:'',types:[],description:'', tier:-1,abilities:[],traits:[]};
+    return {name:'',types:[],description:'', tier:this.defaultFeatureTier ?? -1,abilities:[],traits:[]};
   }
   EmptyTrait(): Trait {
-    return {name:'',types:[],description:'',tier:-1};
+    return {name:'',types:[],description:'',tier:this.defaultTraitTier ?? -1};
   }
   EmptyAbility(): Ability {
-    return {name:'',types:[],primaryTags:[],secondaryTags:[],tertiaryTags:[],description:'',tier:-1,attack:0,energyDamage:0,scaling:''};
+    return {name:'',types:[],primaryTags:[],secondaryTags:[],tertiaryTags:[],description:'',tier:this.defaultAbilityTier ?? -1,attack:0,energyDamage:0,scaling:''};
   }
   selectable = true;
   removable = true;
@@ -37,6 +37,10 @@ export class DevComponent implements OnInit {
 
   importFeatureText: string= ""
   importFeature: Feature = this.EmptyFeature();
+
+  defaultAbilityTier?: number;
+  defaultTraitTier?: number;
+  defaultFeatureTier?: number;
   constructor() { }
 
   ngOnInit(): void {
