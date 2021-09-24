@@ -5,6 +5,21 @@
         <mat-label>Ability Default Tier</mat-label>
           <input matInput type="number" placeholder="1" [(ngModel)]="defaultAbilityTier" name="tier">
       </mat-form-field>
+      <mat-form-field appearance="fill" class="full">
+        <mat-label>Default Types</mat-label>
+              <mat-chip-list #chipDefaultAbilityType aria-label="Tag selection">
+                <mat-chip *ngFor="let pTag of defaultAbilityTypes" [selectable]="selectable"
+                         [removable]="removable" (removed)="removeDefaultAbilityType(pTag)">
+                  {{pTag}}
+                  <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                </mat-chip>
+                <input placeholder="New type..."
+                       [matChipInputFor]="chipDefaultAbilityType"
+                       [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                       [matChipInputAddOnBlur]="addOnBlur"
+                       (matChipInputTokenEnd)="addDefaultAbilityType($event)">
+              </mat-chip-list>
+      </mat-form-field>
     </form>
   </div>
   <div class="third">
@@ -13,6 +28,21 @@
         <mat-label>Trait Default Tier</mat-label>
           <input matInput type="number" placeholder="1" [(ngModel)]="defaultTraitTier" name="tier">
       </mat-form-field>
+      <mat-form-field appearance="fill" class="full">
+        <mat-label>Default Types</mat-label>
+              <mat-chip-list #chipDefaultTraitType aria-label="Tag selection">
+                <mat-chip *ngFor="let pTag of defaultTraitTypes" [selectable]="selectable"
+                         [removable]="removable" (removed)="removeDefaultTraitType(pTag)">
+                  {{pTag}}
+                  <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                </mat-chip>
+                <input placeholder="New type..."
+                       [matChipInputFor]="chipDefaultTraitType"
+                       [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                       [matChipInputAddOnBlur]="addOnBlur"
+                       (matChipInputTokenEnd)="addDefaultTraitType($event)">
+              </mat-chip-list>
+      </mat-form-field>
     </form>
   </div>
   <div class="third">
@@ -20,6 +50,21 @@
       <mat-form-field appearance="fill" class="full">
         <mat-label>Feature Default Tier</mat-label>
           <input matInput type="number" placeholder="1" [(ngModel)]="defaultFeatureTier" name="tier">
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="full">
+        <mat-label>Default Types</mat-label>
+              <mat-chip-list #chipDefaultFeatureType aria-label="Tag selection">
+                <mat-chip *ngFor="let pTag of defaultFeatureTypes" [selectable]="selectable"
+                         [removable]="removable" (removed)="removeDefaultFeatureType(pTag)">
+                  {{pTag}}
+                  <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                </mat-chip>
+                <input placeholder="New type..."
+                       [matChipInputFor]="chipDefaultFeatureType"
+                       [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                       [matChipInputAddOnBlur]="addOnBlur"
+                       (matChipInputTokenEnd)="addDefaultFeatureType($event)">
+              </mat-chip-list>
       </mat-form-field>
     </form>
   </div>
