@@ -1,4 +1,4 @@
-import { COMMA, ENTER } from '@angular/cdk/keycodes';
+import { COMMA, ENTER, Z } from '@angular/cdk/keycodes';
 import { Component, OnInit } from '@angular/core';
 import { MatChipInputEvent } from '@angular/material/chips';
 import { Ability } from '../Ability';
@@ -12,13 +12,22 @@ import { Trait } from '../Trait';
 })
 export class DevComponent implements OnInit {
   EmptyFeature(): Feature {
-    return {name:'',types:[],description:'', tier:-1,abilities:[],traits:[]};
+    let x = {name:'',types:[] as any[],description:'', tier:this.defaultFeatureTier ?? -1,abilities:[],traits:[]};
+    if(this.defaultFeatureTypes !== undefined)
+      x.types.push(...this.defaultFeatureTypes);
+    return x;
   }
   EmptyTrait(): Trait {
-    return {name:'',types:[],description:'',tier:-1};
+    let x = {name:'',types:[] as any[],description:'',tier:this.defaultTraitTier ?? -1};
+    if(this.defaultTraitTypes !== undefined)
+      x.types.push(...this.defaultTraitTypes);
+    return x;
   }
   EmptyAbility(): Ability {
-    return {name:'',types:[],primaryTags:[],secondaryTags:[],tertiaryTags:[],description:'',tier:-1,attack:0,energyDamage:0,scaling:''};
+    let x = {name:'',types:[] as any[],primaryTags:[],secondaryTags:[],tertiaryTags:[],description:'',tier:this.defaultAbilityTier ?? -1,attack:0,energyDamage:0,scaling:''};
+    if(this.defaultAbilityTypes !== undefined)
+      x.types.push(...this.defaultAbilityTypes)
+    return x;
   }
   selectable = true;
   removable = true;
@@ -37,6 +46,14 @@ export class DevComponent implements OnInit {
 
   importFeatureText: string= ""
   importFeature: Feature = this.EmptyFeature();
+
+  defaultAbilityTier?: number;
+  defaultTraitTier?: number;
+  defaultFeatureTier?: number;
+
+  defaultFeatureTypes: string[] = [];
+  defaultAbilityTypes: string[] = [];
+  defaultTraitTypes: string[] = [];
   constructor() { }
 
   ngOnInit(): void {
@@ -130,7 +147,7 @@ export class DevComponent implements OnInit {
 
     this.importFeature.name = lines[0].trim();
 
-    this.importFeature.types = lines[1].split(" ");
+    this.importFeature.types.push(...lines[1].split(" "));
 
     let dLine = lines.slice(2).join(' ');
     this.importFeature.description= dLine.trim();
@@ -202,7 +219,7 @@ export class DevComponent implements OnInit {
   }
 
   removeFeatType(tag: string): void {
-    const index = this.importAbility.types.indexOf(tag);
+    const index = this.importFeature.types.indexOf(tag);
 
     if (index >= 0) {
       this.importFeature.types.splice(index, 1);
@@ -263,6 +280,61 @@ export class DevComponent implements OnInit {
 
     if (index >= 0) {
       this.importAbility.primaryTags.splice(index, 1);
+    }
+  }
+
+  addDefaultFeatureType(event: MatChipInputEvent): void {
+    const value = (event.value || '').trim();
+
+    if (value) {
+      this.defaultFeatureTypes.push(value);
+    }
+
+    // Clear the input value
+    event.chipInput!.clear();
+  }
+
+  removeDefaultFeatureType(tag: string): void {
+    const index = this.defaultFeatureTypes.indexOf(tag);
+
+    if (index >= 0) {
+      this.defaultFeatureTypes.splice(index, 1);
+    }
+  }
+  addDefaultAbilityType(event: MatChipInputEvent): void {
+    const value = (event.value || '').trim();
+
+    if (value) {
+      this.defaultAbilityTypes.push(value);
+    }
+
+    // Clear the input value
+    event.chipInput!.clear();
+  }
+
+  removeDefaultAbilityType(tag: string): void {
+    const index = this.defaultAbilityTypes.indexOf(tag);
+
+    if (index >= 0) {
+      this.defaultAbilityTypes.splice(index, 1);
+    }
+  }
+  addDefaultTraitType(event: MatChipInputEvent): void {
+    const value = (event.value || '').trim();
+
+    if (value) {
+      this.defaultTraitTypes.push(value);
+    }
+
+    // Clear the input value
+    event.chipInput!.clear();
+  }
+
+  removeDefaultTraitType(tag: string): void {
+    const index = this.defaultTraitTypes.indexOf(tag);
+
+    if (index >= 0) {
+      this.defaultTraitTypes.splice(index, 1);
     }
   }
 }

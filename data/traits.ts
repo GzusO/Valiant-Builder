@@ -4,7 +4,7 @@ export const traitData: Trait[] = [
 
     //Characteristic 
     //Physical Power
-    {name:'Combat Athleticism',types:['Physical Training','Characteristic'],description:'You gain bonuses to the following global abilities: • Shove: your target is pushed away an additional tile • Grab: increase the focus threshold by 12 • Leap: increase the range by 1 • Sprint: change the base cost to 0.',tier:2},
+    {name:'Combat Athleticism',types:['Physical Training','Characteristic'],description:'You gain bonuses to the following global abilities: • Shove: your target is pushed away an additional tile • Grab: increase the focus threshold by 5 • Leap: increase the range by 1 • Sprint: change the base cost to 0.',tier:2},
     {name:'Strength',types:['Athletic Form','Characteristic'],description:'Gain +1 lethality.',tier:3},
     {name:'Improved Strength',types:['Perfect Form','Characteristic'],description:'Gain +1 lethality.',tier:5},
 
@@ -24,7 +24,7 @@ export const traitData: Trait[] = [
     {name:'Improved Focus',types:['Ascended Cognition'],description:'Gain +1 focus slot.',tier:5},
 
     //Mental Acuity
-    {name:'Fast Reactions',types:['Instincts'],description:'The first non-variable cost reaction you use each combat is free.',tier:2},
+    {name:'Fast Reactions',types:['Instincts'],description:'The first non-variable cost reaction ability you use each combat has its base energy cost changed to 0.',tier:2},
     {name:'Speed',types:['Advanced Wit'],description:'Gain +1 finesse.',tier:3},
     {name:'Finesse Reduction Immunity',types:['Razor Instincts'],description:'You are immune to attribute ailments that reduce your finesse.',tier:4},
     {name:'Improved Speed',types:['Perfect Wit'],description:'Gain +1 finesse.',tier:5},
@@ -58,7 +58,7 @@ export const traitData: Trait[] = [
     {name:'Derge Stature',types:['Savage Stature'],description:'Commoners tend to either fear or respect you.',tier:0},
     {name:'Derge Endurance',types:['Bloody Resilience'],description:'Gain +1 endurance.',tier:0},
     {name:'Terrified Immunity',types:['Savage Resolve'],description:'You are immune to the terrified ailment.',tier:0},
-    {name:'Bloody Slaughter',types:['Violent Soul'],description:'When you reduce a character’s endurance, restore 5 energy.',tier:0},
+    {name:'Bloody Slaughter',types:['Violent Soul'],description:'When you reduce a character’s endurance to 0, restore 5 energy.',tier:0},
     {name:'Brutality Desensitization',types:['Brutal Tradition'],description:'You are almost entirely unaffected by torture or trauma.',tier:0},
     {name:'Hunter-Gatherer',types:['Clan Provider'],description:'You are always able to find ample food in the wild, given the region is at least moderately bountiful.',tier:0},
     {name:'Intimidating',types:['Imposing Presence'],description:'When you attempt to intimidate another character of a tier less than your own, you always succeed (as long as that character is capable of being intimidated).',tier:0},
@@ -98,7 +98,7 @@ export const traitData: Trait[] = [
     //Selk
     {name:'Deliberation',types:['Deliberate Process'],description:'You know if contests outside of combat are possible for you to succeed in.',tier:0},
     {name:'Longevity',types:['Fated Longevity'],description:'Gain +2 death resistance.',tier:0},
-    {name:'Fast Recharge',types:['Lightning Recovery'],description:'The value of recharging ailments you suffer can never exceed 1.',tier:0},
+    {name:'Stunned Immunity',types:['Lightning Recovery'],description:'You are immune to the stunned ailment.',tier:0},
     {name:'Technophile',types:['Arcane Tinkering'],description:'You are able to operate any arcane technology, assuming it’s possible for you to operate it.',tier:0},
     {name:'Keen Mind',types:['Bright Minded'],description:'You know the origin of any technology you come across, as long as it has a knowable origin.',tier:0},
     {name:'First Impressions',types:['Grandiosity'],description:'Regardless of your actual physical appearance, those that don’t know you assume you are of noble status.',tier:0},
@@ -169,15 +169,99 @@ export const traitData: Trait[] = [
     {name:'Able Frame',types:['Pack Mule'],description:'Your base weight threshold is increased by 10 lb.',tier:0},
     {name:'Pocket Snacks',types:['Pack Mule'],description:'You’ve always got snacks handy. Gods know where you keep them.',tier:0},
 
+    //Warrior
+    {name:'Warrior Techniques',types:['Warrior'],description:'When you gain this trait, select any two tier 1 abilities from the Warrior Techniques pool and gain access to those abilities. Whenever you invest a tier into the Warrior class path, you may replace one of your known techniques with another ability form the Warrior Techniques pool you could learn. You may only learn techniques with tiers equal to or less than your warrior class path invested tier.',tier:1},
+    {name:'Improved Techniques',types:['Warrior'],description:'At invested tiers 3, 6, and 9, you gain an additional slot for Warrior Techniques. When you gain an additional slot at these tiers, you also learn a new technique alongside the optional technique replacement at every tier.',tier:1},
+    {name:'Technique Retraining',types:['Warrior'],description:'You can learn new abilities from the warrior technique pool, as long as their tier is equal to or less than your warrior class invested tier. When you learn and ability this way, you must replace one of your existing warrior techniques with the new ability. You must also have access to a study amenity of a tier equal to or greater than the tier of the ability you are learning. You can retrain your Warrior Techniques by spending a week of downtime with no breaks or major interruptions. After this week concludes, the character may reselect all of their available Warrior Techniques from the Warrior Techniques abilities pool.',tier:1},
+    {name:'Advantageous Attacks',types:['Martial Finesse'],description:'Attack abilities you use against winded targets gain 2 attack.',tier:1},
+    {name:'Heavy Armor Training',types:['Battle Conditioning'],description:'Ignore up to 1 point of finesse reduction that comes from your worn armor.',tier:2},
+    {name:'Weapon Flurry',types:['Dual-Wielding'],description:'Gain +1 lethality and +1 defence while wielding two weapons that aren’t two-handed, Shield, or Large Shield weapons.',tier:2},
+    {name:'Gunslinger',types:['Dual-Wielding'],description:'Ignore the two-handed tag on Gun weapons.',tier:2},
+    {name:'Rage',types:['Enraged'],description:'You gain +1 lethality and +1 resistance while you suffer the winded status.',tier:2},
+    {name:'Shielded Barrage',types:['Lancer'],description:'You may wield a Shield or Large Shield weapon while wielding a Crossbow, Heavy crossbow, Gun, or Heavy Gun weapon. Ignore the unwieldly tag Heavy crossbow, or Heavy Gun weapons.',tier:5},
+    {name:'Masterful Attacks',types:['Masterful Maneuvers'],description:'You may apply an additional attack modifier ability to your attack abilities.',tier:6},
+    {name:'Additional Stance',types:['Masterful Stances'],description:'You may use an additional stance ability at the beginning of the round.',tier:6},
+    {name:'Heavy Momentum',types:['Behemoth Momentum'],description:'Ignore the slow tag on attack abilities you use during your turn.',tier:9},
+    {name:'Heavy Weapon Handling',types:['Behemoth Strength'],description:'You can use melee attack abilities attached to two-handed weapons while holding the weapon with a single hand.',tier:9},
+    {name:'Eternal',types:['Eternal Body'],description:'If you would die, set your current endurance and death resistance to 1 and set your current energy to 0. Permanently suffer -5 energy.',tier:10},
 
+    {name:'Popular',types:['Local Notoriety'],description:'You are popular among commoners, who will always offer you respite or aid if they can.',tier:1},
+    {name:'Vigilance',types:['Martial Discipline'],description:'Your party cannot be ambushed while using the Rest ability.',tier:1},
+    {name:'Weightless Armor',types:['Armor Training'],description:'You don’t count the weight of your worn armor against your weight threshold.',tier:2},
+    {name:'Excess Energy',types:['Lingering Adrenaline'],description:'When you reduce a character’s endurance to 0, you gain +1 to the contest roll to the next contest you make outside of combat. This bonus lasts until you resolve the Rest ability.',tier:2},
+    {name:'Trophy Hunter',types:['Monster Hunter'],description:'You are able to take a preserved trophy from any character you or your allies kill.',tier:2},
+    {name:'Trained Dexterity',types:['Notably Quick'],description:'When you make physical acuity contests outside of combat, you gain +1 to the contest roll.',tier:3},
+    {name:'Trained Strength',types:['Notably Strong'],description:'When you make physical power contests outside of combat, you gain +1 to the contest roll.',tier:3},
+    {name:'Trained Toughness',types:['Notably Tough'],description:'When you make physical resilience contests outside of combat, you gain +1 to the contest roll.',tier:3},
+    {name:'Pacify',types:['Pacifying Presence'],description:'You are able to pacify any character of a lower tier than your own, assuming it is possible to pacify the character.',tier:4},
+    {name:'Obstacle Familiarity',types:['Sized Up'],description:'You know the characteristic contest target for any physical characteristic contest before you partake in it.',tier:4},
+    //Arcanist
+    {name:'Arcanist Repertoire',types:['Arcanist'],description:'When you gain this trait, select any two tier 1 abilities from the arcanist repertoire pool and gain access to those abilities. Whenever you invest a tier into the Arcanist class path, you may learn another Arcanist Repertoire ability. You may only learn abilities with tiers equal to or less than your Arcanist class path invested tier.',tier:1},
+    {name:'Improved Repertoire',types:['Arcanist'],description:'At invested tiers 3, 6, and 9, you may augment a single ability in your repertoire, permanently granting it one of the following bonuses (you may augment the same ability multiple times, with the effects stacking): • Reduce its base energy cost by 1 to a minimum of 0 (cannot affect variable cost abilities) • Increase its focus threshold by 3 • Increase its limited value by 1',tier:1},
+    {name:'Expanded Repertoire',types:['Arcanist'],description:'You can learn new abilities from the arcanist repertoire pool, as long as their tier is equal to or less than your arcanist class invested tier. Learning an ability this way costs Tins equal to the base item cost of the tier of the ability learned. You must also have access to a study amenity of a tier equal to or greater than the tier of the ability you are learning.',tier:1},
+    {name:'Steadfast Focus',types:['Steady Mind'],description:'Increase the focus value of abilities you use by 3.',tier:1},
+    {name:'Hardened Focus',types:['Steady Mind'],description:'You gain +1 resistance for each focus ability you are maintaining.',tier:1},
+    {name:'Arcane Shell',types:['Arcane Armors'],description:'Gain +2 defence.',tier:2},
+    {name:'Arcane Medicine',types:['Arcane Restoration'],description:'Whenever one of your effects restores a character’s energy, that effect restores an additional 5 energy.',tier:2},
+    {name:'Safe Charging',types:['Stable Charge'],description:'While you have a pending charged action, gain +2 defence and +2 resistance.',tier:2},
+    {name:'Passive Focus',types:['Hyperconscious'],description:'You do not lose focus when incapacitated.',tier:3},
+    {name:'Experimenter',types:['Practiced Experimentation'],description:'Change the base energy cost of the Arcane Experimentation ability to 0 and increase its limited value by 1.',tier:3},
+    {name:'Sculpted Abilities',types:['Arcane Sculpting'],description:'Increase the shape range of your shape abilities by 1. You may choose up to one targeted character to be immune to the effects of any of your shape abilities.',tier:9},
+    {name:'Arcane Mastery',types:['Utter Mastery'],description:'Reduce the cost of all of your repertoire abilities by 1. This is applied after all other energy cost reductions and cannot reduce the cost of abilities below 0.',tier:10},
+    
+    {name:'Telepathy',types:['Telepathic Communication'],description:'You can communicate telepathically with any creature within 10 ft. of you. The range of this ability is multiplied by your mental power characteristic score.',tier:3},
+    //Specialist
 
+    {name:'Specialist Strategies',types:['Specialist'],description:'When you gain this trait, select two tier 1 traits from the Specialist Strategy pool. You do not normally have access to these traits (see Strategy Application). Whenever you invest a tier into the Specialist class path, you may learn another Specialist Strategy trait. You may only learn traits with tiers equal to or less than your Specialist class path invested tier.',tier:1},
+    {name:'Strategy Application',types:['Specialist'],description:'When combat begins, select one of your known Specialist Strategy traits. Gain the effects of that trait for the duration of the combat as long as you are alive and not unconsious.',tier:1},
+    {name:'Improved Strategies',types:['Specialist'],description:'At invested tier 6, you may apply an additional known strategy when combat begins.',tier:1},
+    {name:'Stratagem Studies',types:['Specialist'],description:'You can learn new traits from the specialist strategy pool, as long as their tier is equal to or less than your specialist class invested tier. Learning an ability this way costs Tins equal to the base item cost of the tier of the ability learned. You must also have access to a study amenity of a tier equal to or greater than the tier of the ability you are learning.',tier:1},
+    {name:'Embargo',types:['Specialist'],description:'When combat begins, you may select one character on another team. That character cannot be the first character to act for that team. If no characters on a team are able to go first, any characters on that team may go first.',tier:1},
+    {name:'Preparedness',types:['Munition Resupply'],description:'Your gear and weapon limited abilities have their limited value increased by 1.',tier:1},
+    {name:'Ego-less',types:['Ego Death'],description:'You cannot target yourself with abilities you use. Any of your abilities that would target yourself instead target any allied character you can see. Stance and transformation abilities you use affect any allied character you can see instead of yourself.',tier:9},
+    {name:'Extra Turn',types:['Double-Time'],description:'You can take an extra turn during every round of combat.',tier:10},
+    {name:'Unfaltering',types:['Unshakable Will'],description:'Your focus abilities cannot be ended early due to energy damage or incapacitation, unless that incapacitation is from the unconscious status.',tier:10},
+    {name:'Masterful Finesse',types:['Utterly Effortless'],description:'Finesse can reduce the costs of your abilities down to 0.',tier:10},
+
+    {name:'Organized',types:['Orderly Mind'],description:'You always know the date and time down to an hour of precision. You always know the chronological order of events you have experienced, even if you can’t remember exact times.',tier:1},
+    {name:'Supplies',types:['Quartermaster'],description:'You always know if something from your party’s inventory is missing, given you had knowledge of that item to begin with.',tier:1},
+    {name:'Insight',types:['Investigator’s Instinct'],description:'You know if a someone is lying to you as long as they are not a higher tier than you.',tier:2},
+    {name:'Misdirection',types:['Mercurial Tongue'],description:'You are able to convincingly lie to others as long as they are not a higher tier than you.',tier:2},
+    {name:'Punctual',types:['Travel Planning'],description:'You always know if a travel event could cause you to lose a day or more of travel time.',tier:2},
+    {name:'Request',types:['Enthralling Speech'],description:'You are able to convince someone that is at least one tier below you to do a task, within reason.',tier:3},
+    {name:'Enthrall',types:['Enthralling Speech'],description:'You are able to make someone that is at least one tier below you friendly towards you, within reason. You can only maintain this traits effects on one person at a time.',tier:3},
+    {name:'Soft Steps',types:['Quiet Sneak'],description:'You make no sound while moving.',tier:3},
+    {name:'Social Insights',types:['Deep Insight'],description:'You know the relations between all of characters that you know, given they have any.',tier:6},
+
+    {name:'Bastion Formation',types:['Strategies'],description:'You and all allied characters gain +1 defence.',tier:1},
+    {name:'Battle Poses',types:['Strategies'],description:'Stance abilities you and your allies use have their costs reduced by 1, down to a minimum of 1.',tier:1},
+    {name:'Blitz Formation',types:['Strategies'],description:'Your party acts first this combat.',tier:1},
+    {name:'Spearhead Formation',types:['Strategies'],description:'You and all allied characters gain +1 lethality.',tier:1},
+    {name:'Stalwart Formation',types:['Strategies'],description:'You and your allies gain +2 death resistance. This effect increases any affected character’s current death resistance by 2 when it is applied, and reduces the uses by 2 when it expires. This effect cannot reduce death resistance below 1.',tier:1},
+    {name:'Brutal Aggressions',types:['Strategies'],description:'All enemy characters suffer -1 finesse.',tier:2},
+    {name:'Calm and Collected',types:['Strategies'],description:'You and all allied characters gain +1 finesse.',tier:2},
+    {name:'Combat Drills',types:['Strategies'],description:'You and all allied characters gain +1 movement.',tier:2},
+    {name:'Munition Packing',types:['Strategies'],description:'You and your allies’ weapon limited abilities have their limited value increased by 1.',tier:2},
+    {name:'Pre-Prepared Equipment',types:['Strategies'],description:'You and your allies’ gear abilities can be used once this combat without counting towards their limited values. This allows otherwise consumed gear to be used.',tier:2},
+    {name:'Last Stand',types:['Strategies'],description:'Whenever you or an allied character is reduced to 0 endurance, you and your allied characters gain +1 lethality and +1 defence until combat ends.',tier:3},
+    {name:'Reckless Abandon',types:['Strategies'],description:'All characters gain +2 lethality.',tier:3},
+    {name:'Rehearsed Autonomy',types:['Strategies'],description:'You and all allied characters gain +1 focus slot.',tier:3},
+    {name:'Reinforced Focus',types:['Strategies'],description:'You and all allied characters increase the focus value of abilities they use by 3.',tier:3},
+    {name:'Stalling Tactics',types:['Strategies'],description:'All characters gain +2 defence.',tier:3},
+    {name:'Predictive Immunity',types:['Strategies'],description:'Select one non-attribute ailment when combat begins. You and your allies are immune to that ailment.',tier:4},
+    {name:'Second Chances',types:['Strategies'],description:'The first time you or one of your allies would have their endurance reduced this combat, negate that endurance reduction.',tier:4},
+    {name:'The Long Game',types:['Strategies'],description:'You and your allies may use stance abilities as if they were transformation abilities, doubling the ability’s base energy cost.',tier:4},
+    {name:'Special Forces',types:['Strategies'],description:'You or one of your allies gain the elite tag.',tier:9},
+
+    //Weapons
+    {name:'Cover',types:['Heavy Shield'],description:'You count as in cover against ranged attack abiltiies',tier:0},
+        
 
     //Armor
-    {name:'Light Armor',types:['Light Armor'],description:'You gain +4 Defence. This defence bonus increases by 1 for every armor tier above 0.',tier:0},
-    {name:'Medium Armor',types:['Medium Armor'],description:'You gain +6 Defence. You suffer -1 Finesse. This defence bonus increases by 1 for every armor tier above 0.',tier:0},
-    {name:'Heavy Armor',types:['Heavy Armor'],description:'You gain +8 Defence. You suffer -1 Finesse and -1 Movement. This defence bonus increases by 1 for every armor tier above 0.',tier:0},
-    {name:'Ultra-Heavy Armor',types:['Ultra-Heavy Armor'],description:'You gain +10 Defence. You suffer -2 Finesse and -1 Movement. This defence bonus increases by 1 for every armor tier above 0.',tier:0},
-    
+    {name:'Light Armor',types:['Light Armor'],description:'You gain +4 Defence.',tier:0},
+    {name:'Medium Armor',types:['Medium Armor'],description:'You gain +6 Defence. You suffer -1 Finesse.',tier:0},
+    {name:'Heavy Armor',types:['Heavy Armor'],description:'You gain +8 Defence. You suffer -1 Finesse and -1 Movement.',tier:0},
+
     //Combat Accessories
         //Tier 0 
         {name:'Munition Pouch',types:['Munition Pouch'],description:'Your weapon limited abilities have thier limited value increased by 1.',tier:0},
@@ -229,4 +313,5 @@ export const traitData: Trait[] = [
     {name:'Clean',types:['Clean'],description:'This item cannot be dirtied.',tier:1},
     {name:'Light',types:['Light'],description:'This item’s weight is reduced by 2 lb.',tier:0},
     {name:'Regenerative',types:['Regenerative'],description:'This item repairs and maintains itself over time.',tier:0},
+
 ]
