@@ -1,10 +1,8 @@
 import { Characteristic } from "src/app/Characteristic";
 
 export const characteristicData: Characteristic[] = [
-    {name:'Physical Power',description:'Primary Attributes: Lethality', features:[]},
-    {name:'Physical Acuity',description:'Primary Attribute: Movement', features:[]},
-    {name:'Physical Resilience',description:'Primary Attributes: Defence', features:[]},
-    {name:'Mental Power',description:'Primary Attribute: Focus Slots', features:[]},
-    {name:'Mental Acuity',description:'Primary Attribute: Finesse', features:[]},
-    {name:'Mental Resilience',description:'Primary Attributes: Resistance, Death Resistance', features:[]},
+    {name:'Agility',description:'Related Attributes: Movement', features:[]},
+    {name:'Intelligence',description:'Related Attributes: Focus', features:[]},
+    {name:'Power',description:'Related Attributes: Lethality', features:[]},
+    {name:'Resilience',description:'Related Attributes: Armor', features:[]},
 ]
