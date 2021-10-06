@@ -26,11 +26,11 @@
                     </div>
                 </div>
                 <div class="attribute">
-                    <h3>Energy</h3>
+                    <h3>Armor</h3>
                     <div class="attributeCurrMax">
-                        <span><input matInput  type="text"[(ngModel)]="valiant.energyCurrent" class="current"></span>
+                        <span><input matInput  type="text"[(ngModel)]="valiant.armorCurrent" class="current"></span>
                         <span class="slash">/</span>
-                        <span><input matInput  type="text" [(ngModel)]="valiant.energyMax" class="max"></span>
+                        <span><input matInput  type="text" [(ngModel)]="valiant.armorMax" class="max"></span>
                     </div>
                 </div>
                 <div class="attribute">
@@ -40,15 +40,7 @@
                         <span class="slash">/</span>
                         <span><input matInput  type="text" [(ngModel)]="valiant.deathResistanceMax" class="max"></span>
                     </div>  
-                </div>
-                <div class="attribute">
-                    <h3>Focus Slots</h3>
-                    <div class="attributeCurrMax">
-                        <span><input matInput  type="text"[(ngModel)]="valiant.focusSlotsCurrent" class="current"></span>
-                        <span class="slash">/</span>
-                        <span><input matInput  type="text" [(ngModel)]="valiant.focusSlotsMax" class="max"></span>
-                    </div>
-                </div>
+                </div>  
             </div>
 
             <div class="valiantAttributesFixed">
@@ -57,13 +49,7 @@
                     <div class="attributeAmount">
                         <span><input matInput  type="text" [(ngModel)]="valiant.movement" class="max"></span>
                     </div>
-                </div>
-                <div class="attributeFixed">
-                    <h3>Finesse</h3>
-                    <div class="attributeAmount">
-                        <span><input matInput  type="text" [(ngModel)]="valiant.finesse" class="max"></span>
-                    </div>        
-                </div>
+                </div>  
                 <div class="attributeFixed">
                     <h3>Lethality</h3>
                     <div class="attributeAmount">
@@ -71,9 +57,9 @@
                     </div>
                 </div>
                 <div class="attributeFixed">
-                    <h3>Defence</h3>
+                    <h3>Focus</h3>
                     <div class="attributeAmount">
-                        <span><input matInput  type="text" [(ngModel)]="valiant.defence" class="max"></span>
+                        <span><input matInput  type="text" [(ngModel)]="valiant.focus" class="max"></span>
                     </div>
                 </div>
                 <div class="attributeFixed">

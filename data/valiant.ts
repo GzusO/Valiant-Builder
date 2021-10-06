@@ -15,28 +15,28 @@ export class Valiant {
     traits: Trait[];
     tier: number;
     professions: Profession[];
+
+
+    //Inventory
     inventory: Item[];
     tins: number = 0;
     crowns: number = 0;
     perls: number = 0;
     weightThreshold: number =75;
     inventoryWeight: number =0;
+
     //Attributes
     enduranceMax: number=2;
     enduranceCurrent: number=2;
-    energyMax: number=50;
-    energyCurrent: number=50;
-    deathResistanceMax: number=3;
-    deathResistanceCurrent: number =3;
-    focusSlotsMax: number = 1;
-    focusSlotsCurrent: number =1;
+    armorMax: number=10;
+    armorCurrent: number=10;
+    deathResistanceMax: number=2;
+    deathResistanceCurrent: number =2;
+
+    focus: number = 1;
     movement: number = 5;
-    combatSpeed: number= 0;
     lethality: number= 0;
-    force: number = 0;
-    defence: number = 20;
     resistance: number = 0;
-    finesse: number = 0;
     
     //Descriptions
     description: string = "";
