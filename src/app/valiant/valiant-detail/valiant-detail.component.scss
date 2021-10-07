@@ -4,9 +4,17 @@
     display: flex;
     flex-direction: column;
 }
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
 .header {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
 }
 .valiantName {
     flex-grow: 2;
@@ -22,28 +30,50 @@
 
 .stats {
     display: flex;
+    flex-direction: column;
+}
+
+.valiantAttributesDynamic {
+    display: flex;
     flex-direction: row;
 }
 
 .valiantCharacteristics {
-    flex-grow: 1;
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 50%;
-}
-.valiantAttributes{
-    flex-grow: 4;
+    grid-column: 1;
+    grid-row: 2/4;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    font-size: 12pt;
+    font-weight: 900;
+}
+.valiantCharacteristic {
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    color: rgba(255, 255, 255, 0.75);
+}
+.valiantCharacteristic div{
+    flex: 0 1 25px;
+}
+.valiantCharacteristic input{
+    font-size: 22pt;
+    color: #9c27b0;
 }
 
-.attribute{
-    display: inline-block;
-    margin: 5px 5px 5px 5px;
-    border: black thin solid;
-    padding: 5px 5px 5px 5px;
-    width: 221px;
+
+.valiantAttributes{
+    grid-column: 1 / -1;
+}
+
+.attribute {
+    flex: 1 1 auto;
+}
+
+.attribute h3{
+    font-size: 14pt;
+    font-weight: 900;
+    text-align: left;
+    margin-bottom: 0px;
 }
 .attributeFixed{
     display: inline-block;
@@ -52,32 +82,7 @@
     padding: 5px 5px 5px 5px;
     width: 172px;
 }
-.attributeCurrMax, .attributeAmount {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
 
-.attributeCurrMax input, .attributeAmount input
-{
-    width: 60px;
-    font-size: xx-large;
-    text-align: center;
-    padding: 12px 12px;
-    align-self: center;
-}
-
-.slash
-{
-    width: 40px;
-    font-size: xx-large;
-    text-align: center;
-    align-self: center;
-}
-h3 {
-    text-align: center;
-    margin-bottom: 0px;
-}
 
 .valiantDetails {
     display: flex;
