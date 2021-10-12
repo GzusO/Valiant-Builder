@@ -7,7 +7,11 @@
     
     <div class="row valiantAttributesDynamic">
         <div class="attribute">
-            <h3>ARMOR: {{valiant.armorCurrent}}/{{valiant.armorMax}}</h3>
+            <h3>ARMOR:
+                <input matInput class="trackerInput"[(ngModel)]="valiant.armorCurrent">
+                /
+                <input matInput class="trackerInput" [(ngModel)]="valiant.armorMax">
+            </h3>
             <app-tracker [limit]="valiant.armorMax" [(marked)]=valiant.armorCurrent icon="shield"></app-tracker>
         </div>
         <div class="attribute">

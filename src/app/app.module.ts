@@ -64,6 +64,7 @@ import { ValiantRandomizerComponent } from './valiant/valiant-randomizer/valiant
 import { ItemEditDialogComponent } from './item/item-edit-dialog/item-edit-dialog.component';
 import { TrackerComponent } from './tracker/tracker/tracker.component';
 import { DevComponent } from './dev/dev.component';
+import { FillPipe } from './Pipes/fill.pipe';
 
 
 @NgModule({
@@ -102,7 +103,8 @@ import { DevComponent } from './dev/dev.component';
     ValiantRandomizerComponent,
     ItemEditDialogComponent,
     TrackerComponent,
-    DevComponent
+    DevComponent,
+    FillPipe
   ],
   imports: [
     BrowserModule,
