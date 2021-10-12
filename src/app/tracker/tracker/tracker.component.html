@@ -1,7 +1,17 @@
-<div *ngIf="limit !== 0" class="tracker">
-    <button mat-icon-button (click)="dec()"><mat-icon>remove</mat-icon></button>
-    <span>
-        <button mat-icon-button class="trackerButton" (click)="trackerChanged(i)" *ngFor="let x of limit|fill;let i = index"><mat-icon color=primary [ngClass]="{'material-icons':i<this.marked,'material-icons-outlined':i>=this.marked}">{{getIcon(i)}}</mat-icon></button>
-    </span>
-    <button mat-icon-button (click)="inc()"><mat-icon>add</mat-icon></button>
+<div class="tracker" *ngIf="limit !== 0" >
+    <h3 *ngIf="label !== '' ">
+        {{label}}:
+        <input matInput class="trackerInput"[(ngModel)]="marked" (ngModelChange)="markedChanged($event)">
+        /
+        <input matInput class="trackerInput" [(ngModel)]="limit" (ngModelChange)="limitChanged($event)">
+    </h3>
+    <div class="tracker-buttons">
+        <button mat-icon-button (click)="dec()"><mat-icon>remove</mat-icon></button>
+        <span>
+            <button mat-icon-button class="trackerButton" (click)="trackerChanged(i)" *ngFor="let x of limit|fill;let i = index">
+                <mat-icon color=primary [ngClass]="{'material-icons':i<this.marked,'material-icons-outlined':i>=this.marked}">{{getIcon(i)}}</mat-icon>
+            </button>
+        </span>
+        <button mat-icon-button (click)="inc()"><mat-icon>add</mat-icon></button>
+    </div>
 </div>

@@ -1,6 +1,24 @@
 .tracker{
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column;
+}
+.tracker-buttons{
+  display: flex;
+  flex-flow: row wrap;
+}
+.tracker h3{
+  font-size: 14pt;
+  font-weight: 900;
+  text-align: left;
+  margin-bottom: 0px;
+}
+.trackerInput {
+  width: 25px;
+  background: transparent;
+  border: none;
+  color: inherit;
+  font: inherit;
+  text-align: center;
 }
 
 button.trackerButton:nth-child(5n)::after {

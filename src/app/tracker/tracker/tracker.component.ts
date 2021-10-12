@@ -14,7 +14,9 @@ export class TrackerComponent implements OnInit {
   @Input() limit: number = 1;
   @Input() marked: number =0;
   @Output() markedChange = new EventEmitter<number>();
+  @Output() limitChange = new EventEmitter<number>();
   @Input() icon: string = "person";
+  @Input() label: string = "";
 
   Arr = Array; //Array type captured in a variable
 
@@ -43,5 +45,12 @@ export class TrackerComponent implements OnInit {
       return "favorite"
     }
     return this.icon;
+  }
+
+  limitChanged($event: any){
+    this.limitChange.emit(this.limit);
+  }
+  markedChanged($event: any){
+    this.markedChange.emit(this.marked);
   }
 }

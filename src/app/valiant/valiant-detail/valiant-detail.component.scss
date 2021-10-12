@@ -60,15 +60,6 @@
     color: #9c27b0;
 }
 
-.trackerInput {
-    width: 25px;
-    background: transparent;
-    border: none;
-    color: inherit;
-    font: inherit;
-    text-align: center;
-}
-
 .valiantAttributes{
     grid-column: 1 / -1;
 }
@@ -77,12 +68,6 @@
     flex: 1 1 auto;
 }
 
-.attribute h3{
-    font-size: 14pt;
-    font-weight: 900;
-    text-align: left;
-    margin-bottom: 0px;
-}
 .attributeFixed{
     display: inline-block;
     margin: 5px 5px 5px 5px;
