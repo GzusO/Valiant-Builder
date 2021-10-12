@@ -1,5 +1,7 @@
 <div *ngIf="limit !== 0" class="tracker">
-    <button mat-icon-button (click)="buttonClicked('-')"><mat-icon>remove</mat-icon></button>
-    <mat-checkbox color=primary class="tracker-button" *ngFor="let val of amount;let i = index" [checked]="marked > i" (change)="trackerChanged($event,i)"></mat-checkbox>
-    <button mat-icon-button (click)="buttonClicked('+')"><mat-icon>add</mat-icon></button>
+    <button mat-icon-button (click)="dec()"><mat-icon>remove</mat-icon></button>
+    <span>
+        <button mat-icon-button class="trackerButton" (click)="trackerChanged(i)" *ngFor="let x of Arr(this.limit).fill(1);let i = index"><mat-icon color=primary [ngClass]="{'material-icons':i<this.marked,'material-icons-outlined':i>=this.marked}">{{getIcon(i)}}</mat-icon></button>
+    </span>
+    <button mat-icon-button (click)="inc()"><mat-icon>add</mat-icon></button>
 </div>

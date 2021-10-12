@@ -1,10 +1,10 @@
 .tracker{
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
 }
 
-.tracker-button{
-    padding-left: 2px;
-    padding-right: 2px;
-    padding-top: 10px;
-}
+button.trackerButton:nth-child(5n)::after {
+  border-right: 3px solid #9c27b0;
+  padding-right: 5px;
+  content: "";
+  }

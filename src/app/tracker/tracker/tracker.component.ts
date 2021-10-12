@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ICON_REGISTRY_PROVIDER_FACTORY } from '@angular/material/icon';
 
 @Component({
   selector: 'app-tracker',
@@ -9,42 +10,38 @@ export class TrackerComponent implements OnInit {
 
   constructor() { }
 
-  amount: boolean[] = [];
-
+  amount: boolean[]= [];
   @Input() limit: number = 1;
   @Input() marked: number =0;
+  @Output() markedChange = new EventEmitter<number>();
+  @Input() icon: string = "person";
+
+  Arr = Array; //Array type captured in a variable
+
   ngOnInit(): void {
     this.amount = new Array<boolean>(this.limit);
-    for(var i  = 0;i<this.amount.length;i++){
-      this.amount[i] = false;
-    }
-    for(var i = 0;i<this.marked;i++){
-      this.amount[i]=true;
-    }
-  }
-
-  trackerChanged($event :any, index:number):void {
-    if($event.checked){
-      this.marked = index + 1;
-    }
-    else{
-      this.marked = index;
-    }
-  }
-  buttonClicked(direction: string):void{
     
-      
-    if(direction === "-"){
-      this.marked--;
-    }
-    else{
-      this.marked++;
-    }
-    if(this.marked > this.limit)
-      this.marked= this.limit;
-    if(this.marked < 0){
-      this.marked = 0;
-    }
+  }
 
+  dec() {this.resize(-1);}
+  inc() {this.resize(+1);}
+
+  resize(delta: number){
+    this.marked =Math.max(0,Math.min(this.limit,+this.marked+delta))
+    this.markedChange.emit(this.marked);
+  }
+
+  trackerChanged(amount:number):void {
+    this.marked = amount+1;
+    this.markedChange.emit(this.marked);
+  }
+
+  getIcon(index: number): string {
+    if(this.icon =="favorite"){
+      if(index >= this.marked)
+        return "favorite_border"
+      return "favorite"
+    }
+    return this.icon;
   }
 }

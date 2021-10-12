@@ -8,12 +8,15 @@
     <div class="row valiantAttributesDynamic">
         <div class="attribute">
             <h3>ARMOR: {{valiant.armorCurrent}}/{{valiant.armorMax}}</h3>
+            <app-tracker [limit]="valiant.armorMax" [(marked)]=valiant.armorCurrent icon="shield"></app-tracker>
         </div>
         <div class="attribute">
             <h3>ENDURANCE: {{valiant.enduranceCurrent}}/{{valiant.enduranceMax}}</h3>
+            <app-tracker [limit]="valiant.enduranceMax" [(marked)]=valiant.enduranceCurrent icon="favorite"></app-tracker>
         </div>
         <div class="attribute">
             <h3>DEATH RESISTANCE: {{valiant.deathResistanceCurrent}}/{{valiant.deathResistanceMax}}</h3>
+            <app-tracker [limit]="valiant.deathResistanceMax" [(marked)]=valiant.deathResistanceCurrent icon="person"></app-tracker>
         </div>
     </div>
 
