@@ -15,53 +15,15 @@
             {{lineage.description}}
           </p>
           <h3>Persistent Feature</h3>
-            <mat-expansion-panel *ngFor="let feature of persistent(lineage.features)">
-              <mat-expansion-panel-header> <span class="feature">{{feature.name}}</span> </mat-expansion-panel-header>
-              <p>
-                {{feature.description}}
-              </p>
-              <app-ability-content *ngFor="let ability of feature.abilities" [ability]=ability></app-ability-content>
-              <div *ngFor="let trait of feature.traits">
-                <span class="trait-name">{{trait.name}}</span>
-                <p>{{trait.description}}</p>
-              </div>
-            </mat-expansion-panel>
+          <app-ability-content *ngFor="let ability of persistent(lineage.abilities)" [ability]=ability></app-ability-content>  
         </mat-tab>
         <mat-tab label="Combat">
           <h3>Combat Features</h3>
-          <mat-accordion>
-            <mat-expansion-panel *ngFor="let feature of primary(lineage.features)">
-              <mat-expansion-panel-header>
-                <span class="feature">{{feature.name}}</span>
-              </mat-expansion-panel-header>
-              <p>
-                {{feature.description}}
-              </p>
-              <app-ability-content *ngFor="let ability of feature.abilities" [ability]=ability></app-ability-content>
-              <div *ngFor="let trait of feature.traits">
-                <span class="trait-name">{{trait.name}}</span>
-                <p>{{trait.description}}</p>
-              </div>
-            </mat-expansion-panel>
-          </mat-accordion>
+          <app-ability-content *ngFor="let ability of primary(lineage.abilities)" [ability]=ability></app-ability-content>   
         </mat-tab>
         <mat-tab label="Utility">
           <h3>Utility Features</h3>
-          <mat-accordion>
-            <mat-expansion-panel *ngFor="let feature of secondary(lineage.features)">
-              <mat-expansion-panel-header>
-                <span class="feature">{{feature.name}}</span>
-              </mat-expansion-panel-header>
-              <p>
-                {{feature.description}}
-              </p>
-              <app-ability-content *ngFor="let ability of feature.abilities" [ability]=ability></app-ability-content>
-              <div *ngFor="let trait of feature.traits">
-                <span class="trait-name">{{trait.name}}</span>
-                <p>{{trait.description}}</p>
-              </div>
-            </mat-expansion-panel>
-          </mat-accordion>
+          <app-ability-content *ngFor="let ability of secondary(lineage.abilities)" [ability]=ability></app-ability-content>
         </mat-tab>
       </mat-tab-group>
     </mat-card-content>

@@ -1,7 +1,8 @@
 import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
+import { Ability } from 'src/app/Ability';
 import { Class } from 'src/app/class/Class';
-import { Feature } from 'src/app/feature/Feature';
+
 
 @Component({
   selector: 'app-class-detail',
@@ -16,19 +17,16 @@ export class ClassDetailComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  primary(data: Feature[]): Feature[] {
-    return data.filter(x=>x.types.includes('Combat'));
+  primary(data: Ability[]): Ability[] {
+    return data.filter(x=>x.source.includes('Combat'));
   }
-  secondary(data: Feature[]): Feature[] {
-    return data.filter(x=>x.types.includes('Utility'));
+  secondary(data: Ability[]): Ability[] {
+    return data.filter(x=>x.source.includes('Utility'));
   }
-  global(data: Feature[]): Feature[] {
-    return data.filter(x=>x.types.includes('Global'));
+  global(data: Ability[]): Ability[] {
+    return data.filter(x=>x.source.includes('Global'));
   }
-  hasGlobal(data: Feature[]): boolean {
-    return data.some(x=> x.types.includes("Global"));
-  }
-  uniqueType(): string {
-    return this.class?.abilities.length === 0 ? "Trait Pool" : "Ability Pool";
+  hasGlobal(data: Ability[]): boolean {
+    return data.some(x=> x.source.includes("Global"));
   }
 }

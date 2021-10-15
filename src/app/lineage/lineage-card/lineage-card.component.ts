@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Ability } from 'src/app/Ability';
 import { Lineage } from "src/app/lineage/Lineage";
-import { Feature } from "src/app/feature/Feature";
 
 @Component({
   selector: 'app-lineage-card',
@@ -15,13 +15,13 @@ export class LineageCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  persistent(data: Feature[]): Feature[]{
-    return data.filter(x => x.types.includes('Persistent'))
+  persistent(data: Ability[]): Ability[]{
+    return data.filter(x => x.source.includes('Persistent'))
   }
-  primary(data: Feature[]): Feature[]{
-    return data.filter(x=> x.types.includes('Combat'))
+  primary(data: Ability[]): Ability[]{
+    return data.filter(x=> x.source.includes('Combat'))
   }
-  secondary(data: Feature[]): Feature[]{
-    return data.filter(x=> x.types.includes('Utility'))
+  secondary(data: Ability[]): Ability[]{
+    return data.filter(x=> x.source.includes('Utility'))
   }
 }

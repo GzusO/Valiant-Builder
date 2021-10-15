@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Feature } from '../feature/Feature';
+import { Ability } from '../Ability';
 import { Lineage } from '../lineage/Lineage';
 
 @Pipe({
@@ -7,12 +7,12 @@ import { Lineage } from '../lineage/Lineage';
 })
 export class FilterByTypePipe implements PipeTransform {
 
-  transform(items: Feature[], filter: Lineage[]): Feature[] {
+  transform(items: Ability[], filter: Lineage[]): Ability[] {
     if (!items || !filter) {
       return items;
     }
 
     // This will search and match any option.value that contains the search term
-    return items.filter(x=> x.types.some((val) => filter.findIndex(y=> y.name===val) !== -1));
+    return items.filter(x=> x.source.some((val) => filter.findIndex(y=> y.name===val) !== -1));
   }
 }

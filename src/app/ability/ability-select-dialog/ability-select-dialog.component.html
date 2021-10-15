@@ -10,13 +10,7 @@
                 <div mat-line *ngIf="ability.secondaryTags.length !== 0" class="secondaryTags">
                     <span class="tag" *ngFor="let prime of ability.secondaryTags">{{prime}}, </span>
                 </div>
-                <div mat-line *ngIf="ability.tertiaryTags.length !== 0" class="tertiaryTags">
-                    <span class="tag" *ngFor="let prime of ability.tertiaryTags">{{prime}}, </span>
-                </div>
-                <p mat-line *ngIf="ability.attack !== 0">Attack: {{ability.attack}}</p>
-                <p mat-line *ngIf="ability.energyDamage !== 0">Energy Damage: {{ability.energyDamage}}</p>
                 <p mat-line *ngIf="ability.description.length !==0">{{ability.description}}</p>
-                <p mat-line *ngIf="ability.scaling.length !== 0">{{ability.scaling}}</p>
         </mat-list-option>
     </mat-selection-list>
 </mat-dialog-content>

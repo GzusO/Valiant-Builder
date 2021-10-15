@@ -1,21 +1,15 @@
 import { Ability } from "src/app/Ability";
-import { Feature } from "src/app/feature/Feature";
 import { Lineage } from "src/app/lineage/Lineage";
-import { Profession } from "src/app/profession/Profession";
-import { Trait } from "src/app/Trait";
 import { Item } from "./items";
 
 export class Valiant {
     id: number;
     name: string;
     lineages: Lineage[];
-    features: Feature[];
+    //features: Feature[];
     characteristics: CharacteristicScore[];
     abilities: Ability[];
-    traits: Trait[];
     tier: number;
-    professions: Profession[];
-
 
     //Inventory
     inventory: Item[];
@@ -49,13 +43,10 @@ export class Valiant {
     languages: string = "";
     constructor(){
         this.name = "";
-        this.features =[];
         this.lineages = [];
         this.characteristics = [];
         this.abilities = [];
-        this.traits = [];
         this.tier = 0;
-        this.professions = [];
         this.id = -1;
         this.inventory = [];
     }

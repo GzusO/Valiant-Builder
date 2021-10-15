@@ -1,8 +1,6 @@
 import { Component, EventEmitter, OnInit } from '@angular/core';
 import { Characteristic } from "../Characteristic";
 import { Lineage } from "../lineage/Lineage";
-import { Profession } from "../profession/Profession";
-import { Feature } from "../feature/Feature";
 import { DataService } from '../data.service';
 import { MatSelectionListChange } from '@angular/material/list';
 import { CharacteristicScore, Valiant } from 'data/valiant';
@@ -19,21 +17,19 @@ export class BuilderComponent implements OnInit {
     characteristicPoints: number = 2;
     valiantCharacteristics: CharacteristicScore[] =[];
     valiantLineages: Lineage[] = [];
-    valiantLineagePersistentFeatures: Feature[] = [];
-    valiantLineagePrimaryFeatures: Feature[] = [];
-    valiantLineageSecondaryFeatures: Feature[] = [];
-    valiantProfession: Profession[] =[];
-    valiantClassPrimaryFeatures: Feature[] =[];
-    valiantClassSecondaryFeatures: Feature[] = [];
-    valiantCharacteristicFeautres: Feature[] =[];
+    valiantLineagePersistentFeatures: Ability[] = [];
+    valiantLineagePrimaryFeatures: Ability[] = [];
+    valiantLineageSecondaryFeatures: Ability[] = [];
+    valiantClassPrimaryFeatures: Ability[] =[];
+    valiantClassSecondaryFeatures: Ability[] = [];
+    valiantCharacteristicFeautres: Ability[] =[];
     valiantName: string= "";
     valiantGlobalAbilities: Ability[] = [];
     
 
     lineages: Lineage[] = [];
-    lineageFeatures: Feature[] =[];
-    professions: Profession[] = [];
-    classFeatures: Feature[] = [];
+    lineageFeatures: Ability[] =[];
+    classFeatures: Ability[] = [];
 
   constructor(private dataService: DataService,private snackBar: MatSnackBar) {
       
@@ -42,9 +38,8 @@ export class BuilderComponent implements OnInit {
   ngOnInit(): void {
     this.getCharacteristics();
     this.getLineages();
-    this.getLineageFeatures();
-    this.getProfessions();
-    this.getClassFeatures();
+    this.getLineageAbilities();
+    this.getClassAbilities();
     this.getGlobalAbilities();
     this.characteristics.forEach(char =>this.valiantCharacteristics.push({name:char.name,score:1}));
     this.characteristics.forEach(x=> this.updateCharacteristicFeatures(x.name,1));
@@ -56,25 +51,23 @@ export class BuilderComponent implements OnInit {
   getLineages(): void {
     this.dataService.getLineages().subscribe(lineages => this.lineages = lineages);
   }
-  getLineageFeatures():void {
-    this.dataService.getFeaturesByType('Lineage').subscribe(feats => this.lineageFeatures=feats);
+  getLineageAbilities():void {
+    this.dataService.getAbilitiesBySource('Lineage').subscribe(feats => this.lineageFeatures=feats);
   }
-  getProfessions(): void{
-    this.dataService.getProfessions().subscribe(professions => this.professions=professions);
-  }
-  getClassFeatures(): void {
-    this.dataService.getFeaturesByType('Aspirant').subscribe(feats => this.classFeatures= feats);
+
+  getClassAbilities(): void {
+    this.dataService.getAbilitiesBySource('Aspirant').subscribe(feats => this.classFeatures= feats);
   }
   getGlobalAbilities(): void {
     this.dataService.getGlobalAbilities().subscribe(abl => this.valiantGlobalAbilities = abl);
   }
 
-  primary(feats: Feature[]): Feature[] {
-    const result =feats.filter(x=> x.types.includes("Combat"));
+  primary(feats: Ability[]): Ability[] {
+    const result =feats.filter(x=> x.source.includes("Combat"));
     return result;
   }
-  secondary(feats: Feature[]): Feature[] {
-    const result = feats.filter(x=> x.types.includes("Utility"));
+  secondary(feats: Ability[]): Ability[] {
+    const result = feats.filter(x=> x.source.includes("Utility"));
     return result;
   }
   consumePoint(name: string, amount: number){
@@ -107,30 +100,22 @@ export class BuilderComponent implements OnInit {
 
   updateCharacteristicFeatures(name: string, tier: number): void {
     //Remove All Features of the Charactertic
-    this.valiantCharacteristicFeautres = this.valiantCharacteristicFeautres.filter(x => !x.types.includes(name));
+    this.valiantCharacteristicFeautres = this.valiantCharacteristicFeautres.filter(x => !x.source.includes(name));
     let char: Characteristic | undefined = this.characteristics.find(x=> x.name === name);
     if (char === undefined)
       return;
-    let feats: Feature[] = char.features.filter(feat => feat.tier <= tier);
+    let feats: Ability[] = char.abilities.filter(feat => feat.tier <= tier);
     this.valiantCharacteristicFeautres.push(...feats); 
   }
   lineageSelected($event: MatSelectionListChange): void {
     this.valiantLineagePersistentFeatures = [];
-    $event.options[0].selectionList._value?.forEach(x=> this.valiantLineagePersistentFeatures.push(...(x as Object as Lineage).features.filter(y=> y.types.includes("Persistent"))));
+    $event.options[0].selectionList._value?.forEach(x=> this.valiantLineagePersistentFeatures.push(...(x as Object as Lineage).abilities.filter(y=> y.source.includes("Persistent"))));
   }
   save(): void {
     const valiant = new Valiant();
     valiant.name = this.valiantName;
-    valiant.professions = this.valiantProfession;
     valiant.lineages = this.valiantLineages;
     valiant.characteristics = this.valiantCharacteristics;
-    valiant.features.push(...this.valiantCharacteristicFeautres);
-    valiant.features.push(...this.valiantLineagePersistentFeatures);
-    valiant.features.push(...this.valiantLineagePrimaryFeatures);
-    valiant.features.push(...this.valiantLineageSecondaryFeatures);
-    valiant.features.push(...this.valiantClassPrimaryFeatures);
-    valiant.features.push(...this.valiantClassSecondaryFeatures);
-    valiant.features.push(...this.valiantProfession[0].features);
     valiant.abilities.push(...this.valiantGlobalAbilities);
     
     this.dataService.addValiant(valiant);

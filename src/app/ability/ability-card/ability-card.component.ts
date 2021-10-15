@@ -22,7 +22,7 @@ export class AbilityCardComponent implements OnInit {
     this.deleteClicked.emit(this.ability);
   }
   getLimit(ability:Ability): number{
-    let limit = ability.tertiaryTags.find(x=> x.startsWith("Limited"));
+    let limit = ability.secondaryTags.find(x=> x.startsWith("Limited"));
     if (limit === undefined)
       return 0;
     let val = parseInt(limit.split(' ')[1]);

@@ -1,58 +1,21 @@
 <div *ngIf="class">
     <p>{{class.description}}</p>
     <div class="featureGroups">
-        <div class="featureGroup" *ngIf="hasGlobal(class.features)">
+        <div class="featureGroup" *ngIf="hasGlobal(class.abilities)">
             <h3>Global Features</h3>
-            <mat-accordion multi="true">
-                <app-feature-expansion *ngFor="let feature of global(class.features)" [feature]=feature [expanded]=true></app-feature-expansion>
-            </mat-accordion>
+            <app-ability-card *ngFor="let ability of global(class.abilities)" [ability]=ability></app-ability-card>
         </div>
         <div class="featureGroup">
             <h3>Combat Features </h3>
-            <mat-accordion multi="true">
-                <app-feature-expansion *ngFor="let feature of primary(class.features)" [feature]=feature></app-feature-expansion>
-            </mat-accordion>
+            <app-ability-card *ngFor="let ability of primary(class.abilities)" [ability]=ability></app-ability-card>
         </div>
         <div class="featureGroup">
             <h3>Utility Features </h3>
-            <mat-accordion multi="true">
-                <app-feature-expansion *ngFor="let feature of secondary(class.features)" [feature]=feature></app-feature-expansion>
-            </mat-accordion>
+            <app-ability-card *ngFor="let ability of secondary(class.abilities)" [ability]=ability></app-ability-card>
         </div>
         <div class="featureGroup" *ngIf="class.uniqueFeatureName !== '' " >
-            <h3>{{class.uniqueFeatureName}} {{uniqueType()}}</h3>
-            <mat-accordion multi="true">
-                <mat-expansion-panel *ngFor="let ability of class.abilities">
-                    <mat-expansion-panel-header>
-                      <mat-panel-title>
-                        Tier: {{ability.tier}} 
-                      </mat-panel-title>
-                      <mat-panel-description>
-                        {{ability.name}}
-                      </mat-panel-description>
-                    </mat-expansion-panel-header>
-                    <div>
-                      <span class="ability-name">{{ability.name}} ({{ability.primaryTags}})</span>
-                      <div *ngIf="ability.secondaryTags.length !== 0">{{ability.secondaryTags}}</div>
-                      <div *ngIf="ability.tertiaryTags.length !== 0">{{ability.tertiaryTags}}</div>
-                      <p>{{ability.description}}</p>
-                    </div>
-                  </mat-expansion-panel>
-                  <mat-expansion-panel *ngFor="let trait of class.traits">
-                    <mat-expansion-panel-header>
-                      <mat-panel-title>
-                        Tier: {{trait.tier}} 
-                      </mat-panel-title>
-                      <mat-panel-description>
-                        {{trait.name}}
-                      </mat-panel-description>
-                    </mat-expansion-panel-header>
-                    <div>
-                      <span class="trait-name">{{trait.name}}</span>
-                      <p>{{trait.description}}</p>
-                    </div>
-                  </mat-expansion-panel>
-            </mat-accordion>
+            <h3>{{class.uniqueFeatureName}}</h3>
+            <app-ability-card *ngFor="let ability of class.abilities" [ability]=ability></app-ability-card>
         </div>
     </div>
 </div>

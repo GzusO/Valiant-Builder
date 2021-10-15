@@ -44,9 +44,6 @@
     <div class="valiantDetails">
         <mat-tab-group class="info">
             <mat-tab label="Description">
-                <div class="valiantProfession">
-                    Profession: {{valiant.professions[0]?.name}}
-                </div>
                 <div class="valiantLineages">
                     Lineage: <span *ngFor="let lineage of valiant.lineages">{{lineage.name}}, </span>
                 </div>
@@ -109,23 +106,10 @@
                     </table>
                 </form>
             </mat-tab>
-            <mat-tab label="Features">
-                
-                <div class="cards">
-                    <app-feature-card *ngFor="let feat of valiant.features" [feature]=feat [enableMenu]="true" (deleteClicked)="removeFeature($event)" class="card" ></app-feature-card>
-                    <button mat-fab color="primary"(click)="openAddFeatures()"><mat-icon>add</mat-icon></button>
-                </div>
-            </mat-tab>
             <mat-tab label="Abilities">
                 <div class="cards">
                     <app-ability-card *ngFor="let ability of abilities" [ability]=ability [enableMenu]="true" (deleteClicked)="removeAbility($event)" class="card"></app-ability-card>
                     <button mat-fab color="primary"(click)="openAddAbilities()"><mat-icon>add</mat-icon></button>
-                </div>
-            </mat-tab>
-            <mat-tab label="Traits">
-                <div class="cards">
-                    <app-trait-card *ngFor="let trait of traits" [trait]=trait [enableMenu]="true" (deleteClicked)="removeTrait($event)" class="card"></app-trait-card>
-                    <button mat-fab color="primary"(click)="openAddTraits()"><mat-icon>add</mat-icon></button>
                 </div>
             </mat-tab>
         </mat-tab-group>

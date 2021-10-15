@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Lineage } from "src/app/lineage/Lineage";
-import { Feature } from "src/app/feature/Feature";
+
 import { DataService } from 'src/app/data.service';
+import { Ability } from 'src/app/Ability';
 
 @Component({
   selector: 'app-lineage-list',
@@ -21,13 +22,13 @@ export class LineageListComponent implements OnInit {
     this.dataService.getLineages().subscribe(lineages => this.lineages = lineages)
   }
 
-  persistent(data: Feature[]): Feature[]{
-    return data.filter(x => x.types.includes('Persistent'))
+  persistent(data: Ability[]): Ability[]{
+    return data.filter(x => x.source.includes('Persistent'))
   }
-  primary(data: Feature[]): Feature[]{
-    return data.filter(x=> x.types.includes('Combat'))
+  primary(data: Ability[]): Ability[]{
+    return data.filter(x=> x.source.includes('Combat'))
   }
-  secondary(data: Feature[]): Feature[]{
-    return data.filter(x=> x.types.includes('Utility'))
+  secondary(data: Ability[]): Ability[]{
+    return data.filter(x=> x.source.includes('Utility'))
   }
 }

@@ -1,8 +1,8 @@
-import { Feature } from "./feature/Feature";
+import { Ability } from "./Ability";
 
 
 export interface Characteristic {
     name: string;
     description: string;
-    features: Feature[];
+    abilities: Ability[];
 }

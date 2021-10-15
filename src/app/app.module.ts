@@ -36,13 +36,9 @@ import { ClassListComponent } from './class/class-list/class-list.component';
 import { BuilderComponent } from './builder/builder.component'
 import { FilterByTypePipe } from './Pipes/filter-by-type.pipe';
 import { MapPipe } from './Pipes/map.pipe';
-import { ProfessionListComponent } from './profession/profession-list/profession-list.component';
 import { LineageListComponent } from './lineage/lineage-list/lineage-list.component';
 import { LineageCardComponent } from './lineage/lineage-card/lineage-card.component';
-import { ProfessionCardComponent } from './profession/profession-card/profession-card.component';
-import { FeatureCardComponent } from './feature/feature-card/feature-card.component';
 import { ClassDetailComponent } from './class/class-detail/class-detail.component';
-import { FeatureExpansionComponent } from './feature/feature-expansion/feature-expansion.component';
 import { AbilityContentComponent } from './ability/ability-content/ability-content.component';
 import { ArmorListComponent } from './item/armor-list/armor-list.component';
 import { WeaponListComponent } from './item/weapon-list/weapon-list.component';
@@ -54,12 +50,9 @@ import { CharacteristicDetailComponent } from './characteristic/characteristic-d
 import { ValiantListComponent } from './valiant/valiant-list/valiant-list.component';
 import { ValiantDetailComponent } from './valiant/valiant-detail/valiant-detail.component';
 import { AbilityCardComponent } from './ability/ability-card/ability-card.component';
-import { TraitCardComponent } from './trait/trait-card/trait-card.component';
 import { ValiantExportDialogComponent } from './valiant/valiant-export-dialog/valiant-export-dialog.component';
 import { TagTooltipDialogComponent } from './tag/tag-tooltip-dialog/tag-tooltip-dialog.component';
-import { FeatureSelectDialogComponent } from './feature/feature-select-dialog/feature-select-dialog.component';
 import { AbilitySelectDialogComponent } from './ability/ability-select-dialog/ability-select-dialog.component';
-import { TraitSelectDialogComponent } from './trait/trait-select-dialog/trait-select-dialog.component';
 import { ValiantRandomizerComponent } from './valiant/valiant-randomizer/valiant-randomizer.component';
 import { ItemEditDialogComponent } from './item/item-edit-dialog/item-edit-dialog.component';
 import { TrackerComponent } from './tracker/tracker/tracker.component';
@@ -70,7 +63,6 @@ import { FillPipe } from './Pipes/fill.pipe';
 @NgModule({
   declarations: [
     AppComponent,
-    ProfessionListComponent,
     LineageListComponent,
     FooterComponent,
     CharacteristicListComponent,
@@ -79,10 +71,7 @@ import { FillPipe } from './Pipes/fill.pipe';
     FilterByTypePipe,
     MapPipe,
     LineageCardComponent,
-    ProfessionCardComponent,
-    FeatureCardComponent,
     ClassDetailComponent,
-    FeatureExpansionComponent,
     AbilityContentComponent,
     ArmorListComponent,
     WeaponListComponent,
@@ -94,12 +83,9 @@ import { FillPipe } from './Pipes/fill.pipe';
     ValiantListComponent,
     ValiantDetailComponent,
     AbilityCardComponent,
-    TraitCardComponent,
     ValiantExportDialogComponent,
     TagTooltipDialogComponent,
-    FeatureSelectDialogComponent,
     AbilitySelectDialogComponent,
-    TraitSelectDialogComponent,
     ValiantRandomizerComponent,
     ItemEditDialogComponent,
     TrackerComponent,

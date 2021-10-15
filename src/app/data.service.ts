@@ -2,14 +2,8 @@ import { Injectable } from '@angular/core';
 import { Class } from "./class/Class";
 import { Characteristic } from "./Characteristic";
 import { Lineage } from "./lineage/Lineage";
-import { Profession } from "./profession/Profession";
 import { Ability } from "./Ability";
-import { Trait } from "./Trait";
-import { Feature } from "./feature/Feature";
 import { abilityData } from 'data/abilities';
-import { featureData } from 'data/features';
-import { traitData } from 'data/traits';
-import { professionData } from 'data/professions';
 import { lineageData } from 'data/lineages';
 import { Observable, of } from 'rxjs';
 import { characteristicData } from 'data/characteristics';
@@ -24,10 +18,7 @@ import { Valiant } from 'data/valiant';
   providedIn: 'root'
 })
 export class DataService {
-  
-  professions = professionData;
-  features = featureData; 
-  traits = traitData;
+
   abilities = abilityData;
   lineages = lineageData;
   characteristics = characteristicData;
@@ -38,10 +29,6 @@ export class DataService {
   gear = gearData;
   enchantments = enchantmentData;
   valiants: Valiant[]= [];
-
-  getProfessions(): Observable<Profession[]> {
-    return of(this.professions);
-  }
 
   getLineages(): Observable<Lineage[]>{
     return of(this.lineages);
@@ -55,21 +42,21 @@ export class DataService {
     return of (this.classes);
   }
 
-  getFeatures(): Observable<Feature[]>{
-    return of(this.features);
-  }
+
   getAbilities(): Observable<Ability[]>{
     return of(this.abilities);
   }
-  getTraits(): Observable<Trait[]>{
-    return of(this.traits);
+
+  getTraits(): Observable<Ability[]>{
+    return of(this.abilities.filter(x => x.trait));
   }
-  getFeaturesByType(type: string): Observable<Feature[]>{
-    return of(this.features.filter(x=> x.types.includes(type)));
+ 
+  getLineageAbilities(): Observable<Ability[]>{
+    return of(this.abilities.filter(x=> x.source.includes('Lineage')));
   }
 
-  getLineageFeatures(): Observable<Feature[]>{
-    return of(this.features.filter(x=> x.types.includes('Lineage')));
+  getAbilitiesBySource(arg0: string): Observable<Ability[]> {
+    return of(this.abilities.filter(x=>x.source.includes(arg0)));
   }
 
   getTagByName(name: string): Tag | undefined {
@@ -96,12 +83,10 @@ export class DataService {
     return of(this.valiants.find(x=> x.id===id)!);
   }
   getGlobalAbilities(): Observable<Ability[]> {
-    return of(this.abilities.filter(x=> x.types.includes("Global")));
+    return of(this.abilities.filter(x=> x.source.includes("Global")));
   }
 
   constructor() {
-    this.mapAbilities();
-    this.mapTraits();
     this.mapCharacteristics();
     this.mapProfessions();
     this.mapClasses();
@@ -113,40 +98,29 @@ export class DataService {
     this.loadValiants();
   }
 
-  mapAbilities(): void{
-    this.features.map(x=>x.abilities = (this.abilities.filter(y => y.types.includes(x.name))!));
-    this.classes.map(x=> x.abilities = (this.abilities.filter(y => y.types.includes(x.uniqueFeatureName))));
-  }
-  mapTraits(): void{
-    this.features.map(x=>x.traits = (this.traits.filter(y => y.types.includes(x.name))!));
-    this.classes.map(x=>x.traits = (this.traits.filter(y=>y.types.includes(x.uniqueFeatureName))));
-  }
   mapCharacteristics(): void{
-    this.characteristics.map(x => x.features = (this.features.filter(y => y.types.includes(x.name))).sort((a,b) => a.tier-b.tier));
+    this.characteristics.map(x => x.abilities = (this.abilities.filter(y => y.source.includes(x.name))).sort((a,b) => a.tier-b.tier));
   }
   mapProfessions(): void{
-    this.professions.map(x =>x.features = (this.features.filter(y => y.types.includes(x.name))!));
+    
   }
   mapClasses(): void{
-    this.classes.map(x => x.features = (this.features.filter(y => y.types.includes(x.name))).sort((a,b) => a.tier-b.tier));
+    
   }
   mapLineages(): void{
-    this.lineages.map(x => x.features = (this.features.filter(y => y.types.includes('Lineage')).filter(y => y.types.includes(x.name)))!);
+    
   }
   mapArmor(): void {
-    this.armors.map(x => x.traits = (this.traits.filter(y=> y.types.includes(x.name))));
+    
   }
   mapWeapons(): void {
-    this.weapons.map(x =>x.abilities = (this.abilities.filter(y=> y.types.includes(x.name))));
-    this.weapons.map(x =>x.traits = (this.traits.filter(y=> y.types.includes(x.name))));
+    this.weapons.map(x =>x.abilities = (this.abilities.filter(y=> y.source.includes(x.name))));
   }
   mapGear(): void {
-    this.gear.map(x =>x.abilities = (this.abilities.filter(y=> y.types.includes(x.name))));
-    this.gear.map(x =>x.traits = (this.traits.filter(y=> y.types.includes(x.name))));
+    this.gear.map(x =>x.abilities = (this.abilities.filter(y=> y.source.includes(x.name))));
   }
   mapEnchantments(): void {
-    this.enchantments.map(x =>x.abilities = (this.abilities.filter(y=> y.types.includes(x.name))));
-    this.enchantments.map(x =>x.traits = (this.traits.filter(y=> y.types.includes(x.name))));
+    this.enchantments.map(x =>x.abilities = (this.abilities.filter(y=> y.source.includes(x.name))));
   }
   loadValiants(): void {
     const valiants = this.getLocalStorage("valiants");

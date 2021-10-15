@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Ability } from 'src/app/Ability';
 import { Class } from 'src/app/class/Class';
-import { Feature } from 'src/app/feature/Feature';
 import { DataService } from 'src/app/data.service';
 
 @Component({
@@ -19,10 +19,10 @@ export class ClassListComponent implements OnInit {
     this.dataService.getClasses().subscribe(classes => this.classes = classes);
   }
 
-  primary(data: Feature[]): Feature[] {
-    return data.filter(x=>x.types.includes('Combat'))
+  primary(data: Ability[]): Ability[] {
+    return data.filter(x=>x.source.includes('Combat'))
   }
-  secondary(data: Feature[]): Feature[] {
-    return data.filter(x=>x.types.includes('Utility'))
+  secondary(data: Ability[]): Ability[] {
+    return data.filter(x=>x.source.includes('Utility'))
   }
 }
