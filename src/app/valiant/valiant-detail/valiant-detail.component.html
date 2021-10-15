@@ -5,7 +5,7 @@
         <button mat-button (click)="export()">Export</button>
     </div>
     
-    <div class="row valiantAttributesDynamic">
+    <div class="row valiantAttributesStatic">
         <div class="attribute">
             <app-tracker [(limit)]="valiant.armorMax" [(marked)]=valiant.armorCurrent icon="shield" label="ARMOR"></app-tracker>
         </div>
@@ -24,30 +24,19 @@
                     <label> // {{char.name}}</label>
             </div>
         </div>
-        <div class="valiantAttributesFixed">
-            <div class="attributeFixed">
-                <h3>Movement</h3>
-                <div class="attributeAmount">
-                    <span><input matInput  type="text" [(ngModel)]="valiant.movement" class="max"></span>
-                </div>
-            </div>  
-            <div class="attributeFixed">
-                <h3>Lethality</h3>
-                <div class="attributeAmount">
-                    <span><input matInput  type="text" [(ngModel)]="valiant.lethality" class="max"></span>
-                </div>
+        <div class="valiantAttributesDynamic">
+            <div class="attributeDynamic">
+                <label>Lethality </label><input matInput [(ngModel)]="valiant.lethality">
             </div>
-            <div class="attributeFixed">
-                <h3>Focus</h3>
-                <div class="attributeAmount">
-                    <span><input matInput  type="text" [(ngModel)]="valiant.focus" class="max"></span>
-                </div>
+            
+            <div class="attributeDynamic">
+                <label>Movement </label><input matInput [(ngModel)]="valiant.movement">
             </div>
-            <div class="attributeFixed">
-                <h3>Resistance</h3>
-                <div class="attributeAmount">
-                    <span><input matInput  type="text" [(ngModel)]="valiant.resistance" class="max"></span>
-                </div>      
+            <div class="attributeDynamic">
+                <label>Focus </label><input matInput [(ngModel)]="valiant.focus">
+            </div>
+            <div class="attributeDynamic">
+                <label>Resistance </label><input matInput [(ngModel)]="valiant.resistance">
             </div>
         </div>
     </div>

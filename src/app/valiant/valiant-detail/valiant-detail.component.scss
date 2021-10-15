@@ -33,9 +33,16 @@
     flex-direction: column;
 }
 
-.valiantAttributesDynamic {
+.valiantAttributesStatic {
     display: flex;
     flex-direction: row;
+}
+.valiantAttributesDynamic {
+    display: flex;
+    flex-flow: column wrap;
+}
+.attributeDynamic{
+    flex: 1 1 auto;
 }
 
 .valiantCharacteristics {
@@ -60,20 +67,8 @@
     color: #9c27b0;
 }
 
-.valiantAttributes{
-    grid-column: 1 / -1;
-}
-
 .attribute {
     flex: 1 1 auto;
-}
-
-.attributeFixed{
-    display: inline-block;
-    margin: 5px 5px 5px 5px;
-    border: black thin solid;
-    padding: 5px 5px 5px 5px;
-    width: 172px;
 }
 
 
