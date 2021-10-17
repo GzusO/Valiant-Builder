@@ -106,10 +106,33 @@
                     </table>
                 </form>
             </mat-tab>
-            <mat-tab label="Abilities">
-                <div class="cards">
-                    <app-ability-card *ngFor="let ability of abilities" [ability]=ability [enableMenu]="true" (deleteClicked)="removeAbility($event)" class="card"></app-ability-card>
-                    <button mat-fab color="primary"(click)="openAddAbilities()"><mat-icon>add</mat-icon></button>
+            <mat-tab label="Abilities & Traits">
+                <button mat-fab color="primary"(click)="openAddAbilities()"><mat-icon>add</mat-icon></button>   
+                <div class="abilityTrait">
+                    <div class="ability-list" cdkDropList (cdkDropListDropped)="dropAbility($event)">
+                        <div class="listItem" *ngFor="let ability of valiant.abilities" cdkDrag>
+                            <app-ability-card [ability]=ability [enableMenu]="true" (deleteClicked)="removeAbility($event)" class="card">
+                                <div class="ability-handle" cdkDragHandle cdkDragRootElement="app-ability-card">
+                                    <svg width="24px" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z"></path>
+                                        <path d="M0 0h24v24H0z" fill="none"></path>
+                                    </svg>
+                                </div>
+                            </app-ability-card>
+                        </div>
+                    </div>
+                    <div class="ability-list" cdkDropList (cdkDropListDropped)="dropTrait($event)">
+                        <div class="listItem" *ngFor="let ability of valiant.traits" cdkDrag>
+                            <app-ability-card [ability]=ability [enableMenu]="true" (deleteClicked)="removeAbility($event)" class="card">
+                                <div class="ability-handle" cdkDragHandle cdkDragRootElement="app-ability-card">
+                                    <svg width="24px" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z"></path>
+                                        <path d="M0 0h24v24H0z" fill="none"></path>
+                                    </svg>
+                                </div>
+                            </app-ability-card>
+                        </div>
+                    </div>
                 </div>
             </mat-tab>
         </mat-tab-group>

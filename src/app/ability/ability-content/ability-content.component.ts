@@ -13,6 +13,7 @@ import { TagTooltipDialogComponent } from 'src/app/tag/tag-tooltip-dialog/tag-to
 export class AbilityContentComponent implements OnInit {
 
   @Input() ability?: Ability
+  @Input() includeTitle: boolean =true;
   constructor(private dataService: DataService,public dialog: MatDialog) { }
 
   ngOnInit(): void {

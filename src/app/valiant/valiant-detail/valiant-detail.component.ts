@@ -18,7 +18,6 @@ import { ItemEditDialogComponent } from 'src/app/item/item-edit-dialog/item-edit
 })
 export class ValiantDetailComponent implements OnInit {
   valiant?: Valiant;
-  abilities: Ability[] = [];
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute,public dialog: MatDialog, private dataService: DataService, private snackBar: MatSnackBar) { }
 
@@ -48,6 +47,7 @@ export class ValiantDetailComponent implements OnInit {
       this.valiant!.inventory.splice(index, 1);
     }
   }
+
   
   openAddAbilities(): void{
     const dialogRef = this.dialog.open(AbilitySelectDialogComponent);
@@ -56,11 +56,16 @@ export class ValiantDetailComponent implements OnInit {
   }
 
   addAbilities(abilities: Ability[]): void {
-    this.valiant!.abilities.push(...abilities);
+    abilities.map(x=> x.trait ? this.valiant!.traits.push(x) : this.valiant!.abilities.push(x))
     this.dataService.updateValiant(this.valiant!);
   }
   removeAbility(ability: Ability): void {
-    this.valiant!.abilities = this.valiant!.abilities.filter(x=> x!== ability);
+    if(ability.trait){
+      this.valiant!.traits = this.valiant!.traits.filter(x=> x!== ability);
+    }
+    else{
+      this.valiant!.abilities = this.valiant!.abilities.filter(x=> x!== ability);
+    }
     this.dataService.updateValiant(this.valiant!);
   }
 
@@ -70,6 +75,12 @@ export class ValiantDetailComponent implements OnInit {
   dropItem(event: any ) {
     moveItemInArray(this.valiant!.inventory, event.previousIndex, event.currentIndex);
   }
+  dropAbility(event: any ) {
+    moveItemInArray(this.valiant!.abilities, event.previousIndex, event.currentIndex);
+  }
+  dropTrait(event: any ) {
+    moveItemInArray(this.valiant!.traits, event.previousIndex, event.currentIndex)
+  } 
   inventoryWeight(): number{
     if(this.valiant === undefined){
       return 0;

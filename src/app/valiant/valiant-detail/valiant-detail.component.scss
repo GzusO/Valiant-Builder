@@ -79,6 +79,34 @@
 .info {
     flex: 6;
 }
+
+.abilityTrait {
+    display: flex;
+    flex-flow: row;
+}
+
+.ability-list {
+    max-width: 100%;
+    margin: 4px;
+    min-height: 60px;
+    display: block;
+    border-radius: 4px;
+    overflow: hidden;
+    flex: 1 1 auto;
+  }
+
+.ability-handle {
+    color: #ccc;
+    cursor: move;
+    width: 24px;
+    height: 24px;
+    display: inline;
+}
+
+.listItem {
+    margin: 4px;
+}
+
 .inventory {
     flex: 5;
     padding: 0px 4px 4px 4px;
@@ -110,32 +138,8 @@
 
  /* Flexbox stuff */
 .card {
-    flex: 1 0 500px;
+    flex: 1 1 auto;
     display: flex;
-}
-
-@media screen and (min-width: 300px) {
-    .card {
-       max-width: 100%;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .card {
-       max-width: calc(50% -  1em);
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .card {
-        max-width: calc(33% - 1em);
-    }
-}
-
-@media screen and (min-width: 1920px) {
-    .card {
-        max-width: calc(25% - 1em);
-    }
 }
 
 

@@ -9,6 +9,7 @@ export class Valiant {
     //features: Feature[];
     characteristics: CharacteristicScore[];
     abilities: Ability[];
+    traits: Ability[];
     tier: number;
 
     //Inventory
@@ -45,6 +46,7 @@ export class Valiant {
         this.name = "";
         this.lineages = [];
         this.characteristics = [];
+        this.traits = [];
         this.abilities = [];
         this.tier = 0;
         this.id = -1;
