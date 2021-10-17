@@ -1,18 +1,17 @@
-<h1 mat-dialog-title>Ability Select
+<h1 mat-dialog-title>{{trait ? "Trait" : "Ability"}} Select
     <input matInput [(ngModel)]="filter" (ngModelChange)="filterItem($event)" placeholder="Search by Name">
 </h1>
 <mat-dialog-content>
-    <mat-selection-list [(ngModel)]="selection">
-        <mat-list-option class="choice"  *ngFor="let ability of displayAbilities" [value]="ability">
-                <div mat-line class="ability-name">
-                    {{ability.name}} (<span *ngFor="let prime of ability.primaryTags" class="tag">{{prime}}, </span>)
-                </div>
-                <div mat-line *ngIf="ability.secondaryTags.length !== 0" class="secondaryTags">
-                    <span class="tag" *ngFor="let prime of ability.secondaryTags">{{prime}}, </span>
-                </div>
-                <p mat-line *ngIf="ability.description.length !==0">{{ability.description}}</p>
-        </mat-list-option>
-    </mat-selection-list>
+    <div class="flex">
+        <mat-selection-list class="rowSelect" [(ngModel)]="selection">
+            <mat-list-option class="choice"  *ngFor="let ability of displayAbilities" [value]="ability">
+                {{ability.name}}
+            </mat-list-option>
+        </mat-selection-list>
+        <div class="rowDescription">
+            <app-ability-content *ngFor="let ability of selection" [ability]=ability [big]=true></app-ability-content>
+        </div> 
+    </div>
 </mat-dialog-content>
 <mat-dialog-actions>
     <button mat-button (click)="onCancelClick()">Cancel</button>

@@ -6,6 +6,7 @@ import { DataService } from 'src/app/data.service';
 @Component({
   selector: 'app-ability-select-dialog',
   templateUrl: './ability-select-dialog.component.html',
+  styleUrls: ['./ability-select-dialog.component.scss']
 })
 export class AbilitySelectDialogComponent implements OnInit {
   selection: Ability[] =[];
@@ -13,16 +14,28 @@ export class AbilitySelectDialogComponent implements OnInit {
   displayAbilities: Ability[] = [];
   filter: string = "";
 
+  trait: boolean = false;
+
   constructor(public dialogRef: MatDialogRef<AbilitySelectDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: Ability[], private dataService: DataService) { }
+    @Inject(MAT_DIALOG_DATA) public data: any, private dataService: DataService) { }
 
   ngOnInit(): void {
-    this.getAbilities();
+    this.trait = this.data.trait;
+    if(this.data.trait) {
+      this.getTraits();
+    }
+    else {
+      this.getAbilities();
+    }
+   
     this.displayAbilities = this.abilities;
   }
 
   getAbilities(): void {
     this.dataService.getAbilities().subscribe(abil => (this.abilities= abil));
+  }
+  getTraits(): void{
+    this.dataService.getTraits().subscribe(abil => (this.abilities=abil));
   }
   onCancelClick(): void{
     this.dialogRef.close();

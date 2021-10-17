@@ -14,6 +14,7 @@ export class AbilityContentComponent implements OnInit {
 
   @Input() ability?: Ability
   @Input() includeTitle: boolean =true;
+  @Input() big: boolean = false;
   constructor(private dataService: DataService,public dialog: MatDialog) { }
 
   ngOnInit(): void {

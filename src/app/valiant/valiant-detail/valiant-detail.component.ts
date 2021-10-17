@@ -49,8 +49,8 @@ export class ValiantDetailComponent implements OnInit {
   }
 
   
-  openAddAbilities(): void{
-    const dialogRef = this.dialog.open(AbilitySelectDialogComponent);
+  openAddAbilities(trait: boolean): void{
+    const dialogRef = this.dialog.open(AbilitySelectDialogComponent,{width:'100vw',height:'100vh',data:{trait:trait}});
 
     dialogRef.afterClosed().subscribe(data => this.addAbilities(data));
   }

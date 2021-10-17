@@ -44,7 +44,7 @@ export class DataService {
 
 
   getAbilities(): Observable<Ability[]>{
-    return of(this.abilities);
+    return of(this.abilities.filter(x => !x.trait));
   }
 
   getTraits(): Observable<Ability[]>{

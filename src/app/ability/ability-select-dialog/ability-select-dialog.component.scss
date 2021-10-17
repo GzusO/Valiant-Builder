@@ -1,0 +1,17 @@
+.mat-dialog-content {
+    height:85vh;
+    max-height: 100vh;
+}
+.flex {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 100%;
+}
+.rowSelect{
+    flex: 0 0 500px;
+    overflow: auto;
+}
+.rowDescription{
+    flex: 1 1 auto;
+    
+}

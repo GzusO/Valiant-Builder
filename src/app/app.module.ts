@@ -58,6 +58,7 @@ import { ItemEditDialogComponent } from './item/item-edit-dialog/item-edit-dialo
 import { TrackerComponent } from './tracker/tracker/tracker.component';
 import { DevComponent } from './dev/dev.component';
 import { FillPipe } from './Pipes/fill.pipe';
+import { AbilityListItemComponent } from './ability/ability-list-item/ability-list-item.component';
 
 
 @NgModule({
@@ -90,7 +91,8 @@ import { FillPipe } from './Pipes/fill.pipe';
     ItemEditDialogComponent,
     TrackerComponent,
     DevComponent,
-    FillPipe
+    FillPipe,
+    AbilityListItemComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,6 @@
-<div *ngIf=ability>
-    <span class="ability-name" *ngIf=includeTitle>{{ability.name}}</span>
-    <div *ngIf="ability.primaryTags.length !== 0" class="secondaryTags">
+<div [ngClass]="{'big':big}" *ngIf=ability>
+    <h2 class="ability-name" *ngIf=includeTitle>{{ability.name}}</h2>
+    <div *ngIf="ability.primaryTags.length !== 0" class="primaryTags">
         <span class="tag" *ngFor="let prime of ability.primaryTags" (click)="openTagDialog(prime)">{{prime}}, </span>
     </div>
     <div *ngIf="ability.secondaryTags.length !== 0" class="secondaryTags">

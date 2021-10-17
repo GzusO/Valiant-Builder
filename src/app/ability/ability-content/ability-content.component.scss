@@ -1,27 +1,44 @@
+h2 {
+    margin-bottom: 0px;
+}
 .ability-name{
-    font-size: small;
+    font-size:medium;
     font-weight: bold;
 }
 .secondaryTags{
-    font-size: small;
+    font-size: medium;
     font-style: italic;
     margin-bottom: 0px;
 }
-.tertiaryTags{
-    font-size: small;
+.primaryTags{
+    font-size: medium;
     font-style: italic;
     margin-bottom: 0px;
 }
-h2, p{
-    padding: 8px 8px 8px 8px;
-}
+
 p {
     padding: 2px 2px 2px 2px;
     margin-bottom: 0px;
+    font-size: medium;
 }
 .tag{
     cursor: help;
 }
 .flavorText{
     font-style: italic;
+}
+
+.big .ability-name{
+    font-size: 24pt;
+}
+.big .primaryTags{
+    font-size: large;
+    font-weight: lighter;
+}
+.big .secondaryTags{
+    font-size: large;
+    font-weight: lighter;
+}
+.big p {
+    font-size: large;
 }

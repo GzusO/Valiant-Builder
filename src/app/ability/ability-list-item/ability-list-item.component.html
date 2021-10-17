@@ -1,0 +1,10 @@
+<div *ngIf=ability>
+    <div matLine class="ability-name">{{ability.name}}</div>
+    <div matLine *ngIf="ability.primaryTags.length !== 0" class="secondaryTags">
+        <span class="tag" *ngFor="let prime of ability.primaryTags">{{prime}}, </span>
+    </div>
+    <div matLine *ngIf="ability.secondaryTags.length !== 0" class="secondaryTags">
+        <span class="tag" *ngFor="let prime of ability.secondaryTags">{{prime}}, </span>
+    </div>
+    <p matLine *ngIf="ability.description.length !==0">{{ability.description}}</p>
+</div>

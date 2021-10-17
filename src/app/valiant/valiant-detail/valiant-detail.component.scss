@@ -91,9 +91,19 @@
     min-height: 60px;
     display: block;
     border-radius: 4px;
-    overflow: hidden;
-    flex: 1 1 auto;
+    flex: 1 0 0;
   }
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.gridHeading {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
 
 .ability-handle {
     color: #ccc;
