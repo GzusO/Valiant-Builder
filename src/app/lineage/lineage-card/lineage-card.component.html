@@ -14,16 +14,11 @@
           <p>
             {{lineage.description}}
           </p>
-          <h3>Persistent Feature</h3>
-          <app-ability-content *ngFor="let ability of persistent(lineage.abilities)" [ability]=ability></app-ability-content>  
+          <h3>Utility Effects</h3>
+          <app-ability-content *ngFor="let ability of utility(lineage.abilities)" [ability]=ability></app-ability-content>  
         </mat-tab>
-        <mat-tab label="Combat">
-          <h3>Combat Features</h3>
+        <mat-tab label="Abilities & Traits">
           <app-ability-content *ngFor="let ability of primary(lineage.abilities)" [ability]=ability></app-ability-content>   
-        </mat-tab>
-        <mat-tab label="Utility">
-          <h3>Utility Features</h3>
-          <app-ability-content *ngFor="let ability of secondary(lineage.abilities)" [ability]=ability></app-ability-content>
         </mat-tab>
       </mat-tab-group>
     </mat-card-content>

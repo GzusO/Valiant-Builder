@@ -92,6 +92,10 @@
                 <mat-label>Description</mat-label>
                 <textarea matInput [(ngModel)]="importAbility.description" name="description"></textarea>
             </mat-form-field>
+            <mat-form-field appearance="fill" class="full">
+              <mat-label>Flavor Text</mat-label>
+              <textarea matInput [(ngModel)]="importAbility.flavorText" name="flavor"></textarea>
+          </mat-form-field>
             <button mat-button (click)="addAbility()">Submit</button>
           </form>
           <div class="full">

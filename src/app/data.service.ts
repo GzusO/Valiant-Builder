@@ -108,7 +108,7 @@ export class DataService {
     
   }
   mapLineages(): void{
-    
+    this.lineages.map(x=> x.abilities =(this.abilities.filter(y=> y.source.includes(x.name))))
   }
   mapArmor(): void {
     

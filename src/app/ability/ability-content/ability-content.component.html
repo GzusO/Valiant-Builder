@@ -1,10 +1,10 @@
 <div [ngClass]="{'big':big}" *ngIf=ability>
     <h2 class="ability-name" *ngIf=includeTitle>{{ability.name}}</h2>
     <div *ngIf="ability.primaryTags.length !== 0" class="primaryTags">
-        <span class="tag" *ngFor="let prime of ability.primaryTags" (click)="openTagDialog(prime)">{{prime}}, </span>
+        <span class="tag" *ngFor="let prime of ability.primaryTags" tag>{{prime}}, </span>
     </div>
     <div *ngIf="ability.secondaryTags.length !== 0" class="secondaryTags">
-        <span class="tag" *ngFor="let prime of ability.secondaryTags" (click)="openTagDialog(prime)">{{prime}}, </span>
+        <span class="tag" *ngFor="let prime of ability.secondaryTags" tag>{{prime}}, </span>
     </div>
     <p *ngIf="ability.description.length !==0">{{ability.description}}</p>
     <p class="flavorText">{{ability.flavorText}}</p>

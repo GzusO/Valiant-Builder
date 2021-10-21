@@ -15,13 +15,11 @@ export class LineageCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  persistent(data: Ability[]): Ability[]{
-    return data.filter(x => x.source.includes('Persistent'))
+  utility(data: Ability[]): Ability[]{
+    return data.filter(x => x.source.includes('Utility'))
   }
   primary(data: Ability[]): Ability[]{
-    return data.filter(x=> x.source.includes('Combat'))
+    return data.filter(x => !x.source.includes('Utility'))
   }
-  secondary(data: Ability[]): Ability[]{
-    return data.filter(x=> x.source.includes('Utility'))
-  }
+
 }

@@ -22,13 +22,8 @@ export class LineageListComponent implements OnInit {
     this.dataService.getLineages().subscribe(lineages => this.lineages = lineages)
   }
 
-  persistent(data: Ability[]): Ability[]{
-    return data.filter(x => x.source.includes('Persistent'))
+  utility(data: Ability[]): Ability[]{
+    return data.filter(x => x.source.includes('Utility'))
   }
-  primary(data: Ability[]): Ability[]{
-    return data.filter(x=> x.source.includes('Combat'))
-  }
-  secondary(data: Ability[]): Ability[]{
-    return data.filter(x=> x.source.includes('Utility'))
-  }
+
 }

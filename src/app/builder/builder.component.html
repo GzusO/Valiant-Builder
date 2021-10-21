@@ -33,7 +33,7 @@
             </div>
             
             <div class="PrimaryFeatures">
-                <h3>Combat Features Pick 2, must be from different lineages if 2 lineages are selected</h3>
+                <h3>Abilities & Traits Pick 2, must be from different lineages if 2 lineages are selected</h3>
                 <mat-selection-list  #primaryFeatureList [(ngModel)]="valiantLineagePrimaryFeatures">
                     <mat-list-option class="choice" #primeFeature *ngFor="let primaryFeature of primary(lineageFeatures) | filterByType:valiantLineages" [disabled]="primaryFeatureList.selectedOptions.selected.length > 1 && !primeFeature.selected" [value]="primaryFeature">
                         <h4 mat-line>{{primaryFeature.name}} - {{primaryFeature.source.join(", ")}}</h4>
@@ -43,13 +43,8 @@
                 </mat-selection-list>
             </div>
             <div class="SecondaryFeatures">
-                <h3>Utility Features Pick 2, must be from different lineages if 2 lineages are selected</h3>
-                <mat-selection-list  #secondaryFeatureList [(ngModel)]="valiantLineageSecondaryFeatures">
-                    <mat-list-option class="choice" #secondFeature *ngFor="let secondaryFeature of secondary(lineageFeatures) | filterByType:valiantLineages" [disabled]="secondaryFeatureList.selectedOptions.selected.length > 1 && !secondFeature.selected" [value]="secondaryFeature">
-                        <h4 mat-line>{{secondaryFeature.name}} - {{secondaryFeature.source.join(", ")}}</h4>
-                        <p class="description" mat-line>{{secondaryFeature.description}}</p>
-                    </mat-list-option>
-                </mat-selection-list>
+                <h3>Utilities Effects</h3>
+                <app-ability-content *ngFor="let effect of secondary(lineageFeatures) | filterByType:valiantLineages" [ability]="effect"></app-ability-content>
             </div>
         </div>
         

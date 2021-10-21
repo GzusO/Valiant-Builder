@@ -59,6 +59,7 @@ import { TrackerComponent } from './tracker/tracker/tracker.component';
 import { DevComponent } from './dev/dev.component';
 import { FillPipe } from './Pipes/fill.pipe';
 import { AbilityListItemComponent } from './ability/ability-list-item/ability-list-item.component';
+import { TagDirective } from './tag.directive';
 
 
 @NgModule({
@@ -92,7 +93,8 @@ import { AbilityListItemComponent } from './ability/ability-list-item/ability-li
     TrackerComponent,
     DevComponent,
     FillPipe,
-    AbilityListItemComponent
+    AbilityListItemComponent,
+    TagDirective
   ],
   imports: [
     BrowserModule,

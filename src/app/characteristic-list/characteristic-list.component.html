@@ -1,7 +1,25 @@
 <h2>Characteristics</h2>
-<mat-tab-group style="width: 50%;">
+<mat-tab-group>
   <mat-tab *ngFor="let characteristic of characteristics" label="{{characteristic.name}}">
     <p>{{characteristic.description}}</p>
-    <app-ability-content *ngFor="let ability of characteristic.abilities" [ability]=ability></app-ability-content>
+
+    <table mat-table [dataSource]="characteristic.abilities" class="mat-elevation-z8">
+
+      <ng-container matColumnDef="tier">
+          <th mat-header-cell *matHeaderCellDef> Score </th>
+          <td mat-cell *matCellDef="let ability"> {{ability.tier}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="abilityTrait">
+          <th mat-header-cell *matHeaderCellDef >Abilities & Traits </th>
+          <td mat-cell *matCellDef="let ability"><app-ability-content [ability]=ability></app-ability-content></td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; 
+                              let even = even
+                              columns: displayedColumns;"
+                              [ngClass]="{gray: even}"></tr>
+  </table>
   </mat-tab>
 </mat-tab-group>

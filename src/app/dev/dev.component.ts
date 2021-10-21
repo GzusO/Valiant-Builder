@@ -11,7 +11,7 @@ import { Ability } from '../Ability';
 export class DevComponent implements OnInit {
   
   EmptyAbility(): Ability {
-    let x = {name:'',source:[] as any[],primaryTags:[],secondaryTags:[],description:'',tier:this.defaultAbilityTier ?? -1,trait:false,flavorText:''};
+    let x = {name:'',source:[] as any[],primaryTags:[],secondaryTags:[],description:'',tier:this.defaultAbilityTier ?? -1,trait:this.defaultTrait ?? false,flavorText:''};
     if(this.defaultAbilityTypes !== undefined)
       x.source.push(...this.defaultAbilityTypes)
     return x;
@@ -29,6 +29,7 @@ export class DevComponent implements OnInit {
 
   defaultAbilityTier?: number;
   defaultAbilityTypes: string[] = [];
+  defaultTrait: boolean = true;
   constructor() { }
 
   ngOnInit(): void {
@@ -57,26 +58,26 @@ export class DevComponent implements OnInit {
     return s.replace("'","\\'");
   }
   AblToTS(abl: Ability): string {
-    return `{name:'${this.escapeQuote(abl.name)}',source:[${this.formatStringArray(abl.source)}],primaryTags:[${this.formatStringArray(abl.primaryTags)}],secondaryTags:[${this.formatStringArray(abl.secondaryTags)}],description:'${this.escapeQuote(abl.description)}',tier:${abl.tier},trait:false'},`;
+    return `{name:'${this.escapeQuote(abl.name)}',source:[${this.formatStringArray(abl.source)}],primaryTags:[${this.formatStringArray(abl.primaryTags)}],secondaryTags:[${this.formatStringArray(abl.secondaryTags)}],description:'${this.escapeQuote(abl.description)}',tier:${abl.tier},trait:${abl.trait},flavorText:'${this.escapeQuote(abl.flavorText)}'},`;
   }
  
   ParseAbilityImport($event:any): void {
     let data = this.importAbilityText;
     let lines = data.split("\n");
 
-    let name =lines[0].split('(')[0];
+    let name =lines[0];
     this.importAbility.name = name.trim();
 
-    let line = lines[0].split('(')[1];
-    line = line.replace(')','');
-    let tags = line.split(',');
-    let tagsFormatted: string[] =[];
+    let pLine =  lines[1];
+    this.importAbility.primaryTags= pLine.split(',');
 
-    this.importAbility.primaryTags= tagsFormatted;
-
-    let sLine =  lines[1];
+    let sLine =  lines[2];
     this.importAbility.secondaryTags = sLine.split(',');
 
+    if(this.importAbility.secondaryTags[0] === "" && this.importAbility.primaryTags[0] === "")
+      this.importAbility.trait = true;
+    else
+      this.importAbility.trait = false;
 
     let dLine = lines.slice(3).join(' ');
     this.importAbility.description= dLine.trim();

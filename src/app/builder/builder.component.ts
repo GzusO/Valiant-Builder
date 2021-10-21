@@ -17,12 +17,11 @@ export class BuilderComponent implements OnInit {
     characteristicPoints: number = 2;
     valiantCharacteristics: CharacteristicScore[] =[];
     valiantLineages: Lineage[] = [];
-    valiantLineagePersistentFeatures: Ability[] = [];
+    valiantLineageUtilityEffects: Ability[] = [];
     valiantLineagePrimaryFeatures: Ability[] = [];
-    valiantLineageSecondaryFeatures: Ability[] = [];
     valiantClassPrimaryFeatures: Ability[] =[];
     valiantClassSecondaryFeatures: Ability[] = [];
-    valiantCharacteristicFeautres: Ability[] =[];
+    valiantCharacteristicAbilities: Ability[] =[];
     valiantName: string= "";
     valiantGlobalAbilities: Ability[] = [];
     
@@ -63,7 +62,7 @@ export class BuilderComponent implements OnInit {
   }
 
   primary(feats: Ability[]): Ability[] {
-    const result =feats.filter(x=> x.source.includes("Combat"));
+    const result =feats.filter(x=> !x.source.includes("Utility"));
     return result;
   }
   secondary(feats: Ability[]): Ability[] {
@@ -100,24 +99,48 @@ export class BuilderComponent implements OnInit {
 
   updateCharacteristicFeatures(name: string, tier: number): void {
     //Remove All Features of the Charactertic
-    this.valiantCharacteristicFeautres = this.valiantCharacteristicFeautres.filter(x => !x.source.includes(name));
+    this.valiantCharacteristicAbilities = this.valiantCharacteristicAbilities.filter(x => !x.source.includes(name));
     let char: Characteristic | undefined = this.characteristics.find(x=> x.name === name);
     if (char === undefined)
       return;
     let feats: Ability[] = char.abilities.filter(feat => feat.tier <= tier);
-    this.valiantCharacteristicFeautres.push(...feats); 
+    this.valiantCharacteristicAbilities.push(...feats); 
   }
   lineageSelected($event: MatSelectionListChange): void {
-    this.valiantLineagePersistentFeatures = [];
-    $event.options[0].selectionList._value?.forEach(x=> this.valiantLineagePersistentFeatures.push(...(x as Object as Lineage).abilities.filter(y=> y.source.includes("Persistent"))));
+    this.valiantLineageUtilityEffects = [];
+    $event.options[0].selectionList._value?.forEach(x=> this.valiantLineageUtilityEffects.push(...(x as Object as Lineage).abilities.filter(y=> y.source.includes("Utility"))));
   }
   save(): void {
     const valiant = new Valiant();
     valiant.name = this.valiantName;
     valiant.lineages = this.valiantLineages;
     valiant.characteristics = this.valiantCharacteristics;
-    valiant.abilities.push(...this.valiantGlobalAbilities);
-    
+
+    //Global Abilities and Traits
+    valiant.abilities.push(...this.valiantGlobalAbilities.filter(x=> !x.trait));
+    valiant.traits.push(...this.valiantGlobalAbilities.filter(x=> x.trait));
+
+    //Lineage Abilities, Traits, and Utility Effects
+    this.valiantLineagePrimaryFeatures.forEach(function(element){
+      if(element.trait){
+        valiant.traits.push(element);
+      }
+      else{
+        valiant.abilities.push(element);
+      }
+    });
+    valiant.traits.push(...this.valiantLineageUtilityEffects)
+
+    //Characteristic Abiltiies and Traits
+    this.valiantCharacteristicAbilities.forEach(function(element){
+      if(element.trait){
+        valiant.traits.push(element);
+      }
+      else{
+        valiant.abilities.push(element);
+      }
+    });
+
     this.dataService.addValiant(valiant);
 
     this.snackBar.open("Valiant Saved",undefined,{duration:3000});

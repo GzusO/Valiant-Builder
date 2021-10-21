@@ -9,6 +9,8 @@ import { DataService } from '../data.service';
 })
 export class CharacteristicListComponent implements OnInit {
   characteristics: Characteristic[] = [];
+  displayedColumns: string[] = ['tier','abilityTrait'];
+
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
