@@ -1,21 +1,6 @@
 <div *ngIf="class">
     <p>{{class.description}}</p>
-    <div class="featureGroups">
-        <div class="featureGroup" *ngIf="hasGlobal(class.abilities)">
-            <h3>Global Features</h3>
-            <app-ability-card *ngFor="let ability of global(class.abilities)" [ability]=ability></app-ability-card>
-        </div>
-        <div class="featureGroup">
-            <h3>Combat Features </h3>
-            <app-ability-card *ngFor="let ability of primary(class.abilities)" [ability]=ability></app-ability-card>
-        </div>
-        <div class="featureGroup">
-            <h3>Utility Features </h3>
-            <app-ability-card *ngFor="let ability of secondary(class.abilities)" [ability]=ability></app-ability-card>
-        </div>
-        <div class="featureGroup" *ngIf="class.uniqueFeatureName !== '' " >
-            <h3>{{class.uniqueFeatureName}}</h3>
-            <app-ability-card *ngFor="let ability of class.abilities" [ability]=ability></app-ability-card>
-        </div>
+    <div class="cards">
+       <app-archetype-card *ngFor="let archetype of archetypes" [archetype]="archetype"></app-archetype-card>
     </div>
 </div>

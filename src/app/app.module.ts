@@ -60,6 +60,7 @@ import { DevComponent } from './dev/dev.component';
 import { FillPipe } from './Pipes/fill.pipe';
 import { AbilityListItemComponent } from './ability/ability-list-item/ability-list-item.component';
 import { TagDirective } from './tag.directive';
+import { ArchetypeCardComponent } from './class/archetype-card/archetype-card.component';
 
 
 @NgModule({
@@ -94,7 +95,8 @@ import { TagDirective } from './tag.directive';
     DevComponent,
     FillPipe,
     AbilityListItemComponent,
-    TagDirective
+    TagDirective,
+    ArchetypeCardComponent
   ],
   imports: [
     BrowserModule,

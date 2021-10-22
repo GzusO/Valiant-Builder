@@ -1,0 +1,54 @@
+.card {
+    display: grid;
+    grid-template-rows: max-content 500px 1fr;
+}
+
+.name{
+    font-size: larger;
+    font-weight:  bold;
+}
+
+.trait-name{
+    font-size: small;
+    font-weight: bold;
+}
+.ability-name{
+    font-size: small;
+    font-weight: bold;
+}
+.secondaryTags{
+    font-size: small;
+    font-style: italic;
+}
+.tertiaryTags{
+    font-size: small;
+    font-style: italic;
+}
+.feature{
+    font-size: medium;
+    font-weight: bold;
+}
+
+//Shrink Tab Header
+::ng-deep.mat-tab-label, ::ng-deep.mat-tab-label-active{
+    min-width: 0!important;
+    padding: 3px!important;
+    margin: 3px!important;
+}
+
+//Tab Header locked to bottom
+.mat-tab-group{
+height: 92%;
+position: absolute;
+}
+//Rest of tab content fills space vertically
+::ng-deep.mat-tab-body-wrapper{
+flex: 1;
+}
+
+h2, p{
+    padding: 8px 8px 8px 8px;
+}
+p {
+    padding: 4px 4px 4px 4px;
+}

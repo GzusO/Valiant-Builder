@@ -14,7 +14,6 @@
           <p>
             {{lineage.description}}
           </p>
-          <h3>Utility Effects</h3>
           <app-ability-content *ngFor="let ability of utility(lineage.abilities)" [ability]=ability></app-ability-content>  
         </mat-tab>
         <mat-tab label="Abilities & Traits">

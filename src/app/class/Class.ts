@@ -5,4 +5,12 @@ export interface Class {
     description: string;
     uniqueFeatureName: string;
     abilities: Ability[];
+    archetypes: Archetype[];
+}
+
+export interface Archetype {
+    name: string;
+    description: string;
+    class: string;
+    abilities: Ability[];
 }

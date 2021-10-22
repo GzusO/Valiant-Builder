@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Class } from "./class/Class";
+import { Archetype, Class } from "./class/Class";
 import { Characteristic } from "./Characteristic";
 import { Lineage } from "./lineage/Lineage";
 import { Ability } from "./Ability";
@@ -7,7 +7,7 @@ import { abilityData } from 'data/abilities';
 import { lineageData } from 'data/lineages';
 import { Observable, of } from 'rxjs';
 import { characteristicData } from 'data/characteristics';
-import { classData } from 'data/classes';
+import { archetypeData, classData } from 'data/classes';
 import { Tag, tagData } from 'data/tags';
 import { Item, armorData,weaponData,gearData } from 'data/items';
 
@@ -28,6 +28,7 @@ export class DataService {
   weapons = weaponData;
   gear = gearData;
   enchantments = enchantmentData;
+  archetypes = archetypeData;
   valiants: Valiant[]= [];
 
   getLineages(): Observable<Lineage[]>{
@@ -41,7 +42,6 @@ export class DataService {
   getClasses(): Observable<Class[]>{
     return of (this.classes);
   }
-
 
   getAbilities(): Observable<Ability[]>{
     return of(this.abilities.filter(x => !x.trait));
@@ -85,8 +85,12 @@ export class DataService {
   getGlobalAbilities(): Observable<Ability[]> {
     return of(this.abilities.filter(x=> x.source.includes("Global")));
   }
+  getArchetypesByClassName(name: string): Observable<Archetype[]> {
+    return of(this.archetypes.filter(x=>x.class === name));
+  }
 
   constructor() {
+    
     this.mapCharacteristics();
     this.mapProfessions();
     this.mapClasses();
@@ -95,7 +99,11 @@ export class DataService {
     this.mapWeapons();
     this.mapGear();
     this.mapEnchantments();
+    this.mapArchetypes();
     this.loadValiants();
+  }
+  mapArchetypes(): void {
+    this.archetypes.map(x=>x.abilities = (this.abilities.filter(y=> y.source.includes(x.name))))
   }
 
   mapCharacteristics(): void{
@@ -105,7 +113,7 @@ export class DataService {
     
   }
   mapClasses(): void{
-    
+    this.classes.map(x=> x.abilities = (this.abilities.filter(y=> y.source.includes(x.name))))
   }
   mapLineages(): void{
     this.lineages.map(x=> x.abilities =(this.abilities.filter(y=> y.source.includes(x.name))))

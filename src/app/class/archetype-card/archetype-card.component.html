@@ -1,0 +1,24 @@
+<mat-card class="card" *ngIf="archetype">
+    <mat-card-header>
+        <mat-card-title>
+        <span class="name">{{archetype.name}}</span>
+        </mat-card-title>
+        <mat-card-subtitle>
+        <mat-divider></mat-divider>
+        </mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+        <mat-tab-group headerPosition="below" dynamicHeight="true">
+        <mat-tab label="Info">
+            <p>
+            {{archetype.description}}
+            </p>
+            <app-ability-content *ngFor="let ability of utility(archetype.abilities)" [ability]=ability></app-ability-content>  
+        </mat-tab>
+        <mat-tab label="Abilities & Traits">
+            <app-ability-content *ngFor="let ability of primary(archetype.abilities)" [ability]=ability></app-ability-content>   
+        </mat-tab>
+        </mat-tab-group>
+    </mat-card-content>
+</mat-card>
