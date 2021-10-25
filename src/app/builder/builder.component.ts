@@ -6,6 +6,8 @@ import { MatSelectionListChange } from '@angular/material/list';
 import { CharacteristicScore, Valiant } from 'data/valiant';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Ability } from '../Ability';
+import { Archetype } from '../class/Class';
+import { ArchetypeCardComponent } from '../class/archetype-card/archetype-card.component';
 
 @Component({
   selector: 'app-builder',
@@ -24,24 +26,27 @@ export class BuilderComponent implements OnInit {
     valiantCharacteristicAbilities: Ability[] =[];
     valiantName: string= "";
     valiantGlobalAbilities: Ability[] = [];
+    valiantAspirantArchetype: Archetype[] = [];
     
 
     lineages: Lineage[] = [];
     lineageFeatures: Ability[] =[];
-    classFeatures: Ability[] = [];
+    aspirantArchetypes: Archetype[] = [];
 
   constructor(private dataService: DataService,private snackBar: MatSnackBar) {
-      
    }
 
   ngOnInit(): void {
     this.getCharacteristics();
     this.getLineages();
     this.getLineageAbilities();
-    this.getClassAbilities();
     this.getGlobalAbilities();
+    this.getAspirantArchetypes();
     this.characteristics.forEach(char =>this.valiantCharacteristics.push({name:char.name,score:1}));
     this.characteristics.forEach(x=> this.updateCharacteristicFeatures(x.name,1));
+  }
+  getAspirantArchetypes() {
+    this.dataService.getArchetypesByClassName('Aspirant').subscribe(archetypes => this.aspirantArchetypes = archetypes)
   }
 
   getCharacteristics(): void {
@@ -54,9 +59,6 @@ export class BuilderComponent implements OnInit {
     this.dataService.getAbilitiesBySource('Lineage').subscribe(feats => this.lineageFeatures=feats);
   }
 
-  getClassAbilities(): void {
-    this.dataService.getAbilitiesBySource('Aspirant').subscribe(feats => this.classFeatures= feats);
-  }
   getGlobalAbilities(): void {
     this.dataService.getGlobalAbilities().subscribe(abl => this.valiantGlobalAbilities = abl);
   }
@@ -115,10 +117,7 @@ export class BuilderComponent implements OnInit {
     valiant.name = this.valiantName;
     valiant.lineages = this.valiantLineages;
     valiant.characteristics = this.valiantCharacteristics;
-
-    //Global Abilities and Traits
-    valiant.abilities.push(...this.valiantGlobalAbilities.filter(x=> !x.trait));
-    valiant.traits.push(...this.valiantGlobalAbilities.filter(x=> x.trait));
+    valiant.archetypes.push(...this.valiantAspirantArchetype);
 
     //Lineage Abilities, Traits, and Utility Effects
     this.valiantLineagePrimaryFeatures.forEach(function(element){
@@ -140,6 +139,21 @@ export class BuilderComponent implements OnInit {
         valiant.abilities.push(element);
       }
     });
+
+    //Archetype Abilities and Traits
+    this.valiantAspirantArchetype[0].abilities.forEach(function(element){
+      if(element.trait){
+        valiant.traits.push(element);
+      }
+      else{
+        valiant.abilities.push(element);
+      }
+    });
+
+    //Global Abilities and Traits
+    valiant.abilities.push(...this.valiantGlobalAbilities.filter(x=> !x.trait));
+    valiant.traits.push(...this.valiantGlobalAbilities.filter(x=> x.trait));
+
 
     this.dataService.addValiant(valiant);
 

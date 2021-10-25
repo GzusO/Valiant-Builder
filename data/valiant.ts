@@ -1,4 +1,5 @@
 import { Ability } from "src/app/Ability";
+import { Archetype } from "src/app/class/Class";
 import { Lineage } from "src/app/lineage/Lineage";
 import { Item } from "./items";
 
@@ -6,11 +7,11 @@ export class Valiant {
     id: number;
     name: string;
     lineages: Lineage[];
-    //features: Feature[];
     characteristics: CharacteristicScore[];
     abilities: Ability[];
     traits: Ability[];
     tier: number;
+    archetypes: Archetype[];
 
     //Inventory
     inventory: Item[];
@@ -51,6 +52,7 @@ export class Valiant {
         this.tier = 0;
         this.id = -1;
         this.inventory = [];
+        this.archetypes = [];
     }
 }
 

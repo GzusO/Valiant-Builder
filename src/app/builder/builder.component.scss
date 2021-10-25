@@ -62,6 +62,9 @@ table, th, td, tr {
 .lineages, .professions{
     flex: 1 0 auto;
 }
+.archetype {
+    flex: 1 0 auto;
+}
 .professionInfo {
     flex: 2 0;
 }
@@ -73,11 +76,21 @@ table, th, td, tr {
     flex: 4 0 ;
 }
 
-.lineageSelection, .professionSelection, .classSelection {
+.archetypeCard {
+    flex: 4 1;
+}
+
+.lineageSelection, .professionSelection {
     justify-content: center;
     display: flex;
     flex-flow: row;
     gap: 20px;
+}
+
+.classSelection {
+ display: flex;
+ flex-flow: row;
+ gap: 20px;
 }
 
 .description {
