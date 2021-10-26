@@ -43,6 +43,7 @@ export class Valiant {
     appearance: string = "";
     origin: string = "";
     languages: string = "";
+    background: string = "";
     constructor(){
         this.name = "";
         this.lineages = [];

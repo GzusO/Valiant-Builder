@@ -10,6 +10,8 @@ import { ValiantExportDialogComponent } from '../valiant-export-dialog/valiant-e
 import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
 import { Item } from 'data/items';
 import { ItemEditDialogComponent } from 'src/app/item/item-edit-dialog/item-edit-dialog.component';
+import { Archetype } from 'src/app/class/Class';
+import { Lineage } from 'src/app/lineage/Lineage';
 
 @Component({
   selector: 'app-valiant-detail',
@@ -37,6 +39,18 @@ export class ValiantDetailComponent implements OnInit {
   export(): void{
     const dialogRef = this.dialog.open(ValiantExportDialogComponent, {data:this.valiant});
   }
+
+  getLineageString(lineages: Lineage[]): string {
+    var result = "";
+
+    result = lineages.map(lineages => lineages.name).join(', ');
+
+    return result;
+  }
+
+
+
+
   editItem(item: Item): void{
     const dialogRef = this.dialog.open(ItemEditDialogComponent, {panelClass:'fixed-width-dialog',data:item});
   }

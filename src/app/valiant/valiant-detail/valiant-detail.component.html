@@ -1,8 +1,35 @@
 <div *ngIf="valiant" class="container">
     <div class="header row">
         <input matInput [(ngModel)]=valiant.name class="valiantName">
+        
         <button mat-button (click)="save()">Save</button>
         <button mat-button (click)="export()">Export</button>
+    </div>
+    <div class="misc row">
+        <div class="col">
+            <div class="subtitle">
+                Tier
+            </div>
+            <div class="value">
+                {{valiant.tier}}
+            </div>
+        </div>
+        <div class="col">
+            <div class="subtitle">
+                Background
+            </div>
+            <div class="value">
+                <input matInput [(ngModel)]=valiant.background >
+            </div>
+        </div>
+        <div class="col">
+            <div class="subtitle">
+                Lineage
+            </div>
+            <div class="value">
+                {{getLineageString(valiant.lineages)}}
+            </div>
+        </div>
     </div>
     
     <div class="row valiantAttributesStatic">
@@ -44,9 +71,6 @@
     <div class="valiantDetails">
         <mat-tab-group class="info">
             <mat-tab label="Description">
-                <div class="valiantLineages">
-                    Lineage: <span *ngFor="let lineage of valiant.lineages">{{lineage.name}}, </span>
-                </div>
                 <form class="basicInfo">
                     <table cellspacing="0" class="fullWidth">
                         <tr>
@@ -108,10 +132,9 @@
             </mat-tab>
             <mat-tab label="Abilities & Traits">
                 <div class="grid">
-                    <div class="col">
+                    <div class="">
                         <div class="gridHeading">
                             <h2>Ability List</h2>
-                            <button mat-mini-fab color="primary"(click)="openAddAbilities(false)"><mat-icon>add</mat-icon></button>
                         </div>
                         <div class="ability-list" cdkDropList (cdkDropListDropped)="dropAbility($event)">
                             <div class="listItem" *ngFor="let ability of valiant.abilities" cdkDrag>
@@ -126,10 +149,20 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="">
                         <div class="gridHeading">
                             <h2>Trait List</h2>
-                            <button mat-mini-fab color="primary"(click)="openAddAbilities(true)"><mat-icon>add</mat-icon></button>
+                            <mat-menu #TraitMenu="matMenu">
+                                <button mat-menu-item (click)="openAddAbilities(false)">
+                                    Add Ability
+                                </button>
+                                <button mat-menu-item (click)="openAddAbilities(true)">
+                                Add Trait
+                                </button>
+                            </mat-menu>
+                            <button mat-icon-button [matMenuTriggerFor]="TraitMenu" class="">
+                                <mat-icon>more_vert</mat-icon>
+                            </button>
                         </div>
                         <div class="ability-list" cdkDropList (cdkDropListDropped)="dropTrait($event)">
                             <div class="listItem" *ngFor="let ability of valiant.traits" cdkDrag>

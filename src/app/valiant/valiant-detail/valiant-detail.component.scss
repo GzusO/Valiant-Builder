@@ -11,15 +11,37 @@
     flex: 0 0 100%;
     max-width: 100%;
 }
+.col {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+
+}
 .header {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
 }
+.misc {
+    gap: 100px;
+}
+.subtitle {
+    font-size: 16pt;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.75);
+}
+.value {
+    font-size: 16pt;
+    font-weight: 900;
+    line-height: 32px;
+}
+
 .valiantName {
     flex-grow: 2;
-    font-size: xx-large;
-    font-weight: bolder;
+    font-size: 36pt;
+    font-weight: 900;
+    letter-spacing: 5px;
+    line-height: 72px;
 }
 .valiantProfession{
     flex-grow: 1;
