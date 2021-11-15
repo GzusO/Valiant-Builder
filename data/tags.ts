@@ -27,8 +27,8 @@ export const tagData: Tag[] = [
     },
     {
         name: 'Stance',
-        displayFormat: 'Stance [x]',
-        description: 'Abilities that can only be used during the beginning round. Stance abilities require x focus to maintain, and their effects are active until the beginning of the next round. A character may normally only maintain one stance ability. If a character is able to maintain multiple stance abilities, all maintained stance abilities must be unique.'
+        displayFormat: 'Stance',
+        description: 'Abilities that can only be used during the beginning round. Stance ability’s effects are active until the beginning of the next round. A character may normally only maintain one stance ability. If a character is able to maintain multiple stance abilities, all maintained stance abilities must be unique.'
     },
     {
         name: 'Transformation',
@@ -49,7 +49,7 @@ export const tagData: Tag[] = [
     {
         name: 'Attack',
         displayFormat: 'Attack',
-        description: 'An ability that involves a user attacking on or more targets. Attack abilities that target exposed characters result in a direct hit.'
+        description: 'An ability that involves a user attacking one or more targets'
     },
     {
         name: 'Blitz',

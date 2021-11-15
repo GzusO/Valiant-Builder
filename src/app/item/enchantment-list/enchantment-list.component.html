@@ -1,15 +1,9 @@
-<table mat-table #enchantmentSort="matSort" [dataSource]="enchantmentDataSource" matSort class="mat-elevation-z8">
-
+<table mat-table #weaponEnchantmentSort="matSort" [dataSource]="weaponEnchantmentDataSource" matSort class="mat-elevation-z8">
     <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Enchantment </th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Weapon Enchantments </th>
         <td mat-cell *matCellDef="let enchant"> {{enchant.name}} </td>
       </ng-container>
       
-      <ng-container matColumnDef="valid">
-        <th mat-header-cell *matHeaderCellDef >Valid Item Types </th>
-        <td mat-cell *matCellDef="let enchant"> {{enchant.validItems.join(", ")}}</td>
-      </ng-container>
-
       <ng-container matColumnDef="tier">
         <th mat-header-cell *matHeaderCellDef mat-sort-header>Tier </th>
         <td mat-cell *matCellDef="let enchant"> {{enchant.tier}}</td>
@@ -33,19 +27,48 @@
                               columns: displayedColumns;"
                               [ngClass]="{gray: even}"></tr>
 </table>
+
 <br>
-<table mat-table #utilitytEnchantmentSort="matSort" [dataSource]="utilityEnchantmentDataSource" matSort class="mat-elevation-z8">
+
+<table mat-table #armorEnchantmentSort="matSort" [dataSource]="armorEnchantmentDataSource" matSort class="mat-elevation-z8">
 
   <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Enchantment </th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Armor Enchantments </th>
       <td mat-cell *matCellDef="let enchant"> {{enchant.name}} </td>
     </ng-container>
     
-    <ng-container matColumnDef="valid">
-      <th mat-header-cell *matHeaderCellDef >Valid Item Types </th>
-      <td mat-cell *matCellDef="let enchant"> {{enchant.validItems.join(", ")}}</td>
+    <ng-container matColumnDef="tier">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Tier </th>
+      <td mat-cell *matCellDef="let enchant"> {{enchant.tier}}</td>
+    </ng-container>
+  
+    <ng-container matColumnDef="cost">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Cost (tins) </th>
+      <td mat-cell *matCellDef="let enchant"> {{enchant.cost}} </td>
     </ng-container>
 
+    <ng-container matColumnDef="traits">
+      <th mat-header-cell *matHeaderCellDef>Abilities and Traits </th>
+      <td mat-cell *matCellDef="let enchant">
+        <app-ability-content *ngFor="let ability of enchant.abilities" [ability]=ability></app-ability-content>
+      </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; 
+                            let even = even
+                            columns: displayedColumns;"
+                            [ngClass]="{gray: even}"></tr>
+</table>
+
+<br>
+
+<table mat-table #utilitytEnchantmentSort="matSort" [dataSource]="utilityEnchantmentDataSource" matSort class="mat-elevation-z8">
+  <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Utility Enchantments </th>
+      <td mat-cell *matCellDef="let enchant"> {{enchant.name}} </td>
+    </ng-container>
+    
     <ng-container matColumnDef="tier">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Tier </th>
       <td mat-cell *matCellDef="let enchant"> {{enchant.tier}}</td>
@@ -63,9 +86,9 @@
       </td>
     </ng-container>
   
-    <tr mat-header-row *matHeaderRowDef="utilityDisplayedColumns"></tr>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; 
                             let even = even
-                            columns: utilityDisplayedColumns;"
+                            columns: displayedColumns;"
                             [ngClass]="{gray: even}"></tr>
 </table>

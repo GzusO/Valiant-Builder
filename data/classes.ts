@@ -64,6 +64,18 @@ export const archetypeData: Archetype[] = [
         abilities: []
     },
     {
+        name: 'Investigator',
+        description: 'You\'ve a knack for finding the truth.',
+        class: 'Aspirant',
+        abilities: []
+    },
+    {
+        name: 'Laborer',
+        description: 'You\'re simple and dependable, which just so happen to be extremely sought-after traits in a valiant.',
+        class: 'Aspirant',
+        abilities: []
+    },
+    {
         name: 'Maniac',
         description: 'You’re crazy, plainly and simply. If it weren’t for you taking up valiancy, you’d probably be blathering about on some street corner, given you weren’t arrested for some heinous crime.',
         class: 'Aspirant',

@@ -119,7 +119,7 @@ export class DataService {
     this.lineages.map(x=> x.abilities =(this.abilities.filter(y=> y.source.includes(x.name))))
   }
   mapArmor(): void {
-    
+    this.armors.map(x=> x.abilities = (this.abilities.filter(y=> y.source.includes(x.name))));
   }
   mapWeapons(): void {
     this.weapons.map(x =>x.abilities = (this.abilities.filter(y=> y.source.includes(x.name))));

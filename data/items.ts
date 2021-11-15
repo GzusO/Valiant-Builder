@@ -11,22 +11,24 @@ export interface Item {
     description: string;
     quantity: number;
 }
+// Tier Cost
+// 00   250
+// 01   1,000
+// 02   3,000
+// 03   6,000
+// 04   10,000
+// 05   15,000
+// 06   21,000
+// 07   28,000
+// 08   36,000
+// 09   45,000
+// 10   55,000
+
 
 export const armorData: Item[] = [
     //Armor Sets
     {
-        name: 'Light Armor',
-        tags: [],
-        weight: 10,
-        cost: 100,
-        abilities: [],
-        tier: 0,
-        description: '',
-        types: ['Armor'],
-        quantity: 1
-    },
-    {
-        name: 'Medium Armor',
+        name: 'Armor',
         tags: [],
         weight: 20,
         cost: 250,
@@ -40,7 +42,7 @@ export const armorData: Item[] = [
         name: 'Heavy Armor',
         tags: [],
         weight: 35,
-        cost: 400,
+        cost: 250,
         abilities: [],
         tier: 0,
         description: '',
@@ -54,7 +56,7 @@ export const armorData: Item[] = [
         name: 'Munition Pouch',
         tags: [],
         weight: 1,
-        cost: 100,
+        cost: 250,
         abilities: [],
         tier: 0,
         description: '',
@@ -65,7 +67,7 @@ export const armorData: Item[] = [
         name: 'Simple Charm',
         tags: [],
         weight: 1,
-        cost: 100,
+        cost: 250,
         abilities: [],
         tier: 0,
         description: '',
@@ -77,8 +79,8 @@ export const armorData: Item[] = [
     {
         name: 'Heart Protector',
         tags: [],
-        weight: 2,
-        cost: 1250,
+        weight: 7,
+        cost: 1000,
         abilities: [],
         tier: 1,
         description: '',
@@ -86,10 +88,10 @@ export const armorData: Item[] = [
         quantity: 1
     },
     {
-        name: 'Padded Cloak',
+        name: 'Quick Stone',
         tags: [],
-        weight: 2,
-        cost: 1500,
+        weight: 1,
+        cost: 1000,
         abilities: [],
         tier: 1,
         description: '',
@@ -102,7 +104,7 @@ export const armorData: Item[] = [
         name: 'Gleaming Goggles',
         tags: [],
         weight: 1,
-        cost: 4000,
+        cost: 3000,
         abilities: [],
         tier: 2,
         description: '',
@@ -113,7 +115,7 @@ export const armorData: Item[] = [
         name: 'Spelljammer\'s Bracer',
         tags: [],
         weight: 2,
-        cost: 3500,
+        cost: 3000,
         abilities: [],
         tier: 2,
         description: '',
@@ -123,10 +125,10 @@ export const armorData: Item[] = [
 
     //Tier 3
     {
-        name: 'Light Stone',
+        name: 'Crystal Lens',
         tags: [],
         weight: 1,
-        cost: 7500,
+        cost: 6000,
         abilities: [],
         tier: 3,
         description: '',
@@ -134,12 +136,24 @@ export const armorData: Item[] = [
         quantity: 1
     },
     {
-        name: 'Quick Stone',
+        name: 'Stoneheart Amulet',
         tags: [],
-        weight: 1,
-        cost: 7500,
+        weight: 3,
+        cost: 6000,
         abilities: [],
         tier: 3,
+        description: '',
+        types: ['Combat Accessory'],
+        quantity: 1
+    },
+    //Tier 6
+    {
+        name: 'Chaos Badge',
+        tags: [],
+        weight: 1,
+        cost: 21000,
+        abilities: [],
+        tier: 6,
         description: '',
         types: ['Combat Accessory'],
         quantity: 1
@@ -152,7 +166,7 @@ export const armorData: Item[] = [
         name: 'Arcanist\'s Mess Kit',
         tags: [],
         weight: 2,
-        cost: 100,
+        cost: 250,
         abilities: [],
         tier: 0,
         description: '',
@@ -163,7 +177,7 @@ export const armorData: Item[] = [
         name: 'Backpack',
         tags: [],
         weight: 4,
-        cost: 75,
+        cost: 250,
         abilities: [],
         tier: 0,
         description: '',
@@ -187,7 +201,7 @@ export const armorData: Item[] = [
         name: 'Soothe Stone',
         tags: [],
         weight: 1,
-        cost: 1250,
+        cost: 1000,
         abilities: [],
         tier: 1,
         description: '',
@@ -224,7 +238,7 @@ export const armorData: Item[] = [
         name: 'Arcane Communicator',
         tags: [],
         weight: 2,
-        cost: 8000,
+        cost: 6000,
         abilities: [],
         tier: 3,
         description: '',
@@ -235,7 +249,7 @@ export const armorData: Item[] = [
         name: 'Mindspeak Amulet',
         tags: [],
         weight: 0,
-        cost: 7500,
+        cost: 6000,
         abilities: [],
         tier: 3,
         description: '',
@@ -251,7 +265,7 @@ export const gearData: Item[] = [
         name: 'Fire Bomb',
         tags: [],
         weight: 2,
-        cost: 75,
+        cost: 250,
         abilities: [],
         tier: 0,
         description: '',
@@ -262,7 +276,7 @@ export const gearData: Item[] = [
         name: 'Lantern',
         tags: [],
         weight: 2,
-        cost: 50,
+        cost: 250,
         abilities: [],
         tier: 0,
         description: '',
@@ -270,10 +284,10 @@ export const gearData: Item[] = [
         quantity: 1
     },
     {
-        name: 'Pavise Shield',
+        name: 'Caltrops',
         tags: [],
-        weight: 10,
-        cost: 100,
+        weight: 2,
+        cost: 250,
         abilities: [],
         tier: 0,
         description: '',
@@ -283,7 +297,7 @@ export const gearData: Item[] = [
 
     //Tier 1
     {
-        name: 'Caltrops',
+        name: 'Flare',
         tags: [],
         weight: 2,
         cost: 1000,
@@ -294,21 +308,10 @@ export const gearData: Item[] = [
         quantity: 1
     },
     {
-        name: 'Flare',
-        tags: [],
-        weight: 2,
-        cost: 1250,
-        abilities: [],
-        tier: 1,
-        description: '',
-        types: [],
-        quantity: 1
-    },
-    {
         name: 'Syrjha',
         tags: [],
         weight: 1,
-        cost: 1250,
+        cost: 1000,
         abilities: [],
         tier: 1,
         description: '',
@@ -343,7 +346,7 @@ export const gearData: Item[] = [
         name: 'Smokescreen',
         tags: [],
         weight: 2,
-        cost: 3500,
+        cost: 3000,
         abilities: [],
         tier: 2,
         description: '',
@@ -356,7 +359,7 @@ export const gearData: Item[] = [
         name: 'Arcane Flare',
         tags: [],
         weight: 2,
-        cost: 6500,
+        cost: 6000,
         abilities: [],
         tier: 3,
         description: '',
@@ -367,7 +370,7 @@ export const gearData: Item[] = [
         name: 'Crystal Mirror',
         tags: [],
         weight: 1,
-        cost: 7500,
+        cost: 6000,
         abilities: [],
         tier: 3,
         description: '',
@@ -378,7 +381,7 @@ export const gearData: Item[] = [
         name: 'Witch-Hunter Charm',
         tags: [],
         weight: 1,
-        cost: 7000,
+        cost: 6000,
         abilities: [],
         tier: 3,
         description: '',
@@ -391,7 +394,7 @@ export const gearData: Item[] = [
         name: 'Crystalline',
         tags: [],
         weight: 1,
-        cost: 11000,
+        cost: 10000,
         abilities: [],
         tier: 4,
         description: '',
@@ -413,7 +416,7 @@ export const gearData: Item[] = [
         name: 'Stun Bomb',
         tags: [],
         weight: 1,
-        cost: 10500,
+        cost: 10000,
         abilities: [],
         tier: 4,
         description: '',
@@ -433,13 +436,47 @@ export const gearData: Item[] = [
         types: [],
         quantity: 1
     },
+    //Tier 6
+    {
+        name: 'Alchemist\'s Sin',
+        tags: [],
+        weight: 3,
+        cost: 21000,
+        abilities: [],
+        tier: 6,
+        description: '',
+        types: [],
+        quantity: 1
+    },
 
 ];
 
 export const weaponData: Item[] = [
     {
-        name: 'Blade',
+        name: 'Melee Weapon',
         tags: [],
+        weight: 5,
+        cost: 250,
+        abilities: [],
+        tier: 0,
+        description: '',
+        types: [],
+        quantity: 1
+    },
+    {
+        name: 'Heavy Melee Weapon',
+        tags: ['Two-Handed'],
+        weight: 15,
+        cost: 250,
+        abilities: [],
+        tier: 0,
+        description: '',
+        types: [],
+        quantity: 1
+    },
+    {
+        name: 'Ranged Weapon',
+        tags: ['Two-Handed'],
         weight: 3,
         cost: 250,
         abilities: [],
@@ -449,127 +486,9 @@ export const weaponData: Item[] = [
         quantity: 1
     },
     {
-        name: 'Heavy Blade',
-        tags: ['Two-Handed'],
-        weight: 4,
-        cost: 300,
-        abilities: [],
-        tier: 0,
-        description: '',
-        types: [],
-        quantity: 1
-    },
-
-    {
-        name: 'Club',
-        tags: [],
-        weight: 3,
-        cost: 50,
-        abilities: [],
-        tier: 0,
-        description: '',
-        types: [],
-        quantity: 1
-    },
-    {
-        name: 'Heavy Club',
-        tags: ['Two-Handed'],
-        weight: 5,
-        cost: 150,
-        abilities: [],
-        tier: 0,
-        description: '',
-        types: [],
-        quantity: 1
-    },
-
-
-    {
-        name: 'Axe',
-        tags: [],
-        weight: 6,
-        cost: 75,
-        abilities: [],
-        tier: 0,
-        description: '',
-        types: [],
-        quantity: 1
-    },
-    {
-        name: 'Heavy Axe',
-        tags: ['Two-Handed'],
-        weight: 3,
-        cost: 200,
-        abilities: [],
-        tier: 0,
-        description: '',
-        types: [],
-        quantity: 1
-    },
-
-
-    {
-        name: 'Polearm',
-        tags: ['Reach 1', 'Two-Handed'],
-        weight: 7,
-        cost: 200,
-        abilities: [],
-        tier: 0,
-        description: '',
-        types: [],
-        quantity: 1
-    },
-    {
-        name: 'Heavy Polearm',
-        tags: ['Reach 1', 'Two-Handed', 'Heavy'],
-        weight: 9,
-        cost: 400,
-        abilities: [],
-        tier: 0,
-        description: '',
-        types: [],
-        quantity: 1
-    },
-
-    {
-        name: 'Bow',
-        tags: ['Two-Handed'],
-        weight: 3,
-        cost: 100,
-        abilities: [],
-        tier: 0,
-        description: '',
-        types: [],
-        quantity: 1
-    },
-    {
-        name: 'Heavy Bow',
-        tags: ['Two-Handed', 'Unwieldly'],
-        weight: 6,
-        cost: 200,
-        abilities: [],
-        tier: 0,
-        description: '',
-        types: [],
-        quantity: 1
-    },
-
-
-    {
-        name: 'Crossbow',
-        tags: ['Two-Handed'],
-        weight: 8,
-        cost: 100,
-        abilities: [],
-        tier: 0,
-        description: '',
-        types: [],
-        quantity: 1
-    },
-    {
-        name: 'Heavy Crossbow',
-        tags: ['Two-Handed', 'Unwieldly'],
-        weight: 12,
+        name: 'Heavy Ranged Weapon',
+        tags: ['Two-Handed','Heavy'],
+        weight: 10,
         cost: 250,
         abilities: [],
         tier: 0,
@@ -577,32 +496,6 @@ export const weaponData: Item[] = [
         types: [],
         quantity: 1
     },
-
-
-    {
-        name: 'Firearm',
-        tags: ['Two-Handed'],
-        weight: 3,
-        cost: 150,
-        abilities: [],
-        tier: 0,
-        description: '',
-        types: [],
-        quantity: 1
-    },
-    {
-        name: 'Heavy Firearm',
-        tags: ['Two-Handed', 'Unwieldly'],
-        weight: 5,
-        cost: 400,
-        abilities: [],
-        tier: 0,
-        description: '',
-        types: [],
-        quantity: 1
-    },
-
-
     {
         name: 'Shield',
         tags: [],

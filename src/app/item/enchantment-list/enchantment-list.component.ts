@@ -12,14 +12,16 @@ import { DataService } from 'src/app/data.service';
 export class EnchantmentListComponent implements OnInit, AfterViewInit {
   enchantments: Enchantment[] =[];
 
-  enchantmentDataSource = new MatTableDataSource<Enchantment>();
+  weaponEnchantmentDataSource = new MatTableDataSource<Enchantment>();
+  armorEnchantmentDataSource = new MatTableDataSource<Enchantment>();
   utilityEnchantmentDataSource= new MatTableDataSource<Enchantment>();
 
-  displayedColumns: string[] = ['tier','name', 'valid', 'cost','traits'];
-  utilityDisplayedColumns: string[] = ['name', 'valid', 'cost','traits'];
 
-  @ViewChild('enchantmentSort') sortEnchantments: MatSort = new MatSort();
+  displayedColumns: string[] = ['tier','name', 'cost','traits'];
+
+  @ViewChild('weaponEnchantmentSort') sortWeaponEnchantments: MatSort = new MatSort();
   @ViewChild('utilityEnchantmentSort') sortUtilityEnchantments: MatSort = new MatSort();
+  @ViewChild('armorEnchantmentSort') sortArmorEnchantments: MatSort = new MatSort();
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
@@ -27,11 +29,13 @@ export class EnchantmentListComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.enchantmentDataSource.sort = this.sortEnchantments;
+    this.weaponEnchantmentDataSource.sort = this.sortWeaponEnchantments;
+    this.armorEnchantmentDataSource.sort = this.sortArmorEnchantments;
     this.utilityEnchantmentDataSource.sort =this.sortUtilityEnchantments;
 
-    this.enchantmentDataSource.data = this.enchantments.filter(x=>x.types.includes("Combat"));
+    this.weaponEnchantmentDataSource.data = this.enchantments.filter(x=>x.types.includes("Weapon"));
     this.utilityEnchantmentDataSource.data = this.enchantments.filter(x=> x.types.includes("Utility"));
+    this.armorEnchantmentDataSource.data = this.enchantments.filter(x=> x.types.includes("Armor"));
   }
 
   getEnchantments():void {
