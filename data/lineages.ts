@@ -1,12 +1,44 @@
 import { Lineage } from "src/app/lineage/Lineage";
 
 export const lineageData: Lineage[] = [
-    {name:'Cossim',description:'Cossim are a small and peculiar people. They’re short and slight, with blue-black skin covered in shimmering patterns. These patterns are unique to each Cossim, and glow softly for as long as the Cossim lives.',abilities:[]},
-    {name:'Girt',description:'Smaller and weaker than most of the other lineages, Girt rely on mental prowess over physical capabilities. They have dark skin and darker hair, which ranges from wavy to tightly curled.',abilities:[]},
-    {name:'Derge',description:'The short-lived Derge range from short and scrappy to tall and imposing. They collect in tribe-like warbands, where physical strength rules.',abilities:[]},
-    {name:'Hjark',description:'Sturdy and industrious, Hjark are built to brave the frozen, cruel peaks of the Barrier Sea. Whether short or tall, they have a hefty build and a stoic disposition.',abilities:[]},
-    {name:'Ingra',description:'Ingra are tall and lean, with a culture that holds the warrior and the artist in equally high regards. Suited to hot climates, Ingra have interacted closely with Girt throughout the history of the Barrier Sea. The shapely Ingra also sport a hefty ego, fed by their martial and artistic prowess as much as it is by their well-kept appearances.',abilities:[]},
-    {name:'Marr',description:'A truly forgettable peoples, the Marr are varied and adaptable. They tend to fill the gaps left by the other lineages, content in living simple lives.',abilities:[]},
-    {name:'Selk',description:'The haughty Selk would be considered plain, if not for how eerily symmetric and flawless their features were. Living in lush forests and hills, the Selk are free to focus their efforts on intellectual pursuits.',abilities:[]},
-    {name:'Vyld',description:'Their leathery is often found in shades of browns and greys, though some bear more exotic patterns. The Vyld are the most primal lineage, with a warrior-culture that emphasizes physical ability.',abilities:[]},
+    {
+        name: 'Cossim',
+        description: 'Cossim are a small and peculiar people. They’re short and slight, with blue-black skin covered in shimmering patterns. These patterns are unique to each Cossim, and glow softly for as long as the Cossim lives.',
+        abilities: []
+    },
+    {
+        name: 'Girt',
+        description: 'Smaller and weaker than most of the other lineages, Girt rely on mental prowess over physical capabilities. They have dark skin and darker hair, which ranges from wavy to tightly curled.',
+        abilities: []
+    },
+    {
+        name: 'Derge',
+        description: 'The short-lived Derge range from short and scrappy to tall and imposing. They collect in tribe-like warbands, where physical strength rules.',
+        abilities: []
+    },
+    {
+        name: 'Hjark',
+        description: 'Sturdy and industrious, Hjark are built to brave the frozen, cruel peaks of the Barrier Sea. Whether short or tall, they have a hefty build and a stoic disposition.',
+        abilities: []
+    },
+    {
+        name: 'Ingra',
+        description: 'Ingra are tall and lean, with a culture that holds the warrior and the artist in equally high regards. Suited to hot climates, Ingra have interacted closely with Girt throughout the history of the Barrier Sea. The shapely Ingra also sport a hefty ego, fed by their martial and artistic prowess as much as it is by their well-kept appearances.',
+        abilities: []
+    },
+    {
+        name: 'Marr',
+        description: 'A truly forgettable peoples, the Marr are varied and adaptable. They tend to fill the gaps left by the other lineages, content in living simple lives.',
+        abilities: []
+    },
+    {
+        name: 'Selk',
+        description: 'The haughty Selk would be considered plain, if not for how eerily symmetric and flawless their features were. Living in lush forests and hills, the Selk are free to focus their efforts on intellectual pursuits.',
+        abilities: []
+    },
+    {
+        name: 'Vyld',
+        description: 'Their leathery is often found in shades of browns and greys, though some bear more exotic patterns. The Vyld are the most primal lineage, with a warrior-culture that emphasizes physical ability.',
+        abilities: []
+    },
 ]

@@ -27,6 +27,8 @@
             "style": "camelCase"
           }
         ],
+        "object-property-newline":["off",{"allowAllPropertiesOnSameLine":false}],
+
         "@angular-eslint/component-selector": [
           "error",
           {
